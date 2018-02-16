@@ -13,6 +13,10 @@ e-mail: popkes@gmx.net
 
 # [](#header-2)Projects
 
+(LSTM-RNN for processing radiological reports)[https://github.com/zotroneneis/lstmLanguageModel]
+(Recurrent Neural Networks for music generation)[https://github.com/zotroneneis/deep-music]
+(Variational Autoencoder for digit generation)[https://github.com/zotroneneis/tensorflow_deep_learning_models/blob/master/improved_variational_autoencoder.ipynb]
+
 
 # [](#header-3)Presentations
 
