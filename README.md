@@ -6,7 +6,7 @@
 
 ![](small_pic.png)
 
-I am a graduate computer science student at Bonn, Germany. My primary interest is machine learning, with a focus on neural networks. I am currently writing my master thesis on recurrent neural networks for modeling radiological language.
+I am a graduate computer science student at Bonn, Germany and a research assistant at the Fraunhofer Institute for Intelligent Systems (IAIS). My primary interest is machine learning, with a focus on neural networks. I am currently writing my master thesis on recurrent neural networks for modeling radiological language.
 
 
 # [](#header-1)Contact
