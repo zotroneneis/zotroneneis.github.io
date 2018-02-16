@@ -4,6 +4,8 @@
 
 # About
 
+![](CV_picture.jpeg)
+
 I am a graduate computer science student at Bonn, Germany. My primary interest is machine learning, especially neural networks. I am currently writing my master thesis on using recurrent neural networks to model radiological language.
 
 
