@@ -1,6 +1,6 @@
-> Machine learning can seem like magic. I love magic!
+#### Machine learning can seem like magic. I love magic!
 
-#### Last Updated Feb 16, 2018.
+> Last Updated Feb 16, 2018.
 
 # About
 
