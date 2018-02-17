@@ -26,9 +26,6 @@ encode medical relationships, semantic similarities and that certain medical rel
 AI safety and privacy research, machine learning in health care, designing novel (biologically inspired) algorithms and architectures, artificial general intelligence, automating machine learning using reinforcement learning
 
 
-
-Abstract:
-
 # [](#header-1)Contact
 
 e-mail: popkes@gmx.net
