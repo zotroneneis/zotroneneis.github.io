@@ -12,8 +12,7 @@ I am a graduate computer science student at Bonn, Germany and a research assista
 
 ## News
 
-I am about to finish my master thesis. Title: "Recurrent Neural Networks – using transfer learning to perform autocompletion of radiological reports“
-Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion
+I am about to finish my master thesis. Title: __Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion__
 
 
 Abstract:
