@@ -23,7 +23,7 @@ encode medical relationships, semantic similarities and that certain medical rel
 
 
 # Research interests:
-AI safety and alignment, machine learning in health care, designing novel, biologically inspired algorithms, artificial general intelligence, reinforcement learning
+AI safety and privacy research, machine learning in health care, designing novel (biologically inspired) algorithms and architectures, artificial general intelligence, automating machine learning using reinforcement learning
 
 
 
