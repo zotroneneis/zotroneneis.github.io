@@ -22,15 +22,15 @@ encode medical relationships, semantic similarities and that certain medical rel
 * * *
 
 
-# Research interests:
+## Research interests:
 AI safety and privacy research, machine learning in health care, designing novel (biologically inspired) algorithms and architectures, artificial general intelligence, automating machine learning using reinforcement learning
 
 
-# [](#header-1)Contact
+## [](#header-1)Contact
 
 e-mail: popkes@gmx.net
 
-# [](#header-2)Projects
+## [](#header-2)Projects
 
 - [LSTM-RNN for processing radiological reports (master thesis)](https://github.com/zotroneneis/lstmLanguageModel)
 - [Recurrent Neural Networks for music generation](https://github.com/zotroneneis/deep-music)
@@ -38,7 +38,7 @@ e-mail: popkes@gmx.net
 
 
 
-# Publications
+## Publications
 
 
 
