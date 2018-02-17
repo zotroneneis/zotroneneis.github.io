@@ -1,6 +1,16 @@
 #### Machine learning can seem like magic. I love magic!
 
-# News
+
+# About
+
+> Last Updated Feb 16, 2018.
+
+![](small_pic.png)
+
+I am a graduate computer science student at Bonn, Germany and a research assistant at the [Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)](https://www.iais.fraunhofer.de/en.html). My primary interest is machine learning, with a focus on neural networks. I am currently writing my master thesis on recurrent neural networks for modeling radiological language.
+
+
+## News
 
 I am about to finish my master thesis. Title: "Recurrent Neural Networks – using transfer learning to perform autocompletion of radiological reports“
 Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion
@@ -11,14 +21,6 @@ Motivated by the potential benefits of a system that accelerates the process of 
 encode medical relationships, semantic similarities and that certain medical relationships can be represented as linear translations.
 
 * * *
-
-# About
-
-> Last Updated Feb 16, 2018.
-
-![](small_pic.png)
-
-I am a graduate computer science student at Bonn, Germany and a research assistant at the [Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)](https://www.iais.fraunhofer.de/en.html). My primary interest is machine learning, with a focus on neural networks. I am currently writing my master thesis on recurrent neural networks for modeling radiological language.
 
 
 # Research interests:
