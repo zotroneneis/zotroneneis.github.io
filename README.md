@@ -42,6 +42,6 @@ e-mail: popkes@gmx.net
 
 A. Popkes  
 __Language Modeling with Recurrent Neural Networks__ - Using Transfer Learning to Perform Radiological Sentence Completion  
-Master Thesis, [PDF](thesis_APopkes_hyperlinks.pdf)  
+Master Thesis, [PDF](https://github.com/zotroneneis/lstmLanguageModel/blob/master/reports/master_thesis_APopkes.pdf)  
 
 
