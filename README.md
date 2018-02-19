@@ -35,6 +35,7 @@ e-mail: popkes@gmx.net
 - [LSTM-RNN for processing radiological reports (master thesis)](https://github.com/zotroneneis/lstmLanguageModel)
 - [Recurrent Neural Networks for music generation](https://github.com/zotroneneis/deep-music)
 - [Variational Autoencoder for digit generation](https://github.com/zotroneneis/tensorflow_deep_learning_models/blob/master/improved_variational_autoencoder.ipynb)
+- [Machine learning basics](https://github.com/zotroneneis/ML_basics) (including linear regression, logistic regression, perceptron, k-NN, ...)
 
 
 
