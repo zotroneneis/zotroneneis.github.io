@@ -21,9 +21,11 @@ Machine learning in health care, AI safety and privacy research, designing novel
 
 ## [](#header-1)Contact
 
-e-mail: popkes@gmx.net
-GitHub: https://github.com/zotroneneis
-LinkedIn: https://de.linkedin.com/in/anna-lena-popkes
+e-mail: popkes@gmx.net   
+   
+GitHub: https://github.com/zotroneneis   
+   
+LinkedIn: https://de.linkedin.com/in/anna-lena-popkes   
 
 ## [](#header-2)Projects
 
