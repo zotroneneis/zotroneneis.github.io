@@ -3,23 +3,23 @@
 
 # About
 
-> Last Updated Feb 16, 2018.
+> Last Updated June 27, 2018.
 
 ![](small_pic.png)
 
-I am a graduate computer science student at Bonn, Germany and a research assistant at the [Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)](https://www.iais.fraunhofer.de/en.html). My primary interest is machine learning, with a focus on neural networks. I am currently writing my master thesis on recurrent neural networks for modeling radiological language.
+I am a computer science graduate, currently interning at Bosch in Palo Alto, California, USA. My primary interest is machine learning/deep learning, with a focus on neural networks. I am especially interested in the application of machine learning and deep learning in health care.
 
 
 ## News
 
-I have recently finished my master thesis. In May 2018 I will move to Palo Alto, CA, USA to join Robert Bosch for an internship.
+I am currently working as a deep learning intern at Robert Bosch in Palo Alto, CA, USA. 
 
 Starting September 2018 I will be one of the first residents of the Microsoft AI Residency Program in Cambridge, UK.
 * * *
 
 
 ## Research interests:
-AI safety and privacy research, machine learning in health care, designing novel (biologically inspired) algorithms and architectures, artificial general intelligence, automating machine learning using reinforcement learning
+Machine learning in health care, AI safety and privacy research, designing novel (biologically inspired) algorithms and architectures, artificial general intelligence, automating machine learning using reinforcement learning
 
 
 ## [](#header-1)Contact
@@ -32,6 +32,8 @@ e-mail: popkes@gmx.net
 - [Recurrent Neural Networks for music generation](https://github.com/zotroneneis/deep-music)
 - [Variational Autoencoder for digit generation](https://github.com/zotroneneis/tensorflow_deep_learning_models/blob/master/improved_variational_autoencoder.ipynb)
 - [Machine learning basics in plain Python](https://github.com/zotroneneis/ML_basics) (including linear regression, logistic regression, perceptron, k-NN, ...)
+- [Deep learning models in TensorFlow](https://github.com/zotroneneis/tensorflow_deep_learning_models)
+- [Project Euler solutions in Python](https://github.com/zotroneneis/ProjectEuler)
 
 
 
