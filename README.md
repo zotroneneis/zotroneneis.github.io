@@ -1,5 +1,4 @@
-# Machine learning can seem like magic. I love magic!
-
+![](ml_magic.png)
 
 ## About
 
