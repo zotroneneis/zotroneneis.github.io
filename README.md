@@ -1,8 +1,6 @@
 ![](ml_magic.png)
 
-## About
-
-> Last Updated June 27, 2018.
+## About (last updated June 27, 2018).
 
 ![](small_pic.png)
 
