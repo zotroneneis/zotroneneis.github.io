@@ -1,6 +1,6 @@
 ![](ml_magic.png)
 
-## About (last updated June 27, 2018).
+## About (last updated July 20, 2018).
 
 ![](small_pic.png)
 
@@ -34,6 +34,7 @@ LinkedIn: https://de.linkedin.com/in/anna-lena-popkes
 - [Variational Autoencoder for digit generation](https://github.com/zotroneneis/tensorflow_deep_learning_models/blob/master/improved_variational_autoencoder.ipynb)
 - [Machine learning basics in plain Python](https://github.com/zotroneneis/ML_basics) (including linear regression, logistic regression, perceptron, k-NN, ...)
 - [Deep learning models in TensorFlow](https://github.com/zotroneneis/tensorflow_deep_learning_models)
+- [Deep learning models in Pytorch](https://github.com/zotroneneis/pytorch_deep_learning_models)
 - [Project Euler solutions in Python](https://github.com/zotroneneis/ProjectEuler)
 
 
