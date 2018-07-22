@@ -13,7 +13,7 @@ author_profile: true
    
 [Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) by Nick Bostrom
 
-================
+---
 ## (Non-fiction) books I have read
 
 ![](../images/waking_up.png)   
@@ -37,7 +37,7 @@ author_profile: true
 **Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future** by Ashlee Vance
 [link](https://www.amazon.com/Elon-Musk-SpaceX-Fantastic-Future/dp/006230125X)
 
-================
+---
 
 ## (Non-fiction) books I want to read
 
