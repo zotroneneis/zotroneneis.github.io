@@ -4,7 +4,6 @@ collection: publications
 permalink: /publication/master_thesis
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2018-30-03
-<!-- venue: 'Journal 1' -->
 paperurl: 'http://zotroneneis.github.io/files/thesis_APopkes_hyperlinks.pdf'
 citation: 'Popkes, Anna-Lena. (2018). &quot;Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion.&quot;
   
