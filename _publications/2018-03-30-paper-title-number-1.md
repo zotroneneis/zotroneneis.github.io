@@ -2,15 +2,16 @@
 title: "Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion"
 collection: publications
 permalink: /publication/2018-03-30-paper-title-number-1
-excerpt: 'Abstract'
+excerpt: 'Motivated by the potential benefits of a system that accelerates the process of writing radiological reports, we present a Recurrent Neu- ral Network Language Model for modeling radiological language.  We show that Recurrent Neural Network Language Models can be used to produce convincing radiological reports and investigate how their performance can be improved by using advanced regularization techniques like embedding dropout or weight tying, and advanced initialization techniques like pre-trained word embeddings. Furthermore, we study the use of transfer learning to create topic-specific language models. To test the applicability of our techniques to other domains we perform experiments on a second dataset, consisting of forum posts on motorized vehicles. In addition to our experiments on Recurrent Neural Network Language Models, we train a Continu- ous Bag-of-Words model on the radiological dataset and analyze the resulting medical word embeddings. We show that the embeddings encode medical relationships, semantic similarities and that certain medical relationships can be represented as linear translations.'
 date: 2018-03-30
-venue: 'Journal 1'
-paperurl: 'http://academicpages.github.io/files/paper1.pdf'
-citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
+venue: 
+paperurl: 'http://zotroneneis.github.io/files/thesis_APopkes.pdf'
+citation: 'Popkes, Anna-Lena. (2018). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 
-This paper is about the number 1. TEST
+Abstract:   
+Motivated by the potential benefits of a system that accelerates the process of writing radiological reports, we present a Recurrent Neu- ral Network Language Model for modeling radiological language.  We show that Recurrent Neural Network Language Models can be used to produce convincing radiological reports and investigate how their performance can be improved by using advanced regularization techniques like embedding dropout or weight tying, and advanced initialization techniques like pre-trained word embeddings. Furthermore, we study the use of transfer learning to create topic-specific language models. To test the applicability of our techniques to other domains we perform experiments on a second dataset, consisting of forum posts on motorized vehicles. In addition to our experiments on Recurrent Neural Network Language Models, we train a Continu- ous Bag-of-Words model on the radiological dataset and analyze the resulting medical word embeddings. We show that the embeddings encode medical relationships, semantic similarities and that certain medical relationships can be represented as linear translations.  
 
-[Download paper here](http://academicpages.github.io/files/paper1.pdf)
+[Download paper here](http://zotroneneis.github.io/files/thesis_APopkes.pdf)
 
-Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1).
+<!-- Recommended citation: Your Name, You. (2009). "Paper Title Number 1." <i>Journal 1</i>. 1(1). -->
