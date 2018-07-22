@@ -9,9 +9,15 @@ author_profile: true
 
 ## (Non-fiction) books I am currently reading
 
-![](../images/bostrom.png)
-   
-[Superintelligence: Paths, Dangers, Strategies](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) by Nick Bostrom
+![](../images/bostrom.png)   
+**Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom   
+[link](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
+
+
+![](../images/gift_of_fear.png)   
+**The Gift of Fear - Survival Signals That Protect Us from Violence** by Gavin de Becker   
+[link](https://www.amazon.com/Gift-Fear-Survival-Signals-Violence/dp/0316235024/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=)
+
 
 ---
 ## (Non-fiction) books I have read
