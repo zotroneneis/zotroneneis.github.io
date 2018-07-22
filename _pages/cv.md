@@ -42,7 +42,7 @@ Work experience
 
 Scholarships and Awars
 =====
-* 01/2016-present: [Studienstiftung des deutschen Volkes]()
+* 01/2016-present: [Studienstiftung des deutschen Volkes](https://www.studienstiftung.de/)
     * German National Academic Foundation
     * Scholarship for studies
 
