@@ -9,7 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
-[Download PDF](http://zotroneneis.github.io/files/CV_APopkes.pdf) version of my CV
+[Download PDF version of my CV](http://zotroneneis.github.io/files/CV_APopkes.pdf) 
+
 
 Education
 ======
