@@ -1,7 +1,7 @@
 ---
 title: "Master thesis"
 collection: publications
-permalink: /publication/master_thesis
+permalink: /publications/master_thesis
 excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2018-30-03
 paperurl: 'http://zotroneneis.github.io/files/thesis_APopkes_hyperlinks.pdf'
