@@ -64,9 +64,10 @@ Scholarships and Awards
    
 Skills
 ======
-* Programming Languages
+* Programming Languages and Frameworks
     * Python
-    * TensorFlor
+    * TensorFlow
+    * Basic knowledge in PyTorch
     * Basic knowledge in Matlab and Java
 * Languages
     * German (native language)
