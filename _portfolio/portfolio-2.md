@@ -28,5 +28,5 @@ And the following notebooks on data preprocessing:
 - Image preprocessing
 - Preprocessing a numerical/categorical dataset
 
-![alt text](../images/image_preprocessing.png)
+![](../images/image_preprocessing.png)
 
