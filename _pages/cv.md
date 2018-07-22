@@ -22,6 +22,8 @@ Education
     * Grade 1.1/GPA: 4.00}
     * Focus modules: Neuroinformatics, Computer Science, Neuroscience, Cognitive (Neuro-) Psychology, Philosophy of Mind and Cognition
 
+---
+   
 Work experience
 ======
 
@@ -40,7 +42,9 @@ Work experience
     * Research assistant at Prof. Nadine Gaab's laboratory for developmental cognitive neuroscience
     * Investigation of perceptual, cognitive and brain development in typically developing infants and children, as well as children diagnosed with or at risk for various developmental disorders
 
-Scholarships and Awars
+---
+   
+Scholarships and Awards
 =====
 * 01/2016-present: [Studienstiftung des deutschen Volkes](https://www.studienstiftung.de/)
     * German National Academic Foundation
@@ -53,7 +57,8 @@ Scholarships and Awars
 * 2012: Cambridge Certificate of Advanced English (CAE)
     * Cambridge University, UK
 
-  
+---
+   
 Skills
 ======
 * Programming Languages
@@ -65,12 +70,16 @@ Skills
     * English (fluent, near-native at speaking and writing)
     * French (moderate knowledge)
 
+---
+   
 Voluntary Work
 ======
 * 2014 - 2015: [Balu und Du](https://www.balu-und-du.de/home/)
     * Prevention project for deprived children
     * Involves a sponsorship for a child between 7 to 10 years for at least a year. During this year, there are weekly meetings of at least three hours with the child, an accompanying weekly seminar at the university as well as detailed online-diary entries for every meeting.
 
+---
+   
 Publications
 ======
   <ul>{% for post in site.publications %}
@@ -82,15 +91,20 @@ Publications
 <!--   <ul>{% for post in site.talks %} -->
 <!--     {% include archive-single-talk-cv.html %} -->
 <!--   {% endfor %}</ul> -->
-  
+
+---
+   
 Teaching
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <!-- <ul>{% for post in site.teaching %} -->
+  <!--   {% include archive-single-cv.html %} -->
+  <!-- {% endfor %}</ul> -->
 
-08/2016}{Lecturer}{University of Osnabrück}{Osnabrück}{}{Lecturer for the block course "representation learning with feedforward neural networks". Organization, preparation and conduction of the course.}
+* 08/2016 Lecturer for neural networks block course
+    * University of Osnabrück, Osnabrück, Germany
+    * Lecturer for the block course "representation learning with feedforward neural networks"
+    * Organization, preparation and conduction of the course
   
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<!-- Service and leadership -->
+<!-- ====== -->
+<!-- * Currently signed in to 43 different slack teams -->
