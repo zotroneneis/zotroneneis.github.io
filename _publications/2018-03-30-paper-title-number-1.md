@@ -6,7 +6,7 @@ excerpt: 'Motivated by the potential benefits of a system that accelerates the p
 date: 2018-03-30
 venue: 
 paperurl: 'http://alpopkes.com/files/thesis_APopkes.pdf'
-citation: 'Popkes, Anna-Lena. (2018). &quot;Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion.&quot; <i></i>. 1(1).'
+citation: 'Popkes, Anna-Lena. (2018). &quot;Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion.&quot; <i></i>..'
 ---
 
 Abstract:   
