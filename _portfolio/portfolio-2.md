@@ -1,16 +1,14 @@
 ---
-title: "Long Short-Term Memory Recurrent Neural Network"
-excerpt: "LSTM-RNN for processing radiological reports<br/><img src='/images/sepsis.png'>"
+title: "Machine learning basics"
+excerpt: "Plain Python implementations of basic machine learning algorithms <br/><img src='/images/decision_tree_predictions.png'>"
 collection: portfolio
 ---
 
-This is the projet I worked on during my master thesis. The full project description and code can be found on [my GitHub page](https://github.com/zotroneneis/LSTM_language_model).
+I started this project when preparing for interviews and applying for different internships and residency programs. 
 
-Abstract of the thesis, describing the motivation and idea of the project: 
+The project includes implementations of basic machine learning algorithms in plain Python (Python Version 3.6+). All algorithms are implemented from scratch without using additional machine learning libraries. The intention of these notebooks is to provide a basic understanding of the algorithms and their underlying structure
 
-Motivated by the potential benefits of a system that accelerates the process of writing radiological reports, we present a Recurrent Neu- ral Network Language Model for modeling radiological language.  We show that Recurrent Neural Network Language Models can be used to produce convincing radiological reports and investigate how their performance can be improved by using advanced regularization techniques like embedding dropout or weight tying, and advanced initialization techniques like pre-trained word embeddings. Furthermore, we study the use of transfer learning to create topic-specific language models. To test the applicability of our techniques to other domains we perform experiments on a second dataset, consisting of forum posts on motorized vehicles. In addition to our experiments on Recurrent Neural Network Language Models, we train a Continu- ous Bag-of-Words model on the radiological dataset and analyze the resulting medical word embeddings. We show that the embeddings encode medical relationships, semantic similarities and that certain medical relationships can be represented as linear translations.  
-
-[Download entire thesis here](http://zotroneneis.github.io/files/thesis_APopkes.pdf)
+The full project description and code can be found on [my GitHub page](https://github.com/zotroneneis/ml_basics).
 
 
 
