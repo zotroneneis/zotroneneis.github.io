@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[Download PDF](http://zotroneneis.github.io/files/CV_APopkes.pdf) version of my CV
+
 Education
 ======
 
@@ -86,25 +88,14 @@ Publications
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-<!-- Talks -->
-<!-- ====== -->
-<!--   <ul>{% for post in site.talks %} -->
-<!--     {% include archive-single-talk-cv.html %} -->
-<!--   {% endfor %}</ul> -->
 
 ---
    
 Teaching
 ======
-  <!-- <ul>{% for post in site.teaching %} -->
-  <!--   {% include archive-single-cv.html %} -->
-  <!-- {% endfor %}</ul> -->
 
 * 08/2016 Lecturer for neural networks block course
     * University of Osnabrück, Osnabrück, Germany
     * Lecturer for the block course "representation learning with feedforward neural networks"
     * Organization, preparation and conduction of the course
   
-<!-- Service and leadership -->
-<!-- ====== -->
-<!-- * Currently signed in to 43 different slack teams -->
