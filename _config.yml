@@ -78,9 +78,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Sidebar Name"
-  avatar           : "profile.png"
-  bio              : "Your biography for the left-hand sidebar"
+  name             : "Anna-Lena Popkes"
+  avatar           : "small_pic.png"
+  bio              : "I am a computer science graduate, currently interning at Bosch in Palo Alto, California, USA. My primary interest is machine learning/deep learning, with a focus on neural networks. I am especially interested in the application of machine learning and deep learning in health care."
   location         : "Palo Alto, CA, USA"
   employer         :
   # googlescholar    : "http://yourfullgooglescholarurl.com"
