@@ -1,10 +1,10 @@
 ---
-title: "Deep learning models in TensorFlow"
-excerpt: " <br/><img src=>"
+title: "Deep Learning Models in TensorFlow"
+excerpt: 
 collection: portfolio
 ---
    
-This project is similar to the "machine learning basics" project. It contains jupyter notebooks implementing several deep learning models using TensorFlow. Each notebook contains detailed explanations about each model, hopefully making it easy to understand all steps.
+This project is similar to the "Machine Learning Basics" project. It contains jupyter notebooks implementing several deep learning models using TensorFlow. Each notebook contains detailed explanations about each model, hopefully making it easy to understand all steps.
    
 The notebooks run in Python 3.6, Tensorflow 1.8
    

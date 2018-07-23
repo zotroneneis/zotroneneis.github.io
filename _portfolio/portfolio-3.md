@@ -1,5 +1,5 @@
 ---
-title: "Recurrent neural network for generating novel monophonic melodies."
+title: "Recurrent Neural Network for Generating Novel Monophonic Melodies."
 excerpt: " <br/><img src='/images/monophonic_melody.png'>"
 collection: portfolio
 ---
