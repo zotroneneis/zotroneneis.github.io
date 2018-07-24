@@ -13,5 +13,5 @@ Motivated by the potential benefits of a system that accelerates the process of 
 
 [Download entire thesis here](http://zotroneneis.github.io/files/thesis_APopkes.pdf)
 
-
+![](../images/sepsis.png)
 

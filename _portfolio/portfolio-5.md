@@ -4,6 +4,8 @@ excerpt: "Python solutions to Project Euler problems"
 <!-- excerpt: "Python solutions to Project Euler Problems <br/><img src='/images/project_euler.png'>" -->
 collection: portfolio
 ---
+
+![](../images/project_euler.png)
    
 I have started solving some of the Project Euler problems in Python.
    

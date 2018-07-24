@@ -13,3 +13,4 @@ All code is written in Python and uses TensorFlow.
    
 The full project description and code can be found on [my GitHub page](https://github.com/zotroneneis/deep_music).
 
+![](../images/monophonic_melody.png)
