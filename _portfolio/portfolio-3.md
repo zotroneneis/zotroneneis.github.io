@@ -1,6 +1,7 @@
 ---
-title: "Recurrent Neural Network for Generating Novel Monophonic Melodies."
-excerpt: " <br/><img src='/images/monophonic_melody.png'>"
+title: "Recurrent Neural Network for Music Generation"
+excerpt: "RNN and VAE for generating novel monophonic melodies" 
+<!-- excerpt: " <br/><img src='/images/monophonic_melody.png'>" -->
 collection: portfolio
 ---
 
