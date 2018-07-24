@@ -1,7 +1,6 @@
 ---
 title: "Long Short-Term Memory Recurrent Neural Network"
 excerpt: "LSTM-RNN for processing radiological reports"
-<!-- excerpt: "LSTM-RNN for processing radiological reports<br/><img src='/images/sepsis.png'>" -->
 collection: portfolio
 ---
 

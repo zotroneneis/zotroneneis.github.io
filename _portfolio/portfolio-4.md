@@ -1,6 +1,6 @@
 ---
 title: "Deep Learning Models in TensorFlow"
-excerpt: Collection of deep learning models 
+excerpt: "Collection of deep learning models"
 collection: portfolio
 ---
    

@@ -1,7 +1,6 @@
 ---
 title: "Machine Learning Basics"
 excerpt: "Plain Python implementations of basic machine learning algorithms"
-<!-- excerpt: "Plain Python implementations of basic machine learning algorithms <br/><img src='/images/decision_tree_predictions.png'>" -->
 collection: portfolio
 ---
 
