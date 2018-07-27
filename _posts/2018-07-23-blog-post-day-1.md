@@ -122,6 +122,47 @@ In this new class we use the method ```super``` to call the ```init``` method of
 Furthermore, we added an attribute "owl". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any OWL (Ordinary Wizarding Level) yet. But this might change!
 
 
+## Instance and class attributes
+
+A Python object can have two types of attributes:     
+a) Instance attributes    
+b) Class attributes    
+
+All the attributes in the examples above are *instance attributes*:    
+- Instance attributes are tied to a particular object instance
+- The contents of an instance variable (e.g. the actual name of a HogwartsMember) are stored on the instance itself, not on the class. For example, the content of the *name* attribute of the instance *hagrid* is *Rubeus Hagrid*. Other instances of the HogwartsMember class will have different names.   
+- So the contents of an instance variable are independent from one object to the next!   
+- When you modify the contents of an instance variable it will only affect the particular object instance, not any of the other objects
+
+A *class attribute* is created inside the class definition. Let's add a class attribute to the HogwartsMember class
+
+```
+class HogwartsMember:
+    """
+    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    """
+    
+    # class attribute
+    location = 'England'
+
+    def __init__(self, name, birthyear, sex):
+        ...
+
+```
+
+Class attributes:   
+- Are not tied to any particular instance of the class   
+- Instead, all instance of the class share access to the same set of class variables   
+- When you modify a class variable, all instances of the class will be affected at the same time. 
+
+We can access and modify class attributes both with and without an instance of the class:
+
+```
+hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')
+print(hagrid.location)
+print(HogwartsMember.location)
+```
+
 ## Further reading:   
 The [Python documentation](https://docs.python.org/3/tutorial/classes.html) contains an entire chapter on classes.
 
@@ -131,15 +172,12 @@ The [Python documentation](https://docs.python.org/3/tutorial/classes.html) cont
 
 
 
-
+<!---
 ## Old text
 I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little 'Harry Potter universe' with classes and methods related to the Harry Potter world (I LOVE Harry Potter). Today my code includes the following concepts:   
-   
 - Object orientation / two classes: HogwartsMember, Pupil
 - I used inheritance for the pupil class. This means that the Pupil class *inherits* all attributes and methods from its parent class
 - I used the @property decorator (see [day 2](http://alpopkes.com/posts/2018/07/blog-post-3/) for details on @property)
 - I created a static method (see [day 4](http://alpopkes.com/posts/2018/07/blog-post-5/) for details on static methods)
 - I used **function annotations**. Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). For the syntax of function annotations see [day 3](http://alpopkes.com/posts/2018/07/blog-post-4/). 
-
-
-
+-->
