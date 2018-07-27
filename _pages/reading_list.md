@@ -17,7 +17,11 @@ author_profile: true
 **How to Win Friends & Influence People** by Dale Carnegie   
 [Click here for link to book](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034) 
 
-
+   
+   
+   
+   
+   
 ---
 ## Books I have read
 
