@@ -6,7 +6,6 @@ tags:
   - python
   - coding
   - object_orientation
-  - decorators
 ---
 
 ## Topics: object oriented programming, classes, inheritance
@@ -43,7 +42,7 @@ To create an actual object, i.e. an *instance* of the class we need to *instanti
 hogwarts_member = HogwartsMember()
 ```
 
-## Creating class attributes and methods
+## Adding attributes and methods
 
 So far our "HogwartsMember" class is boring. We need to add some attributes and methods to make it more interesting.
 
