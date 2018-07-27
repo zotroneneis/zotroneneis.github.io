@@ -1,10 +1,11 @@
 ---
 title: 'Day 3 - function annotations and syntax, to-string conversion (__str__, __repr__) , @property.deleter'
 date: 2018-07-25
-permalink: /posts/2018/07/blog-post-4/
+permalink: /posts/2018/07/coding-challenge-day-3/
 tags:
   - python
   - coding
+  - object_orientation
   - function_annotations
   - to_string_conversion
   - properties

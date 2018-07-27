@@ -1,7 +1,7 @@
 ---
 title: 'Day 1 - creating the Harry Potter universe'
 date: 2018-07-23
-permalink: /posts/2018/07/blog-post-2/
+permalink: /posts/2018/07/coding-challenge-day-1/
 tags:
   - python
   - coding
@@ -15,7 +15,7 @@ I want to start with using some of the stuff I learned from the "Python Tricks" 
 - I used inheritance for the pupil class. This means that the Pupil class *inherits* all attributes and methods from its parent class
 - I used the @property decorator (see [day 2](http://alpopkes.com/posts/2018/07/blog-post-3/) for details on @property)
 - I created a static method (see [day 4](http://alpopkes.com/posts/2018/07/blog-post-5/) for details on static methods)
-- I used **function annotations**. Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). 
+- I used **function annotations**. Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). For the syntax of function annotations see [day 3](http://alpopkes.com/posts/2018/07/blog-post-4/). 
 
 
 

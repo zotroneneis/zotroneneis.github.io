@@ -1,7 +1,7 @@
 ---
 title: 'Day 2 - @property and property(), dict.get()'
 date: 2018-07-24
-permalink: /posts/2018/07/blog-post-3/
+permalink: /posts/2018/07/coding-challenge-day-2/
 tags:
   - python
   - coding
