@@ -1,10 +1,11 @@
 ---
 title: 'Day 4 - Class methods, instance methods and static methods'
 date: 2018-07-26
-permalink: /posts/2018/07/blog-post-5/
+permalink: /posts/2018/07/coding-challenge-day-4/
 tags:
   - python
   - coding
+  - object_orientation
   - class_methods
   - instance_methods
   - static_methods
