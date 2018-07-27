@@ -136,7 +136,7 @@ All the attributes in the examples above are *instance attributes*:
 
 A *class attribute* is created inside the class definition. Let's add a class attribute to the HogwartsMember class
 
-```
+```python
 class HogwartsMember:
     """
     Creates a member of the Hogwarts School of Witchcraft and Wizardry
@@ -166,8 +166,9 @@ print(HogwartsMember.location)
 ## Further reading:   
 The [Python documentation](https://docs.python.org/3/tutorial/classes.html) contains an entire chapter on classes.
 
-
-
+## All code for today
+```python
+```
 
 
 
