@@ -20,10 +20,8 @@ A class can have three types of methods: instance methods, class methods and sta
 
 Our base class already has an instance method:
 ```python
-...
-    def says(self, words):
-        return f"{self._name} says {words}"
-...
+def says(self, words):
+    return f"{self._name} says {words}"
 ```
    
 **Class methods** take at least the parameter *cls* as an input. *cls* points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class. 
