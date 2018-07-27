@@ -117,9 +117,9 @@ harry = Pupil(name='Harry James Potter',
               pet=('Hedwig', 'owl'))
 ```
 
-In this new class we use the method ```super``` to call the ```init``` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the ```Pupil``` class. A pupil has a few more attributes than a simple Hogwarts member. For example, a pupil belongs to one of the Hogwarts houses and she/he started school in a specific year. Also, a pupil might own a pet.    
+In this new class we use the method ```super``` to call the ```init``` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the ```Pupil``` class. A pupil has more attributes than a simple Hogwarts member. For example, a pupil belongs to one of the Hogwarts houses and she/he started school in a specific year. Also, a pupil might own a pet.    
    
-Furthermore, we add an attribute "_owl". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any OWL yet. But this might change!
+Furthermore, we added an attribute "owl". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any OWL (Ordinary Wizarding Level) yet. But this might change!
 
 
 ## Further reading:   
