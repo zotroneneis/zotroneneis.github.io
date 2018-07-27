@@ -1,13 +1,13 @@
 ---
 layout: archive
-title: "Personal reading list"
+title: "Personal reading list of non-fiction books"
 permalink: /reading_list/
 author_profile: true
 ---
 
 {% include base_path %}
 
-## (Non-fiction) books I am currently reading
+## Books I am currently reading
 
 ![](../images/bostrom.png)   
 **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom   
@@ -19,7 +19,7 @@ author_profile: true
 
 
 ---
-## (Non-fiction) books I have read
+## Books I have read
 
 ![](../images/waking_up.png)   
 **Waking Up** by Sam Harris
@@ -44,7 +44,7 @@ author_profile: true
 
 ---
 
-## (Non-fiction) books I want to read
+## Books I want to read (an will!)
 
 ![](../images/why_we_sleep.png)   
    
@@ -59,3 +59,10 @@ author_profile: true
 [Click here for link to book](https://www.amazon.com/Gift-Fear-Survival-Signals-Violence/dp/0316235024/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=)
    
 [Great podcast episode about the book]()
+   
+   
+![](../images/peterson.png)   
+**12 Rules for Life: An Antidote to Chaos** by Jordan B. Peterson   
+[Click here for link to book](https://www.amazon.com/12-Rules-Life-Antidote-Chaos/dp/0345816021/ref=sr_1_3?ie=UTF8&qid=1532660160&sr=8-3&keywords=jordan+peterson)   
+
+
