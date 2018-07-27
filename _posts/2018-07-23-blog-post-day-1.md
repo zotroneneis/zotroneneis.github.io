@@ -26,14 +26,14 @@ That's what I like about OOP: it reflects the structure of our world quite close
 
 ## Classes in Python
 
-A class acts as a *blueprint* for an object. It describes how class objects are structured, what attributes they have and what methods / functionality. The syntax for creating an empty class is quite simple:
+A class acts as a *blueprint* for an object. It describes how objects (i.e. members) of a class are structured, what attributes an object of the class has and what methods / functionality. The syntax for creating an empty class is quite simple:
 
 ```
 class HogwartsMember:
     pass
 ```
 
-Side note: ```pass``` is a Python keyword that can be used as a placeholder. It usually denotes places where we will evenutally write code. It allows us to run the snippet above without getting an error
+Side note: ```pass``` is a Python keyword that can be used as a placeholder. It usually denotes places where we will eventually put code. It allows us to run the code above without getting an error
 
 ## Creating class objects
 
@@ -57,6 +57,9 @@ class HogwartsMember:
         self._name = name
         self.birthyear = birthyear
         self.sex = sex
+        
+    def says(self, words):
+        return f"{self._name} says {words}"
 
 hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')
 ```
