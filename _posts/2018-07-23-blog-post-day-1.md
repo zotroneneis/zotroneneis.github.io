@@ -16,10 +16,10 @@ So let's start with the most important basics.
 
 ## What is Object Oriented Programming ?
 
-Object-oriented programming (OOP) is a specific programming paradigm. In OOP computer programs are designed by creating *objects* that interact with each other. Each object can contain:   
-a) attributes
-b) behavior in the form of methods   
-
+Object-oriented programming (OOP) is a specific programming paradigm. In OOP computer programs are designed by creating *objects* that interact with each other. Each object can contain:    
+a) attributes    
+b) behavior in the form of methods      
+     
 Most OOP programming languages, including Python, are *class-based*. This means that objects are instances of *classes*. This might sound quite abstract. But when you think about it, this is exactly how our world looks like. We have lots of classes and instances of these classes. For example, we have the class "Person" and lots of individual persons (like you and me) that are *instances* of the "Person" class. An attribute of the "Person" class might be "name" or "birthdate". A method might be "current_age" that computes the current age of the person.   
 That's what I like about OOP: it reflects the structure of our world quite closely. This makes it easier to understand the concept.
 
