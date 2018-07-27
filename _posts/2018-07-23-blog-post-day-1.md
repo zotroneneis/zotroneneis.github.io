@@ -8,7 +8,7 @@ tags:
   - object_orientation
 ---
 
-## Topics: object oriented programming, classes, inheritance
+**Topics:** object oriented programming, classes, inheritance
 
 I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little 'Harry Potter universe' with classes and methods related to the Harry Potter world (I LOVE Harry Potter). 
 
