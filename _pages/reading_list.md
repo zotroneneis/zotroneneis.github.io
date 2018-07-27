@@ -14,7 +14,7 @@ author_profile: true
 [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
 
 ![](../images/carnegie.png)   
-**How to Win Friends & Influence People** by Dale Carnegie
+**How to Win Friends & Influence People** by Dale Carnegie   
 [Click here for link to book](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034) 
 
 
