@@ -14,3 +14,4 @@ On July 23rd 2018 I started working on a new habit (for details see [my blog pos
 - Function annotations
 - etc.
 
+I created a separate blog post for each day, describing and explaining the concepts that I studied and/or used on the respective day. The blog posts can be found [here](http://alpopkes.com/year-archive/).

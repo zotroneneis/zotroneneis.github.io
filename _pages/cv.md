@@ -12,8 +12,7 @@ redirect_from:
 [Download PDF version of my CV](http://zotroneneis.github.io/files/CV_APopkes.pdf) 
 
 
-Education
-======
+## Education
 
 * Master of Science in Computer Science, University of Bonn, Bonn, Germany
     * 2015 - 2018
@@ -27,8 +26,7 @@ Education
 
 ---
    
-Work experience
-======
+## Work experience
 
 * 05/2018 - present: Deep Learning Internship
     * Robert Bosch, Palo Alto, CA, USA
@@ -47,8 +45,7 @@ Work experience
 
 ---
    
-Scholarships and Awards
-=====
+## Scholarships and Awards
 * 01/2016-present: [Studienstiftung des deutschen Volkes](https://www.studienstiftung.de/)
     * German National Academic Foundation
     * Scholarship for studies
@@ -62,8 +59,7 @@ Scholarships and Awards
 
 ---
    
-Skills
-======
+## Skills
 * Programming Languages and Frameworks
     * Python
     * TensorFlow
@@ -76,16 +72,14 @@ Skills
 
 ---
    
-Voluntary Work
-======
+## Voluntary Work
 * 2014 - 2015: [Balu und Du](https://www.balu-und-du.de/home/)
     * Prevention project for deprived children
     * Involves a sponsorship for a child between 7 to 10 years for at least a year. During this year, there are weekly meetings of at least three hours with the child, an accompanying weekly seminar at the university as well as detailed online-diary entries for every meeting.
 
 ---
    
-Publications
-======
+## Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
@@ -93,8 +87,7 @@ Publications
 
 ---
    
-Teaching
-======
+## Teaching
 
 * 08/2016 Lecturer for neural networks block course
     * University of Osnabrück, Osnabrück, Germany

@@ -58,7 +58,7 @@ author_profile: true
 **The Gift of Fear - Survival Signals That Protect Us from Violence** by Gavin de Becker   
 [Click here for link to book](https://www.amazon.com/Gift-Fear-Survival-Signals-Violence/dp/0316235024/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=)
    
-[Great podcast episode about the book]()
+[Great podcast episode about the book](https://samharris.org/podcasts/living-with-violence/)
    
    
 ![](../images/peterson.png)   
