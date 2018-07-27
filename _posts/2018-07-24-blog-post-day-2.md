@@ -16,7 +16,15 @@ tags:
 ### Types of methods
 A class can have three types of methods: instance methods, class methods and static methods.
    
-**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through ```self.__class_```_)
+**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through ```self.__class_```_).
+
+Our base class already has an instance method:
+```python
+...
+    def says(self, words):
+        return f"{self._name} says {words}"
+...
+```
    
 **Class methods** take at least the parameter *cls* as an input. *cls* points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class. 
    
