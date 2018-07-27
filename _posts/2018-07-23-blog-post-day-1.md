@@ -62,6 +62,8 @@ class HogwartsMember:
         return f"{self._name} says {words}"
 
 hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')
+print(hagrid.says("Hello!"))
+
 ```
 
 This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')``` the ```__init__``` method of the ```HogwartsMember``` class is called with the arguments ```'Rubeus Hagrid', '1928', 'male'``` which represent the name, birthyear and sex of the Hogwarts member. The ```__init__``` method returns an instance of the class which is then assigned to
