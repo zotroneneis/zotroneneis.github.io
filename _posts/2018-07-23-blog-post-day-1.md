@@ -69,11 +69,15 @@ print(hagrid.says("Hello!"))
 This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')``` the ```__init__``` method of the ```HogwartsMember``` class is called with the arguments ```'Rubeus Hagrid', '1928', 'male'``` which represent the name, birthyear and sex of the Hogwarts member. The ```__init__``` method returns an instance of the class which is then assigned to
 a variable called "hagrid".
    
-Note: The first argument of the ```__init__``` method is called 'self'. This argument will be the first argument in most methods. It points towards an instance of the class whenever the method is called. For more details on this, see the [blog post of day 4]() or the [Python docs](https://docs.python.org/3/tutorial/classes.html).
+Note: The first argument of the ```__init__``` method is called 'self'. This argument will be the first argument in most methods. It points towards an instance of the class whenever the method is called. For more details on this, see the [blog post of day 4]() or the [Python docs](https://docs.python.org/3/tutorial/classes.html).   
+   
+We also added a method called ```says``` that adds behavior to our class. In this case, it allows our Hogwarts member to say something.
 
 ## Inheritance
 
-The HogwartsMember class is nice, but of course we want many other classes in our Harry Potter universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Hogwarts, right? This is what *inheritance* is used for. Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new
+The HogwartsMember class is nice, but of course we want many other classes in our Harry Potter universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Hogwarts, right? This is what *inheritance* is used for.   
+   
+Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new
 functionality. Let's use the concept of inheritance to create a ```Pupil``` class!
 
 ```
