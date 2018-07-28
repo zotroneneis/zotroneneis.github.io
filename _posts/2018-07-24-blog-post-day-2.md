@@ -16,9 +16,7 @@ tags:
 ### Types of methods
 A class can have three types of methods: instance methods, class methods and static methods.
    
-**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state*
-
-<!-- (the latter can be modified through ```self.__class__```). -->
+**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through ```self.__class__```).
 
 Our base class already has an instance method:
 
@@ -48,8 +46,7 @@ class HogwartsMember:
 
 We can also add a static method to our ```Pupil``` class. It will tell us whether a certain grade in an exam passes or fails the exam.
 
-```
-
+```python
 class Pupil(HogwartsMember):
     """
     Create a Hogwarts Pupil
