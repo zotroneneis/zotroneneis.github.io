@@ -1,5 +1,5 @@
 ---
-title: 'Day 2 - types of class methods'
+title: 'Day 2 - Types of class methods'
 date: 2018-07-24
 permalink: /posts/2018/07/coding-challenge-day-2/
 tags:
