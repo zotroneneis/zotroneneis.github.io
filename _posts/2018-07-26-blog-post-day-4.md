@@ -11,3 +11,5 @@ tags:
 
 **Topics:** to-string conversion, ```__repr__, __str__ ```
 
+Today we are going to look at the two methods that control how an object is converted into a string object.
+
