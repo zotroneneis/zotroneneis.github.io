@@ -15,7 +15,7 @@ tags:
 Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). 
    
    
-Let's add annotations to our ```___init___`` constructors:
+Let's add annotations to our ```___init___``` constructors:
 
 ```python
 class HogwartsMember:
