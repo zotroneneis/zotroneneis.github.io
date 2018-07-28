@@ -13,7 +13,7 @@ tags:
 
 **Topics:** class methods, instance methods, static methods, using class methods as alternative constructors
 
-### Types of methods
+## Types of methods
 A class can have three types of methods: instance methods, class methods and static methods.
    
 **Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through ```self.__class__```).
@@ -79,9 +79,9 @@ class Pupil(HogwartsMember):
    
 **Class methods** take at least the parameter *cls* as an input. *cls* points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class.    
    
-Class and static methods allow a developer to communicate what intention she/he had in mind when implementing the method. For example, using a static method expresses that the method is independent from everything else around it. Also, class methods can be used as **alternative constructors **.   
+Class and static methods allow a developer to communicate what intention she/he had in mind when implementing the method. For example, using a static method expresses that the method is independent from everything else around it. Also, class methods can be used as **alternative constructors**.   
    
-### Class methods as alternative constructors   
+## Class methods as alternative constructors   
    
 - In Python a class can only have one constructor (the ```self.__init__()``` method)
 - However, we can use ```@classmethod``` to create factory functions
@@ -94,6 +94,129 @@ For example, we probably want to create the main characters of the Harry Potter 
 @classmethod
 def harry(cls):
     return cls('Harry James Potter', 1980, 'male', 'Griffindor', start_year=1991, pet=('Hedwig', 'owl'))
+```
+
+## All code for today
+```python
+class HogwartsMember:
+    """
+    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    """
+
+    def __init__(self, name, birthyear, sex):
+        self._name = name
+        self.birthyear = birthyear
+        self.sex = sex
+        
+    def says(self, words):
+        return f"{self._name} says {words}"
+
+    @staticmethod
+    def school_headmaster():
+        return HogwartsMember('Albus Percival Wulfric Brian Dumbledore', 1881)
+
+
+class Pupil(HogwartsMember):
+    """
+    Create a Hogwarts Pupil
+    """
+
+    def __init__(self, name, birthyear, sex, house, start_year, pet=None):
+        super(Pupil, self).__init__(name, birthyear, sex)
+        self.house = house
+        self.start_year = start_year
+
+        if pet is not None:
+            self.pet_name, self.pet_type = pet
+
+        self._owls = {
+                'Study of Ancient Runes': False,
+                'Arithmancy': False,
+                'Astronomy': False,
+                'Care of Magical Creatures': False,
+                'Charms': False,
+                'Defence Against the Dark Arts': False,
+                'Divination': False,
+                'Herbology': False,
+                'History of Magic': False,
+                'Muggle Studies': False,
+                'Potions': False,
+                'Transfiguration': False}
+
+    @classmethod
+    def harry(cls):
+        return cls('Harry James Potter', 1980, 'male', 'Griffindor', start_year=1991, pet=('Hedwig', 'owl'))
+
+    @classmethod
+    def ron(cls):
+        return cls('Ronald Bilius Weasley', 1980, 'male', 'Griffindor', 1991, pet=('Pigwidgeon', 'owl'))
+
+    @classmethod
+    def hermione(cls):
+        return cls('Hermione', 1979, 'female', 'Griffindor', 1991, pet=('Crookshanks', 'cat'))
+
+
+
+class Professor(HogwartsMember):
+  """
+  Creates a Hogwarts professor
+  """
+
+  def __init__(self, name, birthyear, sex, subject, house=None):
+      super(Professor, self).__init__(name, birthyear, sex)
+      self.subject = subject
+      if house is not None:
+          self.house = house
+
+    @classmethod
+    def mcgonagall(cls):
+        return cls('Minerva McGonagall', 1935, 'female', 'Transfiguration', house='Griffindor')
+
+    @classmethod
+    def snape(cls):
+        return cls('Severus Snape', 1960, 'male', 'Potions', house='Slytherin')
+
+    
+class Ghost(HogwartsMember):
+    """
+    Creates a Hogwarts ghost
+    """
+
+    def __init__(self, name, birthyear, sex, year_of_death, house=None):
+        super(Ghost, self).__init__(name, birthyear, sex)
+        self.year_of_death = year_of_death
+
+        if house is not None:
+            self.house = house
+
+
+if __name__ == "__main__":
+
+    hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928)
+    print(hagrid)
+
+    harry = Pupil(name='Harry James Potter', birthyear=1980, house='Griffindor', start_year=1991)
+    print(harry)
+
+    headmaster = harry.school_headmaster()
+    print("headmaster: ", headmaster)
+
+    mcgonagall = Professor.mcgonagall()
+    print('mcgonagall: ', mcgonagall)
+
+    snape = Professor.snape()
+    print('snape: ', snape)
+
+    harry = Pupil.harry()
+    print('harry: ', harry)
+
+    ron = Pupil.ron()
+    print('ron: ', ron)
+
+    hermione = Pupil.hermione()
+    print('hermione: ', hermione)
+
+
 ```
 
 
