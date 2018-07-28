@@ -1,5 +1,5 @@
 ---
-title: 'Day 1 - creating the Harry Potter universe'
+title: 'Day 1 - Creating the Harry Potter universe'
 date: 2018-07-23
 permalink: /posts/2018/07/coding-challenge-day-1/
 tags:
