@@ -1,7 +1,7 @@
 ---
 title: 'Day 6 - Properties, setter and getter methods'
 date: 2018-07-28
-permalink: /pos6s/2018/07/coding-challenge-day-5/
+permalink: /pos6s/2018/07/coding-challenge-day-6/
 tags:
   - python
   - coding
@@ -11,7 +11,7 @@ tags:
 ---
 
 **Topics:** properties, ```@property``` and ```property()```, setters, getters
-   
+
 Today, I digged a little deeper into the ```@property``` decorator, how it is related to the ```property()``` function and how its getter and setter methods work. These two links ([link1](https://www.programiz.com/python-programming/property), [link2](https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work)) were really helpful. Of course, there is also the [official Python docs](https://docs.python.org/3.7/howto/descriptor.html) on the ```property()``` function.
 
 In the Python Tricks book I already learned about the functioning of decorators. I also knew that ```@property``` is a way of creating a read-only property. However, I was curious about its relation to ```property()``` and the setter and getter methods. The most important things I learned:
