@@ -11,5 +11,82 @@ tags:
 
 **Topics:** to-string conversion, ```__repr__, __str__ ```
 
-Today we are going to look at the two methods that control how an object is converted into a string object.
+Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won't get a useful representation. For example, when doing:
 
+```python
+hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928, sex='male')
+print(hagrid)
+```
+
+We get this output: ```<__main__.HogwartsMember object at 0x7f81853bfc50>```. It contains the name of the class an the ID of the object (its memory address). But this is not useful for us.   
+   
+But we can control how objects of our classes are converted into string objects. Specifically, the to-string conversion is controlled by two methods: ```__repr__``` and ```__str__ ```. The two methods serve different purposes:   
+
+The result of the ```__repr__``` method should be as *unambigous* as possible. It should function as a debugging aid for developers. Therefore, it should be explicit about what the object is.   
+   
+The result of the ```__str__``` method should be *readable*.   
+   
+By defining these special Python methods we can control how our objects will be represented when converting them into strings. Whenever you create your own class you should at least implement the ```__repr__``` method. Why ```__repr__```? Because this will already ensure a useful conversion of objects to strings. When Python looks for the ```__str__``` method but it hasn't been implemented, it will fall back to using ```__repr__```. So as long as ```__repr__``` is defined we will get a useful representation of our object.   
+   
+Let's add a ```__repr__``` method to our HogwartsMember class!
+
+```python
+class hogwartsmember:
+    """
+    creates a member of the hogwarts school of witchcraft and wizardry
+    """
+
+    def __init__(self, name:str, birthyear:int, sex:str):
+        ...
+
+    def __repr__(self):
+        return f"{self.__class__.__name__}({self._name}, birthyear: {self.birthyear})"
+
+```
+
+Now, the output of 
+```python
+print(hagrid)
+```
+
+will look as follows: ```HogwartsMember(Rubeus Hagrid, birthyear: 1928)```. This is much better!   
+   
+Since our other classes inherit all methods from the parent class, we don't have to implement the ```__repr__``` method again for the other classes. But we want the output of ```__repr__``` to be as unambigous as possible. So we will add a separate ```__repr__``` method to the other classes to make sure that we use all information we have about the objects.
+
+```python
+class Professor(HogwartsMember):
+    """
+    Creates a Hogwarts professor
+    """
+
+    ...
+
+    def __repr__(self):
+        return (f"{self.__class__.__name__}({self._name}, "
+                f"birthyear: {self.birthyear}, subject: {self.subject})")
+
+
+class Ghost(HogwartsMember):
+    """
+    Creates a Hogwarts ghost
+    """
+
+    ...
+
+    def __repr__(self):
+        return (f"{self.__class__.__name__}({self._name}, "
+                f"birthyear: {self.birthyear}, year of death: {self.year_of_death})")
+
+
+class Pupil(HogwartsMember):
+    """
+    Create a Hogwarts Pupil
+    """
+
+    ...
+
+    def __repr__(self):
+        return (f"{self.__class__.__name__}"
+                f"({self._name}, birthyear: {self.birthyear}, house: {self.house})")
+
+```
