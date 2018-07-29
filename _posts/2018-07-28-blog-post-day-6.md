@@ -1,7 +1,7 @@
 ---
 title: 'Day 6 - Properties, setter and getter methods'
 date: 2018-07-28
-permalink: /pos6s/2018/07/coding-challenge-day-6/
+permalink: /posts/2018/07/coding-challenge-day-6/
 tags:
   - python
   - coding
