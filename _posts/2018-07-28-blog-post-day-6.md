@@ -18,14 +18,14 @@ In the Python Tricks book I already learned about the functioning of decorators.
 
 Creating a read-only property with ```@property``` is just a different way of using the ```property()``` function. So when considering our Harry Potter classes, using
 
-```
+```python
 @property
 def name(self):
     return self._name
 ```
 
 Is equivalent to
-```
+```python
 def name(self):
     return self._name
 
@@ -35,7 +35,7 @@ name = property(name)
 The full signature of the ```property()``` function is ```property(fget=None, fset=None, fdel=None, doc=None) -> property attribute```. ```fget``` is a function for getting the value of the attribute, ```fset``` is a function for setting the value of the attribute and ```fdel``` is a function for deleting the attribute. All these arguments are *optional*. So we can create a property object like we did above. But we can add extra "power" to it by specifying a setter, getter and/or deleter
 method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the OWL's (Ordinary Wizarding Level's) to our Pupil class:
 
-```
+```python
 class Pupil(HogwartsMember):
 
     def __init__(self, name:str, birthyear:int, house:str, start_year:int):
@@ -49,7 +49,7 @@ class Pupil(HogwartsMember):
 
 Now, if we want to update the OWL's of a student passed, we have to make sure that she/he actually passed the exam. Otherwise, the OWL can't be awarded. Let's implement that using a setter method.
 
-```
+```python
     @owls.setter
     def owls(self, subject_and_grade):
 
@@ -64,21 +64,14 @@ Now, if we want to update the OWL's of a student passed, we have to make sure th
             raise ValueError('The exam was not passed so no OWL was awarded!')
 
         self._owls[subject] = True
-
-    @staticmethod
-    def passed(grade):
-        grades = {'O': True, 'P': True, 'A':True, 'P': False, 'D': False, 'T': False}
-        return grades[grade]
 ```
 
-In the next days and weeks I want to keep working on these concepts. My current TO DO list looks as follows:
-- Add ```__str__``` and ```_repr__``` methods
-- Add class methods
-- Add getter and deleter methods for properties
-- Incorporate Python's abc module
-- Create Exception hierarchy and own exception classes
+Of course we can also delete the OWL's of a student. But we should probably make sure that the user know what he is doing when stealing a student all of her/his exams!
 
-Let's wrap up what I worked on today:
-- Digged deeper into ```@property``` and ```property()```
-- Added ```dict.get()``` method which returns default value if key does not exist
-- Used another static method
+```python
+    @owls.deleter
+    def owls(self):
+        print("Caution, you are deleting this students' OWL's! "
+              "You should only do that if she/he dropped out of school without passing any exam!")
+        del self._owls
+```
