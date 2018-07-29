@@ -20,7 +20,7 @@ print(hagrid)
 
 We get this output: ```<__main__.HogwartsMember object at 0x7f81853bfc50>```. It contains the name of the class an the ID of the object (its memory address). This is not very useful when we want to know what the object is. But there is a simple solution to our problem!
    
-We can control how objects of our classes are converted into string objects. Specifically, the to-string conversion is controlled by two methods: ```__repr__``` and ```__str__ ```. The two methods serve different purposes:   
+We can control how objects of our classes are converted into string objects. Specifically, the to-string conversion is controlled by two methods: ```__repr__``` and ```__str__ ``` that serve different purposes:   
 
 The result of the ```__repr__``` method should be as *unambigous* as possible. It should function as a debugging aid for developers. Therefore, it should be explicit about what the object is.   
    
