@@ -22,7 +22,7 @@ We get this output: ```<__main__.HogwartsMember object at 0x7f81853bfc50>```. It
    
 We can control how objects of our classes are converted into string objects. Specifically, the to-string conversion is controlled by two methods: ```__repr__``` and ```__str__ ``` that serve different purposes:   
 
-The result of the ```__repr__``` method should be as *unambigous* as possible. It should function as a debugging aid for developers. Therefore, it should be explicit about what the object is.   
+The result of the ```__repr__``` method should be as *unambiguous* as possible. It should function as a debugging aid for developers. Therefore, it should be explicit about what the object is.   
    
 The result of the ```__str__``` method should be *readable*.   
    
@@ -51,7 +51,7 @@ print(hagrid)
 
 will look as follows: ```HogwartsMember(Rubeus Hagrid, birthyear: 1928)```. This is much better!   
    
-Since our other classes inherit all methods from the parent class, we don't have to implement the ```__repr__``` method again for the other classes. But we want the output of ```__repr__``` to be as unambigous as possible. So we will add a separate ```__repr__``` method to the other classes to make sure that we use all information we have about the objects.
+Since our other classes inherit all methods from the parent class we don't have to implement the ```__repr__``` method again for the other classes. But we want the output of ```__repr__``` to be as unambiguous as possible. So we will add separate ```__repr__``` methods to ensure that we use all information we have about the objects.
 
 ```python
 class Professor(HogwartsMember):
