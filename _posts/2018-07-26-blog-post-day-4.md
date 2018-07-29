@@ -26,7 +26,7 @@ The result of the ```__repr__``` method should be as *unambigous* as possible. I
    
 The result of the ```__str__``` method should be *readable*.   
    
-By defining these special Python methods we can control how our objects will be represented when converting them into strings. Whenever you create your own class you should at least implement the ```__repr__``` method. Why ```__repr__```? Because it will ensure a useful conversion of objects to strings. When Python looks for the ```__str__``` method but it hasn't been implemented, it will fall back to using ```__repr__```. So as long as ```__repr__``` is defined we will get a useful representation of our object.   
+By defining these special Python methods we can control how our objects will be represented when converting them into strings. Whenever you create your own class you should at least implement the ```__repr__``` method. Why ```__repr__```? Because it will ensure a useful conversion of objects to strings. When Python looks for the ```__str__``` method but ```__str__``` hasn't been implemented, it will fall back to using ```__repr__```. So as long as ```__repr__``` is defined we will get a helpful representation of our object.   
    
 Let's add a ```__repr__``` method to our HogwartsMember class!
 
