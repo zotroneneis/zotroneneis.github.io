@@ -102,10 +102,10 @@ Now, if we want to update the OWL's of a student passed, we have to make sure th
 
         passed = self.passed(grade)
 
-        if not passed:
-            raise ValueError('The exam was not passed so no OWL was awarded!')
-
-        self._owls[subject] = True
+        if passed:
+            self._owls[subject] = True
+        else:
+            print('The exam was not passed so no OWL was awarded!')
 ```
 
 Of course we can also delete the OWL's of a student. But we should probably make sure that the user knows what he is doing when stealing a student all of her/his exams!
