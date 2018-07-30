@@ -16,7 +16,7 @@ Today, I digged a little deeper into the ```@property``` decorator, how it is re
 
 ## The ```@property``` decorator
 
-Yesterday we looked at decorators. The ```@property``` decorator allows us to create a \textit{read-only} property. Let's add a simple property to our HogwartsMember class.
+Yesterday we looked at decorators. The ```@property``` decorator allows us to create a *read-only* property. Let's add a simple property to our HogwartsMember class.
 
 ```python
 class HogwartsMember:
