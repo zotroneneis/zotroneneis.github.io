@@ -1,5 +1,5 @@
 ---
-title: 'Day 7 - Underscore patterns for variable naming
+title: 'Day 7 - Underscore patterns for variable naming'
 date: 2018-07-29
 permalink: /posts/2018/07/coding-challenge-day-7/
 tags:
