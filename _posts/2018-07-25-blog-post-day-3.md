@@ -56,7 +56,7 @@ class Pupil(HogwartsMember):
 
    
 ## How to use function annotations for arguments that have a default value
-Some classes have attributes with default values. For example, the "pet" attribute of the Pupil class has a default value (as some pupils have a pet and others don't). Also the "house" attribute of the "Professor and "Ghost" class have a default value. So how to we correctly use function annotations for such arguments? I found a clear explanation in [this post](https://stackoverflow.com/questions/38727520/adding-default-parameter-value-with-type-hint-in-python).
+Some classes have attributes with default values. For example, the "pet" attribute of the Pupil class has a default value (as some pupils have a pet and others don't). Also the "house" attribute of the "Professor and "Ghost" class have a default value. So how do we correctly use function annotations for such arguments? I found a clear explanation in [this post](https://stackoverflow.com/questions/38727520/adding-default-parameter-value-with-type-hint-in-python).
 
 In short, the syntax is as follows:
 ```
