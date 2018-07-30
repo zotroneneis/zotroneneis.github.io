@@ -98,7 +98,7 @@ Now, if we want to update the OWL's of a student passed, we have to make sure th
         try:
             subject, grade = subject_and_grade
         except ValueError:
-            raise ValueError("Pass and interable with two items: subject and grade")
+            raise ValueError("Pass an iterable with two items: subject and grade")
 
         passed = self.passed(grade)
 
