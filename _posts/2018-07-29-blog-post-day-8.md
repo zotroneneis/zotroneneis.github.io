@@ -1,6 +1,6 @@
 ---
 title: 'Day 8 - Extending the Harry Potter universe'
-date: 2018-07-29
+date: 2018-07-30
 permalink: /posts/2018/07/coding-challenge-day-8/
 tags:
   - python
