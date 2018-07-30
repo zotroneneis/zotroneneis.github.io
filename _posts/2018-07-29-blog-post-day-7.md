@@ -6,6 +6,7 @@ tags:
   - python
   - coding
   - object_orientation
+  - underscore_patterns
 ---
 
 **Topics:** underscore patterns for variable naming, ```_variable, __variable, __variable__, _```
