@@ -51,7 +51,6 @@ class Pupil(HogwartsMember):
     """
     Create a Hogwarts Pupil
     """
-
     ...
 
     @staticmethod
@@ -193,28 +192,14 @@ class Ghost(HogwartsMember):
 if __name__ == "__main__":
 
     hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928)
-    print(hagrid)
-
     harry = Pupil(name='Harry James Potter', birthyear=1980, house='Griffindor', start_year=1991)
-    print(harry)
-
     headmaster = harry.school_headmaster()
-    print("headmaster: ", headmaster)
 
     mcgonagall = Professor.mcgonagall()
-    print('mcgonagall: ', mcgonagall)
-
     snape = Professor.snape()
-    print('snape: ', snape)
-
     harry = Pupil.harry()
-    print('harry: ', harry)
-
     ron = Pupil.ron()
-    print('ron: ', ron)
-
     hermione = Pupil.hermione()
-    print('hermione: ', hermione)
 
 
 ```
