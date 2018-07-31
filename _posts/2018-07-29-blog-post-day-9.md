@@ -27,10 +27,10 @@ def owls(self, subject_and_grade):
 
     passed = self.passed(grade)
 
-    if not passed:
-        raise ValueError('The exam was not passed so no OWL was awarded!')
-
-    self._owls[subject] = True
+    if passed:
+        self._owls[subject] = True
+    else:
+        print('The exam was not passed so no OWL was awarded!')
 ```
 
 The ```try ... except ... ``` code block implements the EAFP principle. We assume that the ```subject_and_grade``` tuple exists. If it does, we unpack its values into ```subject, grade```. If ```subject_and_grade``` is not a valid tuple, a ```ValueError``` will be raised. We catch this error in the ```except``` block and handle it appropriately.  
