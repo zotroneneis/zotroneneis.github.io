@@ -17,20 +17,20 @@ tags:
 Today we are going to look at a common coding style in Python called 'Easier to ask for forgiveness than permission' or in short 'EAFP'. The idea of EAFP is that we assume that valid keys (or attributes) exist. If this assumption proves false, we catch and handle the exceptions that are raised. We actually used this principle already. Can you guess where? Take a close look at the ```@owls.setter``` method of the ```Pupil``` class:
 
 ```python
-    @owls.setter
-    def owls(self, subject_and_grade):
+@owls.setter
+def owls(self, subject_and_grade):
 
-        try:
-            subject, grade = subject_and_grade
-        except ValueError:
-            raise ValueError("Pass and interable with two items: subject and grade")
+    try:
+        subject, grade = subject_and_grade
+    except ValueError:
+        raise ValueError("Pass and interable with two items: subject and grade")
 
-        passed = self.passed(grade)
+    passed = self.passed(grade)
 
-        if not passed:
-            raise ValueError('The exam was not passed so no OWL was awarded!')
+    if not passed:
+        raise ValueError('The exam was not passed so no OWL was awarded!')
 
-        self._owls[subject] = True
+    self._owls[subject] = True
 ```
 
 The ```try ... except ... ``` code block implements the EAFP principle. We assume that the ```subject_and_grade``` tuple exists. If it does, we unpack its values into ```subject, grade```. If ```subject_and_grade``` is not a valid tuple, a ```ValueError``` will be raised. We catch this error in the ```except``` block and handle it appropriately.  
