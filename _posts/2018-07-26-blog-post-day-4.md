@@ -31,7 +31,7 @@ By defining these special Python methods we can control how our objects will be 
 Let's add a ```__repr__``` method to our HogwartsMember class!
 
 ```python
-class hogwartsmember:
+class HogwartsMember:
     """
     creates a member of the hogwarts school of witchcraft and wizardry
     """
