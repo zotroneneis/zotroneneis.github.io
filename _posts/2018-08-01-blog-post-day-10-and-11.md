@@ -13,7 +13,7 @@ tags:
 **Topics:** Immutable classes, namedtuples
 
 ## Tuples
-Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simply data structure that can be used for grouping arbitrary objects. Important to know is that tuples are *immutable*. That means that once we create a tuple we can not change it anymore.   
+Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simple data structure that can be used for grouping arbitrary objects. Important to know is that tuples are *immutable*. That means that once a tuple has been created, it can not be changed anymore.   
 
 We already used tuples in our Harry Potter universe. For example, we defined the ```pet``` attribute of the ```Pupil``` class to be a tuple:
 
@@ -28,10 +28,10 @@ The 'pet' tuple has two fields: 'pet_name' and 'pet_type' that can be accessed u
 harrys_pet[0] = 'Pigwidgeon'
 ```
 
-will throw a ```TypeError: 'tuple' object does not support item assignment```.
+throws a ```TypeError: 'tuple' object does not support item assignment```.
 
 ## Namedtuples
-As their name suggests, namedtuples are a variation (or rather extension) of plain tuples. In particular, namedtuples allow us to name the fields of a tuple. This makes it much easier to access the indiviual fields. Also, it makes the code more readable. In the plain tuple example above, we can access the values stored in the tuple only by using integer indices, as ```harrys_pet[0]``` or ```harrys_pet[1]```. When having only two fields this is not too bad. But with more than three fields things become messy. 
+As their name suggests, namedtuples are a variation (or rather extension) of plain tuples. In particular, namedtuples allow us to name the fields of the tuple. This makes it much easier to access the individual fields. Also, it makes our code more readable. In the plain tuple example above, we could access the values stored in the tuple only by using integer indices, as ```harrys_pet[0]``` or ```harrys_pet[1]```. When having only two fields this is not too bad. But with more than three fields things become messy. 
 
 Creating a namedtuple is easy. There are two kinds of namedtuples we can use: ```collections.namedtuple``` or ```typing.NamedTuple```. When using ```collections.namedtuple``` our pet tuple would be defined as follows:
 
@@ -67,7 +67,7 @@ print('harrys_pet: ', harrys_pet)
 You can read more about ```typing.NamedTuple``` in the [Python docs](https://docs.python.org/3/library/typing.html).
 
 ## Death eater class
-We don't want our pupils, professors, ghosts to be immutable. A suitable group of people for an immutable class are the death eaters. So let's create a NamedTuple for them!
+We don't want our pupils, professors and ghosts to be immutable. A suitable group of people for an immutable class are the death eaters. So let's create a NamedTuple for them!
 
 ```python
 from typing import NamedTuple
