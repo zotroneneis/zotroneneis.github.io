@@ -131,5 +131,5 @@ Apart from the benefits of abstract base classes we have already discussed, ABC'
 
 ## Further extensions of the universe
 
-When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DeathEater``` class get a ```cast_spell``` method. Since our Harry Potter universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only Slytherins would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Hermione), you might be able to perform a spell earlier than less gifted students.
+When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DeathEater``` class got a ```cast_spell``` method. Since our Harry Potter universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only Slytherins would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Hermione), you might be able to perform a spell earlier than less gifted students.
 
