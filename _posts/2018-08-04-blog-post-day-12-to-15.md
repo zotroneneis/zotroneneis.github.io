@@ -122,7 +122,7 @@ def defining_feature(self):
     pass
 ```
 
-is equivalent to ```defining_feature = property(abstractmethod(defining_feature))```. But in which place should ```@abstractmethod``` go when we combine it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When abstractmethod() is applied in combination with other method descriptors, it should be applied as the innermost decorator"
+is equivalent to ```defining_feature = property(abstractmethod(defining_feature))```. But in which place should ```@abstractmethod``` go when combining it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When abstractmethod() is applied in combination with other method descriptors, it should be applied as the innermost decorator"
 
 ## Further advantages of Abstract Base Classes
 
