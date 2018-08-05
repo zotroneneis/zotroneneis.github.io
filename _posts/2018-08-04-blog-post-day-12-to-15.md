@@ -10,7 +10,7 @@ tags:
   - ABCs
 ---
 
-**Topics:** Actract Base Classes, ABCs
+**Topics:** Abstract Base Classes, ABC's
 
 The last days I have been working on a lot of new classes and methods. Since they all belong to the same big concept, I decided to create one big post on the whole topic instead of several small ones. So let's get right into it!
 
