@@ -21,7 +21,7 @@ redirect_from:
 
 * Bachelor of Science in Cognitive Science, University of Osnabrück, Osnabrück, Germany
     * 2012 - 2015
-    * Grade 1.1/GPA: 4.00}
+    * Grade 1.1/GPA: 4.00
     * Focus modules: Neuroinformatics, Computer Science, Neuroscience, Cognitive (Neuro-) Psychology, Philosophy of Mind and Cognition
 
 ---
@@ -30,7 +30,7 @@ redirect_from:
 
 * 05/2018 - present: Deep Learning Internship
     * Robert Bosch, Palo Alto, CA, USA
-    * Work of deep learning projects, mostly focused on computer vision applicatons and image recognition tasks
+    * Work of deep learning projects, mostly focused on computer vision applications and image recognition tasks
 
 * 09/2016-05/2018: Research Assistant
     * Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)
