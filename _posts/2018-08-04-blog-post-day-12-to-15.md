@@ -30,6 +30,8 @@ Before jumping to further explanations, let's look at an example.
 In the Harry Potter world, lots of different types of spells exist. In particular, a spell can belong to one of seven classes. This makes the ```Spell``` class a great application for Python's [abc module](https://docs.python.org/3/library/abc.html). To use an Abstract Base Class, we import Python's abc module and flag the method that MUST be implemented by all subclasses with the decorator ```@abstractmethod```. A spell should have a name, an incantation and a certain effect. Also, each spell subclass will have a defining feature.
    
 ```python
+from abc import ABCMeta, abstractmethod
+
 class Spell(metaclass=ABCMeta):
     """Creates a spell"""
     def __init__(self, name:str, incantation:str, effect:str):
