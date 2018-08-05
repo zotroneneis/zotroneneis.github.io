@@ -1,5 +1,5 @@
 ---
-title: 'Day 12, 13, 14, 15 - Abstract Base Classes
+title: 'Day 12, 13, 14, 15 - Abstract Base Classes'
 date: 2018-08-04
 permalink: /posts/2018/08/coding-challenge-day-12-to-15/
 tags:
