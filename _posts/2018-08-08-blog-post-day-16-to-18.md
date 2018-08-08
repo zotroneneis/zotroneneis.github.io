@@ -56,7 +56,7 @@ print(gryffindor)
 
 and get a nice output right away: ```House(name='Gryffindor', founder='Godric Gryffindor', traits=['bravery', 'nerve', 'courage', 'chivalry', 'daring'])```. Remember: up to now we had to manually add a ```__repr__()``` method to our classes!   
    
-Another example: we can automatically compare objects of the ```House``` class. This usually involves implementing a custom ```__eq__()``` method (which can become quite complex). With data classes, ```__eq__()``` is implemented automatically. Let's test this by creating another Hufflepuff.
+Another example: we can automatically compare objects of the ```House``` class. This usually involves implementing a custom ```__eq__()``` method (which can become quite complex). With data classes, ```__eq__()``` is implemented automatically. Let's test this by creating Hufflepuff.
 
 ```python
 hufflepuff = House('Hufflepuff',
