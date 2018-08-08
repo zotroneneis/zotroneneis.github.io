@@ -153,7 +153,7 @@ class House:
         return (now - self.founded_in) + 1
 ```
 
-The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for Gryffindor we will create Professor McGonagall and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotroneneis/harry_potter_universe/blob/master/code_per_day/day_16_to_18.py) for all details.
+The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for Gryffindor we will create Professor McGonagall and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotroneneis/harry_potter_universe/blob/master/code_per_day/day_16_to_18.py) for details.
 
 
 
