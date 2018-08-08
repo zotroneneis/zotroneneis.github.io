@@ -97,6 +97,6 @@ print('bellatrix: ', bellatrix)
 
 ## Data classes
 
-Note: When using Python 3.7 we can also use [dataclasses](https://docs.python.org/3/library/dataclasses.html) for creating immutable classes!
+Note: When using Python 3.7 we can also use [dataclasses](https://docs.python.org/3/library/dataclasses.html) for creating immutable classes! Data classes are discussed in more detail on [day 16 to 18](http://alpopkes.com/posts/2018/08/coding-challenge-day-16-to-18/).
 
 
