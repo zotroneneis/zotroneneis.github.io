@@ -23,7 +23,7 @@ class HogwartsMember:
     Creates a member of the Hogwarts School of Witchcraft and Wizardry
     """
 
-    def __init__(self, name:str, birthyear:int, sex:str):
+    def __init__(self, name: str, birthyear: int, sex: str):
         ...
 
 
@@ -32,7 +32,7 @@ class Professor(HogwartsMember):
     Creates a Hogwarts professor
     """
 
-    def __init__(self, name:str, birthyear:int, sex:str, subject:str, house=None):
+    def __init__(self, name: str, birthyear: int, sex: str, subject: str, house=None):
         ...
 
 
@@ -41,7 +41,7 @@ class Ghost(HogwartsMember):
     Creates a Hogwarts ghost
     """
 
-    def __init__(self, name:str, birthyear:int, sex:str, year_of_death:int, house=None):
+    def __init__(self, name: str, birthyear: int, sex: str, year_of_death: int, house=None):
         ...
 
 
@@ -50,7 +50,7 @@ class Pupil(HogwartsMember):
     Create a Hogwarts Pupil
     """
 
-    def __init__(self, name:str, birthyear:int, sex:str, house:str, start_year:int, pet=None):
+    def __init__(self, name: str, birthyear: int, sex: str, house: str, start_year: int, pet=None):
 
 ```
 
@@ -99,8 +99,3 @@ No:
 def munge(input: AnyStr=None): ...
 def munge(input: AnyStr, limit = 1000): ...
 ```
-
-<!-- **3. I added a ```__repr__``` method to both classes** that returns a useful string representation of an object -->
-
-<!-- **4. I added a ```@property.deleter``` method** for the OWL's property in the Pupil class -->
-
