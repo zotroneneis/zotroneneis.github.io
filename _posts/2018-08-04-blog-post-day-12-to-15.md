@@ -49,7 +49,8 @@ class Spell(metaclass=ABCMeta):
         pass
 
     def __repr__(self):
-        return f"{self.__class__.__name__}({self.name}, incantation: '{self.incantation}', effect: {self.effect})"
+        return (f"{self.__class__.__name__}({self.name}, "
+               f"incantation: '{self.incantation}', effect: {self.effect})")
 ```
 
 Let's test whether we can instantiate the ```Spell``` class.
@@ -62,7 +63,8 @@ As expected, this raises an error: ```TypeError: Can't instantiate abstract clas
 
 ```python
 class Charm(Spell):
-    def __init__(self, name: str, incantation: str, effect: str, difficulty: str = None, min_year: int = None):
+    def __init__(self, name: str, incantation: str, effect: str,
+                  difficulty: str = None, min_year: int = None):
         super(Charm, self).__init__(name, incantation, effect)
         self.difficulty = difficulty
         self.min_year = min_year
