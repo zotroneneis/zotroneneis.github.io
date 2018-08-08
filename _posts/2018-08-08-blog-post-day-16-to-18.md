@@ -11,6 +11,8 @@ tags:
 
 **Topics:** Data classes
 
+## Data classes
+
 Data classes are a feature that is new in Python 3.7. And taking a look at them is definitely worth it!
 
 According to the [PEP](https://www.python.org/dev/peps/pep-0557/) on data classes, they are basically "mutable namedtuples with defaults". We already looked at namedtuples on [day 10 and 11](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-10-and-11/). Namedtuples allow us to create an immutable class that primarily stores values (i.e. attributes). We used namedtuples for our ```DeathEater``` class (because once you become a death eather there is no way back. Unless, of course, you want to get killed by Voldemort).    
