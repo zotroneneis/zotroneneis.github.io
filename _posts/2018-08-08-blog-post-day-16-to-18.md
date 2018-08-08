@@ -25,8 +25,8 @@ from dataclasses import dataclass
 @dataclass
 class House:
     name: str
-    founder:str
-    traits:list
+    founder: str
+    traits: list
 ```
 
 We can create an instance of the ```House``` class just as before:
@@ -93,8 +93,8 @@ import datetime
 @dataclass
 class House:
     name: str
-    founder:str
-    traits:list
+    founder: str
+    traits: list
     founded_in: int = 991
 
     def current_age(self):
@@ -121,8 +121,8 @@ import datetime
 @dataclass(order=True)
 class House:
     name: str
-    founder:str
-    traits:list
+    founder: str
+    traits: list
     founded_in: int = 991
 
     def current_age(self):
