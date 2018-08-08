@@ -39,7 +39,7 @@ gryffindor = House('Gryffindor',
 
 ## Default functionality of data classes
 
-When defining the ```House``` class as above, Python automatically adds several [special methods](https://docs.python.org/3/glossary.html#term-special-method) to the class. For example, the class includes a ```__init__()``` that looks like:
+When defining the ```House``` class as above, Python automatically adds several [special methods](https://docs.python.org/3/glossary.html#term-special-method) to the class. For example, the class includes a ```__init__()``` that looks like this:
 
 ```python
 def __init__(self, name: str, founder: str, traits: list):
