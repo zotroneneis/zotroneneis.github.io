@@ -14,7 +14,7 @@ tags:
 
 The last days I have been working on a lot of new classes and methods. Since they all belong to the same big concept, I decided to create one big post on the whole topic instead of several small ones. So let's get right into it!
 
-# Abtract Base Classes
+## Abtract Base Classes
 
 Up to now, our Harry Potter universe has a parent class (HogwartsMember) and several child classes (Pupil, Professor, etc.) that inherit all methods from the parent class. But there are other, more advanced applications where simple inheritance is not sufficient.     
      
