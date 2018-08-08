@@ -11,6 +11,8 @@ tags:
 
 **Topics:** to-string conversion, ```__repr__, __str__ ```
 
+## To-string conversion
+
 Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won't get a useful representation. For example, when doing:
 
 ```python
