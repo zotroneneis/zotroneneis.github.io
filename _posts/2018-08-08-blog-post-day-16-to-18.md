@@ -110,8 +110,8 @@ So far we have used the ```@dataclass``` decorator without any parameters. This 
 - repr: If true (the default), a ```__repr__()``` method will be generated   
 - eq: If true (the default), an ```__eq__()``` method will be generated   
 - order: If true (the default is ```False```), ordering methods will be generated. Ordering methods are: ```__lt__(), __le__(), __gt__()```, and ```__ge__()``` which correspond to the operators ```<, <=, >, >= ```   
-- unsafe_hash: If true (the default is ```False```), a ```__hash__()``` method is generated   
-- frozen: If true (the default is ```False```), fields are *frozen* so assigning to fields will raise an exception. We will talk more about this parameter on [day 18](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-18/).     
+- unsafe_hash: If true (the default is ```False```), a ```__hash__()``` method will be generated   
+- frozen: If true (the default is ```False```), fields are *frozen* so assigning to fields will raise an exception. We will talk more about this parameter on [day 19](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-19/).     
    
 So, for example, we can compare two houses to each other, when setting the ```order``` parameter to ```True```:
 
