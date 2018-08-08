@@ -25,7 +25,7 @@ c) All subclasses should implement certain methods defined in the base class
    
 Before jumping to further explanations, let's look at an example.   
    
-# The ```Spell``` class
+## The ```Spell``` class
    
 In the Harry Potter world, lots of different types of spells exist. In particular, a spell can belong to one of seven classes. This makes the ```Spell``` class a great application for Python's [abc module](https://docs.python.org/3/library/abc.html). To use an Abstract Base Class, we import Python's abc module and flag the method that MUST be implemented by all subclasses with the decorator ```@abstractmethod```. A spell should have a name, an incantation and a certain effect. Also, each spell subclass will have a defining feature.
    
@@ -132,7 +132,7 @@ is equivalent to ```defining_feature = property(abstractmethod(defining_feature)
 Apart from the benefits of abstract base classes we have already discussed, ABC's have other advantages and characteristics that are worth knowing. There is an [excellent blog post](https://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python) on "Why use Abstract Base Classes in Python?" that explains the further functionality of Python's ABC's in detail. 
 
 
-## Further extensions of the universe
+## Further extensions of the Harry Potter universe
 
 When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DeathEater``` class got a ```cast_spell``` method. Since our Harry Potter universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only Slytherins would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Hermione), you might be able to perform a spell earlier than less gifted students.
 
