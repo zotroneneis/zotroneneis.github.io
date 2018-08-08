@@ -87,7 +87,8 @@ class Charm(Spell):
     Creates a charm  -
     a spell that alters the inherent qualities of an object
     """
-    def __init__(self, name: str, incantation: str, effect: str, difficulty: str = None, min_year: int = None):
+    def __init__(self, name: str, incantation: str, effect: str,
+                  difficulty: str = None, min_year: int = None):
         super(Charm, self).__init__(name, incantation, effect)
         self.difficulty = difficulty
         self.min_year = min_year
