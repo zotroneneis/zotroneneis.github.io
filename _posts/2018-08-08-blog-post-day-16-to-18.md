@@ -72,7 +72,7 @@ As expected, these two expressions output ```False``` and ```True```.
 
 ## Adding default values
 
-We can easily add default values to the fields of our ```House``` data class. For example, we could add a field named 'founded_in'. Note: we don't know when Hogwarts was founded, but as discussed [here]() it was probably founded between 893 and 991. We will stick to the latter.
+We can easily add default values to the fields of our ```House``` data class. For example, we could add a field named 'founded_in'. Note: we don't know when Hogwarts was founded, but as discussed [here](https://scifi.stackexchange.com/questions/18550/when-was-hogwarts-founded) it was probably founded between 893 and 991. We will stick to the latter.
 
 ```python
 @dataclass
