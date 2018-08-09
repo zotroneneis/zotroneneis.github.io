@@ -92,7 +92,7 @@ For example, we probably want to create the main characters of the Harry Potter 
 ```python
 @classmethod
 def harry(cls):
-    return cls('Harry James Potter', 1980, 'male', 'Griffindor', start_year=1991, pet=('Hedwig', 'owl'))
+    return cls('Harry James Potter', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
 ```
 
 ## All code for today
