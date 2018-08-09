@@ -40,7 +40,7 @@ class HogwartsMember:
 
     @staticmethod
     def school_headmaster():
-        return HogwartsMember('Albus Percival Wulfric Brian Dumbledore', 1881)
+        return HogwartsMember('Albus Percival Wulfric Brian Dumbledore', 1881, 'male')
 
 ```
 
