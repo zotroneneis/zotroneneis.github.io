@@ -11,7 +11,7 @@ tags:
 
 **Topics:** Decorators within a class
 
-After having talked about decorators already on [day 5](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-5/) and [day 6](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-6/) I want to revisit the topic to discuss how decorators can be used within classes. 
+After having talked about decorators already on [day 5](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-5/) and [day 6](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-6/) I would like to revisit the topic to discuss how decorators can be used within classes. 
 
 Let's put ourselves in the position of a Hogwarts member during the time Severus Snape is headmaster. This is the time Dumbledore is dead and the school is controlled by the Ministry of Magic - and hence, by Voldemort. So these are dark, scary times. People at Hogwarts are constantly scared that something might happen to them, their family or their friends. So when talking to each other between classes, they weren't laughing and fooling around. They were whispering and getting to the next class or common room as quickly as possible. This means that we have to adapt the behaviour of our ```says()``` function in the ```HogwartsMember``` class. However, its output should only change during Snape's reign of terror. This is a great application for decorators!
 
