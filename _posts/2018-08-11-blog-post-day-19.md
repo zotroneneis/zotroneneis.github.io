@@ -1,6 +1,6 @@
 ---
 title: 'Day 19 - Immutable data classes'
-date: 2018-08-10
+date: 2018-08-11
 permalink: /posts/2018/08/coding-challenge-day-19/
 tags:
   - python
