@@ -10,6 +10,8 @@ As part of the habit I've started creating a series of **blog posts** on importa
 
 Since I was bored by the usual tutorial examples, I looked for a topic that would make it fun to study and implement the concepts. And since I absolutely love Harry Potter, I started creating a whole Harry Potter universe around the topics. 
 
+All code can be found in [this GitHub repository](https://github.com/zotroneneis/harry_potter_universe). My blog features the corresponding blog posts.
+
 ## Overview
 
 | Day   | Topics          | Blog post with explanations | Code for the day  |
