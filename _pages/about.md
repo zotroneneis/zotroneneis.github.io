@@ -15,7 +15,9 @@ My interests
 I am especially interested in     
 a) The application of machine learning algorithms in health care    
 b) The study of privacy-preserving machine learning    
-c) Understanding more about the inner functioning of machine learning algorithms    
+c) Understanding more about the inner functioning of machine learning algorithms     
+    
+In my free time I enjoy kickboxing, improving my productivity, [reading](http://alpopkes.com/reading_list/) and meditating.
 
 My path to machine learning
 ======
