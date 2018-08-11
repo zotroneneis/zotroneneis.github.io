@@ -1,5 +1,5 @@
 ---
-title: "Awesome Python Features"
+title: "Harry Potter Universe"
 excerpt: "Advanced Python features explained using the world of Harry Potter"
 collection: portfolio
 ---
