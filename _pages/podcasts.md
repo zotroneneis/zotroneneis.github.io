@@ -36,6 +36,15 @@ Weekly podcast hosted by Michael Kennedy. The episodes are usually casual conver
 [Click here for podcast website](https://talkpython.fm/)   
    
 ---
+![](../images/python_bytes.png)   
+   
+**Python Bytes**
+    
+Weekly podcast on Python news hosted by Michael Kennedy and Brian Okken. 
+
+[Click here for podcast website](https://pythonbytes.fm/)   
+   
+---
    
 ![](../images/intelligence_squared.png)   
 **Intelligence Squared US Debates**
