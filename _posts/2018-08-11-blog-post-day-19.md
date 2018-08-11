@@ -35,7 +35,7 @@ class DeathEater(NamedTuple):
         print(f"{self.name}: {spell.incantation}!")
 ```
 
-Once we instatiate a member of this class, we can't change it anymore. Running
+Once we instantiate a member of this class, we can't change it anymore. Running
 
 ```python
 lucius = DeathEater('Lucius Malfoy', 1953)
