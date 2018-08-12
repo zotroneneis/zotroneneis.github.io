@@ -25,8 +25,6 @@ In both cases, the Python interpreter will read the source file ```harry_potter_
 
 ### Step 3: Executing the code
 
-Case 1: We run the file directly   
-
 The interpreter has finished setting up the special variables, so the value of ```__name__``` is either ```"__main__"``` (case 1) or '''"harry_potter_universe" ''' (case 2). In a next step, the interpreter will read the file and execute all *top-level code* in our script. 'Top-level' code refers to all code at indentation level 0. So in our case, the import statements at the beginning of the ```harry_potter_universe.py``` file will be executed and all classes will be defined. However, none of the code inside the classes will be executed. At the end of the file we have an ```if``` block as top-level code. The ```if``` block starts with the line ```if __name__ == "__main__"```. With the knowledge from the previous steps we should be able to understand what this statement represents: it tests whether the current module, that is 'harry_potter_universe', is being run directly (case 1) or imported by another module (case 2)! In case 1, the output of ```__name__ == "__main__"``` will be ```True```, so the code within the ```if``` block will be exectuted. In case 2, the ```if``` clause won't be executed because the required condition is not met.
 
 
