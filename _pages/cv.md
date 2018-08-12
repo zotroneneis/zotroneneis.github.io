@@ -14,12 +14,12 @@ redirect_from:
 
 ## Education
 
-* Master of Science in Computer Science, University of Bonn, Bonn, Germany
+* *Master of Science* in Computer Science, University of Bonn, Bonn, Germany
     * 2015 - 2018
     * Grade 1.0/GPA: 4.00
-    * Focus area: intelligent systems
+    * Focus on machine learning
 
-* Bachelor of Science in Cognitive Science, University of Osnabrück, Osnabrück, Germany
+* *Bachelor of Science* in Cognitive Science, University of Osnabrück, Osnabrück, Germany
     * 2012 - 2015
     * Grade 1.1/GPA: 4.00
     * Focus modules: Neuroinformatics, Computer Science, Neuroscience, Cognitive (Neuro-) Psychology, Philosophy of Mind and Cognition
@@ -28,16 +28,16 @@ redirect_from:
    
 ## Work experience
 
-* 05/2018 - present: Deep Learning Internship
+* 05/2018 - present: *Deep Learning Internship*
     * Robert Bosch, Palo Alto, CA, USA
     * Work of deep learning projects, mostly focused on computer vision applications and image recognition tasks
 
-* 09/2016-05/2018: Research Assistant
+* 09/2016-05/2018: *Machine Learning Research Assistant*
     * Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)
     * Bonn, Germany
     * Research and industrial projects on machine learning, especially neural networks and reinforcement learning
 
-* 08/2014-11/2014: Research assistant
+** 08/2014-11/2014: *Research assistant*
     * Harvard University
     * Cambridge, United States
     * Research assistant at Prof. Nadine Gaab's laboratory for developmental cognitive neuroscience
