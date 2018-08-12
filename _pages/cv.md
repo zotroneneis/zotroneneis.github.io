@@ -48,7 +48,8 @@ redirect_from:
 ## Scholarships and Awards
 * 01/2016-present: [Studienstiftung des deutschen Volkes](https://www.studienstiftung.de/)
     * German National Academic Foundation
-    * Scholarship for studies
+    * Scholarship for graduate degree
+    * Awarded to the top 0.5/% of German students
 
 * 08/2014-11/2014: Scholarship
     * German Academic Exchange Service
