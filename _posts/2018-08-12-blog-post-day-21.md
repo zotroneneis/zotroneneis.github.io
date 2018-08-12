@@ -35,6 +35,6 @@ In case 1, the value of ```__name__``` is set to ```"__main__"``` because "harry
 
 
 ## Further reading:
-- [Python Docs](https://docs.python.org/3/library/__main__.html)
-= [Stackoverflow post](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
+- [Python Docs](https://docs.python.org/3/library/__main__.html)   
+- [Stackoverflow post](https://stackoverflow.com/questions/419163/what-does-if-name-main-do)
 
