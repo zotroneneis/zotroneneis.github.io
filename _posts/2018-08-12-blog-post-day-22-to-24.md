@@ -165,12 +165,13 @@ if __name__ == "__main__":
 
 ## Contextlib.contextmanager
 
-Context managers don't have to be class-based. We can also use the [contextlib module](https://docs.python.org/3/library/contextlib.html) to support the with statement. 
+Context managers don't have to be class-based. We could also use the [contextlib module](https://docs.python.org/3/library/contextlib.html) to support the with statement. 
 
 
-## Further reading:
-https://dbader.org/blog/python-context-managers-and-with-statement
-http://effbot.org/zone/python-with-statement.htm
-https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/
-https://docs.python.org/3/reference/datamodel.html#context-managers
-https://docs.python.org/3/library/stdtypes.html#typecontextmanager
+<!-- ## Further reading: -->
+<!-- https://dbader.org/blog/python-context-managers-and-with-statement -->
+<!-- http://effbot.org/zone/python-with-statement.htm -->
+<!-- https://jeffknupp.com/blog/2016/03/07/python-with-context-managers/ -->
+<!-- https://docs.python.org/3/reference/datamodel.html#context-managers -->
+<!-- https://docs.python.org/3/library/stdtypes.html#typecontextmanager -->
+
