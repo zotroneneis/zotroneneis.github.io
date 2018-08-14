@@ -27,7 +27,7 @@ with open('letter.txt', 'w') as letter:
                  "Harry")
 ```
 
-Internally, this is translated to something like this (details of the full translation can be found [in PEP 343](https://www.python.org/dev/peps/pep-0343/#specification-the-with-statement):
+Internally, this is translated to something like this (details of the full translation can be found [in PEP 343](https://www.python.org/dev/peps/pep-0343/#specification-the-with-statement)):
 
 ```python
 letter= open('letter.txt', 'w')
