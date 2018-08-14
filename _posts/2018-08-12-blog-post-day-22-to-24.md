@@ -54,7 +54,7 @@ b) Ensures that resources are not leaked
     
 If you want to see an example of how context managers are used within Python, take a look at the ```threading.Lock``` class. It can be found [here](https://docs.python.org/3/library/threading.html#lock-objects).
 
-## Context manager
+## Creating our own context manager
 
 Let's say we want to create a ```Letter``` class in our Harry Potter universe, such that we can create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
 
