@@ -56,7 +56,7 @@ If you want to see an example of how context managers are used within Python, ta
 
 ## Creating our own context manager
 
-Let's say we want to create a ```Letter``` class in our Harry Potter universe, such that we can create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
+Let's say we want to create a ```Letter``` class in our Harry Potter universe that functions as a context manager. This would allows us to create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
 
 ```python
 with Letter('lettername.txt', 'w') as letter:
