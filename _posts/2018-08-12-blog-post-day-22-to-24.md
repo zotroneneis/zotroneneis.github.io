@@ -107,9 +107,9 @@ To be more precise: when the ```with``` statement is executed with a single file
 5. The code in the body of the ```with``` statement is executed (i.e. the ```letter.write(...)``` part).   
 6. The context manager's ```__exit__()``` method is invoked **no matter what happened in the code body**.
 
-If an exception occured in the code body, its type, value and traceback are passed as arguments to ```__exit__()```. So we can use ```__exit__()``` to handle those exceptions, for example we can suppress them.
+If an exception occured in the code body, its type, value and traceback are passed as arguments to ```__exit__()```. So we can use ```__exit__()``` to handle those exceptions, for example, we could suppress them.
    
-For further details on these steps, take a look at the [Python docs](https://docs.python.org/3/reference/compound_stmts.html#with) on the ```with``` statement.
+For further details on these steps, take a look at the [Python docs](https://docs.python.org/3/reference/compound_stmts.html#with).
 
 
 ## Writing letters
