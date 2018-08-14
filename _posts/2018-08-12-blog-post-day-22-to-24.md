@@ -44,7 +44,7 @@ The ```try ... finally``` statement is the key part: it guarantees that the code
 
 ## Why the ```with``` statement is useful
 
-In the ```with``` statement above, the ```open``` keyword opens a file descriptor. As you probably know it's very important that every time you open a file, it also has to be closed. Otherwise, when opening too many files, your operating system will throw an error at some point.   
+In the ```with``` statement above, the ```open``` keyword opens a file descriptor. As you probably know it's very important that every time you open a file, you also need to close it. Otherwise, when opening too many files, your operating system will throw an error at some point.   
    
 By using the ```with``` statement we ensure that the open file descriptor is *closed automatically* after the control flow leaves the context of the ```with``` statement. So even when an exception occurs before the end of the ```with``` block, the opened file will be closed. Also when using a ```return```, ```continue``` or ```break``` statement in the ```with``` block, the file is closed automatically. We don't have to write ```try ... except ... finally``` blocks ourselves - the ```with``` statement takes care of properly closing the file. This makes sure that we are not *leaking any resources*, i.e. forget to close opened files. 
 
