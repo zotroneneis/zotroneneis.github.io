@@ -12,7 +12,7 @@ tags:
 
 ## Context managers and the ```with``` statement
 
-Similar to decorators, context managers are a concept many people use but only few understand. If you haven't heard of the term 'context manager' before: you have probably encountered them when reading or writing from/to a file using the ```with``` statement. 
+Similar to decorators, context managers are a concept many people use but only few understand. If you haven't heard of the term 'context manager' before: you probably encountered them already while reading or writing from/to a file using the ```with``` statement. 
 
 The most common use of context managers is the proper *management of resources*. In simpler term this means that we want to make sure that we open, read, write and close files correctly. Before creating our own context manager, let's take a look at the most common use of the ```with``` statement and why the ```with``` statement is so useful.    
 
