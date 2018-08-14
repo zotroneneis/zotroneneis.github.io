@@ -83,7 +83,7 @@ class Letter:
             self.letter.close()
 ```
 
-That's it! Our ```Letter``` class acts similar to the ```open()``` command and supports the ```with``` statement:
+That's it! With a proper implemetation of ```__enter__()``` and ```__exit__()``` our ```Letter``` class supports the ```with``` statement:
 
 ```python
 with Letter('dear_hagrid.txt') as letter:
