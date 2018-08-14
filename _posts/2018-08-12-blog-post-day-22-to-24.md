@@ -133,7 +133,7 @@ class Letter:
             self.letter.close()
 ```
 
-As a last step, we will add a ```write_letter()``` method to our ```HogwartsMember``` class:
+As a last step, we will add a ```write_letter()``` method to our ```HogwartsMember``` class. This will allow all Hogwart's members to write actual letters (even if we can't send them by owl).
 
 ```python
 class HogwartsMember:
