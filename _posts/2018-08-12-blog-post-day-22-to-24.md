@@ -102,10 +102,10 @@ To be more precise: when the ```with``` statement is executed with a single file
 
 1. The ```with``` statement invokes a context manager.
 2. The context manager's ```__exit__()``` method is loaded for later use.   
-3. The context manager's ```__enter__()``` method is invokes.   
-4. The value returned by the ```__enter__()``` method is bound to the identifier in the ```as``` clause of the ```with``` statement (i.e. the return value is bound to 'letter').   
+3. The context manager's ```__enter__()``` method is invoked.   
+4. The value returned by the ```__enter__()``` method is bound to the identifier in the ```as``` clause of the ```with``` statement (i.e. the return value of ```__enter__()``` is bound to the variable 'letter').   
 5. The code in the body of the ```with``` statement is executed (i.e. the ```letter.write(...)``` part).   
-6. The context manager's ```__exit__()``` method is invoked, **no matter what happened in the code body**.
+6. The context manager's ```__exit__()``` method is invoked **no matter what happened in the code body**.
 
 If an exception occured in the code body, its type, value and traceback are passed as arguments to ```__exit__()```. So we can use ```__exit__()``` to handle those exceptions, for example we can suppress them.
    
