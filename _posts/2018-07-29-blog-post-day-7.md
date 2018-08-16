@@ -41,7 +41,7 @@ Today we are going to look at a very important concept in Python: the usage of u
    
 **A single underscore ```_``` on its own**      
 - This naming convention is sometimes used to denote a variable you don't care about or won't use further   
-- For example you might use it for a running index as in ```list_comprehension = [_ for _ in range(5)]```   
+- For example you might use it as a running index like ```list_comprehension = [_ for _ in range(5)]```   
 
 ----
 
