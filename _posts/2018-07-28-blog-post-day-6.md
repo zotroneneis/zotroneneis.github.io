@@ -69,7 +69,7 @@ def age(self):
 age = property(age)
 ```
 
-The full signature of the ```property()``` function is given by ```property(fget=None, fset=None, fdel=None, doc=None) -> property attribute```.   
+The full signature of the ```property()``` function used in the second example (```age = property(age)```) is given by ```property(fget=None, fset=None, fdel=None, doc=None) -> property attribute```.   
 - ```fget``` is a function for getting the value of the attribute   
 - ```fset``` is a function for setting the value of the attribute   
 - ```fdel``` is a function for deleting the attribute   
