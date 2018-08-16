@@ -104,7 +104,7 @@ class Charm(Spell):
         print(f"{self.incantation}!")
 ```
 
-Now calling 
+Now
 
 ```python
 charm = Charm('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly', 'simple')
@@ -116,7 +116,7 @@ works just fine and prints: ```Charm(Wingardium Leviosa, incantation: 'Wingardiu
 
 ## How to combine @abstractmethod with other decorators
 
-You might have noticed another new thing in the code of ```Spell```: we *stacked* two decorators. When stacking decorators it's important to know that they are applied *from bottom to top*. So calling
+You might noticed another new thing in the code of ```Spell```: we *stacked* two decorators. When stacking decorators it's important to know that they are applied *from bottom to top*. So calling
 
 ```python
 @property
@@ -125,11 +125,11 @@ def defining_feature(self):
     pass
 ```
 
-is equivalent to ```defining_feature = property(abstractmethod(defining_feature))```. But in which place should ```@abstractmethod``` go when combining it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When abstractmethod() is applied in combination with other method descriptors, it should be applied as the innermost decorator". So keep that in mind when using other decorators, too!
+is equivalent to ```defining_feature = property(abstractmethod(defining_feature))```. But in which place should ```@abstractmethod``` go when combining it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When abstractmethod() is applied in combination with other method descriptors, it should be applied as the innermost decorator". So keep that in mind when using additional decorators!
 
 ## Further advantages of Abstract Base Classes
 
-Apart from the benefits of abstract base classes we have already discussed, ABC's have other advantages and characteristics that are worth knowing. There is an [excellent blog post](https://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python) on "Why use Abstract Base Classes in Python?" that explains the further functionality of Python's ABC's in detail. 
+Apart from the benefits of abstract base classes we have already discussed, ABC's have other advantages and characteristics that are worth knowing. There is an [excellent blog post](https://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python) on "Why use Abstract Base Classes in Python?" that explains the further functionalities of Python's ABC's in detail. 
 
 
 ## Further extensions of the Harry Potter universe
