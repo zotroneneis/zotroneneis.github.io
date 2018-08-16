@@ -102,7 +102,7 @@ class Pupil(HogwartsMember):
         return cls('Ginevra Weasley', 1981, 'female', 'Gryffindor', start_year=1992)
 ```
 
-Next, we instatiate Ginny and let her say a few words.
+Next, we instantiate Ginny and let her say a few words.
 
 ```python
 ginny = Pupil.ginny()
