@@ -12,14 +12,14 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
-2018-08-15: My [Harry Potter project](https://github.com/zotroneneis/harry_potter_universe) was mentioned on the Python Bytes podcast! Check out the episode [here](https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor).    
+**2018-08-15:** My [Harry Potter project](https://github.com/zotroneneis/harry_potter_universe) was mentioned on the Python Bytes podcast! Check out the episode [here](https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor).    
 
 My interests 
 =====
 I am especially interested in     
 a) The application of machine learning algorithms in health care   
-b) Understanding how humans learn and how we can optimize human learning and productivity
-c) The functioning of the human brain and how machine learning can be applied in cognitive science research    
+b) Understanding how humans learn and how we can optimize human learning and productivity    
+c) The functioning of the human brain and how machine learning can be applied in cognitive science research       
 d) The study of privacy-preserving machine learning      
 e) Understanding more about the inner functioning of machine learning algorithms       
     
