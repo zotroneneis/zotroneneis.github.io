@@ -73,7 +73,7 @@ class Charm(Spell):
         print(f"{self.incantation}!")
 ```
 
-Let's instatiate a charm everyone knows.
+Let's instantiate a charm everyone knows.
 
 ```python
 charm = Charm('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly', 'simple')
@@ -81,7 +81,7 @@ charm = Charm('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly', '
 
 Well, this is not working. It raises an error *at instantiation time*: ```TypeError: Can't instantiate abstract class Charm with abstract methods defining_feature```. Why? Because we forgot to implement the ```defining_feature``` method!   
       
-This highlights a big advantage of using Abstact Base Classes: if a subclass does not implement all the methods required by the base class, an error is raised at *instationation time*. When not using abtract base classes, we get an error much later, namely only when calling the missing method. A complete implementation of ```Charm``` should look as follows:
+This highlights a big advantage of using Abstact Base Classes: if a subclass does not implement all the methods required by the base class, an error is raised at *instantiation time*. When not using abtract base classes, we get an error much later, namely only when calling the missing method. A complete implementation of ```Charm``` should look as follows:
 
 ```python
 class Charm(Spell):
