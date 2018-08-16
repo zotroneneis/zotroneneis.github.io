@@ -3,7 +3,6 @@ title: "Machine Learning Basics"
 excerpt: "Plain Python implementations of basic machine learning algorithms"
 collection: portfolio
 ---
-<iframe src="https://ghbtns.com/github-btn.html?user=zotroneneis&repo=machine_learning_basics&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
 
 I started this project when preparing for interviews and applying for different internships and residency programs. 
 
