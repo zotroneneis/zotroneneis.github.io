@@ -14,11 +14,11 @@ tags:
 
 Similar to decorators, context managers are a concept many people use but only few understand. If you haven't heard of the term 'context manager' before: you probably encountered them already while reading or writing from/to a file using the ```with``` statement. 
 
-The most common use of context managers is the proper *management of resources*. In simpler term this means that we want to make sure that we open, read, write and close files correctly. Before creating our own context manager, let's take a look at the most common use of the ```with``` statement and why the ```with``` statement is so useful.    
+The most common use of context managers is the proper *management of resources*. In simple terms this means that we want to make sure that we open, read, write and close files correctly. Before creating our own context manager, let's take a look at the most common use of the ```with``` statement and why the ```with``` statement is so useful.    
 
 ## Using ```with``` to open files
 
-In the world of Harry Potter a lot of communication is done via good old letters. So let's image that Harry wants to write a letter to Hagrid asking if he, Ron and Hermione can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
+In the world of Harry Potter a lot of communication is done via good old letters. So let's imagine that Harry wants to write a letter to Hagrid asking if he, Ron and Hermione can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
 
 ```python
 with open('letter.txt', 'w') as letter:
@@ -46,7 +46,7 @@ The ```try ... finally``` statement is the key part: it guarantees that the code
 
 In the ```with``` statement above, the ```open``` keyword opens a file descriptor. As you probably know it's very important that every time you open a file, you also need to close it. Otherwise, when opening too many files, your operating system will throw an error at some point.   
    
-By using the ```with``` statement we ensure that the open file descriptor is *closed automatically* after the control flow leaves the context of the ```with``` statement. So even when an exception occurs before the end of the ```with``` block, the opened file will be closed. Also when using a ```return```, ```continue``` or ```break``` statement in the ```with``` block, the file is closed automatically. We don't have to write ```try ... except ... finally``` blocks ourselves - the ```with``` statement takes care of properly closing the file. This makes sure that we are not *leaking any resources*, i.e. forget to close opened files. 
+By using the ```with``` statement we ensure that the open file descriptor is *closed automatically* after the control flow leaves the context of the ```with``` statement. So even when an exception occurs before the end of the ```with``` block, the opened file will be closed. Also when using a ```return```, ```continue``` or ```break``` statement in the ```with``` block, the file will be closed automatically. We don't have to write ```try ... except ... finally``` blocks ourselves - the ```with``` statement takes care of properly closing the file. This makes sure that we are not *leaking any resources*, i.e. forget to close opened files. 
 
 So in short: the ```with``` statement    
 a) Makes code that deals with resources more readable     
@@ -133,7 +133,7 @@ class Letter:
             self.letter.close()
 ```
 
-As a last step, we will add a ```write_letter()``` method to our ```HogwartsMember``` class. This will allow all Hogwart's members to write actual letters (even if we can't send them by owl).
+As a last step, we will add a ```write_letter()``` method to our ```HogwartsMember``` class. This will allow all Hogwarts members to write actual letters (even if we can't send them by owl).
 
 ```python
 class HogwartsMember:
