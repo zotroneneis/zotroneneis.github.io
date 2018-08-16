@@ -91,7 +91,7 @@ def exhibits_trait(self, trait):
 The ```try ... except ... ``` code block assumes that the given trait exists as a key. If this assumption proves false (i.e. a ```KeyError```is raised) it handles the missing key.
 
 ## Look before you leap (LBYL)
-The opposite of the EAFP principle is called 'Look before you leap' (LBYL). When using LBYL we would first test if a key existed before performing the look-up operation. So our code from above would rather look as follows:
+The opposite of the EAFP principle is called 'Look before you leap' (LBYL). When using LBYL we would first test if a key exists before performing the look-up operation. So our code from above would rather look as follows:
 
 ```python
 def exhibits_trait(self, trait):
