@@ -101,7 +101,7 @@ class Pupil(HogwartsMember):
         return self._owls
 ```
 
-Now, if we want to update the OWL's of a student passed, we have to make sure that she/he actually passed the exam. Otherwise, the OWL can't be awarded. Let's implement that using a setter method.
+Now, if we want to update the OWL's of a student, we have to make sure that she/he actually passed the exam. Otherwise, the OWL can't be awarded. Let's implement that using a setter method.
 
 ```python
     @owls.setter
