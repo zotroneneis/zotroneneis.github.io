@@ -4,7 +4,7 @@ excerpt: "LSTM-RNN for processing radiological reports"
 collection: portfolio
 ---
 
-This is the projet I worked on during my master thesis. The full project description and code can be found on [my GitHub page](https://github.com/zotroneneis/LSTM_language_model).
+This is the project I worked on during my master thesis. The full project description and code can be found on [my GitHub page](https://github.com/zotroneneis/LSTM_language_model).
 
 Abstract of the thesis, describing the motivation and idea of the project: 
 
