@@ -83,18 +83,18 @@ class Pupil(HogwartsMember):
     def __init__(self, name: str, birthyear: int, house: str, start_year: int):
         ...
         self._owls = {
-                      'Study of Ancient Runes': False,
-                      'Arithmancy': False,
-                      'Astronomy': False,
-                      'Care of Magical Creatures': False,
-                      'Charms': False,
-                      'Defence Against the Dark Arts': False,
-                      'Divination': False,
-                      'Herbology': False,
-                      'History of Magic': False,
-                      'Muggle Studies': False,
-                      'Potions': False,
-                      'Transfiguration': False}
+                  'Study of Ancient Runes': False,
+                  'Arithmancy': False,
+                  'Astronomy': False,
+                  'Care of Magical Creatures': False,
+                  'Charms': False,
+                  'Defence Against the Dark Arts': False,
+                  'Divination': False,
+                  'Herbology': False,
+                  'History of Magic': False,
+                  'Muggle Studies': False,
+                  'Potions': False,
+                  'Transfiguration': False}
 
     @property
     def owls(self):
