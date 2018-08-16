@@ -1,5 +1,5 @@
 ---
-title: "Machine Learning Basics" <iframe src="https://ghbtns.com/github-btn.html?user=zotroneneis&repo=machine_learning_basics&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+title: "Machine Learning Basics <iframe src="https://ghbtns.com/github-btn.html?user=zotroneneis&repo=machine_learning_basics&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>"
 excerpt: "Plain Python implementations of basic machine learning algorithms"
 collection: portfolio
 ---
