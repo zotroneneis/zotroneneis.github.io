@@ -163,6 +163,13 @@ def test_init_raises_exception_with_missing_arguments():
         hagrid = HogwartsMember()
 ```
 
+
+## Further Reading
+- Book [Python Testing with pytest](https://pragprog.com/book/bopytest/python-testing-with-pytest) by Brian Okken    
+- [Testing Your Code — The Hitchhiker's Guide to Python ](https://docs.python-guide.org/writing/tests/)   
+- [Pytest](https://pytest.org)
+
+
 ## Full test code for ```HogwartsMember``` class
 
 This test code can also be found on the [GitHub repo]().
@@ -229,8 +236,3 @@ def test_repr_output(capfd, hagrid):
     assert stdout == 'HogwartsMember(Rubeus Hagrid, birthyear: 1928)'
 
 ```
-
-## Further Reading
-- Book [Python Testing with pytest](https://pragprog.com/book/bopytest/python-testing-with-pytest) by Brian Okken    
-- [Testing Your Code — The Hitchhiker's Guide to Python ](https://docs.python-guide.org/writing/tests/)   
-- [Pytest](https://pytest.org)
