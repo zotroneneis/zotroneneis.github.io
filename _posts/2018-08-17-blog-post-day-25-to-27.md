@@ -57,7 +57,7 @@ def test_say_words():
     assert say_words("Ginny", "Careful Neville!") == "Ginny says: Careful Neville!"
 ```
 
-We can run the test by executing the ```pytest``` command. The test should run without errors. 
+We can run the test by running the command ```pytest``` from the command line within the *test_code* folder. The test should run without errors. 
 
 ## Testing the ```HogwartsMember``` class
 
@@ -101,7 +101,7 @@ We can create a fixture using the ```@pytest.fixture``` decorator and pass the f
 
 ```python
 import pytest
-from harry_potter_universe import HogwartsMember
+from harry_potter_universe.harry_potter_universe import HogwartsMember
 
 @pytest.fixture
 def hagrid():
