@@ -117,7 +117,6 @@ def hagrid_with_traits():
     return hagrid
 
 def test_correctness_of_attributes_(hagrid):
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
     assert hagrid.name == 'Rubeus Hagrid'
     assert hagrid.birthyear == 1928
     assert hagrid.sex == 'male'
