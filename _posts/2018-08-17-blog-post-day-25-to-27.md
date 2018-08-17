@@ -171,7 +171,7 @@ def test_init_raises_exception_with_missing_arguments():
 
 ## Full test code for ```HogwartsMember``` class
 
-This test code can also be found on the [GitHub repo]().
+This test code can also be found on the [GitHub repo](https://github.com/zotroneneis/harry_potter_universe/blob/master/test_code/test_hogwarts_member_class.py).
 
 ```python
 import pytest
