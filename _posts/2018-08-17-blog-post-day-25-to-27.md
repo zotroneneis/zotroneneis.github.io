@@ -41,7 +41,7 @@ Test functions should have long and descriptive names. Why? Because the test fun
 
 ## Basic usage of pytest
 
-First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```HogwartsMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In Pytest file names should start or end with "test", so we will name our test file "test_hogwarts_member_class.py'. Before creating test functions for our Harry Potter universe, let's take a quick look at how a simple test function might look like.
+First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```HogwartsMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Harry Potter universe, let's take a quick look at how a simple test function might look like.
 
 Let's take our ```say_words()``` function from [day 5](http://alpopkes.com/posts/2018/07/coding-challenge-day-5/) as an example. The function looks as follows:
 
