@@ -16,7 +16,7 @@ The last days I have been working on a lot of new classes and methods. Since the
 
 ## Abtract Base Classes
 
-Up to now, our Cleon Bery universe has a parent class (CastleKilmereMember) and several child classes (Pupil, Professor, etc.) that inherit all methods from the parent class. But there are other, more advanced applications where simple inheritance is not sufficient.     
+Up to now, our Magical Universe has a parent class (CastleKilmereMember) and several child classes (Pupil, Professor, etc.) that inherit all methods from the parent class. But there are other, more advanced applications where simple inheritance is not sufficient.     
      
 Abstract base classes are useful if your application involves a *hierarchy* of classes. In particular, in this hierarchy    
 a) It should be impossible to instantiate the base class   

@@ -25,7 +25,7 @@ class DarkArmyMember(NamedTuple):
 
     @property
     def leader(self):
-        lord_odon = DarkArmyMember('lord_odon', 1971)
+        lord_odon = DarkArmyMember('Lord Odon', 1971)
         return lord_odon
 
     def __repr__(self):
@@ -38,7 +38,7 @@ class DarkArmyMember(NamedTuple):
 Once we instantiate a member of this class, we can't change it anymore. Running
 
 ```python
-keres = DarkArmyMember('Keres Fulford', 1953)
+keres = DarkArmyMember('Keres Fulford', 1983)
 keres.name = 'Adrien'
 ```
 
@@ -53,7 +53,7 @@ class NewDarkArmyMember():
 
     @property
     def leader(self):
-        lord_odon = DarkArmyMember('lord_odon', 1971)
+        lord_odon = DarkArmyMember('Lord Odon', 1971)
         return lord_odon
 
     def cast(self, spell):
@@ -63,11 +63,11 @@ class NewDarkArmyMember():
 Let's make sure that the class is immutable. Running 
 
 ```python
-keres = NewDarkArmyMember('Keres Fulford', 1953)
+keres = NewDarkArmyMember('Keres Fulford', 1983)
 keres.name = 'Adrien'
 ```
 
-will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(keres)``` will return ```NewDarkArmyMember(name='Keres Fulford', birthyear=1953)```.  
+will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(keres)``` will return ```NewDarkArmyMember(name='Keres Fulford', birthyear=1983)```.  
    
 Note: be careful with the datatypes of your fields. When a field contains a mutable datatype (for example a list) the field will stay mutable, even when setting ```frozen=True```. So when you want to have a truly immutable class, make sure that all fields use immutable data types (for example a tuple instead of a list). 
 

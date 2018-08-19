@@ -18,12 +18,12 @@ The most common use of context managers is the proper *management of resources*.
 
 ## Using ```with``` to open files
 
-In the world of Cleon Bery a lot of communication is done via good old letters. So let's imagine that Cleon wants to write a letter to bromley asking if he, flynn and Cassidy Ambergem can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
+In the world of Cleon Bery a lot of communication is done via good old letters. So let's imagine that Cleon wants to write a letter to Bromley asking if he, Flynn and Cassidy can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
 
 ```python
 with open('letter.txt', 'w') as letter:
-    letter.write("Hi bromley! \n"
-                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+    letter.write("Hi Bromley! \n"
+                 "Can Flynn, Cassidy and I stop by for a tea this afternoon? \n"
                  "Cleon")
 ```
 
@@ -32,8 +32,8 @@ Internally, this is translated to something like this (details of the full trans
 ```python
 letter= open('letter.txt', 'w')
 try:
-    letter.write("Hi bromley! \n"
-                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+    letter.write("Hi Bromley! \n"
+                 "Can Flynn, Cassidy and I stop by for a tea this afternoon? \n"
                  "Cleon")
 finally:
     letter.close()
@@ -56,7 +56,7 @@ If you want to see an example of how context managers are used within Python, ta
 
 ## Creating our own context manager
 
-Let's say we want to create a ```Letter``` class in our Cleon Bery universe that functions as a context manager. This would allows us to create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
+Let's say we want to create a ```Letter``` class in our Magical Universe that functions as a context manager. This would allows us to create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
 
 ```python
 with Letter('lettername.txt', 'w') as letter:
@@ -87,8 +87,8 @@ That's it! With a proper implemetation of ```__enter__()``` and ```__exit__()```
 
 ```python
 with Letter('dear_bromley.txt') as letter:
-    letter.write("Hi bromley! \n"
-                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+    letter.write("Hi Bromley! \n"
+                 "Can Flynn, Cassidy and I stop by for a tea this afternoon? \n"
                  "Cleon")
 
 ```
@@ -138,7 +138,7 @@ As a last step, we will add a ```write_letter()``` method to our ```CastleKilmer
 ```python
 class CastleKilmereMember:
     """
-    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Magic
     """
 
     ...
@@ -156,8 +156,8 @@ class CastleKilmereMember:
 if __name__ == "__main__":
     cleon = Pupil.cleon()
 
-    letter_content = "Hi bromley! \nCan flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \nCleon"
-    cleon.write_letter('bromley', letter_content)
+    letter_content = "Hi Bromley! \nCan Flynn, Cassidy and I stop by for a tea this afternoon? \nCleon"
+    cleon.write_letter('Bromley', letter_content)
 
     print(f"Total number of letter creates so far: {Letter.total_number_of_letters}")
 ```

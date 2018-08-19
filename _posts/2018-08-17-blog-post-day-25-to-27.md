@@ -41,7 +41,7 @@ Test functions should have long and descriptive names. Why? Because the test fun
 
 ## Basic usage of pytest
 
-First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```CastleKilmereMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
+First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```CastleKilmereMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_castle_kilmere_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
 
 Let's take our ```say_words()``` function from [day 5](http://alpopkes.com/posts/2018/07/coding-challenge-day-5/) as an example. The function looks as follows:
 
@@ -73,8 +73,8 @@ def test_correctness_of_attributes_():
 def test_add_positive_traits():
     bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
     bromley.add_trait('kind')
-    bromley.add_trait('wild')
-    assert bromley._traits == {'kind': True, 'wild': True}
+    bromley.add_trait('tidy-minded')
+    assert bromley._traits == {'kind': True, 'tidy-minded': True}
 
 def test_add_negative_trait():
     bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
@@ -84,7 +84,7 @@ def test_add_negative_trait():
 def test_exhibit_traits():
     bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
     bromley.add_trait('kind')
-    bromley.add_trait('wild')
+    bromley.add_trait('tidy-minded')
     bromley.add_trait('mean', False)
 
     assert bromley.exhibits_trait('kind') == True
@@ -95,13 +95,13 @@ def test_exhibit_traits():
 
 ## Pytest fixtures
 
-Since our Cleon Bery universe contains mostly classes we have to create at least one member of the ```CastleKilmereMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate bromley. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
+Since our Magical Universe contains mostly classes we have to create at least one member of the ```CastleKilmereMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Bromley. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
 
 We can create a fixture using the ```@pytest.fixture``` decorator and pass the fixture as an argument to the test functions that need it. So we could change our test code in the following way:
 
 ```python
 import pytest
-from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
+from magical_universe.magical_universe import CastleKilmereMember
 
 @pytest.fixture
 def bromley():
@@ -112,7 +112,7 @@ def bromley():
 def bromley_with_traits():
     bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
     bromley.add_trait('kind')
-    bromley.add_trait('wild')
+    bromley.add_trait('tidy-minded')
     bromley.add_trait('mean', False)
     return bromley
 
@@ -123,8 +123,8 @@ def test_correctness_of_attributes_(bromley):
 
 def test_add_positive_traits(bromley):
     bromley.add_trait('kind')
-    bromley.add_trait('wild')
-    assert bromley._traits == {'kind': True, 'wild': True}
+    bromley.add_trait('tidy-minded')
+    assert bromley._traits == {'kind': True, 'tidy-minded': True}
 
 def test_add_negative_trait(bromley):
     bromley.add_trait('mean', False)
@@ -148,7 +148,7 @@ def test_print_traits(capfd, bromley_with_traits):
     bromley_with_traits.print_traits()
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'Bromley Huckabee is kind, wild but not mean'
+    assert stdout == 'Bromley Huckabee is kind, tidy-minded but not mean'
 
 ```
 
@@ -171,11 +171,11 @@ def test_init_raises_exception_with_missing_arguments():
 
 ## Full test code for ```CastleKilmereMember``` class
 
-This test code can also be found on the [GitHub repo](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/test_code/test_hogwarts_member_class.py).
+This test code can also be found on the [GitHub repo](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_castle_kilmere_member_class.py).
 
 ```python
 import pytest
-from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
+from magical_universe.magical_universe import CastleKilmereMember
 
 @pytest.fixture
 def bromley():
@@ -186,7 +186,7 @@ def bromley():
 def bromley_with_traits():
     bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
     bromley.add_trait('kind')
-    bromley.add_trait('wild')
+    bromley.add_trait('tidy-minded')
     bromley.add_trait('mean', False)
     return bromley
 
@@ -213,7 +213,7 @@ def test_print_traits(capfd, bromley_with_traits):
     bromley_with_traits.print_traits()
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'Bromley Huckabee is kind, wild but not mean'
+    assert stdout == 'Bromley Huckabee is kind, tidy-minded but not mean'
 
 def test_init_raises_exception_with_missing_arguments():
     with pytest.raises(TypeError):
@@ -226,7 +226,7 @@ def test_name_property(bromley):
     assert bromley.name == 'Bromley Huckabee'
 
 def test_age_property(bromley):
-    assert bromley.age == 90 # this holds only if the current year is 2018!
+    assert bromley.age == 59 # this holds only if the current year is 2018!
 
 def test_repr_output(capfd, bromley):
     print(bromley)
