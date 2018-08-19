@@ -20,7 +20,7 @@ Let's add annotations to our ```___init___``` constructors:
 ```python
 class CastleKilmereMember:
     """
-    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Magic
     """
 
     def __init__(self, name: str, birthyear: int, sex: str):

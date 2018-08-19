@@ -40,7 +40,7 @@ class CastleKilmereMember:
 
     @staticmethod
     def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1909, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1939, 'male')
 
 ```
 
@@ -110,7 +110,7 @@ class CastleKilmereMember:
 
     @staticmethod
     def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1909, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1939, 'male')
 
 
 class Pupil(CastleKilmereMember):
@@ -127,18 +127,17 @@ class Pupil(CastleKilmereMember):
             self.pet_name, self.pet_type = pet
 
         self._elms = {
-                'Study of Ancient Runes': False,
-                'Arithmancy': False,
-                'Astflynnomy': False,
-                'Care of Magical Creatures': False,
-                'Charms': False,
-                'Defence Against Dark Magic': False,
-                'Divination': False,
-                'Herbology': False,
-                'History of Magic': False,
-                'Muggle Studies': False,
-                'Potions': False,
-                'Transfiguration': False}
+                  'Broomstick Flying': False,
+                  'Art': False,
+                  'Magical Theory': False,
+                  'Foreign Magical Systems': False,
+                  'Charms': False,
+                  'Defence Against Dark Magic': False,
+                  'Divination': False,
+                  'Herbology': False,
+                  'History of Magic': False,
+                  'Potions': False,
+                  'Transfiguration': False}
 
     @classmethod
     def cleon(cls):
@@ -189,7 +188,7 @@ class Ghost(CastleKilmereMember):
 
 if __name__ == "__main__":
 
-    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1956)
+    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1959)
     cleon = Pupil(name='Cleon Bery', birthyear=2008, house='House of Courage', start_year=2018)
     headmaster = cleon.school_headmaster()
 

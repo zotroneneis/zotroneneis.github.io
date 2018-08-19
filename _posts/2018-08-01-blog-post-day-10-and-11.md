@@ -15,7 +15,7 @@ tags:
 ## Tuples
 Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simple data structure that can be used for grouping arbitrary objects. Important to know is that tuples are *immutable*. That means that once a tuple has been created, it can not be changed anymore.   
 
-We already used tuples in our Cleon Bery universe. For example, we defined the ```pet``` attribute of the ```Pupil``` class to be a tuple:
+We already used tuples in our Magical Universe. For example, we defined the ```pet``` attribute of the ```Pupil``` class to be a tuple:
 
 ```python
 pet = ('pet_name', 'pet_type')
@@ -72,13 +72,13 @@ We don't want our pupils, professors and ghosts to be immutable. A suitable grou
 ```python
 from typing import NamedTuple
 
-class DeathEater(NamedTuple):
+class DarkArmyMember(NamedTuple):
     name: str
     birthyear: str
 
     @property
     def leader(self):
-        lord_odon = DeathEater('lord_odon', 1926)
+        lord_odon = DarkArmyMember('Lord Odon', 1971)
         return lord_odon
 
     def __repr__(self):
@@ -87,12 +87,9 @@ class DeathEater(NamedTuple):
 
 From now on we can easily create new death eaters:
 ```python
-keres = DeathEater('Keres Fulford', 1953)
+keres = DarkArmyMember('Keres Fulford', 1983)
 print('keres: ', keres)
 print("Leader: ', keres.leader)
-
-bellatrix = DeathEater('Bellatrix Lestrange', 1951)
-print('bellatrix: ', bellatrix)
 ```
 
 ## Data classes

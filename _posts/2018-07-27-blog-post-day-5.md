@@ -72,7 +72,7 @@ def say_words(person, words):
 
 ```
 
-Calling ```print(say_words("Cleon", "Hey flynn!"))``` yields ```Cleon says: Hey flynn!```.   
+Calling ```print(say_words("Cleon", "Hey Flynn!"))``` yields ```Cleon says: Hey Flynn!```.   
    
 How can we decorate this function? We somewhat need to make sure that our 'goodbye' wrapper function can process the arguments ```person``` and ```words```. This is not that hard. We simply use ```*args``` and ```**kwargs``` to collect all positional and keyword arguments and forward them to the orginal input function:
 
@@ -92,7 +92,7 @@ def say_words(person, words):
     return f"{person} says: {words}"
 ```
 
-Now calling ```print(say_words("Cleon", "Hey flynn!"))``` yields ```Cleon says: Hey flynn! Goodbye, have a good day!```.   
+Now calling ```print(say_words("Cleon", "Hey Flynn!"))``` yields ```Cleon says: Hey Flynn! Goodbye, have a good day!```.   
    
 As mentioned in the beginning decorators are a complex topic. So far, we have only scratched the surface. Tomorrow, we will look at the ```@property``` decorator which is often used in classes. However, decorators can be useful in many contexts. So make sure to read more about them and try to use them in your own code!   
 

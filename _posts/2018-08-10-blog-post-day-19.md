@@ -13,19 +13,19 @@ tags:
 
 We have talked a lot about data classes in the [last post](http://alpopkes.com/posts/2018/08/coding-challenge-day-16-to-18/). There is one further characteristic of data classes that I would like to study - immutability.   
     
-We can make a dataclass *immutable* such that it fulfills the same purpose as ```typing.NamedTuple```. To make a dataclass immutable we have to set ```frozen=True``` when creating the class. Let's see how we can change our ```DeathEater``` class from ```typing.NamedTuple``` to a dataclass without losing its functionality.   
+We can make a dataclass *immutable* such that it fulfills the same purpose as ```typing.NamedTuple```. To make a dataclass immutable we have to set ```frozen=True``` when creating the class. Let's see how we can change our ```DarkArmyMember``` class from ```typing.NamedTuple``` to a dataclass without losing its functionality.   
    
-Up to now our ```DeathEater``` class looked as follows:
+Up to now our ```DarkArmyMember``` class looked as follows:
 
 ```python
-class DeathEater(NamedTuple):
+class DarkArmyMember(NamedTuple):
     """ Creates a death eater """
     name: str
     birthyear: str
 
     @property
     def leader(self):
-        lord_odon = DeathEater('lord_odon', 1926)
+        lord_odon = DarkArmyMember('lord_odon', 1971)
         return lord_odon
 
     def __repr__(self):
@@ -38,7 +38,7 @@ class DeathEater(NamedTuple):
 Once we instantiate a member of this class, we can't change it anymore. Running
 
 ```python
-keres = DeathEater('Keres Fulford', 1953)
+keres = DarkArmyMember('Keres Fulford', 1953)
 keres.name = 'Adrien'
 ```
 
@@ -46,14 +46,14 @@ will raise ```AttributeError: can't set attribute```. When converting the class 
 
 ```python
 @dataclass(frozen=True)
-class NewDeathEater():
+class NewDarkArmyMember():
     """ Creates a death eater """
     name: str
     birthyear: str
 
     @property
     def leader(self):
-        lord_odon = DeathEater('lord_odon', 1926)
+        lord_odon = DarkArmyMember('lord_odon', 1971)
         return lord_odon
 
     def cast(self, spell):
@@ -63,11 +63,11 @@ class NewDeathEater():
 Let's make sure that the class is immutable. Running 
 
 ```python
-keres = NewDeathEater('Keres Fulford', 1953)
+keres = NewDarkArmyMember('Keres Fulford', 1953)
 keres.name = 'Adrien'
 ```
 
-will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(keres)``` will return ```NewDeathEater(name='Keres Fulford', birthyear=1953)```.  
+will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(keres)``` will return ```NewDarkArmyMember(name='Keres Fulford', birthyear=1953)```.  
    
 Note: be careful with the datatypes of your fields. When a field contains a mutable datatype (for example a list) the field will stay mutable, even when setting ```frozen=True```. So when you want to have a truly immutable class, make sure that all fields use immutable data types (for example a tuple instead of a list). 
 

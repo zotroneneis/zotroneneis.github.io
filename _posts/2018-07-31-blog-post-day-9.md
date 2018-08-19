@@ -23,7 +23,7 @@ def elms(self, subject_and_grade):
     try:
         subject, grade = subject_and_grade
     except ValueError:
-        raise ValueError("Pass and interable with two items: subject and grade")
+        raise ValueError("Pass and iterable with two items: subject and grade")
 
     passed = self.passed(grade)
 
@@ -64,15 +64,15 @@ class CastleKilmereMember:
 
 Let's add a few traits to bromley:
 ```python
-bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1956, sex='male')
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1959, sex='male')
 bromley.add_trait("kind")
-bromley.add_trait("monster-loving")
+bromley.add_trait("tidy-minded")
 bromley.add_trait("impatient", value=False)
 
 bromley.print_traits()
 ```
 
-This prints the following text: *Bromley Huckabee is kind, monster-loving but not impatient*. Let's add another method that checks if a Castle Kilmere member exhibits a certain character trait:
+This prints the following text: *Bromley Huckabee is kind, tidy-minded but not impatient*. Let's add another method that checks if a Castle Kilmere member exhibits a certain character trait:
 
 ```python
 def exhibits_trait(self, trait):

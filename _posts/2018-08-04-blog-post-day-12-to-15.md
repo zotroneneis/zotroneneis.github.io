@@ -56,7 +56,7 @@ class Spell(metaclass=ABCMeta):
 Let's test whether we can instantiate the ```Spell``` class.
 
 ```python
-spell = Spell('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly')
+spell = Spell('Stuporus Ratiato', 'Stuporus Ratiato', 'Makes objects fly')
 ```
 
 As expected, this raises an error: ```TypeError: Can't instantiate abstract class Spell with abstract methods cast, defining_feature```. Great! So let's create a subclass. In case you didn't know: a spell can be either a transfiguration, charm, jinx, hex, curse, counter-spell or healing-spell. The ```Charm``` class might look as follows:
@@ -76,7 +76,7 @@ class Charm(Spell):
 Let's instantiate a charm everyone knows.
 
 ```python
-charm = Charm('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly', 'simple')
+charm = Charm('Stuporus Ratiato', 'Stuporus Ratiato', 'Makes objects fly', 'simple')
 ```
 
 Well, this is not working. It raises an error *at instantiation time*: ```TypeError: Can't instantiate abstract class Charm with abstract methods defining_feature```. Why? Because we forgot to implement the ```defining_feature``` method!   
@@ -107,11 +107,11 @@ class Charm(Spell):
 Now
 
 ```python
-charm = Charm('Wingardium Leviosa', 'Wingardium Leviosa', 'Makes objects fly', 'simple')
+charm = Charm('Stuporus Ratiato', 'Stuporus Ratiato', 'Makes objects fly', 'simple')
 print(charm)
 ```
 
-works just fine and prints: ```Charm(Wingardium Leviosa, incantation: 'Wingardium Leviosa', effect: Makes objects fly)```
+works just fine and prints: ```Charm(Stuporus Ratiato, incantation: 'Stuporus Ratiato', effect: Makes objects fly)```
 
 
 ## How to combine @abstractmethod with other decorators
@@ -134,5 +134,5 @@ Apart from the benefits of abstract base classes we have already discussed, ABC'
 
 ## Further extensions of the Cleon Bery universe
 
-When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DeathEater``` class got a ```cast_spell``` method. Since our Cleon Bery universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only House of Ambitions would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Cassidy Ambergem), you might be able to perform a spell earlier than less gifted students.
+When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DarkArmyMember``` class got a ```cast_spell``` method. Since our Cleon Bery universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only House of Ambitions would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Cassidy Ambergem), you might be able to perform a spell earlier than less gifted students.
 
