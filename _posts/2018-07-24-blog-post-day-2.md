@@ -40,7 +40,7 @@ class CastleKilmereMember:
 
     @staticmethod
     def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1881, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1909, 'male')
 
 ```
 
@@ -110,7 +110,7 @@ class CastleKilmereMember:
 
     @staticmethod
     def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1881, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1909, 'male')
 
 
 class Pupil(CastleKilmereMember):
