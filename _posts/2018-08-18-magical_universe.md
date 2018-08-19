@@ -1,7 +1,7 @@
 ---
 title: 'The tales of Castle Kilmere'
 date: 2018-08-18
-permalink: /posts/2018/07/tales_of_castle_kilmere/
+permalink: /posts/2018/07/the_tales_of_castle_kilmere/
 tags:
   - python
   - coding
