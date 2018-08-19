@@ -19,13 +19,13 @@ We already used tuples in our Cleon Bery universe. For example, we defined the `
 
 ```python
 pet = ('pet_name', 'pet_type')
-cleons_pet = ('Hedwig', 'owl')
+cleons_pet = ('Cotton', 'owl')
 ```
 
 The 'pet' tuple has two fields: 'pet_name' and 'pet_type' that can be accessed using their integer index. Once we create a tuple like ```cleons_pet``` we can't change it anymore. For example, running
 
 ```python
-cleons_pet[0] = 'Pigwidgeon'
+cleons_pet[0] = 'Twiggles'
 ```
 
 throws a ```TypeError: 'tuple' object does not support item assignment```.
@@ -38,7 +38,7 @@ Creating a namedtuple is easy. There are two kinds of namedtuples we can use: ``
 ```python
 from collections import namedtuple
 Pet = namedtuple('Pet', 'pet_name pet_type')
-cleons_pet = Pet('Hedwig', 'owl')
+cleons_pet = Pet('Cotton', 'owl')
 ```
 
 We can access the fields of the namedtuple using the field names or their indices:
@@ -60,7 +60,7 @@ class Pet(NamedTuple):
     def __repr__(self):
         return f"{self.pet_name}, {self.pet_type}"
 
-cleons_pet = Pet('Hedwig', 'owl')
+cleons_pet = Pet('Cotton', 'owl')
 print('cleons_pet: ', cleons_pet)
 ```
 

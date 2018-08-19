@@ -10,7 +10,7 @@ tags:
 
 **Topics:** object oriented programming, classes, inheritance
 
-I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to it.
+I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to the [Tales of Castle Kilmere](http://alpopkes.com/posts/2018/07/the_tales_of_castle_kilmere/).
 
 So let's start with the most important basics.
 
@@ -40,12 +40,12 @@ Side note: ```pass``` is a Python keyword that can be used as a placeholder. It 
 To create an actual object, i.e. an *instance* of the class we need to *instantiate* the class. This is also simple:
 
 ```python
-hogwarts_member = CastleKilmereMember()
+kilmere_member = CastleKilmereMember()
 ```
 
 ## Adding attributes and methods
 
-So far our "CastleKilmereMember" class is boring. We need to add some attributes and methods to make it more interesting.
+So far our ```CastleKilmereMember``` class is boring. We need to add some attributes and methods to make it more interesting.
 
 ```python
 class CastleKilmereMember:
@@ -61,13 +61,12 @@ class CastleKilmereMember:
     def says(self, words):
         return f"{self._name} says {words}"
 
-hagrid = CastleKilmereMember('Rubeus Hagrid', '1928', 'male')
-print(hagrid.says("Hello!"))
+bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+print(bromley.says("Hello!"))
 
 ```
 
-This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```hagrid = CastleKilmereMember('Rubeus Hagrid', '1928', 'male')``` the ```__init__``` method of the ```CastleKilmereMember``` class is called with the arguments ```'Rubeus Hagrid', '1928', 'male'``` which represent the name, birthyear and sex of the Castle Kilmere member. The ```__init__``` method returns an instance of the class which is then assigned to
-a variable called "hagrid".
+This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')``` the ```__init__``` method of the ```CastleKilmereMember``` class is called with the arguments ```'Bromley Huckabee', '1928', 'male'``` which represent the name, birthyear and sex of the Castle Kilmere member. The ```__init__``` method returns an instance of the class which is then assigned to a variable called "bromley".
    
 Note: The first argument of the ```__init__``` method is called 'self'. This argument will be the first argument in most methods. It points towards an instance of the class whenever the method is called. For more details on this, see the [blog post of day 4]() or the [Python docs](https://docs.python.org/3/tutorial/classes.html).   
    
@@ -77,8 +76,7 @@ We also added a method called ```says``` that adds behavior to our class. In thi
 
 The ```CastleKilmereMember``` class is nice, but of course we want many other classes in our Magical Universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Castle Kilmere, right? This is what *inheritance* is used for.   
    
-Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new
-functionality. Let's use the concept of inheritance to create a ```Pupil``` class!
+Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new functionality. Let's use the concept of inheritance to create a ```Pupil``` class!
 
 ```python
 class Pupil(CastleKilmereMember):
@@ -94,32 +92,30 @@ class Pupil(CastleKilmereMember):
         if pet is not None:
             self.pet_name, self.pet_type = pet
 
-        self._owls = {
-                'Study of Ancient Runes': False,
-                'Arithmancy': False,
-                'Astflynnomy': False,
-                'Care of Magical Creatures': False,
-                'Charms': False,
-                'Defence Against the Dark Arts': False,
-                'Divination': False,
-                'Herbology': False,
-                'History of Magic': False,
-                'Muggle Studies': False,
-                'Potions': False,
-                'Transfiguration': False}
-
+        self._elms = {
+                  'Broomstick Flying': False,
+                  'Art': False,
+                  'Magical Theory': False,
+                  'Foreign Magical Systems': False,
+                  'Charms': False,
+                  'Defence Against Dark Magic': False,
+                  'Divination': False,
+                  'Herbology': False,
+                  'History of Magic': False,
+                  'Potions': False,
+                  'Transfiguration': False}
 
 cleon = Pupil(name='Cleon Bery',
               birthyear=1980,
               sex='male',
-              house='Griffindor',
+              house='House of Courage',
               start_year=1991,
-              pet=('Hedwig', 'owl'))
+              pet=('Cotton', 'owl'))
 ```
 
 In this new class we use the method ```super``` to call the ```init``` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the ```Pupil``` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil belongs to one of the Castle Kilmere houses and she/he started school in a specific year. Also, a pupil might own a pet.    
    
-Furthermore, we added an attribute "owl". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any OWL (Ordinary Wizarding Level) yet. But this might change!
+Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any ELM (Elementary Level of Magic) yet. But this might change!
 
 
 ## Instance and class attributes
@@ -130,7 +126,7 @@ b) Class attributes
 
 All the attributes in the examples above are *instance attributes*:    
 - Instance attributes are tied to a particular object instance
-- The contents of an instance variable (e.g. the actual name of a Castle Kilmere Member) are stored on the instance itself, not on the class. For example, the content of the *name* attribute of the instance *hagrid* is *Rubeus Hagrid*. Other instances of the CastleKilmereMember class will have different names.   
+- The contents of an instance variable (e.g. the actual name of a Castle Kilmere member) are stored on the instance itself, not on the class. For example, the content of the *name* attribute of the instance *bromley* is *Bromley Huckabee*. Other instances of the CastleKilmereMember class will have different names.   
 - So the contents of an instance variable are independent from one object to the next!   
 - When you modify the contents of an instance variable it will only affect the particular object instance, not any of the other objects
 
@@ -158,8 +154,8 @@ Class attributes:
 We can access and modify class attributes both with and without an instance of the class:
 
 ```python
-hagrid = CastleKilmereMember('Rubeus Hagrid', '1928', 'male')
-print(hagrid.location)
+bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+print(bromley.location)
 print(CastleKilmereMember.location)
 ```
 
@@ -195,19 +191,18 @@ class Pupil(CastleKilmereMember):
         if pet is not None:
             self.pet_name, self.pet_type = pet
 
-        self._owls = {
-                'Study of Ancient Runes': False,
-                'Arithmancy': False,
-                'Astflynnomy': False,
-                'Care of Magical Creatures': False,
-                'Charms': False,
-                'Defence Against the Dark Arts': False,
-                'Divination': False,
-                'Herbology': False,
-                'History of Magic': False,
-                'Muggle Studies': False,
-                'Potions': False,
-                'Transfiguration': False}
+        self._elms = {
+                  'Broomstick Flying': False,
+                  'Art': False,
+                  'Magical Theory': False,
+                  'Foreign Magical Systems': False,
+                  'Charms': False,
+                  'Defence Against Dark Magic': False,
+                  'Divination': False,
+                  'Herbology': False,
+                  'History of Magic': False,
+                  'Potions': False,
+                  'Transfiguration': False}
 
 class Professor(CastleKilmereMember):
   """
@@ -235,15 +230,15 @@ class Ghost(CastleKilmereMember):
 
 
 if __name__ == "__main__":
-  hagrid = CastleKilmereMember('Rubeus Hagrid', '1928', 'male')
-  print(hagrid.says("Hello!"))
+  bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+  print(bromley.says("Hello!"))
 
   cleon = Pupil(name='Cleon Bery',
                 birthyear=1980,
                 sex='male',
-                house='Griffindor',
+                house='House of Courage',
                 start_year=1991,
-                pet=('Hedwig', 'owl'))
+                pet=('Cotton', 'owl'))
 
 ```
 

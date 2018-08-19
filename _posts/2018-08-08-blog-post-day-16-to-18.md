@@ -34,8 +34,8 @@ class House:
 We can create an instance of the ```House``` class just as before:
 
 ```python
-gryffindor = House('Gryffindor',
-                   'Godric Gryffindor',
+house_of_courage = House('House of Courage',
+                   'Godric House of Courage',
                    ['bravery', 'nerve', 'courage', 'chivalry', 'daring'])
 ```
 
@@ -53,20 +53,20 @@ def __init__(self, name: str, founder: str, traits: list):
 That's nice, isn't it? All we had to do is list the attributes our ```House``` class should have. Python took care of the rest! Of course, ```__init__()``` is not the only special method added to the class. For example, Python also added a ```__repr__()``` method to ```House```. So we can run 
 
 ```python
-print(gryffindor)
+print(house_of_courage)
 ```
 
-and get a nice output right away: ```House(name='Gryffindor', founder='Godric Gryffindor', traits=['bravery', 'nerve', 'courage', 'chivalry', 'daring'])```. Remember: up to now we had to manually add a ```__repr__()``` method to our classes!   
+and get a nice output right away: ```House(name='House of Courage', founder='Godric House of Courage', traits=['bravery', 'nerve', 'courage', 'chivalry', 'daring'])```. Remember: up to now we had to manually add a ```__repr__()``` method to our classes!   
    
-Another example: we can automatically compare objects of the ```House``` class. This usually involves implementing a custom ```__eq__()``` method (which can become quite complex). With data classes, ```__eq__()``` is implemented automatically. Let's test this by creating Hufflepuff.
+Another example: we can automatically compare objects of the ```House``` class. This usually involves implementing a custom ```__eq__()``` method (which can become quite complex). With data classes, ```__eq__()``` is implemented automatically. Let's test this by creating House of Loyalty.
 
 ```python
-hufflepuff = House('Hufflepuff',
-                   'Helga Hufflepuff',
+house_of_loyalty = House('House of Loyalty',
+                   'Helga House of Loyalty',
                    ['dedication', 'hardworking', 'fairness', 'patience', 'kindness', 'tolerance', 'loyalty'])
 
-print(gryffindor == hufflepuff)
-print(gryffindor == gryffindor)
+print(house_of_courage == house_of_loyalty)
+print(house_of_courage == house_of_courage)
 ```
 
 As expected, these two expressions output ```False``` and ```True```. 
@@ -74,7 +74,7 @@ As expected, these two expressions output ```False``` and ```True```.
 
 ## Adding default values
 
-We can easily add default values to the fields of our ```House``` data class. For example, we could add a field named 'founded_in'. Note: we don't know when Hogwarts was founded, but as discussed [here](https://scifi.stackexchange.com/questions/18550/when-was-hogwarts-founded) it was probably founded between 893 and 991. We will stick to the latter.
+We can easily add default values to the fields of our ```House``` data class. For example, we could add a field named 'founded_in'. Note: we don't know when Castle Kilmere was founded, but as discussed [here](https://scifi.stackexchange.com/questions/18550/when-was-hogwarts-founded) it was probably founded between 893 and 991. We will stick to the latter.
 
 ```python
 @dataclass
@@ -132,10 +132,10 @@ class House:
         return (now - self.founded_in) + 1
 ```
 
-Now running ```print(hufflepuff < gryffindor)``` will work and produce the output ```False```. Why False? Because data classes compare objects as if the objects were tuples of their fields. So hufflepuff is "larger" than gryffindor because "G" comes before "H" in the alphabet.
+Now running ```print(house_of_loyalty < house_of_courage)``` will work and produce the output ```False```. Why False? Because data classes compare objects as if the objects were tuples of their fields. So house_of_loyalty is "larger" than house_of_courage because "G" comes before "H" in the alphabet.
 
 
-## Gryffindor houses
+## House of Courage houses
 
 The full ```House``` class will look as follows: 
 
@@ -155,7 +155,7 @@ class House:
         return (now - self.founded_in) + 1
 ```
 
-The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for Gryffindor we will create Professor mirren and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/code_per_day/day_16_to_18.py) for details.
+The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for House of Courage we will create Professor mirren and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/code_per_day/day_16_to_18.py) for details.
 
 
 

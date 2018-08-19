@@ -13,14 +13,14 @@ tags:
 
 After having talked about decorators already on [day 5](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-5/) and [day 6](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-6/) I would like to revisit the topic to discuss how decorators can be used within classes. 
 
-Let's put ourselves in the position of a Hogwarts member during the time Blade Bardock is headmaster. This is the time Dalodore is dead and the school is controlled by the Ministry of Magic - and hence, by Lord Odon. So these are dark, scary times. People at Hogwarts are constantly scared that something might happen to them, their family or their friends. So when talking to each other between classes, they weren't laughing and fooling around. They were whispering and getting to the next class or common room as quickly as possible. This means that we have to adapt the behaviour of our ```says()``` function in the ```HogwartsMember``` class. However, its output should only change during blade's reign of terror. This is a great application for decorators!
+Let's put ourselves in the position of a Castle Kilmere member during the time Blade Bardock is headmaster. This is the time Dalodore is dead and the school is controlled by the Ministry of Magic - and hence, by Lord Odon. So these are dark, scary times. People at Castle Kilmere are constantly scared that something might happen to them, their family or their friends. So when talking to each other between classes, they weren't laughing and fooling around. They were whispering and getting to the next class or common room as quickly as possible. This means that we have to adapt the behaviour of our ```says()``` function in the ```CastleKilmereMember``` class. However, its output should only change during blade's reign of terror. This is a great application for decorators!
 
-Currently, the ```HogwartsMember``` class (at least the part relevant for us) looks like this:
+Currently, the ```CastleKilmereMember``` class (at least the part relevant for us) looks like this:
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name:str, birthyear:int, sex:str):
@@ -52,12 +52,12 @@ def says(person, words):
     return f"{person} says: {words}"
 ```
 
-When not applying the ```@whisper``` decorator, the output of ```says("Aurora", "Be careful Quintus!")``` is ```Aurora says: Be careful Quintus!```. When decorating the function its output is changed to ```Aurora whispers: Be careful Quintus...```. That's exactly what we want! However, we can't use the current version of our ```whisper``` decorator inside the ```HogwartsMember``` class. We need to incorporate the ```self``` argument of our class. This is done as follows: 
+When not applying the ```@whisper``` decorator, the output of ```says("Aurora", "Be careful Quintus!")``` is ```Aurora says: Be careful Quintus!```. When decorating the function its output is changed to ```Aurora whispers: Be careful Quintus...```. That's exactly what we want! However, we can't use the current version of our ```whisper``` decorator inside the ```CastleKilmereMember``` class. We need to incorporate the ```self``` argument of our class. This is done as follows: 
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name: str, birthyear: int, sex: str):
@@ -80,12 +80,12 @@ class HogwartsMember:
         return f"{self._name} says: {words}"
 ```
 
-Let's test our function. First, we need to add a new constructor to the ```Pupil``` class to create Aurora, since Cleon, flynn and Cassidy Ambergem weren't at Hogwarts when blade was headmaster (they were trying to find horcruxes).
+Let's test our function. First, we need to add a new constructor to the ```Pupil``` class to create Aurora, since Cleon, flynn and Cassidy Ambergem weren't at Castle Kilmere when blade was headmaster (they were trying to find horcruxes).
 
 ```python
-class Pupil(HogwartsMember):
+class Pupil(CastleKilmereMember):
     """
-    Create a Hogwarts Pupil
+    Create a Castle Kilmere Pupil
     """
 
     def __init__(self, name: str, birthyear: int, sex: str, house: str, start_year: int, pet: tuple = None):
@@ -99,7 +99,7 @@ class Pupil(HogwartsMember):
 
     @classmethod
     def ginny(cls):
-        return cls('Aurora Gibbs', 1981, 'female', 'Gryffindor', start_year=1992)
+        return cls('Aurora Gibbs', 1981, 'female', 'House of Courage', start_year=1992)
 ```
 
 Next, we instantiate Aurora and let her say a few words.

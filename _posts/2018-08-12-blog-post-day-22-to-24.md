@@ -18,11 +18,11 @@ The most common use of context managers is the proper *management of resources*.
 
 ## Using ```with``` to open files
 
-In the world of Cleon Bery a lot of communication is done via good old letters. So let's imagine that Cleon wants to write a letter to Hagrid asking if he, flynn and Cassidy Ambergem can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
+In the world of Cleon Bery a lot of communication is done via good old letters. So let's imagine that Cleon wants to write a letter to bromley asking if he, flynn and Cassidy Ambergem can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
 
 ```python
 with open('letter.txt', 'w') as letter:
-    letter.write("Hi Hagrid! \n"
+    letter.write("Hi bromley! \n"
                  "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
                  "Cleon")
 ```
@@ -32,7 +32,7 @@ Internally, this is translated to something like this (details of the full trans
 ```python
 letter= open('letter.txt', 'w')
 try:
-    letter.write("Hi Hagrid! \n"
+    letter.write("Hi bromley! \n"
                  "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
                  "Cleon")
 finally:
@@ -86,8 +86,8 @@ class Letter:
 That's it! With a proper implemetation of ```__enter__()``` and ```__exit__()``` our ```Letter``` class supports the ```with``` statement:
 
 ```python
-with Letter('dear_hagrid.txt') as letter:
-    letter.write("Hi Hagrid! \n"
+with Letter('dear_bromley.txt') as letter:
+    letter.write("Hi bromley! \n"
                  "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
                  "Cleon")
 
@@ -133,12 +133,12 @@ class Letter:
             self.letter.close()
 ```
 
-As a last step, we will add a ```write_letter()``` method to our ```HogwartsMember``` class. This will allow all Hogwarts members to write actual letters (even if we can't send them by owl).
+As a last step, we will add a ```write_letter()``` method to our ```CastleKilmereMember``` class. This will allow all Castle Kilmere members to write actual letters (even if we can't send them by owl).
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     ...
@@ -156,8 +156,8 @@ class HogwartsMember:
 if __name__ == "__main__":
     cleon = Pupil.cleon()
 
-    letter_content = "Hi Hagrid! \nCan flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \nCleon"
-    cleon.write_letter('Hagrid', letter_content)
+    letter_content = "Hi bromley! \nCan flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \nCleon"
+    cleon.write_letter('bromley', letter_content)
 
     print(f"Total number of letter creates so far: {Letter.total_number_of_letters}")
 ```

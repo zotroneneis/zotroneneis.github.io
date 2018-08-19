@@ -30,9 +30,9 @@ def says(self, words):
 Let's add a static method to our base class.   
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name, birthyear, sex):
@@ -40,16 +40,16 @@ class HogwartsMember:
 
     @staticmethod
     def school_headmaster():
-        return HogwartsMember('Redmond Dalodore', 1881, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1881, 'male')
 
 ```
 
 We can also add a static method to our ```Pupil``` class. It will tell us whether a certain grade in an exam passes or fails the exam.
 
 ```python
-class Pupil(HogwartsMember):
+class Pupil(CastleKilmereMember):
     """
-    Create a Hogwarts Pupil
+    Create a Castle Kilmere Pupil
     """
     ...
 
@@ -67,10 +67,8 @@ class Pupil(HogwartsMember):
                 'Acceptable': True,
                 'P': False,
                 'Poor': False,
-                'D': False,
-                'Dreadful': False,
-                'T': False,
-                'Troll': False,
+                'H': False,
+                'Horrible': False,
                 }
 
         return grades.get(grade, False)
@@ -92,14 +90,14 @@ For example, we probably want to create the main characters of the Cleon Bery wo
 ```python
 @classmethod
 def cleon(cls):
-    return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
+    return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Cotton', 'owl'))
 ```
 
 ## All code for today
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name, birthyear, sex):
@@ -112,12 +110,12 @@ class HogwartsMember:
 
     @staticmethod
     def school_headmaster():
-        return HogwartsMember('Redmond Dalodore', 1881, 'male')
+        return CastleKilmereMember('Redmond Dalodore', 1881, 'male')
 
 
-class Pupil(HogwartsMember):
+class Pupil(CastleKilmereMember):
     """
-    Create a Hogwarts Pupil
+    Create a Castle Kilmere Pupil
     """
 
     def __init__(self, name, birthyear, sex, house, start_year, pet=None):
@@ -128,13 +126,13 @@ class Pupil(HogwartsMember):
         if pet is not None:
             self.pet_name, self.pet_type = pet
 
-        self._owls = {
+        self._elms = {
                 'Study of Ancient Runes': False,
                 'Arithmancy': False,
                 'Astflynnomy': False,
                 'Care of Magical Creatures': False,
                 'Charms': False,
-                'Defence Against the Dark Arts': False,
+                'Defence Against Dark Magic': False,
                 'Divination': False,
                 'Herbology': False,
                 'History of Magic': False,
@@ -144,11 +142,11 @@ class Pupil(HogwartsMember):
 
     @classmethod
     def cleon(cls):
-        return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
+        return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Cotton', 'owl'))
 
     @classmethod
     def flynn(cls):
-        return cls('Flynn Gibbs', 1980, 'male', 'Griffindor', 1991, ('Pigwidgeon', 'owl'))
+        return cls('Flynn Gibbs', 1980, 'male', 'Griffindor', 1991, ('Twiggles', 'owl'))
 
     @classmethod
     def cassidy(cls):
@@ -156,9 +154,9 @@ class Pupil(HogwartsMember):
 
 
 
-class Professor(HogwartsMember):
+class Professor(CastleKilmereMember):
   """
-  Creates a Hogwarts professor
+  Creates a Castle Kilmere professor
   """
 
   def __init__(self, name, birthyear, sex, subject, house=None):
@@ -173,12 +171,12 @@ class Professor(HogwartsMember):
 
     @classmethod
     def blade(cls):
-        return cls('Blade Bardock', 1960, 'male', 'Potions', 'Slytherin')
+        return cls('Blade Bardock', 1960, 'male', 'Potions', 'House of Ambition')
 
     
-class Ghost(HogwartsMember):
+class Ghost(CastleKilmereMember):
     """
-    Creates a Hogwarts ghost
+    Creates a Castle Kilmere ghost
     """
 
     def __init__(self, name, birthyear, sex, year_of_death, house=None):
@@ -191,7 +189,7 @@ class Ghost(HogwartsMember):
 
 if __name__ == "__main__":
 
-    hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928)
+    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1928)
     cleon = Pupil(name='Cleon Bery', birthyear=1980, house='Griffindor', start_year=1991)
     headmaster = cleon.school_headmaster()
 
@@ -227,25 +225,25 @@ if __name__ == "__main__":
 <!-- ``` -->
 
 <!-- The full signature of the ```property()``` function is ```property(fget=None, fset=None, fdel=None, doc=None) -> property attribute```. ```fget``` is a function for getting the value of the attribute, ```fset``` is a function for setting the value of the attribute and ```fdel``` is a function for deleting the attribute. All these arguments are *optional*. So we can create a property object like we did above. But we can add extra "power" to it by specifying a setter, getter and/or deleter -->
-<!-- method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the OWL's (Ordinary Wizarding Level's) to our Pupil class: -->
+<!-- method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the ELM's (Elementare Level of Magic's) to our Pupil class: -->
 
 <!-- ``` -->
-<!-- class Pupil(HogwartsMember): -->
+<!-- class Pupil(CastleKilmereMember): -->
 
 <!--     def __init__(self, name:str, birthyear:int, house:str, start_year:int): -->
 <!--         ... -->
-<!--         self._owls = {'Study of Ancient Runes': False, 'Arithmancy': False, 'Astflynnomy': False, 'Care of Magical Creatures': False, 'Charms': False, 'Defence Against the Dark Arts': False, 'Divination': False, 'Herbology': False, 'History of Magic': False, 'Muggle Studies': False, 'Potions': False, 'Transfiguration': False} -->
+<!--         self._elms = {'Study of Ancient Runes': False, 'Arithmancy': False, 'Astflynnomy': False, 'Care of Magical Creatures': False, 'Charms': False, 'Defence Against Dark Magic': False, 'Divination': False, 'Herbology': False, 'History of Magic': False, 'Muggle Studies': False, 'Potions': False, 'Transfiguration': False} -->
 
 <!--     @property -->
-<!--     def owls(self): -->
-<!--         return self._owls -->
+<!--     def elms(self): -->
+<!--         return self._elms -->
 <!-- ``` -->
 
-<!-- Now, if we want to update the OWL's of a student passed, we have to make sure that she/he actually passed the exam. Otherwise, the OWL can't be awarded. Let's implement that using a setter method. -->
+<!-- Now, if we want to update the ELM's of a student passed, we have to make sure that she/he actually passed the exam. Otherwise, the ELM can't be awarded. Let's implement that using a setter method. -->
 
 <!-- ``` -->
-<!--     @owls.setter -->
-<!--     def owls(self, subject_and_grade): -->
+<!--     @elms.setter -->
+<!--     def elms(self, subject_and_grade): -->
 
 <!--         try: -->
 <!--             subject, grade = subject_and_grade -->
@@ -255,9 +253,9 @@ if __name__ == "__main__":
 <!--         passed = self.passed(grade) -->
 
 <!--         if not passed: -->
-<!--             raise ValueError('The exam was not passed so no OWL was awarded!') -->
+<!--             raise ValueError('The exam was not passed so no ELM was awarded!') -->
 
-<!--         self._owls[subject] = True -->
+<!--         self._elms[subject] = True -->
 
 <!--     @staticmethod -->
 <!--     def passed(grade): -->

@@ -41,7 +41,7 @@ Test functions should have long and descriptive names. Why? Because the test fun
 
 ## Basic usage of pytest
 
-First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```HogwartsMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
+First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```CastleKilmereMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
 
 Let's take our ```say_words()``` function from [day 5](http://alpopkes.com/posts/2018/07/coding-challenge-day-5/) as an example. The function looks as follows:
 
@@ -59,81 +59,81 @@ def test_say_words():
 
 We can run the test by running the command ```pytest``` from the command line within the *test_code* folder. The test should run without errors. 
 
-## Testing the ```HogwartsMember``` class
+## Testing the ```CastleKilmereMember``` class
 
-Let's create a few tests that ensure that a Hogwarts member is created correctly and that we can add positive and negative traits, as well as check whether a member possesses a certain trait.
+Let's create a few tests that ensure that a Castle Kilmere member is created correctly and that we can add positive and negative traits, as well as check whether a member possesses a certain trait.
 
 ```python
 def test_correctness_of_attributes_():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    assert hagrid.name == 'Rubeus Hagrid'
-    assert hagrid.birthyear == 1928
-    assert hagrid.sex == 'male'
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    assert bromley.name == 'Bromley Huckabee'
+    assert bromley.birthyear == 1928
+    assert bromley.sex == 'male'
 
 def test_add_positive_traits():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    assert hagrid._traits == {'kind': True, 'wild': True}
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    assert bromley._traits == {'kind': True, 'wild': True}
 
 def test_add_negative_trait():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    hagrid.add_trait('mean', False)
-    assert hagrid._traits == {'mean': False}
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley.add_trait('mean', False)
+    assert bromley._traits == {'mean': False}
 
 def test_exhibit_traits():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    hagrid.add_trait('mean', False)
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    bromley.add_trait('mean', False)
 
-    assert hagrid.exhibits_trait('kind') == True
-    assert hagrid.exhibits_trait('mean') == False
-    assert hagrid.exhibits_trait('smart') == None
+    assert bromley.exhibits_trait('kind') == True
+    assert bromley.exhibits_trait('mean') == False
+    assert bromley.exhibits_trait('smart') == None
 ```
 
 
 ## Pytest fixtures
 
-Since our Cleon Bery universe contains mostly classes we have to create at least one member of the ```HogwartsMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Hagrid. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
+Since our Cleon Bery universe contains mostly classes we have to create at least one member of the ```CastleKilmereMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate bromley. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
 
 We can create a fixture using the ```@pytest.fixture``` decorator and pass the fixture as an argument to the test functions that need it. So we could change our test code in the following way:
 
 ```python
 import pytest
-from cleon_potter_universe.cleon_potter_universe import HogwartsMember
+from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
 
 @pytest.fixture
-def hagrid():
-  hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-  return hagrid
+def bromley():
+  bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+  return bromley
 
 @pytest.fixture
-def hagrid_with_traits():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    hagrid.add_trait('mean', False)
-    return hagrid
+def bromley_with_traits():
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    bromley.add_trait('mean', False)
+    return bromley
 
-def test_correctness_of_attributes_(hagrid):
-    assert hagrid.name == 'Rubeus Hagrid'
-    assert hagrid.birthyear == 1928
-    assert hagrid.sex == 'male'
+def test_correctness_of_attributes_(bromley):
+    assert bromley.name == 'Bromley Huckabee'
+    assert bromley.birthyear == 1928
+    assert bromley.sex == 'male'
 
-def test_add_positive_traits(hagrid):
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    assert hagrid._traits == {'kind': True, 'wild': True}
+def test_add_positive_traits(bromley):
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    assert bromley._traits == {'kind': True, 'wild': True}
 
-def test_add_negative_trait(hagrid):
-    hagrid.add_trait('mean', False)
-    assert hagrid._traits == {'mean': False}
+def test_add_negative_trait(bromley):
+    bromley.add_trait('mean', False)
+    assert bromley._traits == {'mean': False}
 
-def test_exhibit_traits(hagrid_with_traits):
-    assert hagrid_with_traits.exhibits_trait('kind') == True
-    assert hagrid_with_traits.exhibits_trait('mean') == False
-    assert hagrid_with_traits.exhibits_trait('smart') == None
+def test_exhibit_traits(bromley_with_traits):
+    assert bromley_with_traits.exhibits_trait('kind') == True
+    assert bromley_with_traits.exhibits_trait('mean') == False
+    assert bromley_with_traits.exhibits_trait('smart') == None
 ```
 
 Fixtures are much more powerful than this. So if you want to learn more about them consider reading the [pytest docs on fixtures](https://docs.pytest.org/en/latest/fixture.html).
@@ -144,22 +144,22 @@ Fixtures are much more powerful than this. So if you want to learn more about th
 Our ```print_traits()``` function prints the positive and negative traits. So we need a way to test whether the printed output is correct. This can be done using the ```capfd``` fixture as explained in this [stackoverflow post](https://stackoverflow.com/questions/20507601/writing-a-pytest-function-for-checking-the-output-on-console-stdout-in-python):
 
 ```python
-def test_print_traits(capfd, hagrid_with_traits):
-    hagrid_with_traits.print_traits()
+def test_print_traits(capfd, bromley_with_traits):
+    bromley_with_traits.print_traits()
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'Rubeus Hagrid is kind, wild but not mean'
+    assert stdout == 'Bromley Huckabee is kind, wild but not mean'
 
 ```
 
 ## Testing for exceptions
 
-To show how we can test whether our code raises a certain exception, we can try to create a ```HogwartsMember``` without any attributes. This should raise a ```TypeError```:
+To show how we can test whether our code raises a certain exception, we can try to create a ```CastleKilmereMember``` without any attributes. This should raise a ```TypeError```:
 
 ```python
 def test_init_raises_exception_with_missing_arguments():
     with pytest.raises(TypeError):
-        hagrid = HogwartsMember()
+        bromley = CastleKilmereMember()
 ```
 
 
@@ -169,69 +169,69 @@ def test_init_raises_exception_with_missing_arguments():
 - [Pytest](https://pytest.org)
 
 
-## Full test code for ```HogwartsMember``` class
+## Full test code for ```CastleKilmereMember``` class
 
 This test code can also be found on the [GitHub repo](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/test_code/test_hogwarts_member_class.py).
 
 ```python
 import pytest
-from cleon_potter_universe.cleon_potter_universe import HogwartsMember
+from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
 
 @pytest.fixture
-def hagrid():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    return hagrid
+def bromley():
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    return bromley
 
 @pytest.fixture
-def hagrid_with_traits():
-    hagrid = HogwartsMember('Rubeus Hagrid', 1928, 'male')
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    hagrid.add_trait('mean', False)
-    return hagrid
+def bromley_with_traits():
+    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    bromley.add_trait('mean', False)
+    return bromley
 
-def test_correctness_of_attributes_(hagrid):
-    assert hagrid._name == 'Rubeus Hagrid'
-    assert hagrid.birthyear == 1928
-    assert hagrid.sex == 'male'
+def test_correctness_of_attributes_(bromley):
+    assert bromley._name == 'Bromley Huckabee'
+    assert bromley.birthyear == 1928
+    assert bromley.sex == 'male'
 
-def test_add_positive_traits(hagrid):
-    hagrid.add_trait('kind')
-    hagrid.add_trait('wild')
-    assert hagrid._traits == {'kind': True, 'wild': True}
+def test_add_positive_traits(bromley):
+    bromley.add_trait('kind')
+    bromley.add_trait('wild')
+    assert bromley._traits == {'kind': True, 'wild': True}
 
-def test_add_negative_trait(hagrid):
-    hagrid.add_trait('mean', False)
-    assert hagrid._traits == {'mean': False}
+def test_add_negative_trait(bromley):
+    bromley.add_trait('mean', False)
+    assert bromley._traits == {'mean': False}
 
-def test_exhibit_traits(hagrid_with_traits):
-    assert hagrid_with_traits.exhibits_trait('kind') == True
-    assert hagrid_with_traits.exhibits_trait('mean') == False
-    assert hagrid_with_traits.exhibits_trait('smart') == None
+def test_exhibit_traits(bromley_with_traits):
+    assert bromley_with_traits.exhibits_trait('kind') == True
+    assert bromley_with_traits.exhibits_trait('mean') == False
+    assert bromley_with_traits.exhibits_trait('smart') == None
 
-def test_print_traits(capfd, hagrid_with_traits):
-    hagrid_with_traits.print_traits()
+def test_print_traits(capfd, bromley_with_traits):
+    bromley_with_traits.print_traits()
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'Rubeus Hagrid is kind, wild but not mean'
+    assert stdout == 'Bromley Huckabee is kind, wild but not mean'
 
 def test_init_raises_exception_with_missing_arguments():
     with pytest.raises(TypeError):
-        hagrid = HogwartsMember()
+        bromley = CastleKilmereMember()
 
-def test_says(hagrid):
-    assert hagrid.says("Hi Cleon!") == "Rubeus Hagrid says: Hi Cleon!"
+def test_says(bromley):
+    assert bromley.says("Hi Cleon!") == "Bromley Huckabee says: Hi Cleon!"
 
-def test_name_property(hagrid):
-    assert hagrid.name == 'Rubeus Hagrid'
+def test_name_property(bromley):
+    assert bromley.name == 'Bromley Huckabee'
 
-def test_age_property(hagrid):
-    assert hagrid.age == 90 # this holds only if the current year is 2018!
+def test_age_property(bromley):
+    assert bromley.age == 90 # this holds only if the current year is 2018!
 
-def test_repr_output(capfd, hagrid):
-    print(hagrid)
+def test_repr_output(capfd, bromley):
+    print(bromley)
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'HogwartsMember(Rubeus Hagrid, birthyear: 1928)'
+    assert stdout == 'CastleKilmereMember(Bromley Huckabee, birthyear: 1928)'
 
 ```

@@ -14,11 +14,11 @@ tags:
 
 ## Easier to ask for forgiveness than permission
 
-Today we are going to look at a common coding style in Python called 'Easier to ask for forgiveness than permission' or in short 'EAFP'. The idea of EAFP is that we assume that valid keys (or attributes) exist. If this assumption proves false, we catch and handle the exceptions that are raised. We actually used this principle already. Can you guess where? Take a close look at the ```@owls.setter``` method of the ```Pupil``` class:
+Today we are going to look at a common coding style in Python called 'Easier to ask for forgiveness than permission' or in short 'EAFP'. The idea of EAFP is that we assume that valid keys (or attributes) exist. If this assumption proves false, we catch and handle the exceptions that are raised. We actually used this principle already. Can you guess where? Take a close look at the ```@elms.setter``` method of the ```Pupil``` class:
 
 ```python
-@owls.setter
-def owls(self, subject_and_grade):
+@elms.setter
+def elms(self, subject_and_grade):
 
     try:
         subject, grade = subject_and_grade
@@ -28,19 +28,19 @@ def owls(self, subject_and_grade):
     passed = self.passed(grade)
 
     if passed:
-        self._owls[subject] = True
+        self._elms[subject] = True
     else:
-        print('The exam was not passed so no OWL was awarded!')
+        print('The exam was not passed so no ELM was awarded!')
 ```
 
 The ```try ... except ... ``` code block implements the EAFP principle. We assume that the ```subject_and_grade``` tuple exists. If it does, we unpack its values into ```subject, grade```. If ```subject_and_grade``` is not a valid tuple, a ```ValueError``` will be raised. We catch this error in the ```except``` block and handle it appropriately.  
    
-To add another example of the EAFP principle to our Cleon Bery universe we first extend our ```HogwartsMember``` class with a ```_traits``` attribute and two methods for adding and printing traits:
+To add another example of the EAFP principle to our Cleon Bery universe we first extend our ```CastleKilmereMember``` class with a ```_traits``` attribute and two methods for adding and printing traits:
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name: str, birthyear: int, sex: str):
@@ -62,17 +62,17 @@ class HogwartsMember:
     ...
 ```
 
-Let's add a few traits to Hagrid:
+Let's add a few traits to bromley:
 ```python
-hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928, sex='male')
-hagrid.add_trait("kind")
-hagrid.add_trait("monster-loving")
-hagrid.add_trait("impatient", value=False)
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley.add_trait("kind")
+bromley.add_trait("monster-loving")
+bromley.add_trait("impatient", value=False)
 
-hagrid.print_traits()
+bromley.print_traits()
 ```
 
-This prints the following text: *Rubeus Hagrid is kind, monster-loving but not impatient*. Let's add another method that checks if a Hogwarts member exhibits a certain character trait:
+This prints the following text: *Bromley Huckabee is kind, monster-loving but not impatient*. Let's add another method that checks if a Castle Kilmere member exhibits a certain character trait:
 
 ```python
 def exhibits_trait(self, trait):

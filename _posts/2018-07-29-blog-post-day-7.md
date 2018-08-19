@@ -26,7 +26,7 @@ Today we are going to look at a very important concept in Python: the usage of u
 - When naming a variable like this it will trigger Python's so called *name mangling*
 - This means that the variable name is internally replaced with ```_classname__var```      
 - ```classname``` is the name of the current class with any leading underscore(s) stripped   
-- For example, for the HogwartsMember class a variable named ```__name``` would internally be represented as ```_HogwartsMember__name```   
+- For example, for the CastleKilmereMember class a variable named ```__name``` would internally be represented as ```_CastleKilmereMember__name```   
 - Although there are no 'private' variables in Python, there is a valid use-case for private variables in classes (namely to avoid naming conflicts with childclasses)   
 - The name mangling is enforced by the Python interpreter   
    

@@ -18,36 +18,36 @@ Function annotations are a very cool Python 3 feature. They allow us to add arbi
 Let's add annotations to our ```___init___``` constructors:
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     def __init__(self, name: str, birthyear: int, sex: str):
         ...
 
 
-class Professor(HogwartsMember):
+class Professor(CastleKilmereMember):
     """
-    Creates a Hogwarts professor
+    Creates a Castle Kilmere professor
     """
 
     def __init__(self, name: str, birthyear: int, sex: str, subject: str, house=None):
         ...
 
 
-class Ghost(HogwartsMember):
+class Ghost(CastleKilmereMember):
     """
-    Creates a Hogwarts ghost
+    Creates a Castle Kilmere ghost
     """
 
     def __init__(self, name: str, birthyear: int, sex: str, year_of_death: int, house=None):
         ...
 
 
-class Pupil(HogwartsMember):
+class Pupil(CastleKilmereMember):
     """
-    Create a Hogwarts Pupil
+    Create a Castle Kilmere Pupil
     """
 
     def __init__(self, name: str, birthyear: int, sex: str, house: str, start_year: int, pet=None):

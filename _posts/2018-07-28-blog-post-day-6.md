@@ -16,12 +16,12 @@ Today, I digged a little deeper into the ```@property``` decorator, how it is re
 
 ## The ```@property``` decorator
 
-Yesterday we looked at decorators. The ```@property``` decorator allows us to create a *read-only* property. Let's add a simple property to our HogwartsMember class.
+Yesterday we looked at decorators. The ```@property``` decorator allows us to create a *read-only* property. Let's add a simple property to our CastleKilmereMember class.
 
 ```python
-class HogwartsMember:
+class CastleKilmereMember:
     """
-    Creates a member of the Hogwarts School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
     """
 
     ...
@@ -35,15 +35,15 @@ class HogwartsMember:
 This creates a property called *age* that can be accessed using the dot syntax:   
 
 ```python
-hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928, sex='male')
-print(hagrid.age)
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+print(bromley.age)
 ```
 
 With the current year (2018) this yields the output ```90```. Of course, we can also set a global ```now``` variable in our code that gives more appropriate ages. Since the attribute is *read-only* we can't change it:
 
 ```python
-hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928, sex='male')
-hagrid.age = 44
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley.age = 44
 ```
 
 yields an ```AttributeError: can't set attribute```. Of course, we can modify the behavior of ```@property```. Specifically, we can define how a property is accessed, set and deleted by defining its ```getter, setter``` and ```deleter``` methods.
@@ -75,37 +75,36 @@ The full signature of the ```property()``` function used in the second example (
 - ```fdel``` is a function for deleting the attribute   
    
 All these arguments are *optional*. So we can create a property object like we did above. But we can add extra "power" to it by specifying a setter, getter and/or deleter
-method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the OWL's (Ordinary Wizarding Level's) to our Pupil class:
+method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the ELM's (Elementare Level of Magic's) to our Pupil class:
 
 ```python
-class Pupil(HogwartsMember):
+class Pupil(CastleKilmereMember):
 
     def __init__(self, name: str, birthyear: int, house: str, start_year: int):
         ...
-        self._owls = {
-                  'Study of Ancient Runes': False,
-                  'Arithmancy': False,
-                  'Astflynnomy': False,
-                  'Care of Magical Creatures': False,
+        self._elms = {
+                  'Broomstick Flying': False,
+                  'Art': False,
+                  'Magical Theory': False,
+                  'Foreign Magical Systems': False,
                   'Charms': False,
-                  'Defence Against the Dark Arts': False,
+                  'Defence Against Dark Magic': False,
                   'Divination': False,
                   'Herbology': False,
                   'History of Magic': False,
-                  'Muggle Studies': False,
                   'Potions': False,
                   'Transfiguration': False}
 
     @property
-    def owls(self):
-        return self._owls
+    def elms(self):
+        return self._elms
 ```
 
-Now, if we want to update the OWL's of a student, we have to make sure that she/he actually passed the exam. Otherwise, the OWL can't be awarded. Let's implement that using a setter method.
+Now, if we want to update the ELM's of a student, we have to make sure that she/he actually passed the exam. Otherwise, the ELM can't be awarded. Let's implement that using a setter method.
 
 ```python
-    @owls.setter
-    def owls(self, subject_and_grade):
+    @elms.setter
+    def elms(self, subject_and_grade):
 
         try:
             subject, grade = subject_and_grade
@@ -115,17 +114,17 @@ Now, if we want to update the OWL's of a student, we have to make sure that she/
         passed = self.passed(grade)
 
         if passed:
-            self._owls[subject] = True
+            self._elms[subject] = True
         else:
-            print('The exam was not passed so no OWL was awarded!')
+            print('The exam was not passed so no ELM was awarded!')
 ```
 
-Of course we can also delete the OWL's of a student. But we should probably make sure that the user knows what he is doing when stealing a student all of her/his exams!
+Of course we can also delete the ELM's of a student. But we should probably make sure that the user knows what he is doing when stealing a student all of her/his exams!
 
 ```python
-    @owls.deleter
-    def owls(self):
-        print("Caution, you are deleting this students' OWL's! "
+    @elms.deleter
+    def elms(self):
+        print("Caution, you are deleting this students' ELM's! "
               "You should only do that if she/he dropped out of school without passing any exam!")
-        del self._owls
+        del self._elms
 ```

@@ -64,7 +64,7 @@ Now, the output of ```print(say_hello())``` will be: ```Hey there! Goodbye, have
 
 ## Wrapping functions that take input arguments
 
-Of course we want to be able to decorate all kinds of functions, not only ones that don't take any input arguments. Consider a function similar to the ```says``` function of our HogwartsMember class:  
+Of course we want to be able to decorate all kinds of functions, not only ones that don't take any input arguments. Consider a function similar to the ```says``` function of our CastleKilmereMember class:  
 
 ```python
 def say_words(person, words):

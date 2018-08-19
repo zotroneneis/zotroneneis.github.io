@@ -17,7 +17,7 @@ I always wanted to dig into the statement ```if __name__ == "__main__"``` that i
 
 We saved our Cleon Bery Universe in a file named ```cleon_potter_universe.py```. First of all, we have to distinguish the two ways in which we can run our code:   
 1. We can run the file directly, as in ```python cleon_potter_universe.py```   
-2. We can import the file from another module. In this case we would have a different script, for example 'simulate_quidditch_game.py'. In that script, we can use our Cleon Bery classes by importing them at the beginning of the script. For example using: ```from cleon_potter_universe import HogwartsMember, Pupil, Professor```.   
+2. We can import the file from another module. In this case we would have a different script, for example 'simulate_quidditch_game.py'. In that script, we can use our Cleon Bery classes by importing them at the beginning of the script. For example using: ```from cleon_potter_universe import CastleKilmereMember, Pupil, Professor```.   
     
 ### Step 2: Setting up special variables
 
