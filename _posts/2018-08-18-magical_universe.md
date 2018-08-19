@@ -1,7 +1,7 @@
 ---
 title: 'The tales of Castle Kilmere'
 date: 2018-08-18
-permalink: /posts/2018/07/magical_universe/
+permalink: /posts/2018/07/tales_of_castle_kilmere/
 tags:
   - python
   - coding
@@ -22,9 +22,9 @@ Like many British schools, Castle Kilmere is divided into different Houses, 5 in
 - Rupert Radford leads the House of Creativity and teaches the subject of art.
 - And last but not least Gabriel Giddings, the teacher of broomstick flying and head of the House of Wisdom.
 
-## Andere Information
-School headmaster: Redmond Dalodore
-Subjects: charms, potions, broomstick flying, magical theory, foreign magical systems, history of magic, herbology, art
-Ghosts: The mocking knight, the old lady, the gray groom
-Tollpatschiger Schueler: Quintus Dukes
-Ordinary Wizarding Levels (OWL's): Elementary levels of magic (ELM's)
+<!-- ## Andere Information -->
+<!-- School headmaster: Redmond Dalodore -->
+<!-- Subjects: charms, potions, broomstick flying, magical theory, foreign magical systems, history of magic, herbology, art -->
+<!-- Ghosts: The mocking knight, the old lady, the gray groom -->
+<!-- Tollpatschiger Schueler: Quintus Dukes -->
+<!-- Ordinary Wizarding Levels (OWL's): Elementary levels of magic (ELM's) -->
