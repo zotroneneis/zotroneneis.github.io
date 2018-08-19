@@ -25,8 +25,8 @@ class DeathEater(NamedTuple):
 
     @property
     def leader(self):
-        voldemort = DeathEater('Voldemort', 1926)
-        return voldemort
+        lord_odon = DeathEater('lord_odon', 1926)
+        return lord_odon
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name}, birthyear: {self.birthyear})"
@@ -38,8 +38,8 @@ class DeathEater(NamedTuple):
 Once we instantiate a member of this class, we can't change it anymore. Running
 
 ```python
-lucius = DeathEater('Lucius Malfoy', 1953)
-lucius.name = 'Draco'
+keres = DeathEater('Keres Fulford', 1953)
+keres.name = 'Adrien'
 ```
 
 will raise ```AttributeError: can't set attribute```. When converting the class to a data class we can keep most of the code. However, we won't need the ```__repr__()``` method anymore!
@@ -53,8 +53,8 @@ class NewDeathEater():
 
     @property
     def leader(self):
-        voldemort = DeathEater('Voldemort', 1926)
-        return voldemort
+        lord_odon = DeathEater('lord_odon', 1926)
+        return lord_odon
 
     def cast(self, spell):
         print(f"{self.name}: {spell.incantation}!")
@@ -63,11 +63,11 @@ class NewDeathEater():
 Let's make sure that the class is immutable. Running 
 
 ```python
-lucius = NewDeathEater('Lucius Malfoy', 1953)
-lucius.name = 'Draco'
+keres = NewDeathEater('Keres Fulford', 1953)
+keres.name = 'Adrien'
 ```
 
-will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(lucius)``` will return ```NewDeathEater(name='Lucius Malfoy', birthyear=1953)```.  
+will raise ```dataclasses.FrozenInstanceError: cannot assign to field 'name'```. And we can still get a nice representation of the object without having to write our own ```__repr__()``` method. Running ```print(keres)``` will return ```NewDeathEater(name='Keres Fulford', birthyear=1953)```.  
    
 Note: be careful with the datatypes of your fields. When a field contains a mutable datatype (for example a list) the field will stay mutable, even when setting ```frozen=True```. So when you want to have a truly immutable class, make sure that all fields use immutable data types (for example a tuple instead of a list). 
 

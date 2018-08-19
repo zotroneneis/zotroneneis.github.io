@@ -78,8 +78,8 @@ class DeathEater(NamedTuple):
 
     @property
     def leader(self):
-        voldemort = DeathEater('Voldemort', 1926)
-        return voldemort
+        lord_odon = DeathEater('lord_odon', 1926)
+        return lord_odon
 
     def __repr__(self):
         return f"{self.__class__.__name__}({self.name}, birthyear: {self.birthyear})"
@@ -87,9 +87,9 @@ class DeathEater(NamedTuple):
 
 From now on we can easily create new death eaters:
 ```python
-lucius = DeathEater('Lucius Malfoy', 1953)
-print('Lucius: ', lucius)
-print("Leader: ', lucius.leader)
+keres = DeathEater('Keres Fulford', 1953)
+print('keres: ', keres)
+print("Leader: ', keres.leader)
 
 bellatrix = DeathEater('Bellatrix Lestrange', 1951)
 print('bellatrix: ', bellatrix)
