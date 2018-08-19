@@ -150,7 +150,7 @@ class Pupil(CastleKilmereMember):
 
     @classmethod
     def cassidy(cls):
-        return cls('Cassidy Ambergem', 2007, 'female', 'House of Courage', 2018, ('Crookshanks', 'cat'))
+        return cls('Cassidy Ambergem', 2007, 'female', 'House of Courage', 2018, ('Ramses', 'cat'))
 
 
 
