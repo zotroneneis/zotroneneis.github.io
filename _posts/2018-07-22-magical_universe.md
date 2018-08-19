@@ -1,6 +1,6 @@
 ---
 title: 'The tales of Castle Kilmere'
-date: 2018-07-23
+date: 2018-07-22
 permalink: /posts/2018/07/the_tales_of_castle_kilmere/
 tags:
   - python
@@ -29,15 +29,15 @@ Like many British schools, Castle Kilmere is divided into different Houses, 5 in
 <!-- Tollpatschiger Schueler: Quintus Dukes -->
 <!-- Ordinary Wizarding Levels (OWL's): Elementary levels of magic (ELM's) -->
  
-        <!-- self._elms = { -->
-        <!--           'Broomstick Flying': False, -->
-        <!--           'Art': False, -->
-        <!--           'Magical Theory': False, -->
-        <!--           'Foreign Magical Systems': False, -->
-        <!--           'Charms': False, -->
-        <!--           'Defence Against Dark Magic': False, -->
-        <!--           'Divination': False, -->
-        <!--           'Herbology': False, -->
-        <!--           'History of Magic': False, -->
-        <!--           'Potions': False, -->
-        <!--           'Transfiguration': False} -->
+ <!--        self._elms = { -->
+ <!--                  'Broomstick Flying': False, -->
+ <!--                  'Art': False, -->
+ <!--                  'Magical Theory': False, -->
+ <!--                  'Foreign Magical Systems': False, -->
+ <!--                  'Charms': False, -->
+ <!--                  'Defence Against Dark Magic': False, -->
+ <!--                  'Divination': False, -->
+ <!--                  'Herbology': False, -->
+ <!--                  'History of Magic': False, -->
+ <!--                  'Potions': False, -->
+ <!--                  'Transfiguration': False} -->
