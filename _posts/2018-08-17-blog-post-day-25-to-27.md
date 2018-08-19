@@ -65,24 +65,24 @@ Let's create a few tests that ensure that a Castle Kilmere member is created cor
 
 ```python
 def test_correctness_of_attributes_():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     assert bromley.name == 'Bromley Huckabee'
-    assert bromley.birthyear == 1928
+    assert bromley.birthyear == 1956
     assert bromley.sex == 'male'
 
 def test_add_positive_traits():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     bromley.add_trait('kind')
     bromley.add_trait('wild')
     assert bromley._traits == {'kind': True, 'wild': True}
 
 def test_add_negative_trait():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     bromley.add_trait('mean', False)
     assert bromley._traits == {'mean': False}
 
 def test_exhibit_traits():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     bromley.add_trait('kind')
     bromley.add_trait('wild')
     bromley.add_trait('mean', False)
@@ -105,12 +105,12 @@ from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
 
 @pytest.fixture
 def bromley():
-  bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+  bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
   return bromley
 
 @pytest.fixture
 def bromley_with_traits():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     bromley.add_trait('kind')
     bromley.add_trait('wild')
     bromley.add_trait('mean', False)
@@ -118,7 +118,7 @@ def bromley_with_traits():
 
 def test_correctness_of_attributes_(bromley):
     assert bromley.name == 'Bromley Huckabee'
-    assert bromley.birthyear == 1928
+    assert bromley.birthyear == 1956
     assert bromley.sex == 'male'
 
 def test_add_positive_traits(bromley):
@@ -179,12 +179,12 @@ from cleon_potter_universe.cleon_potter_universe import CastleKilmereMember
 
 @pytest.fixture
 def bromley():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     return bromley
 
 @pytest.fixture
 def bromley_with_traits():
-    bromley = CastleKilmereMember('Bromley Huckabee', 1928, 'male')
+    bromley = CastleKilmereMember('Bromley Huckabee', 1956, 'male')
     bromley.add_trait('kind')
     bromley.add_trait('wild')
     bromley.add_trait('mean', False)
@@ -192,7 +192,7 @@ def bromley_with_traits():
 
 def test_correctness_of_attributes_(bromley):
     assert bromley._name == 'Bromley Huckabee'
-    assert bromley.birthyear == 1928
+    assert bromley.birthyear == 1956
     assert bromley.sex == 'male'
 
 def test_add_positive_traits(bromley):
@@ -232,6 +232,6 @@ def test_repr_output(capfd, bromley):
     print(bromley)
     stdout, err = capfd.readouterr()
     stdout = stdout.strip()
-    assert stdout == 'CastleKilmereMember(Bromley Huckabee, birthyear: 1928)'
+    assert stdout == 'CastleKilmereMember(Bromley Huckabee, birthyear: 1956)'
 
 ```

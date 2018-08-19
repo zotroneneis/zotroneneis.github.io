@@ -64,7 +64,7 @@ class CastleKilmereMember:
 
 Let's add a few traits to bromley:
 ```python
-bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1956, sex='male')
 bromley.add_trait("kind")
 bromley.add_trait("monster-loving")
 bromley.add_trait("impatient", value=False)

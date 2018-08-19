@@ -90,7 +90,7 @@ For example, we probably want to create the main characters of the Cleon Bery wo
 ```python
 @classmethod
 def cleon(cls):
-    return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Cotton', 'owl'))
+    return cls('Cleon Bery', 2008, 'male', 'House of Courage', 2018, ('Cotton', 'owl'))
 ```
 
 ## All code for today
@@ -142,15 +142,15 @@ class Pupil(CastleKilmereMember):
 
     @classmethod
     def cleon(cls):
-        return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Cotton', 'owl'))
+        return cls('Cleon Bery', 2008, 'male', 'House of Courage', 2018, ('Cotton', 'owl'))
 
     @classmethod
     def flynn(cls):
-        return cls('Flynn Gibbs', 1980, 'male', 'Griffindor', 1991, ('Twiggles', 'owl'))
+        return cls('Flynn Gibbs', 2008, 'male', 'House of Courage', 2018, ('Twiggles', 'owl'))
 
     @classmethod
     def cassidy(cls):
-        return cls('Cassidy Ambergem Ambergem', 1979, 'female', 'Griffindor', 1991, ('Crookshanks', 'cat'))
+        return cls('Cassidy Ambergem', 2007, 'female', 'House of Courage', 2018, ('Crookshanks', 'cat'))
 
 
 
@@ -167,11 +167,11 @@ class Professor(CastleKilmereMember):
 
     @classmethod
     def mirren(cls):
-        return cls('Miranda Mirren', 1935, 'female', 'Transfiguration', 'Griffindor')
+        return cls('Miranda Mirren', 1963, 'female', 'Transfiguration', 'House of Courage')
 
     @classmethod
     def blade(cls):
-        return cls('Blade Bardock', 1960, 'male', 'Potions', 'House of Ambition')
+        return cls('Blade Bardock', 1988, 'male', 'Potions', 'House of Ambition')
 
     
 class Ghost(CastleKilmereMember):
@@ -189,15 +189,15 @@ class Ghost(CastleKilmereMember):
 
 if __name__ == "__main__":
 
-    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1928)
-    cleon = Pupil(name='Cleon Bery', birthyear=1980, house='Griffindor', start_year=1991)
+    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1956)
+    cleon = Pupil(name='Cleon Bery', birthyear=2008, house='House of Courage', start_year=2018)
     headmaster = cleon.school_headmaster()
 
     mirren = Professor.mirren()
     blade = Professor.blade()
     cleon = Pupil.cleon()
     flynn = Pupil.flynn()
-    hermione = Pupil.hermione()
+    cassidy = Pupil.cassidy()
 
 
 ```

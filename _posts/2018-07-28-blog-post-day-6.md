@@ -35,14 +35,14 @@ class CastleKilmereMember:
 This creates a property called *age* that can be accessed using the dot syntax:   
 
 ```python
-bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1956, sex='male')
 print(bromley.age)
 ```
 
 With the current year (2018) this yields the output ```90```. Of course, we can also set a global ```now``` variable in our code that gives more appropriate ages. Since the attribute is *read-only* we can't change it:
 
 ```python
-bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1956, sex='male')
 bromley.age = 44
 ```
 

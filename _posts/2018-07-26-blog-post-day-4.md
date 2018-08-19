@@ -16,7 +16,7 @@ tags:
 Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won't get a useful representation. For example, when doing:
 
 ```python
-bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1928, sex='male')
+bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1956, sex='male')
 print(bromley)
 ```
 
@@ -51,7 +51,7 @@ Now, the output of
 print(bromley)
 ```
 
-will look as follows: ```CastleKilmereMember(Bromley Huckabee, birthyear: 1928)```. This is much better!   
+will look as follows: ```CastleKilmereMember(Bromley Huckabee, birthyear: 1956)```. This is much better!   
    
 Since our other classes inherit all methods from the parent class we don't have to implement the ```__repr__``` method again for the other classes. But we want the output of ```__repr__``` to be as unambiguous as possible. So we will add separate ```__repr__``` methods to ensure that we use all information we have about the objects.
 

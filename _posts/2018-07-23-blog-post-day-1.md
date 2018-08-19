@@ -61,12 +61,12 @@ class CastleKilmereMember:
     def says(self, words):
         return f"{self._name} says {words}"
 
-bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+bromley = CastleKilmereMember('Bromley Huckabee', '1956', 'male')
 print(bromley.says("Hello!"))
 
 ```
 
-This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')``` the ```__init__``` method of the ```CastleKilmereMember``` class is called with the arguments ```'Bromley Huckabee', '1928', 'male'``` which represent the name, birthyear and sex of the Castle Kilmere member. The ```__init__``` method returns an instance of the class which is then assigned to a variable called "bromley".
+This class has a method called ```__init__```. The *init* method is called whenever you create a new instance of the class. So when calling ```bromley = CastleKilmereMember('Bromley Huckabee', '1956', 'male')``` the ```__init__``` method of the ```CastleKilmereMember``` class is called with the arguments ```'Bromley Huckabee', '1956', 'male'``` which represent the name, birthyear and sex of the Castle Kilmere member. The ```__init__``` method returns an instance of the class which is then assigned to a variable called "bromley".
    
 Note: The first argument of the ```__init__``` method is called 'self'. This argument will be the first argument in most methods. It points towards an instance of the class whenever the method is called. For more details on this, see the [blog post of day 4]() or the [Python docs](https://docs.python.org/3/tutorial/classes.html).   
    
@@ -106,10 +106,10 @@ class Pupil(CastleKilmereMember):
                   'Transfiguration': False}
 
 cleon = Pupil(name='Cleon Bery',
-              birthyear=1980,
+              birthyear=2008,
               sex='male',
               house='House of Courage',
-              start_year=1991,
+              start_year=2018,
               pet=('Cotton', 'owl'))
 ```
 
@@ -154,7 +154,7 @@ Class attributes:
 We can access and modify class attributes both with and without an instance of the class:
 
 ```python
-bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+bromley = CastleKilmereMember('Bromley Huckabee', '1956', 'male')
 print(bromley.location)
 print(CastleKilmereMember.location)
 ```
@@ -230,14 +230,14 @@ class Ghost(CastleKilmereMember):
 
 
 if __name__ == "__main__":
-  bromley = CastleKilmereMember('Bromley Huckabee', '1928', 'male')
+  bromley = CastleKilmereMember('Bromley Huckabee', '1956', 'male')
   print(bromley.says("Hello!"))
 
   cleon = Pupil(name='Cleon Bery',
-                birthyear=1980,
+                birthyear=2008,
                 sex='male',
                 house='House of Courage',
-                start_year=1991,
+                start_year=2018,
                 pet=('Cotton', 'owl'))
 
 ```
