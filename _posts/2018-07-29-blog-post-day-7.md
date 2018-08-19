@@ -15,14 +15,14 @@ tags:
 
 Today we are going to look at a very important concept in Python: the usage of underscores when naming variables! In Python we have five different naming conventions that involve underscores. 
       
-**A variable with a single leading underscore like** ```_harry```
+**A variable with a single leading underscore like** ```_cleon```
 - This is a naming convention followed by most Python code   
 - A name prefixed with an underscore should be treated as a *non-public* part of the API and it might be changed without notice   
 - This holds independent of whether it is a function, a method or a data member   
 
 ----
    
-**A variable with (at least) two leading underscores and at most one trailing underscore like** ```__harry```   
+**A variable with (at least) two leading underscores and at most one trailing underscore like** ```__cleon```   
 - When naming a variable like this it will trigger Python's so called *name mangling*
 - This means that the variable name is internally replaced with ```_classname__var```      
 - ```classname``` is the name of the current class with any leading underscore(s) stripped   

@@ -1,5 +1,5 @@
 ---
-title: 'Day 1 - Creating the Harry Potter universe'
+title: 'Day 1 - Creating the Magical Universe'
 date: 2018-07-23
 permalink: /posts/2018/07/coding-challenge-day-1/
 tags:
@@ -10,7 +10,7 @@ tags:
 
 **Topics:** object oriented programming, classes, inheritance
 
-I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little 'Harry Potter universe' with classes and methods related to the Harry Potter world (I LOVE Harry Potter). 
+I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to it.
 
 So let's start with the most important basics.
 
@@ -75,7 +75,7 @@ We also added a method called ```says``` that adds behavior to our class. In thi
 
 ## Inheritance
 
-The HogwartsMember class is nice, but of course we want many other classes in our Harry Potter universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Hogwarts, right? This is what *inheritance* is used for.   
+The HogwartsMember class is nice, but of course we want many other classes in our Magical Universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Hogwarts, right? This is what *inheritance* is used for.   
    
 Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new
 functionality. Let's use the concept of inheritance to create a ```Pupil``` class!
@@ -97,7 +97,7 @@ class Pupil(HogwartsMember):
         self._owls = {
                 'Study of Ancient Runes': False,
                 'Arithmancy': False,
-                'Astronomy': False,
+                'Astflynnomy': False,
                 'Care of Magical Creatures': False,
                 'Charms': False,
                 'Defence Against the Dark Arts': False,
@@ -109,7 +109,7 @@ class Pupil(HogwartsMember):
                 'Transfiguration': False}
 
 
-harry = Pupil(name='Harry James Potter',
+cleon = Pupil(name='Cleon Bery',
               birthyear=1980,
               sex='male',
               house='Griffindor',
@@ -198,7 +198,7 @@ class Pupil(HogwartsMember):
         self._owls = {
                 'Study of Ancient Runes': False,
                 'Arithmancy': False,
-                'Astronomy': False,
+                'Astflynnomy': False,
                 'Care of Magical Creatures': False,
                 'Charms': False,
                 'Defence Against the Dark Arts': False,
@@ -238,7 +238,7 @@ if __name__ == "__main__":
   hagrid = HogwartsMember('Rubeus Hagrid', '1928', 'male')
   print(hagrid.says("Hello!"))
 
-  harry = Pupil(name='Harry James Potter',
+  cleon = Pupil(name='Cleon Bery',
                 birthyear=1980,
                 sex='male',
                 house='Griffindor',
@@ -247,12 +247,3 @@ if __name__ == "__main__":
 
 ```
 
-<!---
-## Old text
-I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little 'Harry Potter universe' with classes and methods related to the Harry Potter world (I LOVE Harry Potter). Today my code includes the following concepts:   
-- Object orientation / two classes: HogwartsMember, Pupil
-- I used inheritance for the pupil class. This means that the Pupil class *inherits* all attributes and methods from its parent class
-- I used the @property decorator (see [day 2](http://alpopkes.com/posts/2018/07/blog-post-3/) for details on @property)
-- I created a static method (see [day 4](http://alpopkes.com/posts/2018/07/blog-post-5/) for details on static methods)
-- I used **function annotations**. Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). For the syntax of function annotations see [day 3](http://alpopkes.com/posts/2018/07/blog-post-4/). 
--->

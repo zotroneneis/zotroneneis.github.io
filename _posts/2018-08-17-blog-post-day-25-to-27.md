@@ -21,7 +21,7 @@ You can install pytest using ```pip install pytest```.
 
 ## What makes a good test function?
 
-I have a simple acronym that helps me remember how a good test function should look like. I found it in [this stackoverflow post](https://stackoverflow.com/questions/61400/what-makes-a-good-unit-test). A good test function should be *A (fast) TRIP*:    
+I have a simple acflynnym that helps me remember how a good test function should look like. I found it in [this stackoverflow post](https://stackoverflow.com/questions/61400/what-makes-a-good-unit-test). A good test function should be *A (fast) TRIP*:    
 
 **Automatic**: Test functions should be invoked automatically and we should automatically check the results for pass/fail.    
 
@@ -41,7 +41,7 @@ Test functions should have long and descriptive names. Why? Because the test fun
 
 ## Basic usage of pytest
 
-First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```HogwartsMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Harry Potter universe, let's take a quick look at how a simple test function might look like.
+First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```HogwartsMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_hogwarts_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
 
 Let's take our ```say_words()``` function from [day 5](http://alpopkes.com/posts/2018/07/coding-challenge-day-5/) as an example. The function looks as follows:
 
@@ -54,7 +54,7 @@ A test function might look like this:
 
 ```python
 def test_say_words():
-    assert say_words("Ginny", "Careful Neville!") == "Ginny says: Careful Neville!"
+    assert say_words("Aurora", "Careful Quintus!") == "Aurora says: Careful Quintus!"
 ```
 
 We can run the test by running the command ```pytest``` from the command line within the *test_code* folder. The test should run without errors. 
@@ -95,13 +95,13 @@ def test_exhibit_traits():
 
 ## Pytest fixtures
 
-Since our Harry Potter universe contains mostly classes we have to create at least one member of the ```HogwartsMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Hagrid. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
+Since our Cleon Bery universe contains mostly classes we have to create at least one member of the ```HogwartsMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Hagrid. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
 
 We can create a fixture using the ```@pytest.fixture``` decorator and pass the fixture as an argument to the test functions that need it. So we could change our test code in the following way:
 
 ```python
 import pytest
-from harry_potter_universe.harry_potter_universe import HogwartsMember
+from cleon_potter_universe.cleon_potter_universe import HogwartsMember
 
 @pytest.fixture
 def hagrid():
@@ -171,11 +171,11 @@ def test_init_raises_exception_with_missing_arguments():
 
 ## Full test code for ```HogwartsMember``` class
 
-This test code can also be found on the [GitHub repo](https://github.com/zotroneneis/harry_potter_universe/blob/master/test_code/test_hogwarts_member_class.py).
+This test code can also be found on the [GitHub repo](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/test_code/test_hogwarts_member_class.py).
 
 ```python
 import pytest
-from harry_potter_universe.harry_potter_universe import HogwartsMember
+from cleon_potter_universe.cleon_potter_universe import HogwartsMember
 
 @pytest.fixture
 def hagrid():
@@ -220,7 +220,7 @@ def test_init_raises_exception_with_missing_arguments():
         hagrid = HogwartsMember()
 
 def test_says(hagrid):
-    assert hagrid.says("Hi Harry!") == "Rubeus Hagrid says: Hi Harry!"
+    assert hagrid.says("Hi Cleon!") == "Rubeus Hagrid says: Hi Cleon!"
 
 def test_name_property(hagrid):
     assert hagrid.name == 'Rubeus Hagrid'

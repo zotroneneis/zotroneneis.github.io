@@ -15,22 +15,22 @@ I always wanted to dig into the statement ```if __name__ == "__main__"``` that i
 
 ### Step 1: Two ways of running code
 
-We saved our Harry Potter Universe in a file named ```harry_potter_universe.py```. First of all, we have to distinguish the two ways in which we can run our code:   
-1. We can run the file directly, as in ```python harry_potter_universe.py```   
-2. We can import the file from another module. In this case we would have a different script, for example 'simulate_quidditch_game.py'. In that script, we can use our Harry Potter classes by importing them at the beginning of the script. For example using: ```from harry_potter_universe import HogwartsMember, Pupil, Professor```.   
+We saved our Cleon Bery Universe in a file named ```cleon_potter_universe.py```. First of all, we have to distinguish the two ways in which we can run our code:   
+1. We can run the file directly, as in ```python cleon_potter_universe.py```   
+2. We can import the file from another module. In this case we would have a different script, for example 'simulate_quidditch_game.py'. In that script, we can use our Cleon Bery classes by importing them at the beginning of the script. For example using: ```from cleon_potter_universe import HogwartsMember, Pupil, Professor```.   
     
 ### Step 2: Setting up special variables
 
-In both cases, the Python interpreter will read the source file ```harry_potter_universe.py```. But, as outlined in [this post](https://stackoverflow.com/questions/419163/what-does-if-name-main-do), the interpreter will first define a few special variables. One of them is the ```__name__``` variable. In case 1, so when running our file as the main program, the value of ```__name__``` is set to ```"__main__"```. In case 2, the value of ```__name__``` is set to the name of the module, which is ```"harry_potter_universe"```. 
+In both cases, the Python interpreter will read the source file ```cleon_potter_universe.py```. But, as outlined in [this post](https://stackoverflow.com/questions/419163/what-does-if-name-main-do), the interpreter will first define a few special variables. One of them is the ```__name__``` variable. In case 1, so when running our file as the main program, the value of ```__name__``` is set to ```"__main__"```. In case 2, the value of ```__name__``` is set to the name of the module, which is ```"cleon_potter_universe"```. 
 
 ### Step 3: Executing the code
 
-The interpreter has finished setting up the special variables, so the value of ```__name__``` is either ```"__main__"``` (case 1) or ```"harry_potter_universe"``` (case 2). In a next step, the interpreter will read the file and execute all *top-level code* in the file. 'Top-level' code refers to all code at indentation level 0. So in our case, the import statements at the beginning of the ```harry_potter_universe.py``` file will be executed and all classes will be defined. However, none of the code inside the classes will be executed. At the end of the file we have an ```if``` block as top-level code. The ```if``` block starts with the line ```if __name__ == "__main__"```. With the knowledge from the previous steps we should be able to understand what this statement represents: it tests whether the current module, that is 'harry_potter_universe', is being run directly (case 1) or imported by another module (case 2)! In case 1, the output of ```__name__ == "__main__"``` will be ```True```, so the code within the ```if``` block will be executed. In case 2, the ```if``` clause won't be executed because the required condition is not met.
+The interpreter has finished setting up the special variables, so the value of ```__name__``` is either ```"__main__"``` (case 1) or ```"cleon_potter_universe"``` (case 2). In a next step, the interpreter will read the file and execute all *top-level code* in the file. 'Top-level' code refers to all code at indentation level 0. So in our case, the import statements at the beginning of the ```cleon_potter_universe.py``` file will be executed and all classes will be defined. However, none of the code inside the classes will be executed. At the end of the file we have an ```if``` block as top-level code. The ```if``` block starts with the line ```if __name__ == "__main__"```. With the knowledge from the previous steps we should be able to understand what this statement represents: it tests whether the current module, that is 'cleon_potter_universe', is being run directly (case 1) or imported by another module (case 2)! In case 1, the output of ```__name__ == "__main__"``` will be ```True```, so the code within the ```if``` block will be executed. In case 2, the ```if``` clause won't be executed because the required condition is not met.
 
 
 ### Why "main"?
 
-In case 1, the value of ```__name__``` is set to ```"__main__"``` because "harry_potter_universe.py" is run as the *main program*.
+In case 1, the value of ```__name__``` is set to ```"__main__"``` because "cleon_potter_universe.py" is run as the *main program*.
 
 
 

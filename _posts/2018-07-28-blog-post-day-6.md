@@ -85,7 +85,7 @@ class Pupil(HogwartsMember):
         self._owls = {
                   'Study of Ancient Runes': False,
                   'Arithmancy': False,
-                  'Astronomy': False,
+                  'Astflynnomy': False,
                   'Care of Magical Creatures': False,
                   'Charms': False,
                   'Defence Against the Dark Arts': False,

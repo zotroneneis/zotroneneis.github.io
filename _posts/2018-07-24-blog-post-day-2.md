@@ -40,7 +40,7 @@ class HogwartsMember:
 
     @staticmethod
     def school_headmaster():
-        return HogwartsMember('Albus Percival Wulfric Brian Dumbledore', 1881, 'male')
+        return HogwartsMember('Redmond Dalodore', 1881, 'male')
 
 ```
 
@@ -87,12 +87,12 @@ Class and static methods allow a developer to communicate what intention she/he 
 - These factory functions allow us to create class objects that are configured exactly the way we want them
 - In this way, they act like additional constructors
    
-For example, we probably want to create the main characters of the Harry Potter world. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Harry constructor as follows:
+For example, we probably want to create the main characters of the Cleon Bery world. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Cleon constructor as follows:
    
 ```python
 @classmethod
-def harry(cls):
-    return cls('Harry James Potter', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
+def cleon(cls):
+    return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
 ```
 
 ## All code for today
@@ -112,7 +112,7 @@ class HogwartsMember:
 
     @staticmethod
     def school_headmaster():
-        return HogwartsMember('Albus Percival Wulfric Brian Dumbledore', 1881, 'male')
+        return HogwartsMember('Redmond Dalodore', 1881, 'male')
 
 
 class Pupil(HogwartsMember):
@@ -131,7 +131,7 @@ class Pupil(HogwartsMember):
         self._owls = {
                 'Study of Ancient Runes': False,
                 'Arithmancy': False,
-                'Astronomy': False,
+                'Astflynnomy': False,
                 'Care of Magical Creatures': False,
                 'Charms': False,
                 'Defence Against the Dark Arts': False,
@@ -143,16 +143,16 @@ class Pupil(HogwartsMember):
                 'Transfiguration': False}
 
     @classmethod
-    def harry(cls):
-        return cls('Harry James Potter', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
+    def cleon(cls):
+        return cls('Cleon Bery', 1980, 'male', 'Griffindor', 1991, ('Hedwig', 'owl'))
 
     @classmethod
-    def ron(cls):
-        return cls('Ronald Bilius Weasley', 1980, 'male', 'Griffindor', 1991, ('Pigwidgeon', 'owl'))
+    def flynn(cls):
+        return cls('Flynn Gibbs', 1980, 'male', 'Griffindor', 1991, ('Pigwidgeon', 'owl'))
 
     @classmethod
-    def hermione(cls):
-        return cls('Hermione', 1979, 'female', 'Griffindor', 1991, ('Crookshanks', 'cat'))
+    def cassidy(cls):
+        return cls('Cassidy Ambergem Ambergem', 1979, 'female', 'Griffindor', 1991, ('Crookshanks', 'cat'))
 
 
 
@@ -168,12 +168,12 @@ class Professor(HogwartsMember):
           self.house = house
 
     @classmethod
-    def mcgonagall(cls):
-        return cls('Minerva McGonagall', 1935, 'female', 'Transfiguration', 'Griffindor')
+    def mirren(cls):
+        return cls('Miranda Mirren', 1935, 'female', 'Transfiguration', 'Griffindor')
 
     @classmethod
-    def snape(cls):
-        return cls('Severus Snape', 1960, 'male', 'Potions', 'Slytherin')
+    def blade(cls):
+        return cls('Blade Bardock', 1960, 'male', 'Potions', 'Slytherin')
 
     
 class Ghost(HogwartsMember):
@@ -192,13 +192,13 @@ class Ghost(HogwartsMember):
 if __name__ == "__main__":
 
     hagrid = HogwartsMember(name='Rubeus Hagrid', birthyear=1928)
-    harry = Pupil(name='Harry James Potter', birthyear=1980, house='Griffindor', start_year=1991)
-    headmaster = harry.school_headmaster()
+    cleon = Pupil(name='Cleon Bery', birthyear=1980, house='Griffindor', start_year=1991)
+    headmaster = cleon.school_headmaster()
 
-    mcgonagall = Professor.mcgonagall()
-    snape = Professor.snape()
-    harry = Pupil.harry()
-    ron = Pupil.ron()
+    mirren = Professor.mirren()
+    blade = Professor.blade()
+    cleon = Pupil.cleon()
+    flynn = Pupil.flynn()
     hermione = Pupil.hermione()
 
 
@@ -210,7 +210,7 @@ if __name__ == "__main__":
 
 <!-- In the Python Tricks book I already learned about the functioning of decorators. I also knew that ```@property``` is a way of creating a read-only property. However, I was curious about its relation to ```property()``` and the setter and getter methods. The most important things I learned: -->
 
-<!-- Creating a read-only property with ```@property``` is just a different way of using the ```property()``` function. So when considering our Harry Potter classes, using -->
+<!-- Creating a read-only property with ```@property``` is just a different way of using the ```property()``` function. So when considering our Cleon Bery classes, using -->
 
 <!-- ``` -->
 <!-- @property -->
@@ -234,7 +234,7 @@ if __name__ == "__main__":
 
 <!--     def __init__(self, name:str, birthyear:int, house:str, start_year:int): -->
 <!--         ... -->
-<!--         self._owls = {'Study of Ancient Runes': False, 'Arithmancy': False, 'Astronomy': False, 'Care of Magical Creatures': False, 'Charms': False, 'Defence Against the Dark Arts': False, 'Divination': False, 'Herbology': False, 'History of Magic': False, 'Muggle Studies': False, 'Potions': False, 'Transfiguration': False} -->
+<!--         self._owls = {'Study of Ancient Runes': False, 'Arithmancy': False, 'Astflynnomy': False, 'Care of Magical Creatures': False, 'Charms': False, 'Defence Against the Dark Arts': False, 'Divination': False, 'Herbology': False, 'History of Magic': False, 'Muggle Studies': False, 'Potions': False, 'Transfiguration': False} -->
 
 <!--     @property -->
 <!--     def owls(self): -->

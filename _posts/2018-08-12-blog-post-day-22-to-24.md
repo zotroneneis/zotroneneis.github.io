@@ -18,13 +18,13 @@ The most common use of context managers is the proper *management of resources*.
 
 ## Using ```with``` to open files
 
-In the world of Harry Potter a lot of communication is done via good old letters. So let's imagine that Harry wants to write a letter to Hagrid asking if he, Ron and Hermione can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
+In the world of Cleon Bery a lot of communication is done via good old letters. So let's imagine that Cleon wants to write a letter to Hagrid asking if he, flynn and Cassidy Ambergem can stop by for tea in the afternoon. To do so, we open a file called 'letter.txt' and write a few lines of text to the file:
 
 ```python
 with open('letter.txt', 'w') as letter:
     letter.write("Hi Hagrid! \n"
-                 "Can Ron, Hermione and I stop by for a tea this afternoon? \n"
-                 "Harry")
+                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+                 "Cleon")
 ```
 
 Internally, this is translated to something like this (details of the full translation can be found [in PEP 343](https://www.python.org/dev/peps/pep-0343/#specification-the-with-statement)):
@@ -33,8 +33,8 @@ Internally, this is translated to something like this (details of the full trans
 letter= open('letter.txt', 'w')
 try:
     letter.write("Hi Hagrid! \n"
-                 "Can Ron, Hermione and I stop by for a tea this afternoon? \n"
-                 "Harry")
+                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+                 "Cleon")
 finally:
     letter.close()
 ```
@@ -56,7 +56,7 @@ If you want to see an example of how context managers are used within Python, ta
 
 ## Creating our own context manager
 
-Let's say we want to create a ```Letter``` class in our Harry Potter universe that functions as a context manager. This would allows us to create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
+Let's say we want to create a ```Letter``` class in our Cleon Bery universe that functions as a context manager. This would allows us to create a function called ```write_letter()``` that opens a letter object and writes text to it. So in the end we want to be able to use:
 
 ```python
 with Letter('lettername.txt', 'w') as letter:
@@ -88,8 +88,8 @@ That's it! With a proper implemetation of ```__enter__()``` and ```__exit__()```
 ```python
 with Letter('dear_hagrid.txt') as letter:
     letter.write("Hi Hagrid! \n"
-                 "Can Ron, Hermione and I stop by for a tea this afternoon? \n"
-                 "Harry")
+                 "Can flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \n"
+                 "Cleon")
 
 ```
 
@@ -154,10 +154,10 @@ class HogwartsMember:
 
 ```python
 if __name__ == "__main__":
-    harry = Pupil.harry()
+    cleon = Pupil.cleon()
 
-    letter_content = "Hi Hagrid! \nCan Ron, Hermione and I stop by for a tea this afternoon? \nHarry"
-    harry.write_letter('Hagrid', letter_content)
+    letter_content = "Hi Hagrid! \nCan flynn, Cassidy Ambergem and I stop by for a tea this afternoon? \nCleon"
+    cleon.write_letter('Hagrid', letter_content)
 
     print(f"Total number of letter creates so far: {Letter.total_number_of_letters}")
 ```

@@ -17,7 +17,7 @@ Data classes are a feature that is new in Python 3.7. And taking a look at them 
 
 According to the [PEP](https://www.python.org/dev/peps/pep-0557/) on data classes, they are basically "mutable namedtuples with defaults". We already looked at namedtuples on [day 10 and 11](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-10-and-11/). Namedtuples allow us to create an *immutable class* that primarily stores *values* (i.e. attributes). We used namedtuples for our ```DeathEater``` class (because once you become a death eather there is no way back. Unless, of course, you want to get killed by Voldemort).    
     
-Data classes can do the same things as namedtuples. However, they make it much easier to create a class because a data class implements several useful methods by default. Let's create a data class and see what functionality it includes out of the box. We haven't specified the different houses of the Harry Potter universe yet so let's change that!
+Data classes can do the same things as namedtuples. However, they make it much easier to create a class because a data class implements several useful methods by default. Let's create a data class and see what functionality it includes out of the box. We haven't specified the different houses of the Cleon Bery universe yet so let's change that!
 
 We can create a data class by using the ```@dataclass``` decorator. In case you are not using Python 3.7 you can add data classes to your Python 3.6 installation using ```pip install dataclasses```.
 
@@ -155,7 +155,7 @@ class House:
         return (now - self.founded_in) + 1
 ```
 
-The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for Gryffindor we will create Professor McGonagall and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotroneneis/harry_potter_universe/blob/master/code_per_day/day_16_to_18.py) for details.
+The ```head``` and ```ghost``` field will point towards an instance of the ```Professor``` and ```Ghost``` class. For example, for Gryffindor we will create Professor mirren and Nearly Headless Nick and reference those when instantiating the ```House``` class. See the [full code for day 16 to 18](https://github.com/zotflynneneis/cleon_potter_universe/blob/master/code_per_day/day_16_to_18.py) for details.
 
 
 
