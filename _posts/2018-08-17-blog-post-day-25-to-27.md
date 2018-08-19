@@ -1,7 +1,7 @@
 ---
-title: 'Day 25 to 27 - Testing code with pytest'
+title: 'Day 25 to 28 - Testing code with pytest'
 date: 2018-08-17
-permalink: /posts/2018/08/coding-challenge-day-25-to-27/
+permalink: /posts/2018/08/coding-challenge-day-25-to-28/
 tags:
   - python
   - coding
