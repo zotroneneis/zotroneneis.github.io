@@ -42,11 +42,11 @@ So what do we need in order for our ```Potion``` class to work with a ```for``` 
 
 ## ```__iter__()``` and ```__next__()```
 
-1. What is ```__iter__()``` doing?    
+**1. What is ```__iter__()``` doing?**    
 
 This method simply returns an iterator object. The iterator object can be used to call ```next()``` on it.  
    
-2. What is ```__next__()``` doing?     
+**2. What is ```__next__()``` doing?**     
 
 The ```__next__()``` method takes no arguments and always returns the next element of the object. If there are no elements left, ```__next__()``` must raise the ```StopIteration``` exception. Note: iterators don't have to be finite, we could also create an iterator that produces an infinite number of elements.
 
@@ -54,7 +54,7 @@ Note: we can also use ```iter(object)``` and ```next(object)``` instead of ```ob
 
 <!-- [Source](https://docs.python.org/dev/howto/functional.html#iterators) -->
 
-## Behind the scenes of ```for```
+## Behind the scenes of a ```for``` loop
 
 So what happens if we loop over an item using a ```for``` loop? As outlined in the [Python docs](https://docs.python.org/3/tutorial/classes.html#iterators) the process has several steps:   
 
