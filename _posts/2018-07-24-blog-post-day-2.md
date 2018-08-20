@@ -32,7 +32,7 @@ Let's add a static method to our base class.
 ```python
 class CastleKilmereMember:
     """
-    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Magic
     """
 
     def __init__(self, name, birthyear, sex):
