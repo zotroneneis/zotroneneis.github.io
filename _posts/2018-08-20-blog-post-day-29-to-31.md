@@ -30,7 +30,7 @@ b) **or** a ```__getitem__()``` method (note: since we want to talk about iterat
 **Iterator:**   
 An *iterator* is an object with a ```__next__()``` method. We will take a closer look at each of those methods in a minute.   
    
-Our goal for the next days will be to create our own iterator. Since potions are an important part of the magical world, we will create a ```Potion``` class that supports iteration. So after successfully creating the class such that it supports the iterator protocol, we will be able to do something like this:
+Our goal for this post will be to create our own iterator. Since potions are an important part of the magical world, we will create a ```Potion``` class that supports iteration. So after successfully creating the class such that it supports the iterator protocol, we will be able to do something like this:
 
 ```python
 for ingredient in potion:
