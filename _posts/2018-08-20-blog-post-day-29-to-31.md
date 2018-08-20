@@ -24,8 +24,8 @@ we use iteration. Two similar terms that you might have encountered are *iterabl
 
 **Iterable:**     
 As explained in [this stackoverflow post](https://stackoverflow.com/questions/9884132/what-exactly-are-iterator-iterable-and-iteration) an *iterable* is an object that we can *iterate over*. In practice this means that the object defines   
-a) an ```__iter__()``` method which returns an *iterator* or   
-b) a ```__getitem__()``` method (note: since we want to talk about iterators and ```__iter__()``` is the preferred way to iterate, I won't mention ```__getitem__()``` in the rest of this post). 
+a) an ```__iter__()``` method which returns an *iterator*   
+b) **or** a ```__getitem__()``` method (note: since we want to talk about iterators and ```__iter__()``` is the preferred way to iterate, I won't mention ```__getitem__()``` in the rest of this post). 
    
 **Iterator:**   
 An *iterator* is an object with a ```__next__()``` method. We will take a closer look at each of those methods in a minute.   
