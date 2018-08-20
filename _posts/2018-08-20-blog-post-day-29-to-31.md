@@ -8,7 +8,7 @@ tags:
   - iterators
 ---
 
-**Topics:** Iterators
+**Topics:** Iterators, iterables and iteration
 
 Iterators
 =====
