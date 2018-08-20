@@ -77,7 +77,7 @@ for ingredient in potion:
     print(ingredient)
 ```
 
-Using the steps we can translate this into the following statements which gives exactly the same result:
+Using the steps we can translate this into the following statements which give exactly the same result:
 
 ```python
 potion = Potion(...)
