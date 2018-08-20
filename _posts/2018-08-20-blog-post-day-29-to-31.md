@@ -27,7 +27,7 @@ As explained in [this stackoverflow post](https://stackoverflow.com/questions/98
 a) an ```__iter__()``` method which returns an *iterator* or   
 b) a ```__getitem__()``` method (note: since we want to talk about iterators and ```__iter__()``` is the preferred way to iterate, I won't mention ```__getitem__()``` in the rest of this post). 
    
-**Iterator: **   
+**Iterator:**   
 An *iterator* is an object with a ```__next__()``` method. We will take a closer look at each of those methods in a minute.   
    
 Our goal for the next days will be to create our own iterator. Since potions are an important part of the magical world, we will create a ```Potion``` class that supports iteration. So after successfully creating the class such that it supports the iterator protocol, we will be able to do something like this:
