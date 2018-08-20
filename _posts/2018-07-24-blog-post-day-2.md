@@ -85,7 +85,7 @@ Class and static methods allow a developer to communicate what intention she/he 
 - These factory functions allow us to create class objects that are configured exactly the way we want them
 - In this way, they act like additional constructors
    
-For example, we probably want to create the main characters of the Cleon Bery world. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Cleon constructor as follows:
+For example, we probably want to create the main characters of our Magical Universe. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Cleon constructor as follows:
    
 ```python
 @classmethod
