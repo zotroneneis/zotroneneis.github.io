@@ -50,7 +50,9 @@ This method simply returns an iterator object. The iterator object can be used t
 
 The ```__next__()``` method takes no arguments and always returns the next element of the object. If there are no elements left, ```__next__()``` must raise the ```StopIteration``` exception. Note: iterators don't have to be finite, we could also create an iterator that produces an infinite number of elements.
 
-Note: we can also use ```iter(object)``` and ```next(object)``` instead of ```object.__iter__()``` and ```object.__next__()```. Next, we should understand how these methods are used within a ```for``` loop.
+Note: we can also use ```iter(object)``` and ```next(object)``` instead of ```object.__iter__()``` and ```object.__next__()```. 
+   
+As a next step we should understand how the two methods are used within a ```for``` loop.
 
 <!-- [Source](https://docs.python.org/dev/howto/functional.html#iterators) -->
 
