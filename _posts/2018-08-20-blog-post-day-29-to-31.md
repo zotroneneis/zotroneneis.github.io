@@ -66,7 +66,7 @@ So what happens if we loop over an item using a ```for``` loop? As outlined in t
 
 3. Calling ```iter()``` returns an iterator object.   
 
-4. As described earlier, an iterator object implements the ```__next__()``` method. This method accesses the elements of the object you want to iterate over one at a time. So the loop repeatedly calls ```potion.__next__()```. When no more elements are left, ```__next__()``` raises a ```StopIteration``` exception which tells the ```for``` loop to terminate.   
+4. As described earlier, an iterator object implements the ```__next__()``` method. This method accesses the elements of the object we want to iterate over one at a time. So the loop repeatedly calls ```potion.__next__()```. When no more elements are left, ```__next__()``` raises a ```StopIteration``` exception which tells the ```for``` loop to terminate.   
 
 To make things maximally clear, let's translate the ```for``` loop into the individual steps. The ```for``` loop looked like this:
 
