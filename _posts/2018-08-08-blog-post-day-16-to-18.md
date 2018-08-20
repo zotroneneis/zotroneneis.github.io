@@ -128,7 +128,7 @@ class House:
 Now running ```print(house_of_loyalty < house_of_courage)``` will work and produce the output ```False```. Why False? Because data classes compare objects as if the objects were tuples of their fields. So house_of_loyalty is "larger" than house_of_courage because "C" comes before "L" in the alphabet.
 
 
-## House of Courage houses
+## Full class definition
 
 The full ```House``` class will look as follows: 
 
