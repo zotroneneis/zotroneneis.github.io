@@ -10,6 +10,9 @@ tags:
 
 **Topics:** Iterators
 
+Iterators
+=====
+
 Although we need to create more test functions for the other Magical Universe classes, I want to spend a few days on iterators. First of all, what is meant by the term *iteration*? Iteration describes the process of taking an item and looking at each of its components one by one. Any time we use a loop like
 
 ```python
