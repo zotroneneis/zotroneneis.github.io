@@ -16,7 +16,7 @@ The last days I have been working on a lot of new classes and methods. Since the
 
 ## Abtract Base Classes
 
-Up to now, our Magical Universe has a parent class (CastleKilmereMember) and several child classes (Pupil, Professor, etc.) that inherit all methods from the parent class. But there are other, more advanced applications where simple inheritance is not sufficient.     
+Up to now, our Magical Universe has a parent class (```CastleKilmereMember```) and several child classes (```Pupil, Professor```, etc.) that inherit all methods from the parent class. But there are other, more advanced applications where simple inheritance is not sufficient.     
      
 Abstract base classes are useful if your application involves a *hierarchy* of classes. In particular, in this hierarchy    
 a) It should be impossible to instantiate the base class   
@@ -132,7 +132,7 @@ is equivalent to ```defining_feature = property(abstractmethod(defining_feature)
 Apart from the benefits of abstract base classes we have already discussed, ABC's have other advantages and characteristics that are worth knowing. There is an [excellent blog post](https://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python) on "Why use Abstract Base Classes in Python?" that explains the further functionalities of Python's ABC's in detail. 
 
 
-## Further extensions of the Cleon Bery universe
+## Further extensions of the Magical Universe
 
-When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DarkArmyMember``` class got a ```cast_spell``` method. Since our Cleon Bery universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only House of Ambitions would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Cassidy Ambergem), you might be able to perform a spell earlier than less gifted students.
+When implementing the ```Spell``` class and its subclasses, I made sure that the ```Pupil``` and ```DarkArmyMember``` class got a ```cast_spell``` method. Since our Magical Universe should stay realistic a pupil has to study a spell before she/he is able to perform it. Only members of the House of Ambition would study hexes and curses (i.e. dark magic). Also, only certain spells are taught at certain years. If you are highly intelligent (like Cassidy Ambergem), you might be able to perform a spell earlier than less gifted students.
 

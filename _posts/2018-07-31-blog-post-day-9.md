@@ -35,12 +35,12 @@ def elms(self, subject_and_grade):
 
 The ```try ... except ... ``` code block implements the EAFP principle. We assume that the ```subject_and_grade``` tuple exists. If it does, we unpack its values into ```subject, grade```. If ```subject_and_grade``` is not a valid tuple, a ```ValueError``` will be raised. We catch this error in the ```except``` block and handle it appropriately.  
    
-To add another example of the EAFP principle to our Cleon Bery universe we first extend our ```CastleKilmereMember``` class with a ```_traits``` attribute and two methods for adding and printing traits:
+To add another example of the EAFP principle to our Magical Universe we first extend our ```CastleKilmereMember``` class with a ```_traits``` attribute and two methods for adding and printing traits:
 
 ```python
 class CastleKilmereMember:
     """
-    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
+    Creates a member of the Castle Kilmere School of Magic
     """
 
     def __init__(self, name: str, birthyear: int, sex: str):

@@ -41,7 +41,7 @@ Test functions should have long and descriptive names. Why? Because the test fun
 
 ## Basic usage of pytest
 
-First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```CastleKilmereMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_castle_kilmere_member_class.py*. Before creating test functions for our Cleon Bery universe, let's take a quick look at how a simple test function might look like.
+First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the ```CastleKilmereMember``` class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with "test", so we will name our test file *test_castle_kilmere_member_class.py*. Before creating test functions for our Magical Universe, let's take a quick look at how a simple test function might look like.
 
 Let's take our ```say_words()``` function from [day 5](http://alpopkes.com/posts/2018/07/coding-challenge-day-5/) as an example. The function looks as follows:
 
@@ -95,7 +95,7 @@ def test_exhibit_traits():
 
 ## Pytest fixtures
 
-Since our Magical Universe contains mostly classes we have to create at least one member of the ```CastleKilmereMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Bromley. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
+Since our Magical Universe contains mostly classes we have to create at least one member of the ```CastleKilmereMember``` class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Bromley Huckabee. Is there a way to avoid this? Of course! There is a feature in pytest called *fixtures*. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.
 
 We can create a fixture using the ```@pytest.fixture``` decorator and pass the fixture as an argument to the test functions that need it. So we could change our test code in the following way:
 

@@ -17,7 +17,7 @@ Data classes are a feature that is new in Python 3.7. And taking a look at them 
 
 According to the [PEP](https://www.python.org/dev/peps/pep-0557/) on data classes, they are basically "mutable namedtuples with defaults". We already looked at namedtuples on [day 10 and 11](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-10-and-11/). Namedtuples allow us to create an *immutable class* that primarily stores *values* (i.e. attributes). We used namedtuples for our ```DarkArmyMember``` class (because once you become a member of the dark army there is no way back. Unless, of course, you want to get killed by Lord Odon).    
     
-Data classes can do the same things as namedtuples. However, they make it much easier to create a class because a data class implements several useful methods by default. Let's create a data class and see what functionality it includes out of the box. We haven't specified the different houses of the Cleon Bery universe yet so let's change that!
+Data classes can do the same things as namedtuples. However, they make it much easier to create a class because a data class implements several useful methods by default. Let's create a data class and see what functionality it includes out of the box. We haven't specified the different houses of the Magical Universe yet so let's change that!
 
 We can create a data class by using the ```@dataclass``` decorator. In case you are not using Python 3.7 you can add data classes to your Python 3.6 installation using ```pip install dataclasses```.
 
@@ -42,7 +42,7 @@ house_of_courage = House('House of Courage',
 When defining the ```House``` class as above, Python automatically adds several [special methods](https://docs.python.org/3/glossary.html#term-special-method) to the class. For example, the class includes a ```__init__()``` that looks like this:
 
 ```python
-def __init__(self, name: str, founder: str, traits: list):
+def __init__(self, name: str, traits: list):
     self.name = name
     self.traits = traits
 ```
@@ -128,7 +128,7 @@ class House:
 Now running ```print(house_of_loyalty < house_of_courage)``` will work and produce the output ```False```. Why False? Because data classes compare objects as if the objects were tuples of their fields. So house_of_loyalty is "larger" than house_of_courage because "C" comes before "L" in the alphabet.
 
 
-## House of Courage houses
+## Full class definition
 
 The full ```House``` class will look as follows: 
 
