@@ -4,7 +4,8 @@ excerpt: "Advanced Python features explained using the world of Magic"
 collection: portfolio
 ---
 
-![](../images/the_tales.jpg)
+<!-- ![](../images/the_tales.jpg) -->
+![](https://github.com/zotroneneis/magical_universe/blob/master/the_tales.jpg)
 
 On July 23rd 2018 I started working on a new habit (for details see [my blog post](http://www.alpopkes.com/posts/2018/07/blog-post-1)), namely coding for at least 15 minutes a day. The major goal of this new habit was (and still is) to continously improve my coding skills.
 
