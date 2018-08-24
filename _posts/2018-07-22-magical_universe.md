@@ -6,7 +6,6 @@ tags:
   - python
   - coding
 ---
-
 ![](https://github.com/zotroneneis/magical_universe/blob/master/IMG_6623.jpg)
 
 My magical universe: "The Tales of Castle Kilmere"
