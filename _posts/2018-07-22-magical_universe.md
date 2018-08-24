@@ -9,8 +9,7 @@ tags:
 
 My magical universe: "The Tales of Castle Kilmere"
 
-<!-- ![](../images/the_tales.jpg) -->
-![](https://github.com/zotroneneis/magical_universe/blob/master/the_tales.jpg)
+![](https://github.com/zotroneneis/magical_universe/blob/master/IMG_6623.jpg)
 
 The main character of our magical universe is named Cleon Bery. Cleon's parents died shortly after his birth, while fighting Lord Odon (a dark wizard with the ambition to control the magical world) and his Dark Army. Being an orphan, Cleon is raised by the Spinsters - a foster family living in Littleport, a village located in Cambridgeshire, UK. Although the Spinsters have a son in Cleon's age (Gary) the two don't get along very well. Gary always considered Cleon a threat to his status as an only child. As a consequence, Gary never misses an opportunity to bully Cleon and make him feel unwelcome.
 
@@ -24,6 +23,8 @@ Like many British schools, Castle Kilmere is divided into different Houses, 5 in
 - Birdie Briddle, a chubby, lovable old lady, is head of the House of Loyalty. She teaches the art of spell casting.
 - Rupert Radford leads the House of Creativity and teaches the subject of art.
 - And last but not least Gabriel Giddings, the teacher of broomstick flying and head of the House of Wisdom.
+
+![](https://github.com/zotroneneis/magical_universe/blob/master/IMG_6623.jpg)
 
 <!-- ## Andere Information -->
 <!-- School headmaster: Redmond Dalodore -->
