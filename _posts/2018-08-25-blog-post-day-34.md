@@ -10,6 +10,8 @@ tags:
 
 **Topics:** Multisets, ```collections.Counter```
  
+## Counting objects
+
 Today I want to present a very useful class in Python: ```collections.Counter```. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn't love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using ```collections.Counter```.
 
 ## What is ```collections.Counter``` ?
