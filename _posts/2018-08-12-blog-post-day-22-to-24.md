@@ -1,7 +1,7 @@
 ---
 title: 'Day 22 to 24 - Context managers and the "with" statement '
 date: 2018-08-14
-permalink: /posts/2018/08/coding-challenge-day-21-to-24/
+permalink: /posts/2018/08/coding-challenge-day-22-to-24/
 tags:
   - python
   - coding
