@@ -6,7 +6,8 @@ tags:
   - python
   - coding
 ---
-![](https://github.com/zotroneneis/magical_universe/blob/master/IMG_6623.jpg)
+<!-- ![](https://github.com/zotroneneis/magical_universe/blob/master/IMG_6623.jpg) -->
+![](../images/the_tales.jpg)
 
 My magical universe: "The Tales of Castle Kilmere"
 
