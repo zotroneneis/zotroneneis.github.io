@@ -3,9 +3,8 @@ title: "Magical Universe"
 excerpt: "Advanced Python features explained using the world of Magic"
 collection: portfolio
 ---
-
-<!-- ![](../images/the_tales.jpg) -->
-![](https://github.com/zotroneneis/magical_universe/blob/master/the_tales.jpg)
+![](../images/the_tales.jpg)
+<!-- ![](https://github.com/zotroneneis/magical_universe/blob/master/the_tales.jpg) -->
 
 On July 23rd 2018 I started working on a new habit (for details see [my blog post](http://www.alpopkes.com/posts/2018/07/blog-post-1)), namely coding for at least 15 minutes a day. The major goal of this new habit was (and still is) to continously improve my coding skills.
 
@@ -16,7 +15,7 @@ Since I was bored by the usual tutorial examples, I looked for a topic that woul
 All code can be found in [this GitHub repository](https://github.com/zotroneneis/harry_potter_universe). My blog features the corresponding blog posts.
 
 ## Overview
-
+ 
 | Day   | Topics          | Blog post with explanations | Code for the day  |
 | :---: |:--------------: | :--------------------------:| :----------------:|
 | 1 | Intro to object oriented programming, classes, inheritance   | [Day 1](http://www.alpopkes.com/posts/2018/07/coding-challenge-day-1/)  | [Code day 1](https://github.com/zotroneneis/100_days_of_code/blob/master/code_per_day/day_1.py) |
@@ -37,5 +36,8 @@ All code can be found in [this GitHub repository](https://github.com/zotroneneis
 | 22 - 24  | Context managers and the ```with``` statement| [Day 22 to 24](http://alpopkes.com/posts/2018/08/coding-challenge-day-22-to-24/) | [Code day 22 to 24](https://github.com/zotroneneis/magical_universe/blob/master/code_per_day/day_22_to_24.py) |
 | 25 - 28  | Testing code with pytest| [Day 25 to 28](http://alpopkes.com/posts/2018/08/coding-challenge-day-25-to-28/) | [Code day 25 to 28](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_hogwarts_member_class.py) |
 | 29 - 31  | Iterators, iterables, iteration| [Day 29 to 31](http://alpopkes.com/posts/2018/08/coding-challenge-day-29-to-31/) | [Code day 29 to 31](https://github.com/zotroneneis/magical_universe/blob/master/code_per_day/day_29_to_31.py) |
-
-
+| 32  | Test code for ```Professor``` class | No blog post, see [Day 25 to 28](http://alpopkes.com/posts/2018/08/coding-challenge-day-25-to-28/) for an introduction to testing| [Code day 32](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_professor_class.py) |
+| 33  | Test code for ```Ghost``` class | No blog post, see [Day 25 to 28](http://alpopkes.com/posts/2018/08/coding-challenge-day-25-to-28/) for an introduction to testing| [Code day 33](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_ghost_class.py) |
+| 34  | Counting objects with ```Collections.counter``` | [Day 34](http://alpopkes.com/posts/2018/08/coding-challenge-day-34/) | [Day 34](https://github.com/zotroneneis/magical_universe/blob/master/code_per_day/day_34.py) |
+| 35  | Test code for ```DarkArmyMember``` class | No blog post, see [Day 25 to 28](http://alpopkes.com/posts/2018/08/coding-challenge-day-25-to-28/) for an introduction to testing| [Code day 35](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_dark_army_member_class.py) |
+| 36  | Test code for ```Potion``` class | No blog post, see [Day 25 to 28](http://alpopkes.com/posts/2018/08/coding-challenge-day-25-to-28/) for an introduction to testing| [Code day 36](https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_potion_class.py) |
