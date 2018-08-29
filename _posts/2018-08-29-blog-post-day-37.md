@@ -1,5 +1,5 @@
 ---
-title: 'Day 3& - Extending the Magical Universe'
+title: 'Day 37 - Extending the Magical Universe'
 date: 2018-08-29
 permalink: /posts/2018/08/coding-challenge-day-37/
 tags:
