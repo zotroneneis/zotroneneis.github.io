@@ -12,10 +12,10 @@ tags:
 
 ## Errors and Exceptions
 
-First of all, what is an exception? At outlined in the [Python docs](https://docs.python.org/3/tutorial/errors.html) there are two big kinds of errors: *syntax errors* and *exceptions*. 
+First of all, what is an exception? As outlined in the [Python docs](https://docs.python.org/3/tutorial/errors.html) there are two big kinds of errors: *syntax errors* and *exceptions*. 
 
 **Syntax Error:**   
-A syntax error is an error that makes it impossible to *parse* a program. That's why it is also called a *parsing error*. Whenever we made a mistake in the syntax of our code (for example, we might have forgotten a ':' somewhere) the parser will complain with a ```Syntax Error: invalid syntax```, pointing us to the offending line.
+A syntax error is an error that makes it impossible to *parse* a program. That's why it's also called a *parsing error*. Whenever we made a mistake in the syntax of our code (for example, we might forgot a ':' somewhere) the parser will complain with a ```Syntax Error: invalid syntax```, pointing us to the offending line.
     
 **Exception:**    
 An exception is an error that is detected while a program is being executed. Python has several [built-in exceptions](https://docs.python.org/3/library/exceptions.html#bltin-exceptions) like ```ValueError``` or ```TypeError```. However, when creating a module, it can often be useful to create custom exception classes that are more specific than the generic exceptions built into Python.
@@ -35,19 +35,19 @@ class MySpecificError(ValueError):
   pass 
 ```
 
-Custom exception classes can be very simple (like the ones above) or complex, providing additional details and containing methods. If you want to see how custom exception classes are used in larger projects, take a look at the [Open AI gym exception classes](https://softwareengineering.stackexchange.com/questions/343262/is-it-better-to-have-many-specified-exceptions-or-some-general-that-are-raised-w) or the [Python click package](https://softwareengineering.stackexchange.com/questions/343262/is-it-better-to-have-many-specified-exceptions-or-some-general-that-are-raised-w).
+Custom exception classes can be very simple (like the ones above) or complex, providing additional details and containing methods. If you want to see how custom exception classes are used in larger projects, take a look at the [Open AI gym exception classes](https://github.com/openai/gym/blob/master/gym/error.py) or the [Python click package](https://github.com/pallets/click/blob/master/click/exceptions.py).
 
 
 ## When are custom exception classes useful?
 
-Most of the time, the standard Python exception classes (like ```TypeError, ValueError``` etc.) are sufficient, especially when customizing them with a specific message. Consider the ```self.birthyear``` attribute of our ```CastleKilmereMember``` class. The birthyear is used for computing the current age of a Castle Kilmere member. So if ```birthyear``` has the wrong type, that is, its not an integer like ```1991```, we won't get a valid age. So we should introduce a type check on the birthyear in our ```__init__()``` constructor:
+Most of the time, the standard Python exception classes (like ```TypeError, ValueError``` etc.) are sufficient, especially when customizing them with a specific message. Consider the ```self.birthyear``` attribute of our ```CastleKilmereMember``` class. The birthyear is used for computing the current age of a Castle Kilmere member. So if ```birthyear``` has the wrong type, that is, it's not an integer like ```1991```, we won't get a valid age. So we should introduce a type check on the birthyear in our ```__init__()``` constructor:
 
 ```python
 if type(birthyear) is not int:
     raise TypeError("The birthyear is not a valid integer. Try something like 1991")
 ```
 
-However, when defining a module, we might have several distinct errors in that module. In such a case it can be useful to create custom exception classes. In the example above we might throw a specific error like ```InvalidBirthyearError```. When creating custom exception classes it's common practice to define a base exception class for the module, and subclass specific exception classes for the different error conditions. We will create a file called ```error.py``` to define our exception classes and use them in our code.
+However, when defining a module we might have several distinct errors in that module. In such a case it can be useful to create custom exception classes. In the example above we might throw a specific error like ```InvalidBirthyearError```. When creating custom exception classes it's common practice to define a base exception class for the module, and subclass specific exception classes for the different error conditions. We will create a file called ```error.py``` to define our exception classes and use them in our code.
 
 ```python
 class BaseError(Exception):
@@ -73,7 +73,7 @@ if type(birthyear) is not int:
 
 Custom exception classes can have several benefits:    
 - When something goes wrong, error messages will be more specific and readable    
-- Anyone using the code (teammates, clients, etc.) can be use to catch all exceptions our module can raise if they catch ```BaseException```     
+- Anyone using the code (teammates, clients, etc.) can be sure to catch all exceptions our module may raise if they catch ```BaseException```     
 - If needed, more specific exceptions can be catched, giving problem-specific details       
 - We (or the maintainers of the module) can add and modify existing exceptions without breaking existing client code     
 
