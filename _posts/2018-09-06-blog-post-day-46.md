@@ -1,5 +1,5 @@
 ---
-title: 'Day 46 - Avoiding losing metdata wih 
+title: 'Day 46 - functools.wraps to avoiding losing metdata with decorators'
 date: 2018-09-06
 permalink: /posts/2018/08/coding-challenge-day-46/
 tags:
