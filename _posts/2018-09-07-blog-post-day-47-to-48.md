@@ -13,9 +13,9 @@ Topics: ```collections.defaultdict```
 
 ## The ```collections``` module
 
-The [```collections``` module](https://docs.python.org/3/library/collections.html#module-collections) in Python contains several very useful classes. One of them is helpful for our Magical Universe: ```collections.defaultdict```.
+The [```collections``` module](https://docs.python.org/3/library/collections.html#module-collections) in Python contains several useful classes. One of them is especially helpful for our Magical Universe: ```collections.defaultdict```.
 
-When defining our ```CastleKilmereMember``` class, we specified ```self.traits``` to be an empty dictionary. New positive and negative traits can be added to a person using the ```add_trait()``` function. We can check whether a person possesses a certain trait using the ```exhibit_trait()``` function. The relevant parts of the class look as follows:
+When defining our ```CastleKilmereMember``` class we specified ```self.traits``` to be an empty dictionary. New positive and negative traits can be added to a person using the ```add_trait()``` function. We can check whether a person possesses a certain trait using the ```exhibit_trait()``` function. The relevant parts of the class look as follows:
 
 ```python
 class CastleKilmereMember:
@@ -28,6 +28,9 @@ class CastleKilmereMember:
         self.birthyear = birthyear
         self.sex = sex
         self._traits = {}
+
+    def add_trait(self, trait, value=True):
+        self._traits[trait] = value
 
     def exhibits_trait(self, trait):
         try:
@@ -49,9 +52,11 @@ As visible in the definition of ```exhibit_trait()``` we have to catch and handl
 
 ## ```collections.defaultdict```
 
-```collections.defaultdict``` is a subclass of the general dictionary type. What makes ```defaultdict``` perfect for our problem is that it allows to specify a default value which is returned whenever a requested key cannot found. The basic usage of ```collections.defaultdict``` is as follows: 
+```collections.defaultdict``` is a subclass of the general dictionary type. What makes ```defaultdict``` perfect for our problem is that it allows to specify a *default value* which is returned whenever a requested key cannot found. The basic usage of ```collections.defaultdict``` is as follows: 
 
 ```python
+from collections import defaultdict
+
 dict_ = defaultdict(default_factory)
 ```
 
