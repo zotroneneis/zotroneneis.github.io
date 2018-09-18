@@ -8,6 +8,7 @@ tags:
 ---
 
 **Topics:** Wrap up
+
 During the past 50 days we studied several highly useful Python concepts using a Magical Universe. Overall, we looked at the following concepts:
 
 ## General Python concepts:
