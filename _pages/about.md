@@ -13,7 +13,7 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 News
 =====
 
-**2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) at Cambridge, UK!
+**2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) in Cambridge, UK!
 
 **2018-08-15:** My [magical universe project](https://github.com/zotroneneis/magical_universe) was mentioned on the Python Bytes podcast! Check out the episode [here](https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor).    
 
