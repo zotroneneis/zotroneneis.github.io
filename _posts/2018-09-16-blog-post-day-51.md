@@ -28,7 +28,7 @@ During the past 50 days we studied several highly useful Python concepts using a
 - Data classes
 - How to create iterators and control their behavior
 - Context managers and how to use the ```with``` statement
-- The defaultdict of the collections module
+- The ```defaultdict``` of the ```collections``` module
 
 
 On the last days, we looked at the usage of configuration (config) files. All of these concepts have the potential to be used in our daily coding work. They can improve the readability, efficiency and understandability of our code. And with a little bit of magic it doesn't seem so hard anymore, does it?
