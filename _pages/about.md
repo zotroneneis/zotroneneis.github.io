@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working at **Microsoft Research** in Cambridge, being one of the first Artificial Intelligence residents.
+Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working at **Microsoft Research** in Cambridge, UK, being one of the first Artificial Intelligence residents.
 
 News
 =====
