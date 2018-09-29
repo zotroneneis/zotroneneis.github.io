@@ -8,10 +8,13 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working as a **deep learning intern** at Robert Bosch in Palo Alto, CA, USA. Starting September 2018 I will be one of the first residents of the Microsoft AI Residency Program in Cambridge, UK.
+Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working at **Microsoft Research** in Cambridge, UK, being one of the first participants in the [Microsoft AI Residency Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-ai-residency-program/).
 
 News
 =====
+
+**2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) in Cambridge, UK!
+
 **2018-08-15:** My [magical universe project](https://github.com/zotroneneis/magical_universe) was mentioned on the Python Bytes podcast! Check out the episode [here](https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor).    
 
 My interests 
