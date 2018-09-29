@@ -13,7 +13,7 @@ I have been wanting to learn more about Docker for months. However, when startin
 
 ## Virtual Machines
 
-### What is a virtual machines?
+### What is a virtual machine?
 
 The name "virtual machine" already points out what a virtual machine does: it emulates a "real" computer system. Let's think of it as a little box that completely and entirely believes that it is a full computer. And it has reason to do so: a virtual machine exhibits the behavior of a computer and is capable of performing tasks like a computer. 
 
