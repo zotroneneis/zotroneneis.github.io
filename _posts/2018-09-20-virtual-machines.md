@@ -3,7 +3,6 @@ title: An introduction to virtual machines
 date: 2018-09-29
 permalink: /posts/2018/09/intro-to-virtual-machines/
 tags:
-  - docker
   - virtual_machines
 ---
 
