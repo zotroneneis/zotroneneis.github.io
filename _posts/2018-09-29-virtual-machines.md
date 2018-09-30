@@ -29,7 +29,7 @@ Let's take a look at the entire picture. The bottommost part of our computer arc
 
 [Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/virtual_machine.png)
 
-![](virtual_machine.png)
+![](https://github.com/zotroneneis/resources/blob/master/virtual_machine.png)
 
 
 ### What are disadvantages of virtual machines?
