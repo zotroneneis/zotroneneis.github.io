@@ -20,22 +20,22 @@ Let's start by looking at physical containers. Containers are mostly used in the
 
 Software containers have a similar function. They allow us to pack our code and all of its dependencies (libraries, frameworks, etc.) into a nice little box - a container. The container can then run anywhere. This allows developers to be sure that their software will run independently of where it is deployed. 
 
-Usually, when moving software from one computing environment to another (e.g. from a developers machine to a test environment) we often run into problems, especially if the environments are not identical. For example, the developer might have written the code in Python 3 but the test environment still runs in Python 2. Also differences in network topology, storage and security policies can cause problems.
+Usually, when moving software from one computing environment to another (e.g. from a developers machine to a test environment) we run into problems, especially if the environments are not identical. For example, the developer might have written the code in Python 3 but the test environment still runs in Python 2. Also differences in network topology, storage and security policies can cause problems.
 Containers solve this problem and allow us to reliably run software in different computing environments.
 
 ### How containers work and how they differ from virtual machines
 
 Let's look at the entire picture. Similar to virtual machines, containers sit on top of a host operating system (e.g. Windows 10) which in turn sits on an infrastructure (e.g. a laptop). The rough eqivalent to the hypervisor used by virtual machines is the *container engine* which sits on top of the host operating system. At the moment, the *Docker Engine* is by far the most popular one. 
 
-Several containers can sit on top of the same host operating system. Different to virtual machines, all containers share access to the the same operating system, namely the one of the host. This has the major advantage that only one operating system needs to be managed and maintained. Also, the shared components are read-only. This allows containers to be small in size (megabytes) and to be able to start within seconds (as opposed to gigabytes and minutes for a virtual machine). So to point this out again: in the case of virtual machines we have several operating systems running on a single server In the case of containers, we only have the host operating system.
+Several containers can sit on top of the same host operating system. Different to virtual machines, all containers share access to the the same operating system, namely the one of the host. This has the major advantage that only one operating system needs to be managed and maintained. Also, the shared components are read-only. This allows containers to be small in size (megabytes) and to be able to start within seconds (as opposed to gigabytes and minutes for a virtual machine). So to point this out again: in the case of virtual machines we have several operating systems running on a single server. In the case of containers, we only have the host operating system.
 
-[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/)
+[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
 
 ### What is the difference between a container and a container image?
 
-A container is the runtime instance of an (container) image. Our image is the "recipe", that is, the file system and configuration of our application. The container is the "cake": a running instance of the image that runs the actual applications. 
+A container is the runtime instance of a (container) image. Our image is the "recipe", that is, the file system and configuration of our application. The container is the "cake": a running instance of the image that runs the actual applications. 
 
-[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/)
+[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
 
 ### Sources
 - [Techcrunch](https://techcrunch.com/2016/10/16/wtf-is-a-container/)
