@@ -9,6 +9,7 @@ tags:
 
 **Topics:** Containers
  
+
 I have been wanting to learn more about Docker for months. However, when starting to read Dockers [get started page](https://docs.docker.com/v17.09/get-started/) I quickly had to find out that I'm lacking knowledge in too many other concepts. Since my background isn't computer science I often run across this problem. Luckily, this allows me to constantly learn new things! With the goal of eventually reaching the topic of Docker, the [first post](http://alpopkes.com/posts/2018/09/intro-to-virtual-machines/) introduced virtual machines. This one is about containers.
 
 ## Containers
