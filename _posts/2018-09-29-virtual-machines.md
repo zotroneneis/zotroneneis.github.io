@@ -27,9 +27,8 @@ To create a virtual machine we need a so called *virtual machine manager* which 
 
 Let's take a look at the entire picture. The bottommost part of our computer architecture is the infrastructure, for example a laptop. On top of this runs the host operating system, for example Windows 10. Next comes the hypervisor that manages our guest operating systems. The guest operating systems sit on top of the hypervisor. Guest operating systems might be Ubuntu and Windows XP.
 
-[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/)
+[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
 
-<!-- ![](https://github.com/zotroneneis/resources/blob/master/virtual_machine.png) -->
 
 
 ### What are disadvantages of virtual machines?
