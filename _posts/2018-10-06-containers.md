@@ -21,7 +21,7 @@ Let's start by looking at physical containers. Containers are mostly used in the
 Software containers have a similar function. They allow us to pack our code and all of its dependencies (libraries, frameworks, etc.) into a nice little box - a container. The container can then run anywhere. This allows developers to be sure that their software will run independently of where it is deployed. 
 
 Usually, when moving software from one computing environment to another (e.g. from a developers machine to a test environment) we run into problems, especially if the environments are not identical. For example, the developer might have written the code in Python 3 but the test environment still runs in Python 2. Also differences in network topology, storage and security policies can cause problems.
-Containers solve this problem and allow us to reliably run software in different computing environments.
+Containers solve this problem and allow us to reliably run software in different computing environments. Using containers to deploy applications is called *containerization*.
 
 ### How containers work and how they differ from virtual machines
 
@@ -33,11 +33,24 @@ Several containers can sit on top of the same host operating system. Different t
 
 ### What is the difference between a container and a container image?
 
-A container is the runtime instance of a (container) image. Our image is the "recipe", that is, the file system and configuration of our application. The container is the "cake": a running instance of the image that runs the actual applications. 
+A container is the runtime instance of a (container) image. Our image is the "recipe": a package that includes everything we need for running a specific application including the code, the file system , libraries and configuration of our application. The container is the "cake": a running instance of the image, that is, what the image becomes in memory when executed.
+
+### Advantages of containerization
+
+The [Docker Get Started](https://docs.docker.com/get-started/#docker-concepts) page contains a nice overview of the main advantages of using containers. Containers are:
+
+- Flexible: Even the most complex applications can be containerized.
+- Lightweight: Containers leverage and share the host kernel.
+- Interchangeable: You can deploy updates and upgrades on-the-fly.
+- Portable: You can build locally, deploy to the cloud, and run anywhere.
+- Scalable: You can increase and automatically distribute container replicas.
+- Stackable: You can stack services vertically and on-the-fly.
 
 [Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
+
 
 ### Sources
 - [Techcrunch](https://techcrunch.com/2016/10/16/wtf-is-a-container/)
 - [StackOverflow](https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container)
 - [Electronic Design](https://www.electronicdesign.com/dev-tools/what-s-difference-between-containers-and-virtual-machines)
+- [Docker Get Started](https://docs.docker.com/get-started/#docker-concepts)
