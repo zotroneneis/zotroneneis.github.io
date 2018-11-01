@@ -9,17 +9,25 @@ author_profile: true
 
 ## Books I am currently reading
 
+![](../images/why_we_sleep.png)   
+   
+**Why We Sleep: Unlocking the Power of Sleep and Dreams** by Matthew Walker   
+[Click here for link to book](https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316)    
+     
+[Great podcast episode about the book](http://podcastnotes.org/2018/04/29/why-we-sleep/) (podcast: the Joe Rogan experience)   
+
+   
 ![](../images/bostrom.png)   
 **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
 
-![](../images/carnegie.png)   
-**How to Win Friends & Influence People** by Dale Carnegie   
-[Click here for link to book](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034) 
-
    
 ---
 ## Books I have read
+
+![](../images/carnegie.png)   
+**How to Win Friends & Influence People** by Dale Carnegie   
+[Click here for link to book](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034) 
 
 ![](../images/waking_up.png)   
 **Waking Up** by Sam Harris   
@@ -43,14 +51,6 @@ author_profile: true
 
 ## Books I want to read (an will!)
 
-![](../images/why_we_sleep.png)   
-   
-**Why We Sleep: Unlocking the Power of Sleep and Dreams** by Matthew Walker   
-[Click here for link to book](https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316)    
-     
-[Great podcast episode about the book](http://podcastnotes.org/2018/04/29/why-we-sleep/) (podcast: the Joe Rogan experience)   
-   
-   
 ![](../images/gift_of_fear.png)     
 **The Gift of Fear - Survival Signals That Protect Us from Violence** by Gavin de Becker      
 [Click here for link to book](https://www.amazon.com/Gift-Fear-Survival-Signals-Violence/dp/0316235024/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=)    
