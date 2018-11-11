@@ -66,8 +66,8 @@ print('cleons_pet: ', cleons_pet)
 
 You can read more about ```typing.NamedTuple``` in the [Python docs](https://docs.python.org/3/library/typing.html).
 
-## Death eater class
-We don't want our pupils, professors and ghosts to be immutable. A suitable group of people for an immutable class are the death eaters. So let's create a NamedTuple for them!
+## Dark Army class
+We don't want our pupils, professors and ghosts to be immutable. A suitable group of people for an immutable class are the Dark Army members. So let's create a NamedTuple for them!
 
 ```python
 from typing import NamedTuple
@@ -85,7 +85,7 @@ class DarkArmyMember(NamedTuple):
         return f"{self.__class__.__name__}({self.name}, birthyear: {self.birthyear})"
 ```
 
-From now on we can easily create new death eaters:
+From now on we can easily create new Dark Army members:
 ```python
 keres = DarkArmyMember('Keres Fulford', 1983)
 print('keres: ', keres)
