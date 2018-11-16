@@ -12,7 +12,8 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
-**2018-11-16:** I was invited to be a guest on "Talk Python To Me", the biggest Python podcast! Check out the [new episode](https://talkpython.fm/episodes/show/186/100-days-of-python-in-a-magical-universe).
+**2018-11-16:** I was invited to be a guest on [Talk Python To Me](https://talkpython.fm/
+), the biggest Python podcast! Check out the new episode [here](https://talkpython.fm/episodes/show/186/100-days-of-python-in-a-magical-universe).
 
 **2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) in Cambridge, UK!
 
