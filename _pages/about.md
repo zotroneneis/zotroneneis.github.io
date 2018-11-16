@@ -12,6 +12,7 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
+**2018-11-16:** I was invited to be a guest on "Talk Python To Me", the biggest Python podcast! Check out the [new episode](https://talkpython.fm/episodes/show/186/100-days-of-python-in-a-magical-universe).
 
 **2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) in Cambridge, UK!
 
@@ -23,9 +24,7 @@ I am especially interested in
 a) The application of machine learning algorithms in health care   
 b) Understanding how humans learn and how we can optimize human learning and productivity    
 c) The functioning of the human brain and how machine learning can be applied in cognitive science research       
-d) The study of privacy-preserving machine learning      
-e) Understanding more about the inner functioning of machine learning algorithms       
-    
+
 In my free time I enjoy kickboxing, improving my productivity, [reading](http://alpopkes.com/reading_list/) and meditating.
 
 My path to machine learning
