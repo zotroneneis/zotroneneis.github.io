@@ -12,6 +12,9 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
+**2018-11-25:** My [machine learning basics](https://github.com/zotroneneis/machine_learning_basics
+) project was presented on [Python Bytes](https://pythonbytes.fm/)! Check out the episode [here](https://pythonbytes.fm/episodes/show/105/colorizing-and-restoring-old-images-with-deep-learning).
+
 **2018-11-16:** I was invited to be a guest on [Talk Python To Me](https://talkpython.fm/
 ), the biggest Python podcast! Check out the new episode [here](https://talkpython.fm/episodes/show/186/100-days-of-python-in-a-magical-universe).
 
