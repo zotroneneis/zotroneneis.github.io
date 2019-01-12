@@ -45,4 +45,8 @@ I'm always working on my math skills and I prefer the MIT classes for that. Alth
 - [Project Euler](https://projecteuler.net/archives). Math problems to solve for fun. Also perfect to practice programming! Python solutions to all problems can be found very easily. I've started working on Project Euler a while back. My solutions can be found [here](https://github.com/zotroneneis/ProjectEuler).
 
  
+## Interesting Blog Posts to read
+- [On Being a Senior Engineer](https://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
+- [Google: Rules of Machine Learning - Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/)
+- [Confession as an AI researcher; seeking advice](https://www.reddit.com/r/MachineLearning/comments/73n9pm/d_confession_as_an_ai_researcher_seeking_advice/).
 
