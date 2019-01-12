@@ -10,6 +10,13 @@ tags:
 
 Over the past two years I've come across several great resources for learning. Not only Python, but also Math, Machine Learning and other concepts. However, I never created a proper overview. So that's what this blog post is about. I will continue to add resources as I come across them and update broken links if necessary.
 
+# Table of Contents
+1. [Math](#math)
+2. [Machine Learning](#machine-learning)
+3. [Python](#python)
+4. [Interesting Blogposts](#interesting-blog-posts)
+
+
 ## Math
 I'm always working on my math skills and I prefer the MIT classes for that. Although it takes time to work through an entire course I believe that it's worth it. Especially with math. 
 - MIT Course: [Single Variable Calculus](https://ocw.mit.edu/courses/mathematics/18-01sc-single-variable-calculus-fall-2010/). This class is about differentiation and integration of functions of one variable. It teaches a lot of important concepts fundamental to many scientific disciplines.
@@ -45,7 +52,7 @@ I'm always working on my math skills and I prefer the MIT classes for that. Alth
 - [Project Euler](https://projecteuler.net/archives). Math problems to solve for fun. Also perfect to practice programming! Python solutions to all problems can be found very easily. I've started working on Project Euler a while back. My solutions can be found [here](https://github.com/zotroneneis/ProjectEuler).
 
  
-## Interesting Blog Posts to read
+## Interesting Blog Posts
 - [On Being a Senior Engineer](https://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
 - [Google: Rules of Machine Learning - Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/)
 - [Confession as an AI researcher; seeking advice](https://www.reddit.com/r/MachineLearning/comments/73n9pm/d_confession_as_an_ai_researcher_seeking_advice/).
