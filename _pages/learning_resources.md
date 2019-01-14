@@ -55,4 +55,5 @@ I'm always working on my math skills and I prefer the MIT classes for that. Alth
 - [On Being a Senior Engineer](https://www.kitchensoap.com/2012/10/25/on-being-a-senior-engineer/)
 - [Google: Rules of Machine Learning - Best Practices for ML Engineering](https://developers.google.com/machine-learning/guides/rules-of-ml/)
 - [Confession as an AI researcher; seeking advice](https://www.reddit.com/r/MachineLearning/comments/73n9pm/d_confession_as_an_ai_researcher_seeking_advice/).
+- [So You Want to Be a Research Scientist - Here’s what they don’t teach you in graduate school](https://medium.com/s/story/so-you-want-to-be-a-research-scientist-363c075d3d4c)
 
