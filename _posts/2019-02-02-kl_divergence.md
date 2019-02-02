@@ -8,7 +8,7 @@ tags:
 
 **Topics:** Kullback-Leibler Divergence
 
-One of the points on my long 'stuff-you-have-to-look-at' list is the Kullback-Leibler divergence. I finally took the time to take a detailed look at this topic. Due to problems with displaying the math formulas I decided to create a jupyter notebook with the blog post. You can find it [here](). 
+One of the points on my long 'stuff-you-have-to-look-at' list is the Kullback-Leibler divergence. I finally took the time to take a detailed look at this topic. Due to problems with displaying the math formulas I decided to create a jupyter notebook with the blog post. You can find it [here](https://github.com/zotroneneis/resources/blob/master/KL_divergence.ipynb). 
 
 Taking a detailed look at the KL divergence was definitely worth it! Next, I want to learn more about variational inference.
 
