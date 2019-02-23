@@ -29,11 +29,22 @@ Let's look at the entire picture. Similar to virtual machines, containers sit on
 
 Several containers can sit on top of the same host operating system. Different to virtual machines, all containers share access to the the same operating system, namely the one of the host. This has the major advantage that only one operating system needs to be managed and maintained. Also, the shared components are read-only. This allows containers to be small in size (megabytes) and to be able to start within seconds (as opposed to gigabytes and minutes for a virtual machine). So to point this out again: in the case of virtual machines we have several operating systems running on a single server. In the case of containers, we only have the host operating system.
 
-[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
+<img src="https://github.com/zotroneneis/resources/blob/master/vm_vs_container.png"
+     alt="Container vs. Virtual Machine"
+     style="float: left; margin-right: 10px;" />
+
+[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/vm_vs_container.png)
 
 ### What is the difference between a container and a container image?
 
 A container is the runtime instance of a (container) image. Our image is the "recipe": a package that includes everything we need for running a specific application including the code, the file system , libraries and configuration of our application. The container is the "cake": a running instance of the image, that is, what the image becomes in memory when executed.
+
+
+<img src="https://github.com/zotroneneis/resources/blob/master/image_vs_container.png"
+     alt="Container vs. Image"
+     style="float: left; margin-right: 10px;" />
+
+[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources/blob/master/image_vs_container.png)
 
 ### Advantages of containerization
 
@@ -46,7 +57,7 @@ The [Docker Get Started](https://docs.docker.com/get-started/#docker-concepts) p
 - Scalable: You can increase and automatically distribute container replicas.
 - Stackable: You can stack services vertically and on-the-fly.
 
-[Link if you can't see the image displayed here](https://github.com/zotroneneis/resources)
+
 
 
 ### Sources
