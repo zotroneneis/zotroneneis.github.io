@@ -12,5 +12,5 @@ Variational inference is an important topic that is widely used in machine learn
 
 Similar to the post on the [Kullback Leibler Divergence](http://alpopkes.com/posts/2019/02/kl-divergence/) I created a jupyter notebook with the blog post. You can find it [here](https://github.com/zotroneneis/resources/blob/master/variational_inference.ipynb).
 
-There is also a PDF version of the explanations which has by far the nicest looks (e.g. all the equations are aligned). You can download it [here](http://alpopkes.com/files/variational_inference.pdf)
+There is also a **PDF version** of the explanations which has by far the nicest looks (e.g. all the equations are aligned). You can download it [here](http://alpopkes.com/files/variational_inference.pdf)
 
