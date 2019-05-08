@@ -12,6 +12,9 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
+
+**2019-05-08:** My first publication on Interpretable Bayesian Neural Networks for Healthcare is out! Code/Repo to follow. The paper can be found [here](https://arxiv.org/pdf/1905.02599.pdf).
+
 **2018-11-25:** My [machine learning basics](https://github.com/zotroneneis/machine_learning_basics
 ) project was presented on [Python Bytes](https://pythonbytes.fm/)! Check out the episode [here](https://pythonbytes.fm/episodes/show/105/colorizing-and-restoring-old-images-with-deep-learning).
 
