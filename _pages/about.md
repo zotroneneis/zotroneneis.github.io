@@ -12,6 +12,7 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently working
 
 News
 =====
+**2019-08-05** We open-sourced the code for our [paper on Interpretable Bayesian Neural Networks for Healthcare](https://arxiv.org/pdf/1905.02599.pdf). You can find it [here](https://github.com/microsoft/horseshoe-bnn).
 
 **2019-05-08:** My first publication on Interpretable Bayesian Neural Networks for Healthcare is out! Code/Repo to follow. The paper can be found [here](https://arxiv.org/pdf/1905.02599.pdf).
 
