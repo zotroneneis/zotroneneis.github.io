@@ -9,9 +9,7 @@ author_profile: true
 
 ## Books I am currently reading
 
-![](../images/why_we_sleep.png)   
-   
-**Why We Sleep: Unlocking the Power of Sleep and Dreams** by Matthew Walker   
+- **Why We Sleep: Unlocking the Power of Sleep and Dreams** by Matthew Walker   
 [Click here for link to book](https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316)    
      
 [Great podcast episode about the book](http://podcastnotes.org/2018/04/29/why-we-sleep/) (podcast: the Joe Rogan experience)   
