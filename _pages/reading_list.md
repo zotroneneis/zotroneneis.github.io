@@ -23,6 +23,11 @@ author_profile: true
 ---
 ## Books I have read
 
+![](../images/why_we_sleep.png)   
+**Why We Sleep: Unlocking the Power of Sleep and Dreams** by Matthew Walker   
+[Click here for link to book](https://www.amazon.com/Why-We-Sleep-Unlocking-Dreams/dp/1501144316)         
+[Great podcast episode about the book](http://podcastnotes.org/2018/04/29/why-we-sleep/) (podcast: the Joe Rogan experience)   
+
 ![](../images/carnegie.png)   
 **How to Win Friends & Influence People** by Dale Carnegie   
 [Click here for link to book](https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034) 
@@ -35,11 +40,9 @@ author_profile: true
 **Python Tricks: A Buffet of Awesome Python Features** by Dan Bader   
 [Click here for link to book](https://www.amazon.com/Python-Tricks-Buffet-Awesome-Features/dp/1775093301)   
 
-
 ![](../images/mindfulness.png)    
 **Finding Peace in a Frantic World** by Mark Williams and Danny Penman    
 [Click here for link to book](https://www.amazon.com/Mindfulness-Eight-Week-Finding-Peace-Frantic-ebook/dp/B005NJ2T1G/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=)    
-
 
 ![](../images/elon_musk.png)    
 **Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future** by Ashlee Vance   
