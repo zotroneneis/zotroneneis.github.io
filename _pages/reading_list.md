@@ -9,6 +9,9 @@ author_profile: true
 
 ## Books I am currently reading
 
+- **Permanent Record** by Edward Snowden
+	- [Click here for link to book](https://www.amazon.com/Permanent-Record/dp/B07VZWH6NB/ref=sr_1_1?keywords=permanent+record&qid=1574242008&sr=8-1)
+
 - **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 	- [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
 
@@ -18,6 +21,9 @@ author_profile: true
 
 - **The War on Normal People: The Truth About America's Disappearing Jobs and Why Universal Basic Income Is Our Future** by Andrew Yang
 	- [Click here for link to book](https://www.amazon.com/War-Normal-People-Disappearing-Universal/dp/0316414247)         
+
+- **Conscious - A Brief Guide to the Fundamental Mystery of the Mind** by Annaka Harris
+	- [Click here for link to book](https://www.amazon.com/Conscious-Brief-Guide-Fundamental-Mystery/dp/0062906712/ref=sr_1_1?crid=KP4IQP1DI82J&keywords=conscious+annaka+harris&qid=1574242039&s=books&sprefix=conscious+annaka+%2Caudible%2C270&sr=1-1)
 
 - **The Skeptics' Guide to the Universe: How to Know What's Really Real in a World Increasingly Full of Fake** by Steven Novella
 	- [Click here for link to book](https://www.theskepticsguide.org/our-book)         
@@ -42,13 +48,6 @@ author_profile: true
 	- [Click here for link to book](https://www.amazon.com/Elon-Musk-SpaceX-Fantastic-Future/dp/006230125X)   
 
 ---
-
-## Books I want to read (an will!)
-
-- **The Gift of Fear - Survival Signals That Protect Us from Violence** by Gavin de Becker      
-	- [Click here for link to book](https://www.amazon.com/Gift-Fear-Survival-Signals-Violence/dp/0316235024/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=)    
-	- [Great podcast episode about the book](https://samharris.org/podcasts/living-with-violence/)   
-   
 
 ## And what about other books?
 
