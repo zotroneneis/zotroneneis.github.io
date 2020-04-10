@@ -9,8 +9,8 @@ author_profile: true
 
 ## Books I am currently reading
 
-- **Permanent Record** by Edward Snowden
-	- [Click here for link to book](https://www.amazon.com/Permanent-Record/dp/B07VZWH6NB/ref=sr_1_1?keywords=permanent+record&qid=1574242008&sr=8-1)
+- **Deep Work** by Cal Newport 
+	- [Click here for link to book](https://www.calnewport.com/books/deep-work/)
 
 - **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 	- [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
@@ -18,6 +18,10 @@ author_profile: true
    
 ---
 ## Books I have read
+
+- **Permanent Record** by Edward Snowden
+	- [Click here for link to book](https://www.amazon.com/Permanent-Record/dp/B07VZWH6NB/ref=sr_1_1?keywords=permanent+record&qid=1574242008&sr=8-1)
+
 
 - **The War on Normal People: The Truth About America's Disappearing Jobs and Why Universal Basic Income Is Our Future** by Andrew Yang
 	- [Click here for link to book](https://www.amazon.com/War-Normal-People-Disappearing-Universal/dp/0316414247)         
