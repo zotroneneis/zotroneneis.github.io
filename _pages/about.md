@@ -8,10 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Anna-Lena. Welcome to my personal website! I just finished the [Microsoft AI Residency Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-ai-residency-program/) at **Microsoft Research** in Cambridge, UK and am currently living in Germany, working as a Machine Learning Engineer.
+Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living in Germany, working as a Machine Learning Engineer.
 
 News
 =====
+**2020-01-02** I started a new position as a Machine Learning Engineer at [inovex](https://www.inovex.de/en/) and am excited to learn a ton of new, great things!
+
 **2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and am excited to start a new job as a Machine Learning Engineer in Cologne, Germany next year.
 
 **2019-08-05** We open-sourced the code for our [paper on Interpretable Bayesian Neural Networks for Healthcare](https://arxiv.org/pdf/1905.02599.pdf). You can find it [here](https://github.com/microsoft/horseshoe-bnn).
