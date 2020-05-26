@@ -9,8 +9,8 @@ author_profile: true
 
 ## Books I am currently reading
 
-- **Deep Work** by Cal Newport 
-	- [Click here for link to book](https://www.calnewport.com/books/deep-work/)
+- **How to Have Impossible Conversations: A Very Practical Guide** by Peter Boghossian and James Lindsay    
+	- [Click here for link to book](https://www.amazon.com/How-Have-Impossible-Conversations-Practical/dp/B07X7KF3KX/ref=sr_1_1?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=244W17XX6E1EU&dchild=1&keywords=how+to+have+impossible+conversations&qid=1590487471&s=books&sprefix=how+to+have+im%2Cstripbooks-intl-ship%2C234&sr=1-1)
 
 - **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 	- [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
@@ -18,6 +18,9 @@ author_profile: true
    
 ---
 ## Books I have read
+
+- **The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses** by Eric Ries   
+	- [Click here for link to book](https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898)
 
 - **Permanent Record** by Edward Snowden
 	- [Click here for link to book](https://www.amazon.com/Permanent-Record/dp/B07VZWH6NB/ref=sr_1_1?keywords=permanent+record&qid=1574242008&sr=8-1)
