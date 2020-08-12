@@ -27,8 +27,17 @@ redirect_from:
 ---
    
 ## Work experience
+* 02/2020 - today: **Machine Learning Engineer**   
+    * inovex, Cologne, Germany
+    * Full-time ML Engineer
 
-* 05/2018 - present: **Deep Learning Internship**   
+* 09/2018 - 10/2019: **Machine Learning Engineer (AI Resident)**   
+    * Microsoft Research, Cambridge, UK
+    * One of the first participants in the Microsoft AI Residency program in Cambridge, UK.
+    * The AI Residency is an educational program, focused on teaching skills necessary for becoming an excellent research/machine learning engineer.
+    * Within the program I worked in the role of a full-time research engineer, applying machine learning to real-world problems.
+
+* 05/2018 - 09/2018: **Deep Learning Internship**   
     * Robert Bosch, Palo Alto, CA, USA
     * Work of deep learning projects, mostly focused on computer vision applications and image recognition tasks
 
@@ -70,10 +79,15 @@ redirect_from:
     * German (native language)
     * English (fluent, near-native at speaking and writing)
     * French (moderate knowledge)
+* Certificates
+    * Google Associate Cloud Engineer
 
 ---
    
 ## Voluntary Work
+* 2018 - today: [KI Macht Schule](https://ki-macht-schule.de/)
+    * Teaching AI and ML to kids in German schools
+
 * 2014 - 2015: [Balu und Du](https://www.balu-und-du.de/home/)
     * Prevention project for deprived children
     * Involves a sponsorship for a child between 7 to 10 years for at least a year. During this year, there are weekly meetings of at least three hours with the child, an accompanying weekly seminar at the university as well as detailed online-diary entries for every meeting.
