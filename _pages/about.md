@@ -12,6 +12,11 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living 
 
 News
 =====
+
+**2020-08-10** I will be a keynote speaker at [PyCon Estonia 2020](https://pycon.ee/), talking about finding magic in Python.
+
+**2020-08-05** Our team at [KI Macht Schule](https://ki-macht-schule.de/) is organizing a free summer camp for kids to learn about AI and ML. Check out the [KI Camp](https://ki-camp.de/)!
+
 **2020-01-02** I started a new position as a Machine Learning Engineer at [inovex](https://www.inovex.de/en/) and am excited to learn a ton of new, great things!
 
 **2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and am excited to start a new job as a Machine Learning Engineer in Cologne, Germany next year.
