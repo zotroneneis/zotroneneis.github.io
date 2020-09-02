@@ -17,9 +17,9 @@ News
 
 **2020-08-05** Our team at [KI Macht Schule](https://ki-macht-schule.de/) is organizing a free summer camp for kids to learn about AI and ML. Check out the [KI Camp](https://ki-camp.de/)!
 
-**2020-01-02** I started a new position as a Machine Learning Engineer at [inovex](https://www.inovex.de/en/) and am excited to learn more about applying ML to real world problems.
+**2020-01-02** I started a new position as a Machine Learning Engineer at [inovex](https://www.inovex.de/en/) and am excited to learn more about applying ML to real world problems!
 
-**2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and am excited to start a new job as a Machine Learning Engineer in Cologne, Germany next year.
+**2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and moved back to Germany.
 
 **2019-08-05** We open-sourced the code for our [paper on Interpretable Bayesian Neural Networks for Healthcare](https://arxiv.org/pdf/1905.02599.pdf). You can find it [here](https://github.com/microsoft/horseshoe-bnn).
 
