@@ -9,9 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[Download PDF version of my CV](http://zotroneneis.github.io/files/CV_APopkes.pdf) 
-
-
 ## Education
 
 * **Master of Science** in Computer Science, University of Bonn, Bonn, Germany
@@ -87,6 +84,7 @@ redirect_from:
 ## Voluntary Work
 * 2018 - today: [KI Macht Schule](https://ki-macht-schule.de/)
     * Teaching AI and ML to kids in German schools
+    * https://ki-macht-schule.de/
 
 * 2014 - 2015: [Balu und Du](https://www.balu-und-du.de/home/)
     * Prevention project for deprived children
