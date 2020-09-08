@@ -82,11 +82,11 @@ redirect_from:
 ---
    
 ## Voluntary Work
-* 2018 - today: [KI Macht Schule](https://ki-macht-schule.de/)
+* 2018 - today: **[KI Macht Schule](https://ki-macht-schule.de/)**
     * Teaching AI and ML to kids in German schools
     * https://ki-macht-schule.de/
 
-* 2014 - 2015: [Balu und Du](https://www.balu-und-du.de/home/)
+* 2014 - 2015: **[Balu und Du](https://www.balu-und-du.de/home/)**
     * Prevention project for deprived children
     * Involves a sponsorship for a child between 7 to 10 years for at least a year. During this year, there are weekly meetings of at least three hours with the child, an accompanying weekly seminar at the university as well as detailed online-diary entries for every meeting.
 
