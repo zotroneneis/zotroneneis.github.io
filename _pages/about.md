@@ -12,6 +12,7 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living 
 
 News
 =====
+**2020-09-11** I was a guest at the podcast [Python Bytes](https://pythonbytes.fm/). Check out the episode [here](https://pythonbytes.fm/episodes/show/198/there-s-a-beaver-in-your-database-and-anna-lena-drops-by).
 
 **2020-08-10** I will be a keynote speaker at [PyCon Estonia 2020](https://pycon.ee/), talking about finding magic in Python.
 
