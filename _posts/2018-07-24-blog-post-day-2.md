@@ -71,7 +71,7 @@ class Pupil(CastleKilmereMember):
                 'Horrible': False,
                 }
 
-        return grades.get(grade, False)
+        return grades[grade]
 ```
    
 **Class methods** take at least the parameter *cls* as an input. *cls* points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class.    

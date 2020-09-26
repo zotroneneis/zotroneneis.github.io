@@ -19,17 +19,13 @@ Up to now our ```DarkArmyMember``` class looked as follows:
 
 ```python
 class DarkArmyMember(NamedTuple):
-    """ Creates a death eater """
     name: str
     birthyear: str
 
     @property
     def leader(self):
-        lord_odon = DarkArmyMember('Lord Odon', 1971)
-        return lord_odon
-
-    def __repr__(self):
-        return f"{self.__class__.__name__}({self.name}, birthyear: {self.birthyear})"
+        master_odon = DarkArmyMember('Master Odon', 1971)
+        return master_odon
 
     def cast(self, spell):
         print(f"{self.name}: {spell.incantation}!")
@@ -42,19 +38,18 @@ keres = DarkArmyMember('Keres Fulford', 1983)
 keres.name = 'Adrien'
 ```
 
-will raise ```AttributeError: can't set attribute```. When converting the class to a data class we can keep most of the code. However, we won't need the ```__repr__()``` method anymore!
+will raise ```AttributeError: can't set attribute```. When converting the class to a data class we can keep all our code.
 
 ```python
 @dataclass(frozen=True)
 class NewDarkArmyMember():
-    """ Creates a death eater """
     name: str
     birthyear: str
 
     @property
     def leader(self):
-        lord_odon = DarkArmyMember('Lord Odon', 1971)
-        return lord_odon
+        master_odon = DarkArmyMember('Master Odon', 1971)
+        return master_odon
 
     def cast(self, spell):
         print(f"{self.name}: {spell.incantation}!")

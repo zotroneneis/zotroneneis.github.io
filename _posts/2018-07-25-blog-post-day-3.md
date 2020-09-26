@@ -1,5 +1,5 @@
 ---
-title: 'Day 3 - Function annotations'
+title: 'Day 3 - Type annotations'
 date: 2018-07-25
 permalink: /posts/2018/07/coding-challenge-day-3/
 tags:
@@ -9,10 +9,10 @@ tags:
   - function_annotations
 ---
 
-**Topics:** Function annotations
+**Topics:** Type annotations
 
-## Function annotations
-Function annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). 
+## Type annotations
+Type annotations are a very cool Python 3 feature. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows you to document of what type your function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). 
    
    
 Let's add annotations to our ```___init___``` constructors:
