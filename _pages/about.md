@@ -8,11 +8,19 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Anna-Lena. Welcome to my personal website! I just finished the [Microsoft AI Residency Program](https://www.microsoft.com/en-us/research/academic-program/microsoft-ai-residency-program/) at **Microsoft Research** in Cambridge, UK and am currently living in Germany, working as a Machine Learning Engineer.
+Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living in Germany, working as a Machine Learning Engineer.
 
 News
 =====
-**2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and am excited to start a new job as a Machine Learning Engineer in Cologne, Germany next year.
+**2020-09-11** I was a guest at the podcast [Python Bytes](https://pythonbytes.fm/). Check out the episode [here](https://pythonbytes.fm/episodes/show/198/there-s-a-beaver-in-your-database-and-anna-lena-drops-by).
+
+**2020-08-10** I will be a keynote speaker at [PyCon Estonia 2020](https://pycon.ee/), talking about finding magic in Python.
+
+**2020-08-05** Our team at [KI Macht Schule](https://ki-macht-schule.de/) is organizing a free summer camp for kids to learn about AI and ML. Check out the [KI Camp](https://ki-camp.de/)!
+
+**2020-01-02** I started a new position as a Machine Learning Engineer at [inovex](https://www.inovex.de/en/) and am excited to learn more about applying ML to real world problems!
+
+**2019-10-01** I finished my AI Residency at Microsoft Research Cambridge and moved back to Germany.
 
 **2019-08-05** We open-sourced the code for our [paper on Interpretable Bayesian Neural Networks for Healthcare](https://arxiv.org/pdf/1905.02599.pdf). You can find it [here](https://github.com/microsoft/horseshoe-bnn).
 
@@ -26,14 +34,13 @@ News
 
 **2018-09-17:** I started my AI residency at the [Microsoft Research Lab](https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/) in Cambridge, UK!
 
-**2018-08-15:** My [magical universe project](https://github.com/zotroneneis/magical_universe) was mentioned on the Python Bytes podcast! Check out the episode [here](https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor).    
-
 My interests 
 =====
 I am especially interested in     
-a) The application of machine learning algorithms in health care   
+a) The application of machine learning algorithms in health care
 b) Understanding how humans learn and how we can optimize human learning and productivity    
-c) The functioning of the human brain and how machine learning can be applied in cognitive science research       
+c) The functioning of the human brain and how machine learning can be applied in cognitive science research    
+d) Teaching kids, teenagers and adults about machine learning. That's why I'm part of [KI Macht Schule](https://ki-macht-schule.de/)
 
 In my free time I enjoy kickboxing, improving my productivity, [reading](http://alpopkes.com/reading_list/) and meditating.
 

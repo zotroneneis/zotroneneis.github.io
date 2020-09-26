@@ -54,11 +54,3 @@ Weekly podcast of live-debates covering a wide variety of topics, inluding educa
 [Click here for podcast website](https://www.intelligencesquaredus.org/)   
 
 ---
-   
-![](../images/twiml_ai.png)   
-   
-**This Week in Machine Learning & AI**
-   
-Weekly podcast by Sam Charrington. Discusses current topics and projects related to machine learning, deep learning and artificial intelligence.
-   
-[Click here for podcast website](https://twimlai.com/)   

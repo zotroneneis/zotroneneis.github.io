@@ -84,9 +84,8 @@ class Pupil(CastleKilmereMember):
     Create a Castle Kilmere Pupil
     """
 
-    def __init__(self, name, birthyear, sex, house, start_year, pet=None):
+    def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
-        self.house = house
         self.start_year = start_year
 
         if pet is not None:
@@ -99,21 +98,18 @@ class Pupil(CastleKilmereMember):
                   'Foreign Magical Systems': False,
                   'Charms': False,
                   'Defence Against Dark Magic': False,
-                  'Divination': False,
-                  'Herbology': False,
                   'History of Magic': False,
                   'Potions': False,
                   'Transfiguration': False}
 
-cleon = Pupil(name='Cleon Bery',
+luke = Pupil(name='Luke Bery',
               birthyear=2008,
               sex='male',
-              house='House of Courage',
-              start_year=2018,
+              start_year=2020,
               pet=('Cotton', 'owl'))
 ```
 
-In this new class we use the method ```super``` to call the ```init``` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the ```Pupil``` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil belongs to one of the Castle Kilmere houses and she/he started school in a specific year. Also, a pupil might own a pet.    
+In this new class we use the method ```super``` to call the ```init``` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the ```Pupil``` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil started school in a specific year. Also, a pupil might own a pet.    
    
 Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any ELM (Elementary Level of Magic) yet. But this might change!
 
@@ -183,9 +179,8 @@ class Pupil(CastleKilmereMember):
     Create a Castle Kilmere Pupil
     """
 
-    def __init__(self, name, birthyear, sex, house, start_year, pet=None):
+    def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
-        self.house = house
         self.start_year = start_year
 
         if pet is not None:
@@ -198,8 +193,6 @@ class Pupil(CastleKilmereMember):
                   'Foreign Magical Systems': False,
                   'Charms': False,
                   'Defence Against Dark Magic': False,
-                  'Divination': False,
-                  'Herbology': False,
                   'History of Magic': False,
                   'Potions': False,
                   'Transfiguration': False}
@@ -209,10 +202,9 @@ class Professor(CastleKilmereMember):
   Creates a Castle Kilmere professor
   """
 
-  def __init__(self, name, birthyear, sex, subject, house=None):
+  def __init__(self, name, birthyear, sex, subject):
       super().__init__(name, birthyear, sex)
       self.subject = subject
-      self.house = house
 
     
 class Ghost(CastleKilmereMember):
@@ -220,12 +212,9 @@ class Ghost(CastleKilmereMember):
     Creates a Castle Kilmere ghost
     """
 
-    def __init__(self, name, birthyear, sex, year_of_death, house=None):
+    def __init__(self, name, birthyear, sex, year_of_death):
         super().__init__(name, birthyear, sex)
         self.year_of_death = year_of_death
-
-        if house is not None:
-            self.house = house
 
 
 
@@ -233,10 +222,9 @@ if __name__ == "__main__":
   bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
   print(bromley.says("Hello!"))
 
-  cleon = Pupil(name='Cleon Bery',
+  luke = Pupil(name='Luke Bery',
                 birthyear=2008,
                 sex='male',
-                house='House of Courage',
                 start_year=2018,
                 pet=('Cotton', 'owl'))
 
