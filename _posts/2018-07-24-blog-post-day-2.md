@@ -16,7 +16,7 @@ tags:
 ## Types of methods
 A class can have three types of methods: instance methods, class methods and static methods.
    
-**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through ```self.__class__```).
+**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through `self.__class__`).
 
 Our base class already has an instance method:
 
@@ -27,24 +27,7 @@ def says(self, words):
    
 **Static methods** take neither a *self* nor *cls* parameter as an input. Therefore, they cannot modify neither object state nor class state. Although they are related to the class, they are independent of the other class or instance methods and can only access the data they are provided with.   
       
-Let's add a static method to our base class.   
-
-```python
-class CastleKilmereMember:
-    """
-    Creates a member of the Castle Kilmere School of Magic
-    """
-
-    def __init__(self, name, birthyear, sex):
-        ...
-
-    @staticmethod
-    def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1939, 'male')
-
-```
-
-We can also add a static method to our ```Pupil``` class. It will tell us whether a certain grade in an exam passes or fails the exam.
+Let's add a static method to our `Pupil` class. It will tell us whether a certain grade in an exam passes or fails the exam.
 
 ```python
 class Pupil(CastleKilmereMember):
@@ -80,123 +63,105 @@ Class and static methods allow a developer to communicate what intention she/he 
    
 ## Class methods as alternative constructors   
    
-- In Python a class can only have one constructor (the ```self.__init__()``` method)
-- However, we can use ```@classmethod``` to create factory functions
+- In Python a class can only have one constructor (the `self.__init__()` method)
+- However, we can use `@classmethod` to create factory functions
 - These factory functions allow us to create class objects that are configured exactly the way we want them
 - In this way, they act like additional constructors
    
-For example, we probably want to create the main characters of our Magical Universe. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Cleon constructor as follows:
+For example, we probably want to create the main characters of our Magical Universe. Typing all the names and other attributes every time would be very slow. Adding a few class methods allows us to speed up the process. We can create a Lissy constructor as follows:
    
 ```python
 @classmethod
-def cleon(cls):
-    return cls('Cleon Bery', 2008, 'male', 'House of Courage', 2018, ('Cotton', 'owl'))
+def lissy(cls):
+    return cls('Lissy Spinster', 2008, 'female', 2020, ('Ramses', 'cat'))
 ```
 
 ## All code for today
 ```python
 class CastleKilmereMember:
-    """
-    Creates a member of the Castle Kilmere School of Witchcraft and Wizardry
-    """
-
+    """ Creates a member of the Castle Kilmere School of Magic """
     def __init__(self, name, birthyear, sex):
-        self._name = name
+        self.name = name
         self.birthyear = birthyear
         self.sex = sex
         
     def says(self, words):
-        return f"{self._name} says {words}"
-
-    @staticmethod
-    def school_headmaster():
-        return CastleKilmereMember('Redmond Dalodore', 1939, 'male')
+        return f"{self._name} says: {words}"
+    
+    @classmethod
+    def school_headmistress(cls):
+        return cls('Miranda Mirren', 1962, 'female')   
 
 
 class Pupil(CastleKilmereMember):
-    """
-    Create a Castle Kilmere Pupil
-    """
+    """ Create a Castle Kilmere Pupil """
 
-    def __init__(self, name, birthyear, sex, house, start_year, pet=None):
+    def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
-        self.house = house
         self.start_year = start_year
 
         if pet is not None:
             self.pet_name, self.pet_type = pet
 
         self._elms = {
+                  'Critical Thinking': False,
+                  'Self-Defense Against Fresh Fruit': False,
                   'Broomstick Flying': False,
-                  'Art': False,
                   'Magical Theory': False,
                   'Foreign Magical Systems': False,
                   'Charms': False,
                   'Defence Against Dark Magic': False,
-                  'Divination': False,
-                  'Herbology': False,
                   'History of Magic': False,
                   'Potions': False,
                   'Transfiguration': False}
+    
+    @classmethod
+    def luke(cls):
+        return cls('Luke Bery', 2008, 'male', 2020, ('Cotton', 'owl'))
 
     @classmethod
-    def cleon(cls):
-        return cls('Cleon Bery', 2008, 'male', 'House of Courage', 2018, ('Cotton', 'owl'))
+    def lissy(cls):
+        return cls('Lissy Spinster', 2008, 'female', 2020, ('Ramses', 'cat'))
 
     @classmethod
-    def flynn(cls):
-        return cls('Flynn Gibbs', 2008, 'male', 'House of Courage', 2018, ('Twiggles', 'owl'))
-
-    @classmethod
-    def cassidy(cls):
-        return cls('Cassidy Ambergem', 2007, 'female', 'House of Courage', 2018, ('Ramses', 'cat'))
+    def adrien(cls):
+        return cls('Adrien Fulford', 2008, 'male', 2020, ('Unnamed', 'owl') )
 
 
 
 class Professor(CastleKilmereMember):
-  """
-  Creates a Castle Kilmere professor
-  """
-
-  def __init__(self, name, birthyear, sex, subject, house=None):
-      super().__init__(name, birthyear, sex)
-      self.subject = subject
-      if house is not None:
-          self.house = house
-
-    @classmethod
-    def mirren(cls):
-        return cls('Miranda Mirren', 1963, 'female', 'Transfiguration', 'House of Courage')
+    def __init__(self, name, birthyear, sex, subject, department):
+        super().__init__(name, birthyear, sex)
+        self.subject = subject
+        self.department = department
 
     @classmethod
     def blade(cls):
-        return cls('Blade Bardock', 1988, 'male', 'Potions', 'House of Ambition')
+        return cls('Blade Bardock', 1988, 'male', 'Potions', 'Science')
+
+    @classmethod
+    def briddle(cls):
+        return cls('Birdie Briddle', 1931, 'female', 'Foreign Magical Systems', 'Law')
+
+    @classmethod
+    def radford(cls):
+        return cls('Rupert Radford', 1958, 'male', 'Illusions 101', 'Creativity and Arts')
+
+    @classmethod
+    def giddings(cls):
+        return cls('Gabriel Giddings', 1974, 'male', 'Broomstick Making', 'Engineering')
 
     
 class Ghost(CastleKilmereMember):
-    """
-    Creates a Castle Kilmere ghost
-    """
-
-    def __init__(self, name, birthyear, sex, year_of_death, house=None):
+    """ Creates a Castle Kilmere ghost """
+    def __init__(self, name, birthyear, sex, year_of_death):
         super().__init__(name, birthyear, sex)
         self.year_of_death = year_of_death
 
-        if house is not None:
-            self.house = house
-
-
 if __name__ == "__main__":
 
-    bromley = KilmereMember(name='Bromley Huckabee', birthyear=1959)
-    cleon = Pupil(name='Cleon Bery', birthyear=2008, house='House of Courage', start_year=2018)
-    headmaster = cleon.school_headmaster()
-
-    mirren = Professor.mirren()
     blade = Professor.blade()
-    cleon = Pupil.cleon()
-    flynn = Pupil.flynn()
-    cassidy = Pupil.cassidy()
+    lissy = Pupil.lissy()
 
 
 ```
