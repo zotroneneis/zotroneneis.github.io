@@ -26,7 +26,7 @@ On their first day at school, Lissy and Luke quickly learn that not all kids at 
 
 The Dark Army is lead by a particular dark wizard called Master Odon. Not many people know how Master Odon looks like but everyone knows his name. He has been pulling the strings behind the weelings and dealings of the dark army for years. In recent years the movement has gained tractio and has since be affecting the live of ordinary magical people like you and me substantially.
 
-<img src="../images/castle_kilmere.png" width="70%">
+<img src="castle_kilmere.png" width="70%">
 
 <!-- ## Andere Information -->
 <!-- School headmaster: Redmond Dalodore -->
