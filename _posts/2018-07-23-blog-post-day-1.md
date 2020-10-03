@@ -10,7 +10,7 @@ tags:
 
 **Topics:** object oriented programming, classes, inheritance
 
-I want to start with using some of the stuff I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to the [Tales of Castle Kilmere](http://alpopkes.com/posts/2018/07/the_tales_of_castle_kilmere/).
+I want to start with using some of the things I learned from the "Python Tricks" book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to the [Tales of Castle Kilmere](http://alpopkes.com/posts/2018/07/the_tales_of_castle_kilmere/).
 
 So let's start with the most important basics.
 
@@ -33,11 +33,11 @@ class CastleKilmereMember:
     pass
 ```
 
-Side note: `pass` is a Python keyword that can be used as a placeholder. It usually denotes places where we will eventually put code. It allows us to run the code above without getting an error
+Side note: `pass` is a Python keyword that can be used as a placeholder. It can be used to denote places where we will eventually put code. In this case, it allows us to run the code above without getting an error.
 
 ## Creating class objects
 
-To create an actual object, i.e. an *instance* of the class we need to *instantiate* the class. This is also simple:
+To create an actual object, that is, an *instance* of the class we need to *instantiate* the class. This is also simple:
 
 ```python
 kilmere_member = CastleKilmereMember()
@@ -61,11 +61,11 @@ class CastleKilmereMember:
     def says(self, words):
         return f"{self.name} says {words}"
 
-bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
+bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
 print(bromley.says("Hello!"))
 ```
 
-This class has a method called `__init__`. The *init* method is called whenever you create a new instance of the class. So when calling ```bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')``` the `__init__` method of the `CastleKilmereMember` class is called with the arguments ```'Bromley Huckabee', '1959', 'male'``` which represent the name, birthyear and sex of the Castle Kilmere member. The `__init__` method returns an instance of the class which is then assigned to a variable called "bromley".
+This class has a method called `__init__`. The dunder init method (dunder = double underscore) is called whenever you create a new instance of the class. So when calling `bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')` the `__init__` method of the `CastleKilmereMember` class is called with the arguments `'Bromley Huckabee', 1959, 'male'` which represent the name, birthyear and sex of the Castle Kilmere member. The `__init__` method returns an instance of the class which is then assigned to a variable called "bromley".
    
 Note: The first argument of the `__init__` method is called 'self'. This argument will be the first argument in most methods. It points towards an instance of the class whenever the method is called. For more details on this, see the [blog post of day 4]() or the [Python docs](https://docs.python.org/3/tutorial/classes.html).   
    
@@ -75,8 +75,7 @@ We also added a method called `says` that adds behavior to our class. In this ca
 
 The `CastleKilmereMember` class is nice, but of course we want many other classes in our Magical Universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Castle Kilmere, right? This is what *inheritance* is used for.   
    
-Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new functionality. Let's use the concept of inheritance to create a `Pupil` class! Inheritance is great for reducing duplicated code and for showing the semantic relations between objects.
-
+Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new functionality. Inheritance is great for reducing duplicated code and for showing the semantic relations between objects. Let's use the concept of inheritance to create a `Pupil` class! 
 
 ```python
 class Pupil(CastleKilmereMember):
@@ -108,9 +107,7 @@ luke = Pupil(name='Luke Bery',
               pet=('Cotton', 'owl'))
 ```
 
-In this new class we use the method `super` to call the `init` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the `Pupil` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil started school in a specific year. Also, a pupil might own a pet.    
-   
-Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she won't have passed any ELM (Elementary Level of Magic) yet. But this might change once she writes her first exams!
+This new class inheritcs from out `CastleKilmereMember` class. In its `init` method we use the method `super` to call the `init` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the `Pupil` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil started school in a specific year. Also, a pupil might own a pet. Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she won't have passed any ELM (Elementary Level of Magic) yet. But this might change once she writes her first exams!
 
 
 ## Instance and class attributes
@@ -149,7 +146,9 @@ We can access and modify class attributes both with and without an instance of t
 ```python
 bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
 print(bromley.location)
+>>> United Kingdom
 print(CastleKilmereMember.location)
+>>> United Kingdom
 ```
 
 ## Further reading:   
