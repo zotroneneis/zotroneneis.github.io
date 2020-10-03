@@ -6,8 +6,6 @@ tags:
   - python
   - coding
 ---
-<img src="../images/castle_kilmere.png" width="70%">
-
 My magical universe: "The Tales of Castle Kilmere"
 
 The main character of our magical universe is named Lissy Spinster. Lissy is a quiet, clumsy girl of age twelve. Although she is sticking her nose into books most of the time, she is always watching her surroundings very closely. Lissy and her older brother Gary don't get along very well. Gary considers his sister a little weird and is spending most of his time outside, playing broom socker with his friends. Lissy's best friend Luke Bery is living next door with four older sisters and very loving parents. Although Luke's personality is completely different to Lissys, she spends most of her free time at Luke's house, reading books in their flying treehouse. Luke is usually full of energy and full of mischief, constantly trying to convince Lissy to play tricks on other people.
