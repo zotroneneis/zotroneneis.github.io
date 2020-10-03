@@ -1,6 +1,6 @@
 ---
 title: 'Day 2 - Types of class methods'
-date: 2018-07-24
+date: 2018-07-24, updated 2020-10-02
 permalink: /posts/2018/07/coding-challenge-day-2/
 tags:
   - python
@@ -11,41 +11,42 @@ tags:
   - static_methods
 ---
 
+
 **Topics:** class methods, instance methods, static methods, using class methods as alternative constructors
 
 ## Types of methods
 A class can have three types of methods: instance methods, class methods and static methods.
    
-**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* and *class state* (the latter can be modified through `self.__class__`).
+**Instance methods** are the most common type of method. They take at least the parameter *self* as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both *object state* (through the `self` parameter) and *class state* indirectly (through the `self.__class__` parameter).
 
-Our base class already has an instance method:
+Our base class already has an instance method. The says methods takes the input self and a string of words the current member of CastleKilmereMember should say. When the says method is called on an object, the self parameter can be used to acces attributes which were set in the dunder init method.
 
 ```python
 def says(self, words):
-    return f"{self._name} says {words}"
+    return f"{self.name} says {words}"
 ```
+
+**Class methods** look similar to instance methods in the sense that they take at least one parameter as an input. This parameter is, however, not `self` but `cls`. `cls` points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class. Another important thing to know about classmethods is that we need to use the @classmethod decorator when implementing a class method. We will talk about decorators in a later blog post. Right now you only need to remember to put a @classmethod on top of the function. An example for a class method can be seen below (see section on alternative constructors).
    
-**Static methods** take neither a *self* nor *cls* parameter as an input. Therefore, they cannot modify neither object state nor class state. Although they are related to the class, they are independent of the other class or instance methods and can only access the data they are provided with.   
-      
-Let's add a static method to our `Pupil` class. It will tell us whether a certain grade in an exam passes or fails the exam.
+**Static methods** take neither a `self` nor `cls` parameter as an input. Therefore, they can modify neither object state nor class state. Although they are related to the class, they are independent and can only access the data they are provided with.   
+
+Do you remember the Pupil class? It had an attribute called `_elms`, standing for "Elementarey Level of Magic". This attribute contains all the obligatory classes a pupil has to take. If a student passes one of her ELMs or not depends on the grade she gets. Castle Kilmere has a fixed grading scheme where grades range from 'E' for 'Excellent' to 'H' for 'Horrible'. This is perfect material for a static method!
+
+Our static method `passed` will receive a grade as an input and will return whether or not this means pass or fail. You can see here that the method uses no class or instance state but only has access to the attributes its provided with, which is the grade in this case.
 
 ```python
 class Pupil(CastleKilmereMember):
-    """
-    Create a Castle Kilmere Pupil
-    """
+    """ Create a Castle Kilmere Pupil """
     ...
 
     @staticmethod
     def passed(grade):
-        """
-        Given a grade, determine if an exam was passed.
-        """
+        """ Given a grade, determine if an exam was passed.  """
         grades = {
+		'E': True,
+		'Excellent': True,
                 'O': True,
                 'Ordinary': True,
-                'P': True,
-                'Passed': True,
                 'A': True,
                 'Acceptable': True,
                 'P': False,
@@ -56,13 +57,11 @@ class Pupil(CastleKilmereMember):
 
         return grades[grade]
 ```
-   
-**Class methods** take at least the parameter *cls* as an input. *cls* points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class.    
-   
-Class and static methods allow a developer to communicate what intention she/he had in mind when implementing the method. For example, using a static method expresses that the method is independent from everything else around it. Also, class methods can be used as **alternative constructors**.   
+
+## What are class and static methods good for?
+Class and static methods allow a developer to communicate what intention she had in mind when implementing the method. For example, using a static method expresses that the method is independent from everything else around it. Also, class methods can be used as **alternative constructors**.   
    
 ## Class methods as alternative constructors   
-   
 - In Python a class can only have one constructor (the `self.__init__()` method)
 - However, we can use `@classmethod` to create factory functions
 - These factory functions allow us to create class objects that are configured exactly the way we want them
@@ -86,7 +85,7 @@ class CastleKilmereMember:
         self.sex = sex
         
     def says(self, words):
-        return f"{self._name} says: {words}"
+        return f"{self.name} says: {words}"
     
     @classmethod
     def school_headmistress(cls):
@@ -162,8 +161,6 @@ if __name__ == "__main__":
 
     blade = Professor.blade()
     lissy = Pupil.lissy()
-
-
 ```
 
 
