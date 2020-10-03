@@ -20,7 +20,7 @@ Object-oriented programming (OOP) is a specific programming paradigm. In OOP com
 a) attributes    
 b) behavior in the form of methods      
      
-Most OOP programming languages, including Python, are *class-based*. This means that objects are instances of *classes*. This might sound quite abstract. But when you think about it, this is exactly how our world looks like. We have lots of classes and instances of these classes. For example, we have the class "Person" and lots of individual persons (like you and me) that are *instances* of the "Person" class. An attribute of the "Person" class might be "name" or "birthdate". A method might be "current_age" that computes the current age of the person.   
+Most OOP programming languages, including Python, are *class-based*. This means that objects are instances of *classes*. This might sound quite abstract. But when you think about it, this is exactly how our world looks like. We have lots of classes and instances of these classes. For example, we have the class "Person" and lots of individual persons (like you and me) that are *instances* of the "Person" class. An attribute of the "Person" class might be "name" or "birthdate". A method might be `calc_current_age` that computes the current age of the person.   
     
 That's what I like about OOP: it reflects the structure of our world quite closely. This makes it easier to understand the concept.
 
@@ -54,12 +54,12 @@ class CastleKilmereMember:
     """
 
     def __init__(self, name, birthyear, sex):
-        self._name = name
+        self.name = name
         self.birthyear = birthyear
         self.sex = sex
         
     def says(self, words):
-        return f"{self._name} says {words}"
+        return f"{self.name} says {words}"
 
 bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
 print(bromley.says("Hello!"))
@@ -75,13 +75,12 @@ We also added a method called `says` that adds behavior to our class. In this ca
 
 The `CastleKilmereMember` class is nice, but of course we want many other classes in our Magical Universe. For example, we want to create pupils, professors, ghosts, etc. But all of these are members of Castle Kilmere, right? This is what *inheritance* is used for.   
    
-Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new functionality. Let's use the concept of inheritance to create a `Pupil` class!
+Inheritance allows us to create a new class that *inherits* all attributes and methods from the *parent class*. The resulting *child class* can override methods and attributes of the parent class and it can add new functionality. Let's use the concept of inheritance to create a `Pupil` class! Inheritance is great for reducing duplicated code and for showing the semantic relations between objects.
+
 
 ```python
 class Pupil(CastleKilmereMember):
-    """
-    Create a Castle Kilmere Pupil
-    """
+    """ Create a Castle Kilmere Pupil """
 
     def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
@@ -91,8 +90,9 @@ class Pupil(CastleKilmereMember):
             self.pet_name, self.pet_type = pet
 
         self._elms = {
+                  'Critical Thinking': False,
+                  'Self-Defense Against Fresh Fruit': False,
                   'Broomstick Flying': False,
-                  'Art': False,
                   'Magical Theory': False,
                   'Foreign Magical Systems': False,
                   'Charms': False,
@@ -108,9 +108,9 @@ luke = Pupil(name='Luke Bery',
               pet=('Cotton', 'owl'))
 ```
 
-In this new class we use the method ```super``` to call the `init` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the `Pupil` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil started school in a specific year. Also, a pupil might own a pet.    
+In this new class we use the method `super` to call the `init` method of the parent class. Then, we add new attributes to the class. These attributes will be specific to object instances of the `Pupil` class. A pupil has more attributes than a simple Castle Kilmere member. For example, a pupil started school in a specific year. Also, a pupil might own a pet.    
    
-Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she/he won't have passed any ELM (Elementary Level of Magic) yet. But this might change!
+Furthermore, we added an attribute "elms". This attribute will be used later. It contains all the classes a pupil might take. When creating a new pupil, she won't have passed any ELM (Elementary Level of Magic) yet. But this might change once she writes her first exams!
 
 
 ## Instance and class attributes
@@ -129,12 +129,10 @@ A *class attribute* is created inside the class definition. Let's add a class at
 
 ```python
 class CastleKilmereMember:
-    """
-    Creates a member of the Castle Kilmere School of Magic
-    """
+    """ Creates a member of the Castle Kilmere School of Magic """
     
     # class attribute
-    location = 'United Kingdom'
+    location = "United Kingdom"
 
     def __init__(self, name, birthyear, sex):
         ...
@@ -149,7 +147,7 @@ Class attributes:
 We can access and modify class attributes both with and without an instance of the class:
 
 ```python
-bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
+bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
 print(bromley.location)
 print(CastleKilmereMember.location)
 ```
@@ -160,23 +158,19 @@ The [Python documentation](https://docs.python.org/3/tutorial/classes.html) cont
 ## All code for today
 ```python
 class CastleKilmereMember:
-    """
-    Creates a member of the Castle Kilmere School of Magic
-    """
+    """ Creates a member of the Castle Kilmere School of Magic """
 
     def __init__(self, name, birthyear, sex):
-        self._name = name
+        self.name = name
         self.birthyear = birthyear
         self.sex = sex
         
     def says(self, words):
-        return f"{self._name} says {words}"
+        return f"{self.name} says {words}"
 
 
 class Pupil(CastleKilmereMember):
-    """
-    Create a Castle Kilmere Pupil
-    """
+    """ Create a Castle Kilmere Pupil """
 
     def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
@@ -198,9 +192,7 @@ class Pupil(CastleKilmereMember):
                   'Transfiguration': False}
 
 class Professor(CastleKilmereMember):
-  """
-  Creates a Castle Kilmere professor
-  """
+  """ Creates a Castle Kilmere professor """
 
   def __init__(self, name, birthyear, sex, subject):
       super().__init__(name, birthyear, sex)
@@ -208,18 +200,15 @@ class Professor(CastleKilmereMember):
 
     
 class Ghost(CastleKilmereMember):
-    """
-    Creates a Castle Kilmere ghost
-    """
+    """ Creates a Castle Kilmere ghost """
 
     def __init__(self, name, birthyear, sex, year_of_death):
         super().__init__(name, birthyear, sex)
         self.year_of_death = year_of_death
 
 
-
 if __name__ == "__main__":
-  bromley = CastleKilmereMember('Bromley Huckabee', '1959', 'male')
+  bromley = CastleKilmereMember('Bromley Huckabee', 1959, 'male')
   print(bromley.says("Hello!"))
 
   luke = Pupil(name='Luke Bery',
