@@ -1,5 +1,5 @@
 ---
-title: 'Day 34 - Multisets, ```collections.Counter```'
+title: 'Day 34 - Multisets, `collections.Counter`'
 date: 2018-08-25
 permalink: /posts/2018/08/coding-challenge-day-34/
 tags:
@@ -8,15 +8,15 @@ tags:
   - multisets
 ---
 
-**Topics:** Multisets, ```collections.Counter```
+**Topics:** Multisets, `collections.Counter`
  
 ## Counting objects
 
-Today I want to present a very useful class in Python: ```collections.Counter```. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn't love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using ```collections.Counter```.
+Today I want to present a very useful class in Python: `collections.Counter`. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn't love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using `collections.Counter`.
 
-## What is ```collections.Counter``` ?
+## What is `collections.Counter` ?
 
-The ```Counter``` class is a dictionary subclass. To be more precise, a Counter is an unordered collection of elements, where the elements are stored as dictionary keys and their counts as dictionary values.   
+The `Counter` class is a dictionary subclass. To be more precise, a Counter is an unordered collection of elements, where the elements are stored as dictionary keys and their counts as dictionary values.   
     
 Because a Counter is a kind of dictionary, the stored elements must be *hashable*. In Python, all immutable objects (like strings) are hashable, while mutable objects (like lists) are not hashable (remember: immutable means that once we created an object, we can't change it anymore).
 
@@ -59,4 +59,4 @@ print(f"Final shopping list: {shopping_list}")
 
 ## Further reading
 
-The ```collections.Counter``` class has a few useful methods, for example, ```Counter.most_common()```. To learn more about the Counter class, look at the [Python docs](https://docs.python.org/3/library/collections.html#collections.Counter).
+The `collections.Counter` class has a few useful methods, for example, `Counter.most_common()`. To learn more about the Counter class, look at the [Python docs](https://docs.python.org/3/library/collections.html#collections.Counter).
