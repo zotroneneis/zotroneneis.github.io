@@ -17,7 +17,7 @@ During the past 50 days we studied several highly useful Python concepts using a
 - How to convert objects to strings
 - How to properly name variables and functions
 - The 'It's easier to ask for forgiveness than permission' EAFP principle
-- The functioning of ```if __name__ == '__name__'```
+- The functioning of `if __name__ == '__name__'`
 - Testing code with pytest
 
 ### Advanced Python concepts:
@@ -27,8 +27,8 @@ During the past 50 days we studied several highly useful Python concepts using a
 - Abstract Base Classes (ABC's)
 - Data classes
 - How to create iterators and control their behavior
-- Context managers and how to use the ```with``` statement
-- The ```defaultdict``` of the ```collections``` module
+- Context managers and how to use the `with` statement
+- The `defaultdict` of the `collections` module
 
 
 On the last days, we looked at the usage of configuration (config) files. All of these concepts have the potential to be used in our daily coding work. They can improve the readability, efficiency and understandability of our code. And with a little bit of magic it doesn't seem so hard anymore, does it?
