@@ -8,6 +8,6 @@ tags:
   - multisets
 ---
 
-**Topics:** Extending the Magical Universe with classmethods for ```Charm, Hex, Curse```, etc.
+**Topics:** Extending the Magical Universe with classmethods for `Charm, Hex, Curse`, etc.
  
-Today I added classmethods to the different ```Spell``` subclasses. Speficially, I added one classmethod for each spell type: ```Charm, Transfiguration, Jinx, Hex, Curse, CounterSpell, HealingSpell``` such that at least one charm, hex, jinx, ... exists in our universe. Tomorrow I will write test code for the entire abstract base class ```Spell```.
+Today I added classmethods to the different `Spell` subclasses. Speficially, I added one classmethod for each spell type: `Charm, Transfiguration, Jinx, Hex, Curse, CounterSpell, HealingSpell` such that at least one charm, hex, jinx, ... exists in our universe. Tomorrow I will write test code for the entire abstract base class `Spell`.
