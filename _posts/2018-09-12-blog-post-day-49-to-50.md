@@ -28,7 +28,7 @@ Using configuration files has many benefits. A few of them are:
 
 There are different languages that can be used for creating config files. Major ones are JSON and YAML. I prefer using yaml because yaml config files are very readable and easy to compose. If you are interested in the differences between the two formats you can check out [this link](https://www.json2yaml.com/).
 
-To create a yaml file we first have to install PyYAML using ```pip install pyyaml```. Afterwards, we can create a config file by using the ending ```.yaml```, as in ```config.yaml```. The syntax of the file looks as follows:
+To create a yaml file we first have to install PyYAML using `pip install pyyaml`. Afterwards, we can create a config file by using the ending `.yaml`, as in `config.yaml`. The syntax of the file looks as follows:
 
 ```yaml
 bromley:
@@ -36,18 +36,17 @@ bromley:
     birthyear: 1959
     sex: male
 
-cleon:
-    name: 'Cleon Bery'
+lissy:
+    name: 'Lissy Spinster'
     birthyear: 2008
-    sex: 'male'
-    house: 'House of Courage'
-    start_year: 2018
-    pet: [Cotton, owl]
+    sex: 'female'
+    start_year: 2020
+    pet: [Ramses, cat]
 ```
 
 ## Creating members of the Magical Universe using a config file
 
-In order to use our ```config.yaml``` file to create new Magical Universe members, we have to open and load the file. After that, we can easily instantiate new members of the different classes:
+In order to use our `config.yaml` file to create new Magical Universe members, we have to open and load the file. After that, we can easily instantiate new members of the different classes:
 
 ```python
 import yaml
@@ -59,10 +58,10 @@ if __name__ == "__main__":
         config = yaml.load(c)
 
         bromley = CastleKilmereMember(**config['bromley'])
-        print('bromley: ', bromley)
+        print(bromley)
 
-        cleon = Pupil(**config['cleon'])
-        print('cleon: ', cleon)
+        lissy = Pupil(**config['lissy'])
+        print(lissy)
 ```
 
 This speeds up the process of creating new members a lot! Also, we don't have to type the names, birthyears, etc. over and over again. Once they are specified in the config file we can reuse them as often as we like.
