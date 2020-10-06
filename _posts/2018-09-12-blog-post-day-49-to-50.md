@@ -34,14 +34,14 @@ To create a yaml file we first have to install PyYAML using `pip install pyyaml`
 bromley:
     name: 'Bromley Huckabee'
     birthyear: 1959
-    sex: male
+    sex: 'male'
 
 lissy:
     name: 'Lissy Spinster'
     birthyear: 2008
     sex: 'female'
     start_year: 2020
-    pet: [Ramses, cat]
+    pet: ['Ramses', 'cat']
 ```
 
 ## Creating members of the Magical Universe using a config file
