@@ -9,11 +9,11 @@ tags:
   - to_string_conversion
 ---
 
-**Topics:** to-string conversion, ```__repr__, __str__ ```
-**Updated:** 2020-10-04
+**Topics:** to-string conversion, ```__repr__, __str__ ```     
+**Updated:** 2020-10-04      
 
 ## To-string conversion
-Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won't get a useful representation. For example, when doing:
+Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won't get a useful representation. For example, when trying to print the `bromley` instance:
 
 ```python
 bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1959, sex='male')
@@ -60,7 +60,6 @@ Since our subclasses inherit all methods from the parent class they will also co
 class Professor(CastleKilmereMember):
     """ Creates a Castle Kilmere professor """
     ...
-
     def __repr__(self) -> str:
         return (f"{self.__class__.__name__}(name='{self.name}', "
                 f"birthyear={self.birthyear}, sex='{self.sex}', "

@@ -10,8 +10,8 @@ tags:
   - ABCs
 ---
 
-**Topics:** Abstract Base Classes, ABC's
-**Updated** 2020-10-05
+**Topics:** Abstract Base Classes, ABC's    
+**Updated** 2020-10-05    
 
 The last days I have been working on a lot of new classes and methods. Since they all belong to the same big concept, I decided to create one big post on the whole topic instead of several small ones. So let's get right into it!
 
@@ -24,7 +24,7 @@ a) It should be impossible to instantiate the base class
 b) All subclasses should have a common base class    
 c) All subclasses should implement certain methods defined in the base class    
      
-Abstract base classes serve three purposes:    
+Abstract base classes serve three purposes:
 1. First, the let a parent class communicate that subclasses should have a certain structure
 2. Second, they allow classes to identify themselves as having the required structure, that is, meeting the demanded requirements
 3. Third, they enforce that a subclass meets the requirements, otherwise throwing an exception at instantiation time
@@ -69,8 +69,7 @@ As expected, this raises an error: `TypeError: Can't instantiate abstract class 
 
 ```python
 class Charm(Spell):
-    def __init__(self, name: str, incantation: str, effect: str,
-                  difficulty: str = 'Simple', min_year: int = 1):
+    def __init__(self, name: str, incantation: str, effect: str, difficulty: str = 'Simple', min_year: int = 1):
         super().__init__(name, incantation, effect)
         self.difficulty = difficulty
         self.min_year = min_year
@@ -92,16 +91,14 @@ This highlights a big advantage of using Abstact Base Classes: if a subclass doe
 ```python
 class Charm(Spell):
     """ Creates a charm """
-    def __init__(self, name: str, incantation: str, effect: str,
-                  difficulty: str = 'Simple', min_year: int = 1):
+    def __init__(self, name: str, incantation: str, effect: str, difficulty: str = 'Simple', min_year: int = 1):
         super().__init__(name, incantation, effect)
         self.difficulty = difficulty
         self.min_year = min_year
 
     @property
     def defining_feature(self) -> str:
-        return ("Alteration of the object's inherent qualities, "
-                "that is, its behaviour and capabilities")
+        return ("Alteration of the object's inherent qualities, that is, its behaviour and capabilities")
 
     def cast(self):
         print(f"{self.incantation}!")
@@ -127,7 +124,7 @@ def defining_feature(self):
     pass
 ```
 
-is equivalent to `defining_feature = property(abstractmethod(defining_feature))`. But in which place should `@abstractmethod` go when combining it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When abstractmethod() is applied in combination with other method descriptors, it should be applied as the innermost decorator". So keep that in mind when using additional decorators!
+is equivalent to `defining_feature = property(abstractmethod(defining_feature))`. But in which place should `@abstractmethod` go when combining it with other decorators? According to the [docs](https://docs.python.org/3/library/abc.html): "When `abstractmethod()` is applied in combination with other method descriptors, it should be applied as the innermost decorator". So keep that in mind when using additional decorators!
 
 ## Further advantages of Abstract Base Classes
 Apart from the benefits of abstract base classes we have already discussed, ABC's have other advantages and characteristics that are worth knowing. There is an [excellent blog post](https://stackoverflow.com/questions/3570796/why-use-abstract-base-classes-in-python) on "Why use Abstract Base Classes in Python?" that explains the further functionalities of Python's ABC's in detail. 

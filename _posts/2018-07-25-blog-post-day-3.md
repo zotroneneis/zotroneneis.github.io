@@ -9,8 +9,8 @@ tags:
   - function_annotations
 ---
 
-**Topics:** Type annotations
-**Updated** 2020-10-04
+**Topics:** Type annotations     
+**Updated** 2020-10-04      
 
 ## Type annotations
 Type annotations are a very cool feature that came out with Python 3.5. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows us to document of what type our function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look [here](https://www.python.org/dev/peps/pep-3107/). 
@@ -21,28 +21,24 @@ Let's add annotations to our `___init___` constructors:
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(self, name: str, birthyear: int, sex: str):
         ...
 
 
 class Professor(CastleKilmereMember):
     """ Creates a Castle Kilmere professor """
-
     def __init__(self, name: str, birthyear: int, sex: str, subject: str):
         ...
 
 
 class Ghost(CastleKilmereMember):
     """ Creates a Castle Kilmere ghost """
-
     def __init__(self, name: str, birthyear: int, sex: str, year_of_death: int):
         ...
 
 
 class Pupil(CastleKilmereMember):
     """ Create a Castle Kilmere Pupil """
-
     def __init__(self, name: str, birthyear: int, sex: str, start_year: int, pet=None):
 	...
 ```
@@ -71,7 +67,7 @@ class CastleKilmereMember:
         return cls('Miranda Mirren', 1963, 'female')
 ```
 
-We need to provide the class name in colons because the type annotation represents a *forward reference*. This behaviour will change with Python 3.10 where classes can be used as type annotations drectly. We can get this new behaviour already with Python 3.7+ with the import `from __future__ import annotations`:
+We need to provide the class name in colons because the type annotation represents a *forward reference*. This behaviour will change with Python 3.10 where classes can be used as type annotations directly. We can get this new behaviour already with Python 3.7+ with the import `from __future__ import annotations`:
 
 ```python
 from __future__ import annotations

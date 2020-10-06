@@ -10,8 +10,8 @@ tags:
   - namedtuples
 ---
 
-**Topics:** Immutable classes, namedtuples
-**Updated** 2020-10-04
+**Topics:** Immutable classes, namedtuples    
+**Updated** 2020-10-04    
 
 ## Tuples
 Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simple data structure that can be used for grouping arbitrary objects. Important to know is that tuples are *immutable*. That means that once a tuple has been created, it can not be changed anymore. We already used tuples in our Magical Universe. For example, we defined the `pet` attribute of the `Pupil` class to be a tuple:

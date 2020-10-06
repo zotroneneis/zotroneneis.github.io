@@ -10,8 +10,8 @@ tags:
   - properties
 ---
 
-**Topics:** properties, `@property` and `property()`, setters, getters
-**Updated** 2020-10-04
+**Topics:** properties, `@property` and `property()`, setters, getters     
+**Updated** 2020-10-04     
 
 Today, I digged a little deeper into the `@property` decorator, how it is related to the `property()` function and how its getter and setter methods work. These two links ([link1](https://www.programiz.com/python-programming/property), [link2](https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work)) were really helpful. Of course, there is also the [official Python docs](https://docs.python.org/3.7/howto/descriptor.html) on the `property()` function.
 
@@ -19,10 +19,11 @@ Today, I digged a little deeper into the `@property` decorator, how it is relate
 Yesterday we looked at decorators. The `@property` decorator allows us to create a *read-only* property. Let's add a simple property to our CastleKilmereMember class.
 
 ```python
+import datetime 
+
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
     ...
-
     @property
     def age(self) -> int:
         now = datetime.datetime.now().year
@@ -35,7 +36,7 @@ This creates a property called *age* that can be accessed using the dot syntax:
 bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1959, sex='male')
 print(bromley.age)
 ```
-With the current year (2018) this outputs `59`. Since the attribute is *read-only* we can't change it:
+With the current year (2020) this outputs `61`. Since the attribute is *read-only* we can't change it:
 
 ```python
 bromley = CastleKilmereMember(name='Bromley Huckabee', birthyear=1959, sex='male')

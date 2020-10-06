@@ -9,13 +9,13 @@ tags:
   - dataclasses
 ---
 
-**Topics:** Data classes     
+**Topics:** Data classes        
 **Updated** 2020-10-05     
-     
-## Data classes
+            
 Data classes are a feature that is new in Python 3.7. And taking a look at them is definitely worth it!
 
-According to the [PEP](https://www.python.org/dev/peps/pep-0557/) on data classes, they are basically "mutable namedtuples with defaults". We already looked at namedtuples on [day 10 and 11](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-10-and-11/). Namedtuples allow us to create an *immutable class* that primarily stores *values* (i.e. attributes). We used namedtuples for our `DarkArmyMember` class (because once you become a member of the dark army there is no way back. Unless, of course, you want to get killed by Lord Odon).    
+## Data classes
+According to the [PEP](https://www.python.org/dev/peps/pep-0557/) on data classes, they are basically "mutable namedtuples with defaults". We already looked at namedtuples on [day 10 and 11](http://www.alpopkes.com/posts/2018/08/coding-challenge-day-10-and-11/). Namedtuples allow us to create an *immutable class* that primarily stores *values* (i.e. attributes). We used namedtuples for our `DarkArmyMember` class (because once you become a member of the dark army there is no way back. Unless, of course, you want to get killed by Master Odon).    
     
 Data classes can do the same things as namedtuples. However, they make it much easier to create a class because a data class implements several useful methods by default. Let's create a data class and see what functionality it includes out of the box. We haven't specified the different departments of the Magical Universe yet so let's change that!
 

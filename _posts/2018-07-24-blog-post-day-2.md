@@ -28,7 +28,7 @@ def says(self, words):
 
 **Class methods** look similar to instance methods in the sense that they take at least one parameter as an input. This parameter is, however, not `self` but `cls`. `cls` points towards the *class* - not a particular object instance - when the method is called. Therefore, a class method can only modify *class state* but not *object state*. Still, changing the class state will still affect all instances of the class. Another important thing to know about classmethods is that we need to use the `@classmethod` decorator when implementing a class method. We will talk about decorators in a later blog post. Right now you only need to remember to put a `@classmethod` on top of the function. An example for a class method can be seen below (see section on alternative constructors).
    
-**Static methods** take neither a `self` nor `cls` parameter as an input. Therefore, they can modify neither object state nor class state. Although they are related to the class, they are independent and can only access the data they are provided with.   
+**Static methods** take neither a `self` nor `cls` parameter as an input. Therefore, they can modify neither object state nor class state. Although they are related to the class, they are yet independent and can only access the data they are provided with.   
 
 Do you remember the Pupil class? It had an attribute called `_elms`, standing for "Elementarey Level of Magic". This attribute contains all the obligatory classes a pupil has to take. If a student passes one of her ELMs or not depends on the grade she gets. Castle Kilmere has a fixed grading scheme where grades range from 'E' for 'Excellent' to 'H' for 'Horrible'. This is perfect material for a static method!
 
@@ -98,7 +98,6 @@ class CastleKilmereMember:
 
 class Pupil(CastleKilmereMember):
     """ Create a Castle Kilmere Pupil """
-
     def __init__(self, name, birthyear, sex, start_year, pet=None):
         super().__init__(name, birthyear, sex)
         self.start_year = start_year
@@ -133,6 +132,7 @@ class Pupil(CastleKilmereMember):
 
 
 class Professor(CastleKilmereMember):
+    """ Create a Castle Kilmere Professor """
     def __init__(self, name, birthyear, sex, subject, department):
         super().__init__(name, birthyear, sex)
         self.subject = subject
@@ -166,76 +166,3 @@ if __name__ == "__main__":
     blade = Professor.blade()
     lissy = Pupil.lissy()
 ```
-
-
-
-<!-- Today, I digged a little deeper into the ```@property``` decorator, how it is related to the ```property()``` function and how its getter and setter methods work. These two links ([link1](https://www.programiz.com/python-programming/property), [link2](https://stackoverflow.com/questions/17330160/how-does-the-property-decorator-work)) were really helpful. Of course, there is also the [official Python docs](https://docs.python.org/3.7/howto/descriptor.html) on the ```property()``` function. -->
-
-<!-- In the Python Tricks book I already learned about the functioning of decorators. I also knew that ```@property``` is a way of creating a read-only property. However, I was curious about its relation to ```property()``` and the setter and getter methods. The most important things I learned: -->
-
-<!-- Creating a read-only property with ```@property``` is just a different way of using the ```property()``` function. So when considering our Cleon Bery classes, using -->
-
-<!-- ``` -->
-<!-- @property -->
-<!-- def name(self): -->
-<!--     return self._name -->
-<!-- ``` -->
-
-<!-- Is equivalent to -->
-<!-- ``` -->
-<!-- def name(self): -->
-<!--     return self._name -->
-
-<!-- name = property(name) -->
-<!-- ``` -->
-
-<!-- The full signature of the ```property()``` function is ```property(fget=None, fset=None, fdel=None, doc=None) -> property attribute```. ```fget``` is a function for getting the value of the attribute, ```fset``` is a function for setting the value of the attribute and ```fdel``` is a function for deleting the attribute. All these arguments are *optional*. So we can create a property object like we did above. But we can add extra "power" to it by specifying a setter, getter and/or deleter -->
-<!-- method. For example, we could use the setter method to implement certain constraints on the property value. Let's say we add an attribute about the ELM's (Elementare Level of Magic's) to our Pupil class: -->
-
-<!-- ``` -->
-<!-- class Pupil(CastleKilmereMember): -->
-
-<!--     def __init__(self, name:str, birthyear:int, house:str, start_year:int): -->
-<!--         ... -->
-<!--         self._elms = {'Study of Ancient Runes': False, 'Arithmancy': False, 'Astflynnomy': False, 'Care of Magical Creatures': False, 'Charms': False, 'Defence Against Dark Magic': False, 'Divination': False, 'Herbology': False, 'History of Magic': False, 'Muggle Studies': False, 'Potions': False, 'Transfiguration': False} -->
-
-<!--     @property -->
-<!--     def elms(self): -->
-<!--         return self._elms -->
-<!-- ``` -->
-
-<!-- Now, if we want to update the ELM's of a student passed, we have to make sure that she/he actually passed the exam. Otherwise, the ELM can't be awarded. Let's implement that using a setter method. -->
-
-<!-- ``` -->
-<!--     @elms.setter -->
-<!--     def elms(self, subject_and_grade): -->
-
-<!--         try: -->
-<!--             subject, grade = subject_and_grade -->
-<!--         except ValueError: -->
-<!--             raise ValueError("Pass and interable with two items: subject and grade") -->
-
-<!--         passed = self.passed(grade) -->
-
-<!--         if not passed: -->
-<!--             raise ValueError('The exam was not passed so no ELM was awarded!') -->
-
-<!--         self._elms[subject] = True -->
-
-<!--     @staticmethod -->
-<!--     def passed(grade): -->
-<!--         grades = {'O': True, 'P': True, 'A':True, 'P': False, 'D': False, 'T': False} -->
-<!--         return grades[grade] -->
-<!-- ``` -->
-
-<!-- In the next days and weeks I want to keep working on these concepts. My current TO DO list looks as follows: -->
-<!-- - Add ```__str__``` and ```_repr__``` methods -->
-<!-- - Add class methods -->
-<!-- - Add getter and deleter methods for properties -->
-<!-- - Incorporate Python's abc module -->
-<!-- - Create Exception hierarchy and own exception classes -->
-
-<!-- Let's wrap up what I worked on today: -->
-<!-- - Digged deeper into ```@property``` and ```property()``` -->
-<!-- - Added ```dict.get()``` method which returns default value if key does not exist -->
-<!-- - Used another static method -->

@@ -9,13 +9,13 @@ tags:
   - decorators
 ---
 
-**Topics:** decorators
-**Updated** 2020-10-04
+**Topics:** decorators     
+**Updated** 2020-10-04     
 
 Today, we are going to look at *decorators*. Python's decorators are an advanced concept so don't worry if you don't immediately understand how they work. The more you will use and read about them, the clearer the concept will become. I won't go into too much detail here, so if you want to know more about decorators, take a look at [Dan Bader's website](https://dbader.org/blog/python-decorators) or the [PEP on decorators](https://www.python.org/dev/peps/pep-0318/#on-the-name-decorator).   
    
 ## What are decorators?
-In simple terms a decorator is a callable that takes a callable as an input and returns a callable. What is a callable? Typically when we're talking about callables we mean functions or (callable) classes. For simplicity, I will stick to functions from now on. But you could equally decorate any other callable.
+In simple terms a decorator is a callable that takes a callable as an input and returns a callable. What is a callable? Typically, when we're talking about callables we mean functions or (callable) classes. For simplicity, I will stick to functions from now on. But you could equally decorate any other callable.
 
 Decorators allow us to extend and/or modify the behavior of the function that they take as an input. And they do that without permanently modifying this 'input' function itself! The functions behavior is changed *only* when it is decorated.  
   
@@ -28,7 +28,7 @@ def useless_decorator(function):
 We can apply the decorator to a function by 'wrapping' it:   
 ```python
 def say_hello() -> str:
-    return f"Hey there!"
+    return "Hey there!"
 
 say_hello = useless_decorator(say_hello)
 ```
@@ -38,7 +38,7 @@ A shortcut for wrapping/decorating a function is given by the `@decorator` synta
 ```python
 @useless_decorator
 def say_hello() -> str:
-    return f"Hey there!"
+    return "Hey there!"
 ```
 
 Right now our decorator only returns its input function. Therefore, the behavior or output of `say_hello()` isn't changed at all. This is not particularly useful. So let's take a look at how we can extend and/or modify the behavior of the wrapped function.

@@ -9,8 +9,8 @@ tags:
   - underscore_patterns
 ---
 
-**Topics:** underscore patterns for variable naming, `_variable, __variable, __variable__, _`
-**Updated** 2020-10-04
+**Topics:** underscore patterns for variable naming, `_variable, __variable, __variable__, _`    
+**Updated** 2020-10-04    
 
 ## Underscore patterns for variable naming
 Today we are going to look at a very important concept in Python: the usage of underscores when naming variables! In Python we have five different naming conventions that involve underscores. 

@@ -10,8 +10,8 @@ tags:
   - EAFP
 ---
 
-**Topics:** Duck typing, EAFP principle
-**Updated** 2020-10-04
+**Topics:** Duck typing, EAFP principle     
+**Updated** 2020-10-04     
 
 ## Duck typing
 Today we are going to look at some fundamental philosophies of programming: duck typing, EAFP and its opposite LBYL. Some of you may have heard of these principles already. However, because they are so fundamental we want to make sure that we apply them to our magical universe correctly.
@@ -51,7 +51,7 @@ lets_fly(lissy)
 >>> You have to be a ghost in order to fly!
 ```
 
-Duck typing is used to determine if an object can be used for a certain purpose. To do this not the *type* of the object is important but the *methods and properties* it has. This is precisely what we just talked about with the ghosts and pupils. It doesn't matter if you are a ghost or a pupil as long as you have a method that allows you to fly! With this knowledge we can rewrite our code as follows:
+**Duck typing** is used to determine if an object can be used for a certain purpose. To do this not the *type* of the object is important but the *methods and properties* it has. This is precisely what we just talked about with the ghosts and pupils. It doesn't matter if you are a ghost or a pupil as long as you have a method that allows you to fly! With this knowledge we can rewrite our code as follows:
 
 ```python
 def lets_fly(thing):
@@ -72,7 +72,6 @@ EAFP is short for "easier to ask for forgiveness than permission". EAFP is a com
 ```python
 @elms.setter
 def elms(self, subject_and_grade):
-
     try:
         subject, grade = subject_and_grade
     except ValueError:
@@ -106,14 +105,13 @@ lets_fly(bromley)
 >>> 'CastleKilmereMember' object has no attribute 'fly'
 ```
 
-As we can see in the example above, we get exactly the behavior we want. Both the mocking knight and Lissy can fly, whereas Bromley, who is way too old to fly on a broomstick, is not able to fly.
+As we can see in the example above, we get exactly the behavior we want. Both the Mocking Knight and Lissy can fly, whereas Bromley, who is way too old to fly on a broomstick, is not able to fly.
 
 To add another example of the EAFP principle to our Magical Universe we first extend our `CastleKilmereMember` class with a `_traits` attribute and two methods for adding and printing traits:
 
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(...):
     	...
         self._traits = {}
@@ -166,8 +164,7 @@ def exhibits_trait(self, trait: str) -> bool:
         value = self._traits[trait]
         return value
     else:
-        print(f"{self._name} does not have a character trait
-	        with the name '{trait}'")
+        print(f"{self._name} does not have a character trait with the name '{trait}'")
         return False
 ```
 As mentioned in [this stackoverflow post](https://stackoverflow.com/questions/11360858/what-is-the-eafp-principle-in-python): "The LBYL version has to search the key inside the dictionary twice, and might also be considered slightly less readable."
