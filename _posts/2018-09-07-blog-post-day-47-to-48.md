@@ -21,7 +21,6 @@ When defining our `CastleKilmereMember` class we specified `self.traits` to be a
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(self, name: str, birthyear: int, sex: str):
         self.name = name
         self.birthyear = birthyear
@@ -40,7 +39,7 @@ class CastleKilmereMember:
             return False
 ```
 
-As visible in the definition of `exhibits_trait()` we have to catch and handle errors caused by querying the `_traits` dictionary with a non-existent key. Wouldn't it be much nicer if we could just return `False` in case a Castle Kilmere member does not possess a certain character trait? We already discussed that this can be achieved using the `dict.get()` function. Another, even more powerful solution is to use the `defaultdict` class from the `collections` module.
+As visible in the definition of `exhibits_trait()` we have to catch and handle errors caused by querying the `_traits` dictionary with a non-existent key. Wouldn't it be much nicer if we could just return `False` in case a Castle Kilmere member does not possess a certain character trait? We already discussed that this can be achieved using the `dict.get()` function (see post on Duck Typing for more details). Another, even more powerful solution is to use the `defaultdict` class from the `collections` module.
 
 ## `collections.defaultdict`
 

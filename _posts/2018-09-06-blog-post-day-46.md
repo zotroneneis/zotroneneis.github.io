@@ -15,7 +15,6 @@ We have discussed decorators on [day 5](http://alpopkes.com/posts/2018/07/coding
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(self, name: str, birthyear: int, sex: str):
         self.name = name
         self.birthyear = birthyear
