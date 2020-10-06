@@ -21,7 +21,6 @@ Currently, the `CastleKilmereMember` class (at least the part relevant for us) l
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(self, name: str, birthyear: int, sex: str):
         self.name = name
         self.birthyear = birthyear
@@ -56,7 +55,6 @@ When not applying the `@whisper` decorator, the output of `says("Lissy", "Be car
 ```python
 class CastleKilmereMember:
     """ Creates a member of the Castle Kilmere School of Magic """
-
     def __init__(self, name: str, birthyear: int, sex: str):
         self.name = name
         self.birthyear = birthyear
@@ -84,7 +82,6 @@ from typing import Tuple, Optional
    
 class Pupil(CastleKilmereMember):
     """ Create a Castle Kilmere Pupil """
-
     def __init__(self, name: str, birthyear: int, sex: str, start_year: int, pet: Optional[Tuple[str, str]] = None):
         super().__init__(name, birthyear, sex)
         self.start_year = start_year

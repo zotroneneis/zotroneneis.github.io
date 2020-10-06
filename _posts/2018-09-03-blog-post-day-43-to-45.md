@@ -119,8 +119,6 @@ Now we can use the exception to tell the user precisely what happened and what h
             return value
         except KeyError as e:
             raise error.TraitDoesNotExistError(f"{self._name} does not possess a character trait with the name '{trait}'. Use the add_trait() function to add traits.")
-            return
-        ...
 ```
 
 Keep in mind that these examples are not supposed to mean that we have to use custom exception classes in our code. You should stick to the built-in Python exceptions whenever they are sufficient. Use custom exception classes only when they are needed.
