@@ -13,7 +13,9 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living 
 News
 =====
 
-**2020-09-** I was a guest at the podcast [Test and Code](https://testandcode.com/). Check out the episode [here](https://testandcode.com/132).
+**2020-10-08** I was one of the keynote speakers at [PyCon Estonia](https://pycon.ee/). If you are up for some magic check out the recording [here](https://www.youtube.com/watch?v=Kf92pycivt4).
+
+**2020-09-28** I was a guest at the podcast [Test and Code](https://testandcode.com/). Check out the episode [here](https://testandcode.com/132).
 
 **2020-09-11** I was a guest at the podcast [Python Bytes](https://pythonbytes.fm/). Check out the episode [here](https://pythonbytes.fm/episodes/show/198/there-s-a-beaver-in-your-database-and-anna-lena-drops-by).
 
@@ -52,7 +54,7 @@ My path to machine learning
 
 My enthusiasm for machine learning arose from my fascination for the human brain. I have been fascinated by the complexity of the human brain for most of my life. Consequently, I decided to study cognitive science in Osnabrück, Germany. After attending a machine learning class in my fourth semester I discovered my true passion: The study and delevopment of algorithms that can learn on their own, developing a sense of intelligence.
 
-From that point on, all my efforts have been directed towards learning as much about machine learning as possible. I continued my studies with a graduate computer science program at Bonn, Germany and started a job as a research assistant in machine learning in my second semester of the graduate program. Since my graduation I have been working as a deep learning intern at Bosch, Palo Alto, California.
+From that point on, all my efforts have been directed towards learning as much about machine learning as possible. I continued my studies with a graduate computer science program at Bonn, Germany and started a job as a research assistant in machine learning in my second semester of the graduate program. After my graduation I completed a deep learning internship at Bosch (Palo Alto, California, USA) and the AI Residency Program at Microsoft Research Cambridge (UK). Since early 2020 I have been working as a full-time Machine Learning Engineer at inovex in Germany.
  
 I am still amazed by the functioning of machine and deep learning techniques and how much they have made possible in the last years (including self-driving cars, computer assisted technology, speech recognition, etc.). I'm curious what new findings and applications the next years will bring and I am super excited to be a part of this.
 <!-- First, I focused on the neuroscientific subjects of the program. However, after visiting a machine learning class in my fourth semester and spending a semester abroad at the Gaab Lab, a neuroscience laboratory at Harvard University, USA, I realized that neuroscience wasn’t the field of study I wanted to pursue. The machine learning class was eye-opening. Algorithms that can learn on their own, developing a sense of intelligence. How cool is that?! Especially neural networks attracted my attention as they are inspired by the functioning of the human brain. -->   
