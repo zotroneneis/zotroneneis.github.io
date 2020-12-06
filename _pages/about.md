@@ -13,6 +13,8 @@ Hi! My name is Anna-Lena. Welcome to my personal website! I am currently living 
 News
 =====
 
+**2020-10-21** I was a guest on [Talk Python To Me](https://talkpython.fm/) the world's biggest Python podcast. Check out the episode [here](https://talkpython.fm/episodes/show/287/testing-without-dependencies-mocking-in-python).
+
 **2020-10-08** I was one of the keynote speakers at [PyCon Estonia 2020](https://pycon.ee/) talking about my magical universe project. A recording of the talk ("Finding Magic in Python") can be [found on YouTube](https://www.youtube.com/watch?v=Kf92pycivt4).
 
 **2020-09-28** I was a guest at the podcast [Test and Code](https://testandcode.com/). Check out the episode [here](https://testandcode.com/132).
