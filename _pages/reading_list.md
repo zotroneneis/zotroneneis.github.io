@@ -9,15 +9,18 @@ author_profile: true
 
 ## Books I am currently reading
 
-- **Deep Work: Rules for Focused Success in a Distracted World** by Cal Newport
-	- [Click here for link to book](https://www.calnewport.com/books/deep-work/)
-
 - **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 	- [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
 
    
 ---
 ## Books I have read   
+
+- **Beethoven, A Life** by Jan Caeyers
+	- [Click here for link to book](https://www.goodreads.com/en/book/show/51827826-beethoven-a-life)
+
+- **Deep Work: Rules for Focused Success in a Distracted World** by Cal Newport
+	- [Click here for link to book](https://www.calnewport.com/books/deep-work/)
     
 - **Steve Jobs** by Walter Isaacso   
 	- [Click here for link to book](https://www.amazon.de/Steve-Jobs-Walter-Isaacson/dp/1451648537)
