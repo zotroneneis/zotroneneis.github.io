@@ -8,13 +8,15 @@ author_profile: true
 {% include base_path %}
 
 ## Books I am currently reading
+- **The Alchemy of Air** by Thomas Hager
+	- [Click here for link to book](https://www.goodreads.com/book/show/3269091-the-alchemy-of-air) 
+   
+---
+## Books I have read   
 
 - **Superintelligence: Paths, Dangers, Strategies** by Nick Bostrom     
 	- [Click here for link to book](https://www.amazon.com/gp/product/0198739834/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=nbostrom0c-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0198739834&linkId=37a8c8afb67a781338095992bd0b4ed6) 
 
-   
----
-## Books I have read   
 
 - **Beethoven, A Life** by Jan Caeyers
 	- [Click here for link to book](https://www.goodreads.com/en/book/show/51827826-beethoven-a-life)
