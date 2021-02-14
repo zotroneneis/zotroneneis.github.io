@@ -1,0 +1,17 @@
+# some information about you
+name: "Anna-Lena Popkes"
+nickname: "Anna-Lena"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/image_al.jpg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "popkes@gmx.net"
+  # phone: "+0123456789"
+
+# some summary about what you do
+summary:
+  - Welcome to my personal webpage!
+  - I am a Machine Learning Engineer
+  - I love learning and teaching
+  

@@ -1,0 +1,17 @@
+# some information about you
+name: "Pascal Wenker"
+nickname: "Pascal"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, ich bin"
+image: "images/author/profile.png"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "pwenker@posteo.de"
+  # phone: "+0123456789"
+
+# some summary about what you do
+summary:
+  - Ich bin Machine Learning Engineer
+  - I arbeite an Open-Source Projekten
+  - Diese Seite ist brandneu. Mehr ist auf dem Weg!
+  

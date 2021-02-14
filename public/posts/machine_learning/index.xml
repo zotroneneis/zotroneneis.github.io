@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Anna-Lena Popkes</title>
+    <link>zotroneneis.github.io/posts/machine_learning/</link>
+    <description>Recent content in Machine Learning on Anna-Lena Popkes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 23 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="zotroneneis.github.io/posts/machine_learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Variational Inference</title>
+      <link>zotroneneis.github.io/posts/machine_learning/variational_inference/</link>
+      <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>zotroneneis.github.io/posts/machine_learning/variational_inference/</guid>
+      <description>Introduction Variational inference is an important topic that is widely used in machine learning. For example, it&amp;rsquo;s the basis for variational autoencoders. Also Bayesian learning often makes use variational of inference. To understand what variational inference is, how it works and why it&amp;rsquo;s useful we will go through each point step by step.
+What are latent variables? A latent variable is the opposite of an observed variable. This means that a latent variable is not directly observed but inferred from other variables which are observed.</description>
+    </item>
+    
+    <item>
+      <title>Kullback-Leibler Divergence</title>
+      <link>zotroneneis.github.io/posts/machine_learning/kl_divergence/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>zotroneneis.github.io/posts/machine_learning/kl_divergence/</guid>
+      <description>One of the points on my long &amp;lsquo;stuff-you-have-to-look-at&amp;rsquo; list is the Kullback-Leibler divergence. I finally took the time to take a detailed look at this topic.
+Definition The KL-divergence is a measure of how similar (or different) two probablity distributions are. When having a discrete probability distribution $P$ and another probability distribution $Q$ the KL-divergence for a set of points $X$ is defined as:
+$$D_{KL}(P ,|| ,Q) = \sum_{x \in X} P(x) \log \big( \frac{P(x)}{Q(x)} \big)$$</description>
+    </item>
+    
+  </channel>
+</rss>

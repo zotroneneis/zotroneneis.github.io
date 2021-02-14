@@ -1,0 +1,61 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Machine Learning Engineer
+# your company information
+company:
+  name: Recogizer Analytics
+  url: "https://recogizer-analytics.com/"
+
+# your resume. this file path should be relative to you "static" directory
+# resume: "files/resume.pdf"
+
+# a summary about you
+summary: 'I am a Machine Learning Engineer. My research interests include Artificial Intelligence, Neuroscience, and many more. I also have way too many hobbies. More about that later.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/pwenker"
+- name: Reddit
+  icon: "fab fa-reddit"
+  url: "https://www.reddit.com/user/pwenker/"
+- name: Reddit
+  icon: "fas fa-chess"
+  url: "https://lichess.org/@/pwenker"
+- name: Linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/pascal-wenker-25a568125/"
+- name: Email
+  icon: "fas fa-envelope"
+  url: "pwenker@posteo.de"
+- name: Twitter
+  icon: "fab fa-twitter"
+  url: "https://www.twitter.com/PascalWenker"
+- name: Youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/channel/UCYxDcdFLW-AMoHEfh7pG-oA"
+
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+- name: AI
+  percentage: 90
+  color: orange
+- name: Research
+  percentage: 95 
+  color: blue
+- name: Engineering
+  percentage: 85
+  color: green

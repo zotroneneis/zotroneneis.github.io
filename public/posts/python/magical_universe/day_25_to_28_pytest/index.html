@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing code with pytest</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/main.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+
+    
+<meta name="description" content="Testing code with pytest" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/single.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/zotroneneis.github.io">
+      <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/zotroneneis.github.io/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/my_path_to_ml/">My path to machine learning</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/books/">Books</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/reading_list/">Personal reading List</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/deep_work/">Deep work</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/machine_learning/">Machine Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/">Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/mocking/">Mocking</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/">Magical Universe</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_start/">Start</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/software_engineering/">Software Engineering</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/containers/">Intro to containers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/docker/">Intro to Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(zotroneneis.github.io/zotroneneis.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/zotroneneis.github.io/images/author/image_al.jpg'/>
+          <h5 class="author-name">Anna-Lena Popkes</h5>
+          <p>August 17, 2018</p>
+        </div>
+
+        <div class="title">
+          <h1>Testing code with pytest</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><strong>Topics:</strong> Testing code with pytest  <br>
+<strong>Updated</strong> 2020-10-05</p>
+<p>Writing test functions for our code is extremely important. Since I have been lazy writing test code myself, I want to spend a little more time on this topic. My favorite testing framework is <a href="https://pytest.org">pytest</a>. I&rsquo;m not an expert on testing, so please consider this post an introduction to testing rather than a thorough guide.</p>
+<h2 id="why-pytest">Why pytest?</h2>
+<p>Using pytest has several advantages. First of all, pytest makes testing very easy because its syntax is simple and easy to understand. Furthermore, it offers pretty and useful failure information. Also, we often need less code with pytest than required to achieve equivalent functionality with frameworks like <a href="https://docs.python.org/3/library/unittest.html">unittest</a>.</p>
+<p>You can install pytest using <code>pip install pytest</code>.</p>
+<h2 id="what-makes-a-good-test-function">What makes a good test function?</h2>
+<p>I have a simple acronym that helps me remember how a good test function should look like. I found it in <a href="https://stackoverflow.com/questions/61400/what-makes-a-good-unit-test">this stackoverflow post</a>. A good test function should be <em>A (fast) TRIP</em>:</p>
+<p><strong>Automatic</strong>: Test functions should be invoked automatically and we should automatically check the results for pass/fail.</p>
+<p><strong>Fast</strong>: Good test functions run fast. If test code requires too much time, it will slow down production time and we won&rsquo;t run it as often as is desirable.</p>
+<p><strong>Thorough</strong>: We should ensure that all key scenarios are tested.</p>
+<p><strong>Repeatable</strong>: A test function should produce the same result each and every time it&rsquo;s executed.</p>
+<p><strong>Independent</strong>: A test should only test <em>one thing at a time</em>! Also, test functions should be independent of each other and no assumptions should be made about the order in which tests are executed.</p>
+<p><strong>Professional</strong>: Test functions should contain clean, precise and readable code.</p>
+<h2 id="how-testing-functions-should-be-named">How testing functions should be named</h2>
+<p>Test functions should have long and descriptive names. Why? Because the test function are never called explicitely by the user. However, the function names will be displayed when a test fails. So if you want to know what functionality isn&rsquo;t working it&rsquo;s very useful to have a test function named, for example, <code>test_square_of_negative_number()</code> instead of just <code>square()</code>.</p>
+<h2 id="basic-usage-of-pytest">Basic usage of pytest</h2>
+<p>First of all, we will create a separate folder that holds our test functions. We will start with a file for testing the <code>CastleKilmereMember</code> class. In the next days and weeks, I will add more test code for the other classes and methods. In pytest file names should start or end with &ldquo;test&rdquo;, so we will name our test file <em>test_castle_kilmere_member_class.py</em>. Before creating test functions for our Magical Universe, let&rsquo;s take a quick look at how a simple test function might look like.</p>
+<p>Let&rsquo;s take our <code>say_words()</code> function from <a href="http://alpopkes.com/posts/2018/07/coding-challenge-day-5/">day 5</a> as an example. The function looks as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_words</span>(person: str, words: str) <span style="color:#f92672">-&gt;</span> str:
+    <span style="color:#66d9ef">return</span> f<span style="color:#e6db74">&#34;{person} says: &#39;{words}&#39;&#34;</span>
+</code></pre></div><p>A test function might look like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_say_words</span>():
+    <span style="color:#66d9ef">assert</span> say_words(<span style="color:#e6db74">&#34;Lissy&#34;</span>, <span style="color:#e6db74">&#34;Careful Luke!&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Lissy says: Careful Luke!&#34;</span>
+</code></pre></div><p>We can run the test by running the command <code>pytest</code> from the command line within the <em>test_code</em> folder. The test should run without errors.</p>
+<h2 id="testing-the-castlekilmeremember-class">Testing the <code>CastleKilmereMember</code> class</h2>
+<p>Let&rsquo;s create a few tests that ensure that a Castle Kilmere member is created correctly and that we can add positive and negative traits, as well as check whether a member possesses a certain trait.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_correctness_of_attributes_</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>birthyear <span style="color:#f92672">==</span> <span style="color:#ae81ff">1959</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>sex <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;male&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_positive_traits</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;tidy-minded&#39;</span>)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;kind&#39;</span>: True, <span style="color:#e6db74">&#39;tidy-minded&#39;</span>: True}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_negative_trait</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;mean&#39;</span>: False}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_exhibit_traits</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;tidy-minded&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;kind&#39;</span>) <span style="color:#f92672">==</span> True
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;mean&#39;</span>) <span style="color:#f92672">==</span> False
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;smart&#39;</span>) <span style="color:#f92672">==</span> None
+</code></pre></div><h2 id="pytest-fixtures">Pytest fixtures</h2>
+<p>Since our Magical Universe contains mostly classes we have to create at least one member of the <code>CastleKilmereMember</code> class before we can test any of its functions. As an effect, we repeatedly used the same line of code to instantiate Bromley Huckabee. Is there a way to avoid this? Of course! There is a feature in pytest called <em>fixtures</em>. Fixtures can be used to encapsulate code that is repeatedly needed for (some) test functions.</p>
+<p>We can create a fixture using the <code>@pytest.fixture</code> decorator and pass the fixture as an argument to the test functions that need it. So we could change our test code in the following way:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pytest
+<span style="color:#f92672">from</span> magical_universe.magical_universe <span style="color:#f92672">import</span> CastleKilmereMember
+
+<span style="color:#a6e22e">@pytest.fixture</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bromley</span>():
+  bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+  <span style="color:#66d9ef">return</span> bromley
+
+<span style="color:#a6e22e">@pytest.fixture</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bromley_with_traits</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;tidy-minded&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+    <span style="color:#66d9ef">return</span> bromley
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_correctness_of_attributes_</span>(bromley):
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>birthyear <span style="color:#f92672">==</span> <span style="color:#ae81ff">1959</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>sex <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;male&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_positive_traits</span>(bromley):
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;tidy-minded&#39;</span>)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;kind&#39;</span>: True, <span style="color:#e6db74">&#39;tidy-minded&#39;</span>: True}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_negative_trait</span>(bromley):
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;mean&#39;</span>: False}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_exhibit_traits</span>(bromley_with_traits):
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;kind&#39;</span>) <span style="color:#f92672">==</span> True
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;mean&#39;</span>) <span style="color:#f92672">==</span> False
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;smart&#39;</span>) <span style="color:#f92672">==</span> None
+</code></pre></div><p>Fixtures are much more powerful than this. So if you want to learn more about them consider reading the <a href="https://docs.pytest.org/en/latest/fixture.html">pytest docs on fixtures</a>.</p>
+<h2 id="testing-output-printed-to-the-shell">Testing output printed to the shell</h2>
+<p>Our <code>print_traits()</code> function prints the positive and negative traits. So we need a way to test whether the printed output is correct. This can be done using the <code>capfd</code> fixture as explained in this <a href="https://stackoverflow.com/questions/20507601/writing-a-pytest-function-for-checking-the-output-on-console-stdout-in-python">stackoverflow post</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_print_traits</span>(capfd, bromley_with_traits):
+    bromley_with_traits<span style="color:#f92672">.</span>print_traits()
+    stdout, err <span style="color:#f92672">=</span> capfd<span style="color:#f92672">.</span>readouterr()
+    stdout <span style="color:#f92672">=</span> stdout<span style="color:#f92672">.</span>strip()
+    <span style="color:#66d9ef">assert</span> stdout <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Bromley Huckabee is kind and tidy-minded</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> Bromley Huckabee is not impatient&#34;</span>
+</code></pre></div><h2 id="testing-for-exceptions">Testing for exceptions</h2>
+<p>To show how we can test whether our code raises a certain exception, we can try to create a <code>CastleKilmereMember</code> without any attributes. This should raise a <code>TypeError</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_init_raises_exception_with_missing_arguments</span>():
+    <span style="color:#66d9ef">with</span> pytest<span style="color:#f92672">.</span>raises(<span style="color:#a6e22e">TypeError</span>):
+        bromley <span style="color:#f92672">=</span> CastleKilmereMember()
+</code></pre></div><h2 id="further-reading">Further Reading</h2>
+<ul>
+<li>Book <a href="https://pragprog.com/book/bopytest/python-testing-with-pytest">Python Testing with pytest</a> by Brian Okken</li>
+<li><a href="https://docs.python-guide.org/writing/tests/">Testing Your Code — The Hitchhiker&rsquo;s Guide to Python </a></li>
+<li><a href="https://pytest.org">Pytest</a></li>
+</ul>
+<h2 id="full-test-code-for-castlekilmeremember-class">Full test code for <code>CastleKilmereMember</code> class</h2>
+<p>This test code can also be found on the <a href="https://github.com/zotroneneis/magical_universe/blob/master/test_code/test_castle_kilmere_member_class.py">GitHub repo</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pytest
+<span style="color:#f92672">from</span> magical_universe.magical_universe <span style="color:#f92672">import</span> CastleKilmereMember
+
+<span style="color:#a6e22e">@pytest.fixture</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bromley</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    <span style="color:#66d9ef">return</span> bromley
+
+<span style="color:#a6e22e">@pytest.fixture</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">bromley_with_traits</span>():
+    bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;tidy-minded&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+    <span style="color:#66d9ef">return</span> bromley
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_correctness_of_attributes_</span>(bromley):
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>birthyear <span style="color:#f92672">==</span> <span style="color:#ae81ff">1959</span>
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>sex <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;male&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_positive_traits</span>(bromley):
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;kind&#39;</span>)
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;wild&#39;</span>)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;kind&#39;</span>: True, <span style="color:#e6db74">&#39;wild&#39;</span>: True}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_negative_trait</span>(bromley):
+    bromley<span style="color:#f92672">.</span>add_trait(<span style="color:#e6db74">&#39;mean&#39;</span>, False)
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>_traits <span style="color:#f92672">==</span> {<span style="color:#e6db74">&#39;mean&#39;</span>: False}
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_exhibit_traits</span>(bromley_with_traits):
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;kind&#39;</span>) <span style="color:#f92672">==</span> True
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;mean&#39;</span>) <span style="color:#f92672">==</span> False
+    <span style="color:#66d9ef">assert</span> bromley_with_traits<span style="color:#f92672">.</span>exhibits_trait(<span style="color:#e6db74">&#39;smart&#39;</span>) <span style="color:#f92672">==</span> None
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_print_traits</span>(capfd, bromley_with_traits):
+    bromley_with_traits<span style="color:#f92672">.</span>print_traits()
+    stdout, err <span style="color:#f92672">=</span> capfd<span style="color:#f92672">.</span>readouterr()
+    stdout <span style="color:#f92672">=</span> stdout<span style="color:#f92672">.</span>strip()
+    <span style="color:#66d9ef">assert</span> stdout <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Bromley Huckabee is kind and tidy-minded</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> Bromley Huckabee is not impatient&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_init_raises_exception_with_missing_arguments</span>():
+    <span style="color:#66d9ef">with</span> pytest<span style="color:#f92672">.</span>raises(<span style="color:#a6e22e">TypeError</span>):
+        bromley <span style="color:#f92672">=</span> CastleKilmereMember()
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_says</span>(bromley):
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>says(<span style="color:#e6db74">&#34;Hi Lissy!&#34;</span>) <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Bromley Huckabee says: Hi Lissy!&#34;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_name_property</span>(bromley):
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_age_property</span>(bromley):
+    <span style="color:#66d9ef">assert</span> bromley<span style="color:#f92672">.</span>age <span style="color:#f92672">==</span> <span style="color:#ae81ff">61</span> <span style="color:#75715e"># this holds only if the current year is 2020!</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_repr_output</span>(capfd, bromley):
+    <span style="color:#66d9ef">print</span>(bromley)
+    stdout, err <span style="color:#f92672">=</span> capfd<span style="color:#f92672">.</span>readouterr()
+    stdout <span style="color:#f92672">=</span> stdout<span style="color:#f92672">.</span>strip()
+    <span style="color:#66d9ef">assert</span> stdout <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;CastleKilmereMember(name=&#39;Bromley Huckabee&#39;, birthyear=1959, sex=&#39;male&#39;)&#34;</span>
+
+</code></pre></div>
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/python/magical_universe/day_25_to_28_pytest.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Iterators</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Context managers and the `with` statement</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-pytest">Why pytest?</a></li>
+    <li><a href="#what-makes-a-good-test-function">What makes a good test function?</a></li>
+    <li><a href="#how-testing-functions-should-be-named">How testing functions should be named</a></li>
+    <li><a href="#basic-usage-of-pytest">Basic usage of pytest</a></li>
+    <li><a href="#testing-the-castlekilmeremember-class">Testing the <code>CastleKilmereMember</code> class</a></li>
+    <li><a href="#pytest-fixtures">Pytest fixtures</a></li>
+    <li><a href="#testing-output-printed-to-the-shell">Testing output printed to the shell</a></li>
+    <li><a href="#testing-for-exceptions">Testing for exceptions</a></li>
+    <li><a href="#further-reading">Further Reading</a></li>
+    <li><a href="#full-test-code-for-castlekilmeremember-class">Full test code for <code>CastleKilmereMember</code> class</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/zotroneneis.github.io/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/zotroneneis.github.io/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/zotroneneis.github.io/js/jquery-3.4.1.min.js"></script>
+<script src="/zotroneneis.github.io/js/popper.min.js"></script>
+<script src="/zotroneneis.github.io/js/bootstrap.min.js"></script>
+
+<script src="/zotroneneis.github.io/js/navbar.js"></script>
+<script src="/zotroneneis.github.io/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/zotroneneis.github.io/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

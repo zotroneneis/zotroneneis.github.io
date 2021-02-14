@@ -1,0 +1,55 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Machine Learning Engineer
+# your company information
+company:
+  name: inovex
+  url: "https://www.inovex.de/en/"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/cv_apopkes.pdf"
+
+# a summary about you
+summary: 'I am an enthusiastic learner who is always looking for new projects and challenges. I am deeply fascinated by machine learning and its applications in questions that affect and benefit many people.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Github
+  icon: "fab fa-github"
+  url: "https://www.github.com/zotroneneis"
+- name: Linkedin
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/anna-lena-popkes"
+- name: Email
+  icon: "fas fa-envelope"
+  url: "popkes@gmx.net"
+- name: Youtube
+  icon: "fab fa-youtube"
+  url: "https://www.youtube.com/channel/UCLMtN2j7wvhydwAeMcT8Fdg"
+
+
+# your soft skills
+# give the percentage between 50 to 100 with 5 intervals.
+# currently supported colors: blue, yellow, pink, green, sky, orange
+softSkills:
+- name: ML
+  percentage: 100
+  color: blue
+- name: Research
+  percentage: 100
+  color: sky
+- name: Engineering
+  percentage: 100
+  color: orange
+- name: Teaching
+  percentage: 100
+  color: yellow

@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>functools.wraps - avoiding losing metdata when applying decorators</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/main.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+
+    
+<meta name="description" content="functools.wraps - avoiding losing metdata when applying decorators" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/single.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/zotroneneis.github.io">
+      <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/zotroneneis.github.io/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/my_path_to_ml/">My path to machine learning</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/books/">Books</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/reading_list/">Personal reading List</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/deep_work/">Deep work</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/machine_learning/">Machine Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/">Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/mocking/">Mocking</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/">Magical Universe</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_start/">Start</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/software_engineering/">Software Engineering</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/containers/">Intro to containers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/docker/">Intro to Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(zotroneneis.github.io/zotroneneis.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/zotroneneis.github.io/images/author/image_al.jpg'/>
+          <h5 class="author-name">Anna-Lena Popkes</h5>
+          <p>September 6, 2018</p>
+        </div>
+
+        <div class="title">
+          <h1>functools.wraps - avoiding losing metdata when applying decorators</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><strong>Topics:</strong> <code>functools.wraps</code></p>
+<p>We have discussed decorators on <a href="http://alpopkes.com/posts/2018/07/coding-challenge-day-5/">day 5</a>, <a href="http://alpopkes.com/posts/2018/07/coding-challenge-day-6/">day 6</a> and <a href="http://alpopkes.com/posts/2018/08/coding-challenge-day-20/">day 20</a> already. Therefore, we know that decorators allow us to extend or modify the behavior of a function <em>without permanently modifying the function itself</em>. In our example we modified the <code>says()</code> function of our <code>CastleKilmereMember</code> class to be whispering instead of talking normally:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CastleKilmereMember</span>:
+    <span style="color:#e6db74">&#34;&#34;&#34; Creates a member of the Castle Kilmere School of Magic &#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">def</span> __init__(self, name: str, birthyear: int, sex: str):
+        self<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> name
+        self<span style="color:#f92672">.</span>birthyear <span style="color:#f92672">=</span> birthyear
+        self<span style="color:#f92672">.</span>sex <span style="color:#f92672">=</span> sex
+        self<span style="color:#f92672">.</span>_traits <span style="color:#f92672">=</span> {}
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">whisper</span>(function):
+        <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(self, <span style="color:#f92672">*</span>args):
+            <span style="color:#e6db74">&#39;&#39;&#39; Whispering decorator &#39;&#39;&#39;</span>
+            original_output <span style="color:#f92672">=</span> function(self, <span style="color:#f92672">*</span>args)
+            first_part, words <span style="color:#f92672">=</span> original_output<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; says: &#39;</span>)
+            words <span style="color:#f92672">=</span> words<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;!&#39;</span>, <span style="color:#e6db74">&#39;.&#39;</span>)
+            new_output <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;{first_part} whispers: {words}..&#34;</span>
+            <span style="color:#66d9ef">return</span> new_output
+        <span style="color:#66d9ef">return</span> wrapper
+
+    <span style="color:#a6e22e">@whisper</span>
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">says</span>(self, words: str) <span style="color:#f92672">-&gt;</span> str:
+        <span style="color:#e6db74">&#39;&#39;&#39;Allows a Castle Kilmere Member to talk&#39;&#39;&#39;</span>
+        <span style="color:#66d9ef">return</span> f<span style="color:#e6db74">&#34;{self.name} says: {words}&#34;</span>
+</code></pre></div><p>When applying a decorator we replace one function with another. In our case, we replaced the <code>says()</code> function with the <code>whisper()</code> function. This has consequences. For example, the metadata attached to our &ldquo;original&rdquo; function is replaced by the metdata of the new function: when looking at the name or docstring of the <code>says()</code> function we won&rsquo;t get the result one would expect. The output of</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>, <span style="color:#ae81ff">1959</span>, <span style="color:#e6db74">&#39;male&#39;</span>)
+<span style="color:#66d9ef">print</span>(bromley<span style="color:#f92672">.</span>says<span style="color:#f92672">.</span>__name__)
+</code></pre></div><p>is <code>wrapper</code>, not <code>says</code>. The same holds for the docstring:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(bromley<span style="color:#f92672">.</span>says<span style="color:#f92672">.</span>__doc__)
+</code></pre></div><p>outputs <code>Whispering decorator</code>. But we don&rsquo;t want to lose any information associated with our original <code>says()</code> function! If applying a decorator corresponds to losing information about a function, we would have a serious problem. Luckily, there is a solution: the <a href="https://docs.python.org/3/library/functools.html"><code>functools</code> module</a>. Applying <code>functools.wraps</code> to the wrapper function carries over the name, docstring, arguments list, etc. of the original input function:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">whisper</span>(function):
+    <span style="color:#a6e22e">@functools.wraps</span>(function)
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">wrapper</span>(self, <span style="color:#f92672">*</span>args):
+        <span style="color:#e6db74">&#39;&#39;&#39; Whispering decorator &#39;&#39;&#39;</span>
+        original_output <span style="color:#f92672">=</span> function(self, <span style="color:#f92672">*</span>args)
+        first_part, words <span style="color:#f92672">=</span> original_output<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39; says: &#39;</span>)
+        words <span style="color:#f92672">=</span> words<span style="color:#f92672">.</span>replace(<span style="color:#e6db74">&#39;!&#39;</span>, <span style="color:#e6db74">&#39;.&#39;</span>)
+        new_output <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;{first_part} whispers: {words}..&#34;</span>
+        <span style="color:#66d9ef">return</span> new_output
+    <span style="color:#66d9ef">return</span> wrapper
+</code></pre></div><p>Now</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(bromley<span style="color:#f92672">.</span>says<span style="color:#f92672">.</span>__name__
+<span style="color:#66d9ef">print</span>(bromley<span style="color:#f92672">.</span>says<span style="color:#f92672">.</span>__doc__)
+</code></pre></div><p>returns the desired result, namely <code>says</code> and <code>Allows a Castle Kilmere Member to talk</code>.</p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/python/magical_universe/day_46_functools_wraps.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>collections.defaultdict</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Custom exception classes</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents"></nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/zotroneneis.github.io/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/zotroneneis.github.io/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/zotroneneis.github.io/js/jquery-3.4.1.min.js"></script>
+<script src="/zotroneneis.github.io/js/popper.min.js"></script>
+<script src="/zotroneneis.github.io/js/bootstrap.min.js"></script>
+
+<script src="/zotroneneis.github.io/js/navbar.js"></script>
+<script src="/zotroneneis.github.io/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/zotroneneis.github.io/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

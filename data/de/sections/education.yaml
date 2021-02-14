@@ -1,0 +1,38 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+ #
+
+degrees: 
+- name: Master's Degree Computer Science
+  icon: fa-graduation-cap
+  timeframe: 2015-2019
+  institution:
+    name: University of Bonn
+    url: "https://www.uni-bonn.de/the-university"
+  grade: #(optional)
+    scale: CGPA
+    achieved: 4
+    outOf: 4
+  extracurricularActivities:
+  - The University of Bonn is one of eleven German Universities of Excellence, the only university with six Clusters of Excellence and more Nobel Prize winners and Fields Medalists have emerged from from it in the past decades than from any other German university.
+  - I gained deep theoretical knowledge about Artificial Intelligence and Machine Learning via the intelligent systems focus track.
+- name: Bachelor's Degree Cognitive Science
+  icon: fa-graduation-cap
+  timeframe: 2011-2015
+  institution:
+    name: Osnabrück University
+    url: "https://www.uni-osnabrueck.de/en/home.html"
+  grade: #(optional)
+    scale: CGPA
+    achieved: 3.7
+    outOf: 4
+  extracurricularActivities:
+    - I gained insights into Artificial Intelligence, Neuroscience, Psychology, Philosophy & theoretical Computer Science.

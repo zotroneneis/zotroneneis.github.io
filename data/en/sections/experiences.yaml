@@ -1,0 +1,90 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: inovex
+    url: "https://www.inovex.de/en/"
+    location: Cologne
+    # company overview
+    overview: 
+  positions:
+  - designation: Machine Learning Engineer
+    start: 02/2020
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - Working on applied data science and data engineering projects
+
+- company:
+    name: KI macht Schule
+    url: https://ki-macht-schule.de/
+    location: Everywhere in Germany
+    overview: KI macht Schule offers free courses on AI and ML to German school kids. Our goal is to educate the next generation on these important topics, allowing them to understand and discuss new developments and challenges.
+  positions:
+  - designation: Voluntary work
+    start: 05/2019
+    responsibilities:
+    - Being a course instructor
+    - Coordinate school requests
+    - Develop and prepare courses
+
+- company:
+    name: Microsoft Research, Cambridge, UK
+    url: "https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/"
+    location: Cambridge, UK
+    overview: 
+  positions:
+  - designation: Machine Learning Engineer (AI Resident)
+    start: 09/2018
+    end: 10/2019
+    responsibilities:
+    - One of the first participants in the Microsoft AI Residency program in Cambridge, UK.
+    - The AI Residency is an educational program, focused on teaching skills necessary for becoming an excellent research/machine learning engineer.
+    - Within the program I worked in the role of a full-time research engineer, applying machine learning to real-world problems.
+
+- company:
+    name: Bosch Center for Artificial Intelligence
+    url: "https://www.bosch-ai.com/"
+    location: Palo Alto, California, USA
+    overview: 
+  positions:
+  - designation: Deep Learning Intern
+    start: 05/2018
+    end: 10/2018
+    responsibilities:
+    - Work of deep learning projects, mostly focused on computer vision applications and image recognition tasks
+
+- company:
+    name: Fraunhofer Institute for Intelligent Analysis and Information Systems (IAIS)
+    url: "https://www.iais.fraunhofer.de/en.html"
+    location: Sankt Augustin, Germany
+    overview: 
+  positions:
+  - designation: Machine Learning Research Assistant
+    start: 09/2016
+    end: 05/2018
+    responsibilities:
+    - Research and industrial projects on machine learning, especially neural networks and reinforcement learning
+
+- company:
+    name: Harvard Medical School
+    url: "https://www.gaablab.com/nadine-gaab"
+    location: Cambridge, USA
+    overview: 
+  positions:
+  - designation: Research assistant
+    start: 08/2014
+    end: 11/2014
+    responsibilities:
+    - Research assistant at Prof. Nadine Gaab's laboratory for developmental cognitive neuroscience
+    - Investigation of perceptual, cognitive and brain development in typically developing infants and children, as well as children diagnosed with or at risk for various developmental disorders

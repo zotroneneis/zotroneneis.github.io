@@ -1,0 +1,52 @@
+baseURL:  "zotroneneis.github.io"
+languageCode: en-us
+title: "Anna-Lena Popkes"
+theme: "toha"
+
+# Manage languages
+# For any more details, you can check the official documentation: https://gohugo.io/content-management/multilingual/
+languages:
+  en:
+    languageName: English
+    weight: 1
+  # de:
+  #   languageName: Deutsch
+  #   weight: 2
+
+# Control TOC depth
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+# Enable Disqus forum
+# disqusShortname: www-pwenker-com
+# Enable global emoji support
+enableEmoji: true
+
+# Site parameters
+params:
+  math: true
+  background: "images/background/sheep.JPG" # 1920x1078
+
+  # The inverted logo will be used in the initial transparent navbar and
+  # the main logo will be used in the non-transparent navbar.
+  logo:
+    main: images/author/image_al.jpg
+    inverted: images/author/image_al.jpg
+    favicon: images/author/image_al.jpg
+  # GitHub repo URL of your site
+  gitRepo: https://github.com/zotroneneis/zotroneneis.github.io
+  gitBranch: main
+
+  # specify whether you want to write some blog posts or not
+  enableBlogPost: true
+
+  # specify whether you want to show Table of Contents in reading page
+  enableTOC: true
+
+  # Provide newsletter configuration. This feature hasn't been implemented yet.
+  # Currently, you can just hide it from the footer.
+  newsletter:
+    enable: false

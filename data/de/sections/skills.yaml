@@ -1,0 +1,32 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: Python
+  icon: /images/sections/skills/python.png
+  summary: "My first and foremost language choice for both hobby projects and professional software development."
+  url: "https://www.python.org/"
+- name: Vim
+  icon: /images/sections/skills/vim.png
+  summary: "My favorite editor and programming environment. I like its speed and customizability."
+  url: "https://www.vim.org/"
+- name: Docker
+  icon: /images/sections/skills/docker.svg
+  summary: "Experienced with (multi-stage) containerization of apps."
+  url: "https://www.docker.com/"
+- name: Git
+  icon: /images/sections/skills/git.png
+  summary: "Experienced with git-based development. Both with Gitlab and Github."
+  url: "https://git-scm.com/"
+- name: Linux
+  icon: /images/sections/skills/linux.png
+  summary: "Using as the main operating system (Ubuntu). Capable of writing bash/shell scripts."

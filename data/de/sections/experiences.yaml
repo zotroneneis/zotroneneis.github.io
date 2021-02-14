@@ -1,0 +1,60 @@
+# section information
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true 
+
+# Your experiences
+experiences:
+- company:
+    name: Recogizer Analytics
+    url: "https://recogizer-analytics.com"
+    location: Bonn, Germany
+    # company overview
+    overview: Recogizer Analytics is a pioneer in Machine Learning for industries.
+  positions:
+  - designation: Machine Learning Engineer
+    start: Apr 2019
+    # don't provide end date if you are currently working there. It will be replaced by "Present"
+    # end: Dec 2020
+    # give some points about what was your responsibilities at the company.
+    responsibilities:
+    - AI Research & Development
+  - designation: Data Science Working Student
+    start: Sep 2016
+    end: Apr 2019
+    responsibilities:
+    - Machine Learning & Data Science and Visualization
+
+# - company:
+#     name: University of Bonn
+#     url: "https://www.uni-bonn.de/the-university"
+#     location: Bonn, Germany
+#     # company overview
+#     overview: The University of Bonn is one of eleven German Universities of Excellence, the only university with six Clusters of Excellence and more Nobel Prize winners and Fields Medalists have emerged from from it in the past decades than from any other German university.
+#   positions:
+#   - designation: Master of Computer Science
+#     start: 2015
+#     end: 2019
+#     responsibilities:
+#     - GPA 4.0
+#     - Deep theoretical knowledge about Artificial Intelligence and Machine Learning via the [intelligent systems](https://www.informatik.uni-bonn.de/en/research-and-phd/intelligent-systems) focus track.
+
+
+# - company:
+#     name: Osnabrück University
+#     url: "https://www.uni-osnabrueck.de/en/home.html"
+#     location: Osnabrück, Germany
+#     # company overview
+#     overview: 
+#   positions:
+#   - designation: Bachelor's Degree Cognitive Science
+#     start: 2011
+#     end: 2015
+#     responsibilities:
+#     - GPA 3.7
+#     - Insights into Artificial Intelligence, Neuroscience, Psychology, Philosophy & theoretical Computer Science.

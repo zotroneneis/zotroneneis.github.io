@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Config files</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/main.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
+
+
+<link rel="stylesheet" href="/zotroneneis.github.io/css/style.css"/>
+
+    
+<meta name="description" content="Config files" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/layouts/single.css"/>
+<link rel="stylesheet" href="/zotroneneis.github.io/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/zotroneneis.github.io">
+      <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
+  <img src="/zotroneneis.github.io/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/zotroneneis.github.io/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/my_path_to_ml/">My path to machine learning</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/books/">Books</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/reading_list/">Personal reading List</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/books/deep_work/">Deep work</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/machine_learning/">Machine Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/">Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/mocking/">Mocking</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/">Magical Universe</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_start/">Start</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="zotroneneis.github.io/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="zotroneneis.github.io/posts/software_engineering/">Software Engineering</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/containers/">Intro to containers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/docker/">Intro to Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="zotroneneis.github.io/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(zotroneneis.github.io/zotroneneis.github.io/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/zotroneneis.github.io/images/author/image_al.jpg'/>
+          <h5 class="author-name">Anna-Lena Popkes</h5>
+          <p>September 10, 2018</p>
+        </div>
+
+        <div class="title">
+          <h1>Config files</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p><strong>Topics:</strong> Using config files</p>
+<h2 id="what-are-config-files">What are config files</h2>
+<p>As a last topic I would like to take a look at the usage of config files. First of all we have to establish what a config file is. The <a href="https://en.wikipedia.org/wiki/Configuration_file">Wikipedia definition</a> definition is precise and easy to understand: <em>configuration files (or config files) are files used to configure the parameters and initial settings for some computer programs</em>.</p>
+<p>In our case we can use a config file to organize and speed up the process of creating members of our magical universe.</p>
+<h2 id="advantages-of-config-files">Advantages of config files</h2>
+<p>Using configuration files has many benefits. A few of them are:</p>
+<ul>
+<li>Config files allow us to separate our code from the parameters the code depends on.</li>
+<li>When a program uses many different parameters, config files make it easier to organize the parameters.</li>
+<li>Also, config files make it easier to cooperate with people who can&rsquo;t code. When the parameters are saved in a separate file, anyone can specify desired parameter values and run the code.</li>
+<li>Config files can be used independently of the programming language our program runs in.</li>
+<li>Config files can be used as a kind of documentation. For example, when a config file is used to store the parameters of a machine learning model, saving the config file together with the trained model documents the parameter values used.</li>
+</ul>
+<h2 id="yaml-and-json">YAML and JSON</h2>
+<p>There are different languages that can be used for creating config files. Major ones are JSON and YAML. I prefer using yaml because yaml config files are very readable and easy to compose. If you are interested in the differences between the two formats you can check out <a href="https://www.json2yaml.com/">this link</a>.</p>
+<p>To create a yaml file we first have to install PyYAML using <code>pip install pyyaml</code>. Afterwards, we can create a config file by using the ending <code>.yaml</code>, as in <code>config.yaml</code>. The syntax of the file looks as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">bromley</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#39;Bromley Huckabee&#39;</span>
+    <span style="color:#f92672">birthyear</span>: <span style="color:#ae81ff">1959</span>
+    <span style="color:#f92672">sex</span>: <span style="color:#e6db74">&#39;male&#39;</span>
+
+<span style="color:#f92672">lissy</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#39;Lissy Spinster&#39;</span>
+    <span style="color:#f92672">birthyear</span>: <span style="color:#ae81ff">2008</span>
+    <span style="color:#f92672">sex</span>: <span style="color:#e6db74">&#39;female&#39;</span>
+    <span style="color:#f92672">start_year</span>: <span style="color:#ae81ff">2020</span>
+    <span style="color:#f92672">pet</span>: [<span style="color:#e6db74">&#39;Ramses&#39;</span>, <span style="color:#e6db74">&#39;cat&#39;</span>]
+</code></pre></div><h2 id="creating-members-of-the-magical-universe-using-a-config-file">Creating members of the Magical Universe using a config file</h2>
+<p>In order to use our <code>config.yaml</code> file to create new Magical Universe members, we have to open and load the file. After that, we can easily instantiate new members of the different classes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> yaml
+<span style="color:#f92672">from</span> magical_universe <span style="color:#f92672">import</span> CastleKilmereMember, Pupil
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+
+    <span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#39;config.yaml&#39;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> c:
+        config <span style="color:#f92672">=</span> yaml<span style="color:#f92672">.</span>load(c)
+
+        bromley <span style="color:#f92672">=</span> CastleKilmereMember(<span style="color:#f92672">**</span>config[<span style="color:#e6db74">&#39;bromley&#39;</span>])
+        <span style="color:#66d9ef">print</span>(bromley)
+
+        lissy <span style="color:#f92672">=</span> Pupil(<span style="color:#f92672">**</span>config[<span style="color:#e6db74">&#39;lissy&#39;</span>])
+        <span style="color:#66d9ef">print</span>(lissy)
+</code></pre></div><p>This speeds up the process of creating new members a lot! Also, we don&rsquo;t have to type the names, birthyears, etc. over and over again. Once they are specified in the config file we can reuse them as often as we like.</p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/python/magical_universe/day_49_to_50_config_files.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+      
+      <div class="col-md-6 previous-article">
+        <a href="zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/" class="btn btn-outline-info">
+          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+          <br />
+          <span>Wrap up</span>
+        </a>
+      </div>
+      
+    
+    
+      
+        
+        
+          
+              
+          
+        
+        <div class="col-md-6 next-article">
+          <a href="zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>collections.defaultdict</span>
+          </a>
+        </div>
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-are-config-files">What are config files</a></li>
+    <li><a href="#advantages-of-config-files">Advantages of config files</a></li>
+    <li><a href="#yaml-and-json">YAML and JSON</a></li>
+    <li><a href="#creating-members-of-the-magical-universe-using-a-config-file">Creating members of the Magical Universe using a config file</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/zotroneneis.github.io/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/zotroneneis.github.io/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/zotroneneis.github.io/js/jquery-3.4.1.min.js"></script>
+<script src="/zotroneneis.github.io/js/popper.min.js"></script>
+<script src="/zotroneneis.github.io/js/bootstrap.min.js"></script>
+
+<script src="/zotroneneis.github.io/js/navbar.js"></script>
+<script src="/zotroneneis.github.io/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/zotroneneis.github.io/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>

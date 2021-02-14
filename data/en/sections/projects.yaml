@@ -1,0 +1,87 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Academic
+  filter: "academic"
+- name: Hobby
+  filter: "hobby"
+
+# your projects
+projects:
+- name: ML Basics
+  logo: /images/artificial_neuron.png 
+  role: Owner
+  timeline: "Feb 2018 - Present"
+  repo: https://github.com/zotroneneis/machine_learning_basics
+  #url: ""  # If your project is not a public repo but it has a website or any external details url then provide it here. don't provide "repo" and "url" simultaneously.
+  summary: Plain python implementations of basic machine learning algorithms 
+  tags: ["academic", "machine-learning", "teaching", "python"]
+
+- name: Magical Universe
+  logo: /images/castle_kilmere.png
+  role: Owner
+  timeline: "August 2018 - Present"
+  repo: https://github.com/zotroneneis/magical_universe
+  summary: Awesome Python features explained using the world of magic 
+  tags: ["hobby", "teaching", "python"]
+
+
+- name: Horseshoe Bayesian Neural Network
+  logo: /images/microsoft.png 
+  role: Contributor
+  timeline: "July 2018"
+  repo: https://github.com/microsoft/horseshoe-bnn
+  summary: A Bayesian Neural Network with a horseshoe prior for improved interpretability 
+  tags: ["professional", "academic", "machine-learning","pytorch", "python"]
+
+- name: Interpretable Outcome Prediction with Sparse Bayesian Neural Networks in Intensive Care
+  role: Author
+  timeline: "May 2020"
+  url: "https://arxiv.org/pdf/1905.02599.pdf"
+  summary: Clinical decision making is challenging because of pathological complexity, as well as large amounts of heterogeneousdata generated as part of routine clinical care. In recent years,machine learning tools have been developed to aid this process [...]
+  tags: ["professional", "academic","machine-learning", "bayesian-learning"]
+
+- name: LSTM Language Model
+  logo: /images/word_embeddings.png 
+  role: Owner
+  timeline: "Feb 2018"
+  repo: https://github.com/zotroneneis/LSTM_language_model
+  summary: LSTM-based language model in TensorFlow 
+  tags: ["academic", "machine-learning","tensorflow", "python"]
+  
+- name: Language Modeling with Recurrent Neural Networks - Using Transfer Learning to Perform Radiological Sentence Completion 
+  role: Author
+  timeline: "March 2018"
+  url: https://github.com/zotroneneis/LSTM_language_model/blob/master/reports/master_thesis_APopkes.pdf
+  summary: Motivated by the potential benefits of a system that accelerates the process of writing radiological reports, we present a Recurrent Neural Network Language Model for modeling radiological language [...]
+
+  tags: ["professional", "academic", "machine-learning", "nlp"]
+- name: Tensorflow deep learning models
+  logo: /images/tensorflow.png 
+  role: Owner
+  timeline: "April 2017"
+  repo: https://github.com/zotroneneis/tensorflow_deep_learning_models
+  summary: TensorFlow implementations of several deep learning models (e.g. variational autoencoder, RNN)
+  tags: ["academic", "machine-learning","tensorflow", "python"]
+
+- name: PyTorch deep learning models
+  logo: /images/pytorch.png 
+  role: Owner
+  timeline: "July 2018"
+  repo: https://github.com/zotroneneis/pytorch_deep_learning_models
+  summary: PyTorch implementations of deep learning models 
+  tags: ["academic", "machine-learning","tensorflow", "python"]
+
