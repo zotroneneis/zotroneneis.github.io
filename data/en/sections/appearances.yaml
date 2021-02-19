@@ -1,0 +1,76 @@
+# section information
+section:
+  name: Talks & Podcasts
+  id: appearances
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Podcasts
+  filter: "podcasts"
+- name: Talks
+  filter: "talks"
+
+
+# your appearances
+appearances:
+- name: Testing without dependencies, mocking in Python
+  logo: /images/sections/appearances/talkpython.png
+  event: Talk Python To Me 
+  timeline: "Oct 21, 2020"
+  url: https://talkpython.fm/episodes/show/287/testing-without-dependencies-mocking-in-python
+  summary: I'm back on the Talk Python Podcast to talk about the whole spectrum of test doubles, dummies, mocks, and more.
+  tags: ['podcasts']
+  logo: /images/sections/appearances/talkpython.png
+- name: Mocking in Python
+  event: Test & Code
+  timeline: "September 28, 2020"
+  url: https://testandcode.com/132
+  summary: I join the Test & Code podcast to talk about mocks and using unittest.mock objects during testing.
+  tags: ['podcasts']
+  logo: /images/sections/appearances/testandcode.jpg
+- name: Finding Magic in Python - Pycon Estonia Key Note 
+  logo: /images/sections/appearances/pythonbytes.png
+  event: Pycon Estonia
+  timeline: "Oct 13, 2020"
+  youtube: Kf92pycivt4
+  summary: My Pycon Estonia talk about magic and python.
+  url: https://pycon.ee
+  tags: ['talks']
+- name: Dropping by on the Python Bytes Podcast
+  event: Python Bytes
+  timeline: "September 11, 2020"
+  url: https://pythonbytes.fm/episodes/show/198/there-s-a-beaver-in-your-database-and-anna-lena-drops-by
+  summary: I join Michael and Brian on the Python Bytes podcast to talk about recent Python developer news.
+  tags: ['podcasts']
+  logo: /images/sections/appearances/pythonbytes.png
+- name: Machine Learning basics featured on Python Bytes
+  event: Python Bytes
+  timeline: "Nov 23, 2018"
+  url: https://pythonbytes.fm/episodes/show/105/colorizing-and-restoring-old-images-with-deep-learning?time_in_sec=1180
+  summary: My ML basics repository (Plain python implementations of basic machine learning algorithms) is featured on Python Bytes.
+  repo: https://github.com/zotroneneis/machine_learning_basics
+  tags: ['podcasts']
+  logo: /images/sections/appearances/pythonbytes.png
+- name: 100 Days of Python in a Magical Universe
+  event: Talk Python To Me 
+  timeline: "Nov 16, 2018"
+  url: https://talkpython.fm/episodes/show/186/100-days-of-python-in-a-magical-universe
+  summary: I talk about my 100 days of code challenge where I created a magical Python universe.
+  tags: ['podcasts']
+  logo: /images/sections/appearances/talkpython.png
+- name: Magical universe featured on Python Bytes
+  event: Python Bytes
+  timeline: "Aug 15, 2018"
+  url: https://pythonbytes.fm/episodes/show/91/will-there-be-a-pyblazor
+  summary: My Magical Universe repository is featured on Python Bytes.
+  repo: https://github.com/zotroneneis/magical_universe
+  tags: ['podcasts']
+  logo: /images/sections/appearances/pythonbytes.png
+
