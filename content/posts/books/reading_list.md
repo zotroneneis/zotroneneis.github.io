@@ -10,11 +10,14 @@ menu:
 ---
 
 ## Books I am currently reading
-- **A Promised Land** by Barack Obama
-	- [Link to book](https://obamabook.com/)
    
+- **Atomic Habits** by James Clear
+	- [Link to book](https://atomichabits.com/)
 ---
 ## Books I have read   
+
+- **A Promised Land** by Barack Obama
+	- [Link to book](https://obamabook.com/)
 
 - **The Alchemy of Air** by Thomas Hager ([Link to book](https://www.goodreads.com/book/show/3269091-the-alchemy-of-air))
 
