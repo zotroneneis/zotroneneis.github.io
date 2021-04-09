@@ -22,7 +22,7 @@ In the following notebook we will work our way from linear regression to Bayesia
 ## 2. Recap linear regression
 
 - In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$. 
-- We are given an input dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
+- We are given an input dataset $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
 - Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations
 - In linear regression, we model the underlying function $f$ using a linear combination of the input features:
 
@@ -195,13 +195,13 @@ In simple linear regression we compute point estimates of our parameters (e.g. u
 To perform Bayesian linear regression we follow three steps:
 1. We set up a probabilistic model that describes our assumptions how the data and parameters are generated
 2. We perform inference for the parameters $\pmb{\theta}$, that is, we compute the posterior probability distribution over the parameters
-3. With this posterior we can perform inference for new, unseen inputs $y_{*}$. In this step we don't compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.
+3. With this posterior we can perform inference for new, unseen inputs $y\_{\*}$. In this step we don't compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.
 
 ### 6.1 Step 1: Probabilistic model 
 
 We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian  prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are expected to lie in the interval $[−2,2]$ which is two standard deviations around the mean value 0.
 
-To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}_0, \pmb{S}_0)$. Let's further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.
+To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}\_0, \pmb{S}\_0)$. Let's further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.
 
 Note: When considering the set of all targets $\mathcal{Y} := \{y_1, ..., y_n \}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$
 
@@ -505,7 +505,7 @@ for n_points in n_points_lst:
 
 ### 6.5 Step 3: Posterior predictive distribution  
  
-Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}\_*, y_*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can't use it to make predictions, right?
+Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}\_\*, y\_\*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can't use it to make predictions, right?
 
 The posterior predictive distribution looks as follows:
 
