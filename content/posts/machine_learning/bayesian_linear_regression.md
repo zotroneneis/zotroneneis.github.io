@@ -83,7 +83,7 @@ The simple linear regression model above is linear not only with respect to the 
 
 The plot below shows example lines produced with the model $y = x \cdot \theta$, using different values for the slope $\theta$ and intercept 0.   
 
-{{< img src="/posts/machine_learning/images/example_straigt_lines.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/example_straight_lines.png" width="80%" align="center" >}}
 
 Having a model which is linear both with respect to the parameters and inputs limits the functions it can learn significantly. We can make our model more powerful by making it *nonlinear* with respect to the inputs. After all, *linear regression* refers to models which are linear in the *parameters*, not necessarily in the *inputs* (linear in the parameters means that the model describes a function by a linear combination of input features).
 
@@ -473,7 +473,7 @@ plot_param_posterior(lower_bound, upper_bound, blr, title="Prior parameter distr
 ```
 
 
-{{< img src="/posts/machine_learning/images/prior_parameter_distribution.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/prior_parameter_distribution.png" width="50%" align="center" >}}
 
 The plot above illustrates both the prior parameter distribution and the true parameter values that we want to find. If our model works correctly, the posterior distribution should become more narrow and move closer to the true parameter values as the model sees more datapoints. This can be visualized with contour plots, too! Below we update the posterior distribution iteratively as the model sees more and more data. The contour plots for each step show how the parameter posterior develops and converges close to the true values in the end.
 
