@@ -22,7 +22,7 @@ In the following notebook we will work our way from linear regression to Bayesia
 ## 2. Recap linear regression
 
 - In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$. 
-- We are given an input dataset $D =  \right{ \mathbf{x}\_n, y_n \left}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
+- We are given an input dataset $D =  \right\{ \mathbf{x}\_n, y_n \left\}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
 - Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations
 - In linear regression, we model the underlying function $f$ using a linear combination of the input features:
 
