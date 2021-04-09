@@ -170,7 +170,7 @@ $$
 With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum\_{k=0}^{K-1} \theta_k x^k$
 
 ### 5.2 The design matrix 
-To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big \{ \pmb{x_n}, y_n \big \}\_{n=1}^N$ we define the design matrix as follows:
+To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big\{ \pmb{x_n}, y_n \big\}\_{n=1}^N$ we define the design matrix as follows:
 
 $$
 \boldsymbol{\Phi}:=\left[\begin{array}{c}
@@ -583,7 +583,7 @@ plt.plot();
 ```
 
 
-{{< img src="/posts/machine_learning/images/predictive_posterior.png" width="50%" align="center" >}}
+{{< img src="/posts/machine_learning/images/predictive_posterior.png" width="40%" align="center" >}}
 
 
 ## Sources and further reading 
