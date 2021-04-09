@@ -28,7 +28,7 @@ In the following notebook we will work our way from linear regression to Bayesia
 
 $$
 \begin{split}
-y &= \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_d x_d \\
+y &= \theta_0 + \theta_1 x_1 + \theta_2 x_2 + ... + \theta_d x_d \\\\\\
 &= \pmb{x}^T \pmb{\theta}
 \end{split}
 $$
@@ -67,7 +67,7 @@ In order to pave the way for Bayesian linear regression we will take a probabili
 As mentioned in the beginning, a simple linear regression model assumes that the target function $f(x)$ is given by a linear combination of the input features:
 $$
 \begin{split}
-y = f(\pmb{x}) + \epsilon \\
+y = f(\pmb{x}) + \epsilon \\\\\\
   = \pmb{x}^T \pmb{\theta} + \epsilon
 \end{split}
 $$
@@ -99,9 +99,9 @@ Where $\pmb{\phi}: \mathbf{R}^D \rightarrow \mathbf{R}^K$ is a (non)linear trans
 
 $$
 \pmb{\phi}(\pmb{x})=\left[\begin{array}{c}
-\phi\_{0}(\pmb{x}) \\
-\phi\_{1}(\pmb{x}) \\
-\vdots \\
+\phi\_{0}(\pmb{x}) \\\\\\
+\phi\_{1}(\pmb{x}) \\\\\\
+\vdots \\\\\\
 \phi\_{K-1}(\pmb{x})
 \end{array}
 \right]
@@ -148,19 +148,19 @@ $$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi\_{0}(x) \\
-\phi\_{1}(x) \\
-\vdots \\
+\phi\_{0}(x) \\\\\\
+\phi\_{1}(x) \\\\\\
+\vdots \\\\\\
 \phi\_{K-1}(x)
 \end{array}
 \right] = 
 \left[
 \begin{array}{c}
-1 \\
-x \\
-x^2 \\
-x^3 \\
-\vdots \\
+1 \\\\\\
+x \\\\\\
+x^2 \\\\\\
+x^3 \\\\\\
+\vdots \\\\\\
 x^{K-1}
 \end{array}
 \right]
@@ -174,13 +174,13 @@ To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the
 
 $$
 \boldsymbol{\Phi}:=\left[\begin{array}{c}
-\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}\_{1}\right) \\
-\vdots \\
+\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}\_{1}\right) \\\\\\
+\vdots \\\\\\
 \boldsymbol{\phi}^{\top}\left(\boldsymbol{x}\_{N}\right)
 \end{array}\right]=\left[\begin{array}{ccc}
-\phi\_{0}\left(\boldsymbol{x}\_{1}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{1}\right) \\
-\phi\_{0}\left(\boldsymbol{x}\_{2}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{2}\right) \\
-\vdots & & \vdots \\
+\phi\_{0}\left(\boldsymbol{x}\_{1}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{1}\right) \\\\\\
+\phi\_{0}\left(\boldsymbol{x}\_{2}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{2}\right) \\\\\\
+\vdots & & \vdots \\\\\\
 \phi\_{0}\left(\boldsymbol{x}\_{N}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{N}\right)
 \end{array}\right] \in \mathbb{R}^{N \times K}
 $$
