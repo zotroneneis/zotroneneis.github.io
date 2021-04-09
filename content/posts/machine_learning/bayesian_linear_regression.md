@@ -124,17 +124,17 @@ $$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi\_{0}(x) \\
-\phi\_{1}(x) \\
-\vdots \\
+\phi\_{0}(x) \\\\\\
+\phi\_{1}(x) \\\\\\
+\vdots \\\\\\
 \phi\_{K-1}(x)
 \end{array}
 \right] = 
 \left[
 \begin{array}{c}
-1 \\
-x \\
-\vdots \\
+1 \\\\\\
+x \\\\\\
+\vdots \\\\\\
 x
 \end{array}
 \right]
