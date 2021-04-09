@@ -22,7 +22,7 @@ In the following notebook we will work our way from linear regression to Bayesia
 ## 2. Recap linear regression
 
 - In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$. 
-- We are given an input dataset $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
+- We are given an input dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
 - Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations
 - In linear regression, we model the underlying function $f$ using a linear combination of the input features:
 
@@ -315,8 +315,7 @@ plt.title("Real function along with noisy targets")
 plt.legend();
 ```
 
-
-![png](output_14_0.png)
+<img src="real_function_with_noise_targets.png" alt="Drawing" style="width: 400px;"/>
 
 
 ### 6.3 Step 2: Posterior over the parameters  
@@ -474,7 +473,7 @@ plot_param_posterior(lower_bound, upper_bound, blr, title="Prior parameter distr
 ```
 
 
-![png](output_18_0.png)
+<img src="prior_parameter_distribution.png" alt="Drawing" style="width: 400px;"/>
 
 
 The plot above illustrates both the prior parameter distribution and the true parameter values that we want to find. If our model works correctly, the posterior distribution should become more narrow and move closer to the true parameter values as the model sees more datapoints. This can be visualized with contour plots, too! Below we update the posterior distribution iteratively as the model sees more and more data. The contour plots for each step show how the parameter posterior develops and converges close to the true values in the end.
@@ -498,35 +497,13 @@ for n_points in n_points_lst:
 ```
 
 
-![png](output_20_0.png)
-
-
-
-![png](output_20_1.png)
-
-
-
-![png](output_20_2.png)
-
-
-
-![png](output_20_3.png)
-
-
-
-![png](output_20_4.png)
-
-
-
-![png](output_20_5.png)
-
-
-
-![png](output_20_6.png)
-
-
-
-![png](output_20_7.png)
+<img src="param_post_1_datapoint.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_10_datapoints.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_50_datapoints.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_100_datapoints.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_200_datapoints.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_500_datapoints.png" alt="Drawing" style="width: 400px;"/>
+<img src="param_post_1000_datapoints.png" alt="Drawing" style="width: 400px;"/>
 
 
 ### 6.5 Step 3: Posterior predictive distribution  
