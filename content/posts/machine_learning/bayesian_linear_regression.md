@@ -511,15 +511,15 @@ The posterior predictive distribution looks as follows:
 
 $$
 \begin{aligned}
-p\left(y\_{*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}\_{*}\right) &=\int p\left(y\_{*} \mid \pmb{x}\_{*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\
-&=\int \mathcal{N}\left(y\_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}\_{N}\right) \mathrm{d} \pmb{\theta} \\
-&=\mathcal{N}\left(y\_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{m}\_{N}, \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)+\sigma^{2}\right)
+p\left(y\_{\*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}\_\*\right) &=\int p\left(y\_{\*} \mid \pmb{x}\_{\*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\
+&=\int \mathcal{N}\left(y\_{\*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \mathrm{d} \pmb{\theta} \\
+&=\mathcal{N}\left(y\_{\*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{m}\_{N}, \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{\*}\right)+\sigma^{2}\right)
 \end{aligned}
 $$
 
-First of all: note that the predictive posterior for a new input $\pmb{x}\_{*}$ is a *univariate* Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right)$) and the mean of the parameter posterior ($\pmb{m}\_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)+\sigma^{2}$) of the predictive posterior has two parts:
+First of all: note that the predictive posterior for a new input $\pmb{x}\_{\*}$ is a *univariate* Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right)$) and the mean of the parameter posterior ($\pmb{m}\_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{\*}\right)+\sigma^{2}$) of the predictive posterior has two parts:
 1. $\sigma^{2}$: The variance of the noise 
-2. $\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$
+2. $\pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{\*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$
 
 Let's add a `predict` method to our `BayesianLinearRegression` class which computes the predictive posterior for a new input (you will find the method in the class definition above):
 
