@@ -83,7 +83,7 @@ The simple linear regression model above is linear not only with respect to the 
 
 The plot below shows example lines produced with the model $y = x \cdot \theta$, using different values for the slope $\theta$ and intercept 0.   
 
-<img src="example_straight_lines.png" alt="Drawing" style="width: 500px;"/>
+{{< img src="/posts/machine_learning/images/example_straigt_lines.png" width="80%" align="center" >}}
 
 Having a model which is linear both with respect to the parameters and inputs limits the functions it can learn significantly. We can make our model more powerful by making it *nonlinear* with respect to the inputs. After all, *linear regression* refers to models which are linear in the *parameters*, not necessarily in the *inputs* (linear in the parameters means that the model describes a function by a linear combination of input features).
 
@@ -316,8 +316,7 @@ plt.legend();
 ```
 
 
-<img src="real_function_with_noisy_targets.png" alt="Drawing" style="width: 400px;"/>
-
+{{< img src="/posts/machine_learning/images/real_function_with_noisy_targets.png" width="80%" align="center" >}}
 
 ### 6.3 Step 2: Posterior over the parameters  
 
@@ -445,7 +444,7 @@ class BayesianLinearRegression:
 
 To ensure that our implementation is correct we can visualize how the posterior over the parameters changes as the model sees more data. We will visualize the distribution using a [contour plot](https://en.wikipedia.org/wiki/Contour_line) - a method for visualizing three-dimensional functions. In our case we want to visualize the density of our bi-variate Gaussian for each point (that is, each slope/intercept combination). The plot below shows an example which illustrates how the lines  and colours of a contour plot correspond to a Gaussian distribution:
 
-<img src="density_plot.png" alt="Drawing" style="width: 400px;"/>
+{{< img src="/posts/machine_learning/images/density_plot.png" width="80%" align="center" >}}
 
 As we can see, the density is highest in the yellow regions decreasing when moving further out into the green and blue parts. This should give you a better understanding of contour plots.
 
@@ -474,8 +473,7 @@ plot_param_posterior(lower_bound, upper_bound, blr, title="Prior parameter distr
 ```
 
 
-<img src="prior_parameter_distribution.png" alt="Drawing" style="width: 400px;"/>
-
+{{< img src="/posts/machine_learning/images/prior_parameter_distribution.png" width="80%" align="center" >}}
 
 The plot above illustrates both the prior parameter distribution and the true parameter values that we want to find. If our model works correctly, the posterior distribution should become more narrow and move closer to the true parameter values as the model sees more datapoints. This can be visualized with contour plots, too! Below we update the posterior distribution iteratively as the model sees more and more data. The contour plots for each step show how the parameter posterior develops and converges close to the true values in the end.
 
@@ -497,15 +495,13 @@ for n_points in n_points_lst:
     previous_n_points = n_points
 ```
 
-
-<img src="param_post_1_datapoint.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_10_datapoints.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_50_datapoints.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_100_datapoints.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_200_datapoints.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_500_datapoints.png" alt="Drawing" style="width: 400px;"/>
-<img src="param_post_1000_datapoints.png" alt="Drawing" style="width: 400px;"/>
-
+{{< img src="/posts/machine_learning/images/param_post_1_datapoint.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_10_datapoints.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_50_datapoints.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_100_datapoints.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_200_datapoints.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_500_datapoints.png" width="80%" align="center" >}}
+{{< img src="/posts/machine_learning/images/param_post_1000_datapoints.png" width="80%" align="center" >}}
 
 ### 6.5 Step 3: Posterior predictive distribution  
  
