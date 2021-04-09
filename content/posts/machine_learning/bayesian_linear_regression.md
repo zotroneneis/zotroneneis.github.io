@@ -583,7 +583,7 @@ plt.plot();
 ```
 
 
-![png](output_24_0.png)
+{{< img src="/posts/machine_learning/images/predictive_posterior.png" width="50%" align="center" >}}
 
 
 ## Sources and further reading 
