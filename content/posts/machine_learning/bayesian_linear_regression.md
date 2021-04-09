@@ -22,7 +22,7 @@ In the following notebook we will work our way from linear regression to Bayesia
 ## 2. Recap linear regression
 
 - In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$. 
-- We are given an input dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
+- We are given an input dataset $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
 - Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations
 - In linear regression, we model the underlying function $f$ using a linear combination of the input features:
 
@@ -91,7 +91,7 @@ Making the model nonlinear with respect to the inputs is easy. We can adapt it b
 $$
 \begin{split}
 y &= \pmb{\phi}^T(\pmb{x}) \pmb{\theta} + \epsilon \\
-&= \sum_{k=0}^{K-1} \theta_k \phi_k(\pmb{x}) + \epsilon
+&= \sum\_{k=0}^{K-1} \theta_k \phi_k(\pmb{x}) + \epsilon
 \end{split}
 $$
 
@@ -99,10 +99,10 @@ Where $\pmb{\phi}: \mathbf{R}^D \rightarrow \mathbf{R}^K$ is a (non)linear trans
 
 $$
 \pmb{\phi}(\pmb{x})=\left[\begin{array}{c}
-\phi_{0}(\pmb{x}) \\
-\phi_{1}(\pmb{x}) \\
+\phi\_{0}(\pmb{x}) \\
+\phi\_{1}(\pmb{x}) \\
 \vdots \\
-\phi_{K-1}(\pmb{x})
+\phi\_{K-1}(\pmb{x})
 \end{array}
 \right]
 \in \mathbb{R}^{K}
@@ -124,10 +124,10 @@ $$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi_{0}(x) \\
-\phi_{1}(x) \\
+\phi\_{0}(x) \\
+\phi\_{1}(x) \\
 \vdots \\
-\phi_{K-1}(x)
+\phi\_{K-1}(x)
 \end{array}
 \right] = 
 \left[
@@ -148,10 +148,10 @@ $$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi_{0}(x) \\
-\phi_{1}(x) \\
+\phi\_{0}(x) \\
+\phi\_{1}(x) \\
 \vdots \\
-\phi_{K-1}(x)
+\phi\_{K-1}(x)
 \end{array}
 \right] = 
 \left[
@@ -167,35 +167,35 @@ x^{K-1}
 \in \mathbb{R}^{K}
 $$
 
-With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum_{k=0}^{K-1} \theta_k x^k$
+With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum\_{k=0}^{K-1} \theta_k x^k$
 
 ### 5.2 The design matrix 
-To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$ we define the design matrix as follows:
+To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$ we define the design matrix as follows:
 
 $$
 \boldsymbol{\Phi}:=\left[\begin{array}{c}
-\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{1}\right) \\
+\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}\_{1}\right) \\
 \vdots \\
-\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{N}\right)
+\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}\_{N}\right)
 \end{array}\right]=\left[\begin{array}{ccc}
-\phi_{0}\left(\boldsymbol{x}_{1}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{1}\right) \\
-\phi_{0}\left(\boldsymbol{x}_{2}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{2}\right) \\
+\phi\_{0}\left(\boldsymbol{x}\_{1}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{1}\right) \\
+\phi\_{0}\left(\boldsymbol{x}\_{2}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{2}\right) \\
 \vdots & & \vdots \\
-\phi_{0}\left(\boldsymbol{x}_{N}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{N}\right)
+\phi\_{0}\left(\boldsymbol{x}\_{N}\right) & \cdots & \phi\_{K-1}\left(\boldsymbol{x}\_{N}\right)
 \end{array}\right] \in \mathbb{R}^{N \times K}
 $$
 
 Note that the design matrix is of shape $N \times K$. $N$ is the number of input examples and $K$ is the output dimension of the non-linear transformation $\pmb{\phi}(\pmb{x})$.
 
 ## 6. Bayesian linear regression  
-What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \{\pmb{x}_1, ..., \pmb{x}_n\}$ and the set of all targets as $\mathcal{Y} := \{y_1, ..., y_n \}$.
+What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \{\pmb{x}\_1, ..., \pmb{x}\_n\}$ and the set of all targets as $\mathcal{Y} := \{y_1, ..., y_n \}$.
 
 In simple linear regression we compute point estimates of our parameters (e.g. using a maximum likelihood approach) and use these estimates to make predictions. Different to this, Bayesian linear regression estimates *distributions* over the parameters and predictions. This allows us to model the uncertainty in our predictions.
 
 To perform Bayesian linear regression we follow three steps:
 1. We set up a probabilistic model that describes our assumptions how the data and parameters are generated
 2. We perform inference for the parameters $\pmb{\theta}$, that is, we compute the posterior probability distribution over the parameters
-3. With this posterior we can perform inference for new, unseen inputs $y_*$. In this step we don't compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.
+3. With this posterior we can perform inference for new, unseen inputs $y_{*}$. In this step we don't compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.
 
 ### 6.1 Step 1: Probabilistic model 
 
@@ -329,15 +329,15 @@ p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y})=\frac{p(\mathcal{Y} \mid \mathcal{
 $$
 
 - $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})$ is the likelihood function, $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$
-- $p(\pmb{\theta})$ is the prior distribution, $p(\pmb{\theta})=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{0}, \pmb{S}_{0}\right)$
+- $p(\pmb{\theta})$ is the prior distribution, $p(\pmb{\theta})=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{0}, \pmb{S}\_{0}\right)$
 - $p(\mathcal{Y} \mid \mathcal{X})=\int p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta}) p(\pmb{\theta}) \mathrm{d} \pmb{\theta}$ is the evidence which ensures that the posterior is normalized (that is, that it integrates to 1).
 
 The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book [Mathematics for Machine Learning](https://mml-book.com)):
 $$
 \begin{aligned}
-p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \\
-\pmb{S}_{N} &=\left(\pmb{S}_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\
-\pmb{m}_{N} &=\pmb{S}_{N}\left(\pmb{S}_{0}^{-1} \pmb{m}_{0}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{y}\right)
+p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \\
+\pmb{S}\_{N} &=\left(\pmb{S}\_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\
+\pmb{m}\_{N} &=\pmb{S}\_{N}\left(\pmb{S}\_{0}^{-1} \pmb{m}\_{0}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{y}\right)
 \end{aligned}
 $$
 
@@ -531,21 +531,21 @@ for n_points in n_points_lst:
 
 ### 6.5 Step 3: Posterior predictive distribution  
  
-Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}_*, y_*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can't use it to make predictions, right?
+Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}\_*, y_*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can't use it to make predictions, right?
 
 The posterior predictive distribution looks as follows:
 
 $$
 \begin{aligned}
-p\left(y_{*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}_{*}\right) &=\int p\left(y_{*} \mid \pmb{x}_{*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\
-&=\int \mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \mathrm{d} \pmb{\theta} \\
-&=\mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{m}_{N}, \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}\right)
+p\left(y\_{*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}\_{*}\right) &=\int p\left(y\_{*} \mid \pmb{x}\_{*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\
+&=\int \mathcal{N}\left(y\_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}\_{N}\right) \mathrm{d} \pmb{\theta} \\
+&=\mathcal{N}\left(y\_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{m}\_{N}, \pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)+\sigma^{2}\right)
 \end{aligned}
 $$
 
-First of all: note that the predictive posterior for a new input $\pmb{x}_{*}$ is a *univariate* Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right)$) and the mean of the parameter posterior ($\pmb{m}_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}$) of the predictive posterior has two parts:
+First of all: note that the predictive posterior for a new input $\pmb{x}\_{*}$ is a *univariate* Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right)$) and the mean of the parameter posterior ($\pmb{m}\_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)+\sigma^{2}$) of the predictive posterior has two parts:
 1. $\sigma^{2}$: The variance of the noise 
-2. $\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$
+2. $\pmb{\phi}^{\top}\left(\pmb{x}\_{*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$
 
 Let's add a `predict` method to our `BayesianLinearRegression` class which computes the predictive posterior for a new input (you will find the method in the class definition above):
 
