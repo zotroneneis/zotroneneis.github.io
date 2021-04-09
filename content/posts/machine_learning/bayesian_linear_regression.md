@@ -170,7 +170,7 @@ $$
 With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum\_{k=0}^{K-1} \theta_k x^k$
 
 ### 5.2 The design matrix 
-To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$ we define the design matrix as follows:
+To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called *design matrix* (also called *feature matrix*). Given our dataset $D = \big \{ \pmb{x_n}, y_n \big \}\_{n=1}^N$ we define the design matrix as follows:
 
 $$
 \boldsymbol{\Phi}:=\left[\begin{array}{c}
@@ -188,7 +188,7 @@ $$
 Note that the design matrix is of shape $N \times K$. $N$ is the number of input examples and $K$ is the output dimension of the non-linear transformation $\pmb{\phi}(\pmb{x})$.
 
 ## 6. Bayesian linear regression  
-What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \big \{ \mathbf{x}\_n, y_n \big \}\_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \{\pmb{x}\_1, ..., \pmb{x}\_n\}$ and the set of all targets as $\mathcal{Y} := \{y_1, ..., y_n \}$.
+What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \big \{ \pmb{x_n}, y_n \big \}\_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \{\pmb{x}\_1, ..., \pmb{x}\_n\}$ and the set of all targets as $\mathcal{Y} := \{y_1, ..., y_n \}$.
 
 In simple linear regression we compute point estimates of our parameters (e.g. using a maximum likelihood approach) and use these estimates to make predictions. Different to this, Bayesian linear regression estimates *distributions* over the parameters and predictions. This allows us to model the uncertainty in our predictions.
 
@@ -315,7 +315,8 @@ plt.title("Real function along with noisy targets")
 plt.legend();
 ```
 
-<img src="real_function_with_noise_targets.png" alt="Drawing" style="width: 400px;"/>
+
+<img src="real_function_with_noisy_targets.png" alt="Drawing" style="width: 400px;"/>
 
 
 ### 6.3 Step 2: Posterior over the parameters  
@@ -340,7 +341,7 @@ p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \m
 \end{aligned}
 $$
 
-Coming back to our `BayesLinearRegression` class we need to add a method which allows us to update the posterior distribution given a dataset.
+Coming back to our `BayesianLinearRegression` class we need to add a method which allows us to update the posterior distribution given a dataset.
 
 
 ```python
