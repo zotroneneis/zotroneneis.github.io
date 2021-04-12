@@ -587,7 +587,7 @@ plt.plot();
 {{< img src="/posts/machine_learning/images/predictive_posterior.png" width="40%" align="center" >}}
 
 
-## Sources and further reading 
+## 7. Sources and further reading 
 
 The basis for this notebook is chapter 9.2 of the book [Mathematics for Machine Learning](https://mml-book.com). I can highly recommend to read through chapter 9 to get a deeper understanding of (Bayesian) linear regression.
    
