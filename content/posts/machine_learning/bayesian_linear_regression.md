@@ -76,7 +76,7 @@ $$
 This corresponds to the following likelihood function: 
 $$p(y | \pmb{x}, \pmb{\theta}) = \mathcal{N}(\pmb{x}^T \pmb{\theta}, \sigma^2)$$
 
-Our goal is to find the parameters $\pmb{\theta} = \{\theta_1, ..., \theta_D\}$ that model the given data best.
+Our goal is to find the parameters $\pmb{\theta} = \Big \\{ \theta_1, ..., \theta_D \Big \\}$ that model the given data best.
 In standard linear regression we can find the best parameters using a least-squares, maximum likelihood (ML) or maximum a posteriori (MAP) approach. If you want to know more about these solutions take a look at the [notebook on linear regression](https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb) or at chapter 9.2 of the book [Mathematics for Machine Learning](https://mml-book.com).
 
 ## 5. Linear regression with basis functions  
@@ -189,7 +189,7 @@ $$
 Note that the design matrix is of shape $N \times K$. $N$ is the number of input examples and $K$ is the output dimension of the non-linear transformation $\pmb{\phi}(\pmb{x})$.
 
 ## 6. Bayesian linear regression  
-What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \{ \pmb{x_n}, y_n \}\_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \{\pmb{x}\_1, ..., \pmb{x}\_n\}$ and the set of all targets as $\mathcal{Y} := \{y_1, ..., y_n \}$.
+What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \Big \\{ \pmb{x_n}, y_n \Big \\}\_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \Big \\{ \pmb{x}\_1, ..., \pmb{x}\_n \Big \\}$ and the set of all targets as $\mathcal{Y} := \Big \\{ y_1, ..., y_n \Big \\}$.
 
 In simple linear regression we compute point estimates of our parameters (e.g. using a maximum likelihood approach) and use these estimates to make predictions. Different to this, Bayesian linear regression estimates *distributions* over the parameters and predictions. This allows us to model the uncertainty in our predictions.
 
@@ -204,7 +204,7 @@ We start by setting up a probabilistic model that describes our assumptions how 
 
 To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}\_0, \pmb{S}\_0)$. Let's further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.
 
-Note: When considering the set of all targets $\mathcal{Y} := \{y_1, ..., y_n \}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$
+Note: When considering the set of all targets $\mathcal{Y} := \Big \\{ y_1, ..., y_n \Big \\}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$
 
 The nice thing about choosing a Gaussian distribution for our prior is that the posterior distributions will be Gaussian, too (keyword [conjugate prior](https://en.wikipedia.org/wiki/Conjugate_prior))! 
 
@@ -335,8 +335,8 @@ $$
 The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book [Mathematics for Machine Learning](https://mml-book.com)):
 $$
 \begin{aligned}
-p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \\
-\pmb{S}\_{N} &=\left(\pmb{S}\_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\
+p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \\\\\\
+\pmb{S}\_{N} &=\left(\pmb{S}\_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\\\\\
 \pmb{m}\_{N} &=\pmb{S}\_{N}\left(\pmb{S}\_{0}^{-1} \pmb{m}\_{0}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{y}\right)
 \end{aligned}
 $$
@@ -512,8 +512,8 @@ The posterior predictive distribution looks as follows:
 
 $$
 \begin{aligned}
-p\left(y\_{\*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}\_\*\right) &=\int p\left(y\_{\*} \mid \pmb{x}\_{\*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\
-&=\int \mathcal{N}\left(y\_{\*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \mathrm{d} \pmb{\theta} \\
+p\left(y\_{\*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}\_\*\right) &=\int p\left(y\_{\*} \mid \pmb{x}\_{\*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\\\\\
+&=\int \mathcal{N}\left(y\_{\*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}\_{N}, \pmb{S}\_{N}\right) \mathrm{d} \pmb{\theta} \\\\\\
 &=\mathcal{N}\left(y\_{\*} \mid \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{m}\_{N}, \pmb{\phi}^{\top}\left(\pmb{x}\_{\*}\right) \pmb{S}\_{N} \pmb{\phi}\left(\pmb{x}\_{\*}\right)+\sigma^{2}\right)
 \end{aligned}
 $$
