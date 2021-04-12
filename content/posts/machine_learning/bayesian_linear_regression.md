@@ -10,19 +10,20 @@ menu:
 math: true
 ---
 
-I finally found time to continue working on my [machine learning basics repository](https://github.com/zotroneneis/machine_learning_basics) which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the [original notebook](https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb). You can even [run the notebook directly in your Browser using Binder](https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb).
+I finally found time to continue working on my [machine learning basics repository](https://github.com/zotroneneis/machine_learning_basics) which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the [original notebook](https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb). You can [run the notebook directly in your Browser using Binder](https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb).
 
 ## 1. What is Bayesian linear regression (BLR)?
 Bayesian linear regression is the *Bayesian* interpretation of linear regression. What does that mean? To answer this question we first have to understand the Bayesian approach. In most of the algorithms we have looked at so far we computed *point estimates* of our parameters. For example, in linear regression we chose values for the weights and bias that minimized our mean squared error cost function. In the Bayesian approach we don't work with exact values but with *probabilities*. This allows us to model the *uncertainty* in our parameter estimates. Why is this important?
 
 In nearly all real-world situations, our data and knowledge about the world is incomplete, indirect and noisy. Hence, uncertainty must be a fundamental part of our decision-making process. This is exactly what the Bayesian approach is about. It provides a formal and consistent way to reason in the presence of uncertainty. Bayesian methods have been around for a long time and are widely-used in many areas of science (e.g. astronomy). Although Bayesian methods have been applied to machine learning problems too, they are usually less well known to beginners. The major reason is that they require a good understanding of probability theory.
 
-In the following notebook we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples.
+In the following post we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples. Remember: you can [run the original notebook directly in your Browser using Binder](https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb).
+ 
 
 ## 2. Recap linear regression
 
 - In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$. 
-- We are given an input dataset $D =  \right\{ \mathbf{x}\_n, y_n \left\}\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
+- We are given an input dataset $D =  { \mathbf{x}\_n, y_n }\_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise
 - Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations
 - In linear regression, we model the underlying function $f$ using a linear combination of the input features:
 
