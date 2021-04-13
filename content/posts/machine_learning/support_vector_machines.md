@@ -16,11 +16,11 @@ I posted another notebook in my [machine learning basics repository](https://git
 
 Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of [*kernel methods*](https://en.wikipedia.org/wiki/Kernel_method). SVMs can be used both for classification and regression. The original SVM proposed in 1963 is a simple binary linear classifier. What does this mean?
 
-Assume we are given a dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$, where $\mathbf{x} \in \mathbb{R}^D$ and labels $y_n \in \{-1, +1 \}$. A linear (hard-margin) SVM separates the two classes using a ($D-1$ dimensional) hyperplane.
+Assume we are given a dataset $D = \big \\{ \mathbf{x}\_n, y_n \big \\}\_{n=1}^N$, where $\mathbf{x} \in \mathbb{R}^D$ and labels $y_n \in \{-1, +1 \}$. A linear (hard-margin) SVM separates the two classes using a ($D-1$ dimensional) hyperplane.
 
 Special to SVMs is that they use not any hyperplane but the one that maximizes the distance between itself and the two sets of datapoints. Such a hyperplane is called *maximum-margin* hyperplane:
 
-{{< img src="/posts/machine_learning/images/separating_hyperplanes.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/separating_hyperplanes.png" width="60%" align="center" >}}
 
 In case you have never heard the term margin: the margin describes the distance between the hyperplane and the closest examples in the dataset.
 
@@ -30,7 +30,7 @@ Two types of SVMs exist: primals SVMs and dual SVMs. Although most research in t
 
 When training an SVM our goal is to find the hyperplane that maximizes the margin between the two sets of points. This hyperplane is fully defined by the points closest to the margin, which are also called *support vectors*.
 
-The equation of a hyperplane is given by $\langle \mathbf{w}, \mathbf{x} \rangle + b = 0$. If an example $\mathbf{x}_i$ lies on the right side of the hyperplane (that is, it has a positive label) we have $\langle \mathbf{w}, \mathbf{x} \rangle + b \gt 0$. If instead $\mathbf{x}_i$ lies on the left side (= negative label) we have $\langle \mathbf{w}, \mathbf{x} \rangle + b \lt 0$.
+The equation of a hyperplane is given by $\langle \mathbf{w}, \mathbf{x} \rangle + b = 0$. If an example $\mathbf{x}\_i$ lies on the right side of the hyperplane (that is, it has a positive label) we have $\langle \mathbf{w}, \mathbf{x} \rangle + b \gt 0$. If instead $\mathbf{x}\_i$ lies on the left side (= negative label) we have $\langle \mathbf{w}, \mathbf{x} \rangle + b \lt 0$.
 
 The support vectors lie exactly on the margin and the optimal separating hyperplane should have the same distance from all support vectors. In this sense the maximum margin hyperplane lies between two separating hyperplanes that are determined by the support vectors:
 
@@ -38,29 +38,29 @@ The support vectors lie exactly on the margin and the optimal separating hyperpl
 
 ### Goal 1:
 When deriving a formal equation for the maximum margin hyperplane we assume that the two delimiting hyperplanes are given by:   
-$$\langle \mathbf{w}, \mathbf{x}_{+} \rangle + b = +1$$ 
-$$\langle \mathbf{w}, \mathbf{x}_{-} \rangle + b = -1$$
+$$\langle \mathbf{w}, \mathbf{x}\_{+} \rangle + b = +1$$ 
+$$\langle \mathbf{w}, \mathbf{x}\_{-} \rangle + b = -1$$
 
-In other words: we want our datapoints two lie at least a distance of 1 away from the decision hyperplane into both directions. To be more precise: for our positive examples (those with label $y_n = +1$) we want the following to hold: $\langle \mathbf{w}, \mathbf{x}_n \rangle + b \ge +1$.
+In other words: we want our datapoints two lie at least a distance of 1 away from the decision hyperplane into both directions. To be more precise: for our positive examples (those with label $y_n = +1$) we want the following to hold: $\langle \mathbf{w}, \mathbf{x}\_n \rangle + b \ge +1$.
 
-For our negative examples (those with label $y_n = -1$) we want the opposite: $\langle \mathbf{w}, \mathbf{x}_n \rangle + b \le -1$. This can be combined into a single equation: $y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1$. This is our first goal: **We want a decision boundary that classifies our training examples correctly.**
+For our negative examples (those with label $y_n = -1$) we want the opposite: $\langle \mathbf{w}, \mathbf{x}\_n \rangle + b \le -1$. This can be combined into a single equation: $y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1$. This is our first goal: **We want a decision boundary that classifies our training examples correctly.**
 
 
 ### Goal 2:
 Our second goal is to maximize the margin of this decision boundary. The margin is given by $\frac{1}{\mathbf{w}}$. If you would like to understand where this value is coming from take a look at the section "*(Optional) Deriving the margin equation*" below.
 
 Our goal to maximize the margin can be expressed as follows:
-$$ \max_{\mathbf{w}, b} \frac{1}{\Vert \mathbf{w} \Vert}$$
+$$ \max\_{\mathbf{w}, b} \frac{1}{\Vert \mathbf{w} \Vert}$$
 
 Instead of maximizing $\frac{1}{\Vert \mathbf{w} \Vert}$ we can instead minimize $\frac{1}{2} \Vert \mathbf{w} \Vert^2$. This simplifies the computation of the gradient.
 
 ### Combined goal
 Combining goal one and goal two yields the following objective function:   
 $$
-\min_{\mathbf{w}, b} \frac{1}{2} \Vert \mathbf{w} \Vert^2
+\min\_{\mathbf{w}, b} \frac{1}{2} \Vert \mathbf{w} \Vert^2
 $$
 $$
-\text{subject to: } y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1 \text{ for all } n = 1, ..., N
+\text{subject to: } y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1 \text{ for all } n = 1, ..., N
 $$
 
 In words: we want to find the values for $\mathbf{w}$ and $b$ that maximize the margin while classifying all training examples correctly. This approach is called the *hard-margin support vector machine*. "Hard" because it does not allow for violations of the margin requirement (= no points are allowed to be within the margin).
@@ -70,32 +70,32 @@ In words: we want to find the values for $\mathbf{w}$ and $b$ that maximize the 
 We can derive the width of the margin in several ways (see sections 12.2.1-12.2.2 of the [Mathematics for Machine Learning book](https://mml-book.com)). Personally, I found the explanation of [this MIT lecture on SVMs](https://www.youtube.com/watch?v=_PwhiWxHK8o) easiest to understand.
 
 The derivation of the margin is based on the assumptions that we have already noted above:
-$$\langle \mathbf{w}, \mathbf{x}_{+} \rangle + b = +1$$ 
-$$\langle \mathbf{w}, \mathbf{x}_{-} \rangle + b = -1$$
+$$\langle \mathbf{w}, \mathbf{x}\_{+} \rangle + b = +1$$ 
+$$\langle \mathbf{w}, \mathbf{x}\_{-} \rangle + b = -1$$
 
 Including the label of each example we can rewrite this as 
-$$y_i (\langle \mathbf{w}, \mathbf{x}_{i} \rangle + b) -1 = 0$$
+$$y_i (\langle \mathbf{w}, \mathbf{x}\_{i} \rangle + b) -1 = 0$$
 
-Let's say we have a positive example $\mathbf{x}_{+}$ that lies on the right delimiting hyperplane and a negative example $\mathbf{x}_{-}$ that lies on the left delimiting hyperplane. The distance between these two vectors is given by ($\mathbf{x}_{+} - \mathbf{x}_{-})$. We want to compute the orthogonal projection of the vector onto the line that is perpendicular to the decision hyperplane. This would give us the width between the two delimiting hyperplanes. We can compute this by multiplying the vector ($\mathbf{x}_{+} - \mathbf{x}_{-})$ with a vector that is perpendicular to the hyperplane. We know that the vector $\mathbf{w}$ is perpendicular to the decision hyperplane. So we can compute the margin by multiplying $(\mathbf{x}_{+} - \mathbf{x}_{-})$ with the vector $\mathbf{w}$ where the latter is divided by the scale $||\mathbf{w}||$ to make it a unit vector.
+Let's say we have a positive example $\mathbf{x}\_{+}$ that lies on the right delimiting hyperplane and a negative example $\mathbf{x}\_{-}$ that lies on the left delimiting hyperplane. The distance between these two vectors is given by ($\mathbf{x}\_{+} - \mathbf{x}\_{-})$. We want to compute the orthogonal projection of the vector onto the line that is perpendicular to the decision hyperplane. This would give us the width between the two delimiting hyperplanes. We can compute this by multiplying the vector ($\mathbf{x}\_{+} - \mathbf{x}\_{-})$ with a vector that is perpendicular to the hyperplane. We know that the vector $\mathbf{w}$ is perpendicular to the decision hyperplane. So we can compute the margin by multiplying $(\mathbf{x}\_{+} - \mathbf{x}\_{-})$ with the vector $\mathbf{w}$ where the latter is divided by the scale $||\mathbf{w}||$ to make it a unit vector.
 
 {{< img src="/posts/machine_learning/images/maximum_margin_derivation.png" width="40%" align="center" >}}
 
 $$
-\begin{align*}
-\text{width} &= (\mathbf{x}_{+} - \mathbf{x}_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
-&= \frac{\mathbf{x}_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}_{-} \cdot \mathbf{w}}{||\mathbf{w}||}
-\end{align*}
+\begin{align}
+\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
+&= \frac{\mathbf{x}\_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}\_{-} \cdot \mathbf{w}}{||\mathbf{w}||}
+\end{align}
 $$
 
-For the positive example $\mathbf{x}_{+}$ we have $y_+ = +1$ and therefore $(\langle \mathbf{w}, \mathbf{x}_{+} \rangle = 1 - b$. For the negative example $\mathbf{x}_{-}$ we have $y_- = -1$ and therefore $- (\langle \mathbf{w}, \mathbf{x}_{-} \rangle) = 1 + b$:
+For the positive example $\mathbf{x}\_{+}$ we have $y\_+ = +1$ and therefore $(\langle \mathbf{w}, \mathbf{x}\_{+} \rangle = 1 - b$. For the negative example $\mathbf{x}\_{-}$ we have $y\_- = -1$ and therefore $- (\langle \mathbf{w}, \mathbf{x}\_{-} \rangle) = 1 + b$:
 
 $$
-\begin{align*}
-\text{width} &= (\mathbf{x}_{+} - \mathbf{x}_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
-&= \frac{\mathbf{x}_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}_{-} \cdot \mathbf{w}}{||\mathbf{w}||} \\ 
+\begin{align}
+\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
+&= \frac{\mathbf{x}\_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}\_{-} \cdot \mathbf{w}}{||\mathbf{w}||} \\ 
 &= \frac{(1 - b) + (1 + b)}{||\mathbf{w}||}\\ 
 &= \frac{2}{||\mathbf{w}||}\\ 
-\end{align*}
+\end{align}
 $$
 
 We conclude that the width between the two delimiting hyperplanes equals $\frac{2}{\mathbf{w}}$. And therefore, that the distance between the decision hyperplane and each delimiting hyperplane is $\frac{1}{\mathbf{w}}$.
@@ -108,17 +108,17 @@ A soft-margin SVM allows for violations of the margin requirement (= classificat
 
 To implement this we introduce so called *slack variables* $\xi_n$. Each training example $(\mathbf{x}_n, y_n)$ is assigned a slack variable $\xi_n \ge 0$. The slack variable allows this example to be within the margin or even on the wrong side of the decision hyperplane:
 
-- If $\xi_n = 0$ the training example $(\mathbf{x}_n, y_n)$ lies exactly on the margin
+- If $\xi_n = 0$ the training example $(\mathbf{x}\_n, y_n)$ lies exactly on the margin
 - $0 \lt \xi_n \lt 1$ the training example lies within the margin but on the correct side of the decision hyperplane
 - $\xi_n \ge 1$ the training example lies on the wrong side of the decision hyperplane
     
 We extend our objective function to include the slack variables as follows:
-$$ \min_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum_{n=1}^N \xi_n $$
+$$ \min\_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum\_{n=1}^N \xi_n $$
 
 $$ \text{subject to:} $$
 
 $$ \begin{equation}
-y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1 - \xi_n
+y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1 - \xi_n
 \end{equation}$$
 
 $$ \xi_i \gt 0 \text{ for all } n = 1, ..., N $$
@@ -140,14 +140,14 @@ Let's understand the output of this loss function with a few examples:
 - If a training example ($y = 1$) is on the correct side of the decision hyperplane but lies within the margin (that is, $0 \lt f(\mathbf{x}) \lt 1$) the hinge loss will output a positive value.
 - If a training example ($y = 1$) is on the wrong side of the decision hyperplane (that is, $f(\mathbf{x}) \lt 0$), the hinge loss returns an even larger value. This value increases linearly with the distance from the decision hyperplane
 
-{{< img src="/posts/machine_learning/images/hinge_loss.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/hinge_loss.png" width="50%" align="center" >}}
 
 ### 4.2 Updated objective function 
 
-Using the hinge loss we can reformulate the optimization problem of the primal soft-margin SVM. Given a dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$ we would like to minimize the total loss which is now given by:
+Using the hinge loss we can reformulate the optimization problem of the primal soft-margin SVM. Given a dataset $D = \big \\{ \mathbf{x}\_n, y_n \big \\}\_{n=1}^N$ we would like to minimize the total loss which is now given by:
 
 $$
-\min _{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^{2} + C \sum_{n=1}^{N} \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle+b\right)\right\}
+\min\_{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^{2} + C \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\}
 $$
 
 If you would like to understand why this is equivalent to our previous formulation of the soft-margin SVM please take a look at chapter 12.2.5 of the [Mathematics for Machine Learning book](https://mml-book.com).
@@ -160,7 +160,7 @@ Part 1: $\frac{1}{2}\|\mathbf{w}\|^{2}$
 
 This part is also called the *regularization term*. It expresses a preference for solutions that separate the datapoints well, thereby maximizing the margin. In theory, we could replace this term by a different regularization term that expresses a different preference.
 
-Part 2: $\sum_{n=1}^{N} \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle+b\right)\right\}$
+Part 2: $\sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\}$
 
 This part is also called the *empirical loss*. In our case it's the hinge loss which penalizes solutions that make mistakes when classifying the training examples. In theory, this term could be replaced with another loss function that expresses a different preference.
 
@@ -174,20 +174,20 @@ The hinge loss function is not differentiable (namely at the point $t=1$). There
 
 Our cost function is then given by 
 $$
-J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum_{n=1}^{N} \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle\right)\right\}
+J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}
 $$
 
 We will reformulate this to simplify computing the gradient:
 $$
-J(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^{N} \Big[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle\right)\right\}\Big]
+J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big\\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}\Big\\]
 $$
 
 
 The gradient is given by:
 $$
-\nabla_{w} J(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^N \left\{\begin{array}{ll}
-\mathbf{w} & \text{if} \max \left(0,1-y_{n} \left(\langle \mathbf{w}, \mathbf{x}_{n} \rangle \right)\right)=0 \\
-\mathbf{w}-C  y_{n} \mathbf{x}_{n} & \text { otherwise }
+\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\{\begin{array}{ll}
+\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\
+\mathbf{w}-C  y\_{n} \mathbf{x}\_{n} & \text { otherwise }
 \end{array}\right.
 $$
 
@@ -205,7 +205,7 @@ $$ f(w) - f(w_0) \ge g \cdot (w - w_0) $$
 
 If $f$ is differentiable at $w_0$, the subgradient contains only one vector which equals the gradient $\nabla f(w_0)$. If, however, $f$ is not differentiable, there may be several values for $g$ that satisfy this inequality. This is illustrated in the figure below.
 
-{{< img src="/posts/machine_learning/images/gradient_vs_subgradient.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/gradient_vs_subgradient.png" width="60%" align="center" >}}
 
 #### Subgradient method
 
@@ -248,7 +248,7 @@ features_train, features_test, labels_train, labels_test = train_test_split(feat
 ```
 
 
-{{< img src="/posts/machine_learning/images/svm_dataset.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/svm_dataset.png" width="60%" align="center" >}}
 
 ### 5.2 SVM class definition 
 
@@ -256,13 +256,13 @@ Next, we would like to implement an SVM class. We will use the knowledge we alre
 
 1. Our objective function using the hinge loss function is given by: 
 $$
-J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum_{n=1}^{N} \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle\right)\right\}
+J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}
 $$
 2. We can minimize this function by computing the gradient: 
 $$
-\nabla_{w} J(\mathbf{w}) = \frac{1}{N} \sum_{n=1}^N \left\{\begin{array}{ll}
-\mathbf{w} & \text{if} \max \left(0,1-y_{n} \left(\langle \mathbf{w}, \mathbf{x}_{n} \rangle \right)\right)=0 \\
-\mathbf{w}-C  y_{n} \mathbf{x}_{n} & \text { otherwise }
+\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\{\begin{array}{ll}
+\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\
+\mathbf{w}-C  y\_{n} \mathbf{x}\_{n} & \text { otherwise }
 \end{array}\right.
 $$
 3. Given the gradient we use stochastic gradient descent to train our model
@@ -465,7 +465,7 @@ plt.xlabel("Feature 1")
 plt.show()
 ```
 
-{{< img src="/posts/machine_learning/images/svm_decision_boundary.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/svm_decision_boundary.png" width="60%" align="center" >}}
 
 
 ## 6. Dual approach 
@@ -505,7 +505,7 @@ Therefore, the tangency condition results in
 $$ \left[\begin{array}{l}
 2 \\ 1
 \end{array}\right]=\lambda \left[\begin{array}{l}
-2 x_{m} \\ 2 y_{m}
+2 x\_{m} \\ 2 y\_{m}
 \end{array}\right] $$
 
 We can rewrite the vector form into individual equations that can be solved by hand:
@@ -515,7 +515,7 @@ We can rewrite the vector form into individual equations that can be solved by h
 
 Solving the equations yields 
 $$ \begin{aligned}
-\left(x_{0}, y_{0}\right) &=\left(\frac{1}{\lambda_{0}}, \frac{1}{2 \lambda_{0}}\right) \\
+\left(x\_{0}, y\_{0}\right) &=\left(\frac{1}{\lambda\_{0}}, \frac{1}{2 \lambda\_{0}}\right) \\
 &=\left(\frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}}\right) \quad \text { or } \quad\left(\frac{-2}{\sqrt{5}}, \frac{-1}{\sqrt{5}}\right)
 \end{aligned} $$
 
@@ -531,11 +531,11 @@ When computing the partial derivatives of $\mathcal{L}$ with respect to $x, y$ a
 
 ### 6.3 Dual optimization problem 
 For the primal soft-margin SVM we considered the following optimization problem: 
-$$ \min_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum_{n=1}^N \xi_n $$
+$$ \min\_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum\_{n=1}^N \xi_n $$
 
 $$ \text{subject to:} $$
 
-$$ y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1 - \xi_n $$
+$$ y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1 - \xi_n $$
 
 $$ \xi_i \gt 0 \text{ for all } n = 1, ..., N $$
 
@@ -543,20 +543,20 @@ To derive the corresponding Lagrangian we will introduce two Lagrange multiplier
 
 $$
 \begin{aligned}
-\mathfrak{L}(\boldsymbol{w}, b, \xi, \alpha, \gamma)=& \frac{1}{2}\|\boldsymbol{w}\|^{2}+C \sum_{n=1}^{N} \xi_{n} \\
-& \underbrace{-\sum_{n=1}^{N} \alpha_{n}\left(y_{n}\left(\left\langle\boldsymbol{w}, \boldsymbol{x}_{n}\right\rangle+b\right)-1+\xi_{n}\right)}_{\text{first constraint}} \underbrace{-\sum_{n=1}^{N} \gamma_{n} \xi_{n}}_{\text{second constraint}}
+\mathfrak{L}(\boldsymbol{w}, b, \xi, \alpha, \gamma)=& \frac{1}{2}\|\boldsymbol{w}\|^{2}+C \sum\_{n=1}^{N} \xi\_{n} \\
+& \underbrace{-\sum\_{n=1}^{N} \alpha\_{n}\left(y\_{n}\left(\left\langle\boldsymbol{w}, \boldsymbol{x}\_{n}\right\rangle+b\right)-1+\xi\_{n}\right)}\_{\text{first constraint}} \underbrace{-\sum\_{n=1}^{N} \gamma\_{n} \xi\_{n}}\_{\text{second constraint}}
 \end{aligned}
 $$
 
 Next, we have to compute the partial derivatives of the Lagrangian with respect to the variables $\mathbf{w}, b$ and $\xi$: $\frac{\partial \mathfrak{L}}{\partial \mathbf{w}}, \frac{\partial \mathfrak{L}}{\partial b}, \frac{\partial \mathfrak{L}}{\partial \xi}$. When setting the first partial derivative to zero we obtain an important interim result: 
-$$ \mathbf{w} = \sum_{n=1}^N \alpha_n y_n \mathbf{x}_n $$
+$$ \mathbf{w} = \sum\_{n=1}^N \alpha_n y_n \mathbf{x}\_n $$
 
 This equation states the the optimal solution for the weight vector is given by a linear combination of our training examples. After setting the other partial derivatives to zero, using the result and simplifying the equations we end up with the following optimization problem (for details see section 12.3.1 of the [Mathematics for Machine Learning book](https://mml-book.com)):
 
-$$\min _{\boldsymbol{\alpha}} \frac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} y_{i} y_{j} \alpha_{i} \alpha_{j}\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle-\sum_{i=1}^{N} \alpha_{i}$$
+$$\min\_{\boldsymbol{\alpha}} \frac{1}{2} \sum\_{i=1}^{N} \sum\_{j=1}^{N} y\_{i} y\_{j} \alpha\_{i} \alpha\_{j}\left\langle\mathbf{x}\_{i}, \mathbf{x}\_{j}\right\rangle-\sum\_{i=1}^{N} \alpha\_{i}$$
 $$ \text{subject to:} $$
-$$\sum_{i=1}^{N} y_{i} \alpha_{i}=0$$
-$$0 \le \alpha_{i} \le C \text{ for all } i=1, \ldots, N$$
+$$\sum\_{i=1}^{N} y\_{i} \alpha\_{i}=0$$
+$$0 \le \alpha\_{i} \le C \text{ for all } i=1, \ldots, N$$
 
 
 This constrained quadratic optimization problem can be solved very efficiently, for example with quadratic programming techniques. One popular library for solving dual SVMs is [libsvm](https://github.com/cjlin1/libsvm) which makes use of a decomposition method to solve the problem (see [this paper](https://www.csie.ntu.edu.tw/~cjlin/papers/libsvm.pdf) for more details). However, several other approaches exist.
@@ -570,7 +570,7 @@ Most SVM research in the last decade has been about the dual formulation. Why th
 ## 8. Kernels / non-linear SVM
 
 ### 8.1 What is a kernel? 
-If you take another look at the optimization equation of dual SVMs you will notice that it computes the inner product $\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle$ between all datapoints $\mathbf{x}_{i}, \mathbf{x}_{j}$. A kernel is a way to compute this inner product implicitely in some (potentially very high dimensional) feature space. To be more precise: assume we have some mapping function $\varphi$ which maps an $n$ dimensional input vector to an $m$ dimensional output vector: $\varphi \, : \, \mathbb R^n \to \mathbb R^m$. Given this mapping function we can compute the dot product of two vectors $\mathbf x$ and $\mathbf y$ in this space as follows: $\varphi(\mathbf x)^T \varphi(\mathbf y)$.
+If you take another look at the optimization equation of dual SVMs you will notice that it computes the inner product $\left\langle\mathbf{x}\_{i}, \mathbf{x}\_{j}\right\rangle$ between all datapoints $\mathbf{x}\_{i}, \mathbf{x}\_{j}$. A kernel is a way to compute this inner product implicitely in some (potentially very high dimensional) feature space. To be more precise: assume we have some mapping function $\varphi$ which maps an $n$ dimensional input vector to an $m$ dimensional output vector: $\varphi \, : \, \mathbb R^n \to \mathbb R^m$. Given this mapping function we can compute the dot product of two vectors $\mathbf x$ and $\mathbf y$ in this space as follows: $\varphi(\mathbf x)^T \varphi(\mathbf y)$.
 
 A kernel is a function $k$ that gives the same result as this dot product: $k(\mathbf x, \mathbf y) = \varphi(\mathbf x)^T \varphi(\mathbf y)$. In other words: the kernel function is equivalent to the dot product of the mapping function.
 
@@ -578,9 +578,9 @@ A kernel is a function $k$ that gives the same result as this dot product: $k(\m
 
 Until now (apart from the soft-margin SVM) our SVMs, both primal and dual, are only able to classify data that is [linearly separable](https://en.wikipedia.org/wiki/Linear_separability). However, most datasets in practice won't be of this form. We need a way to classify data that is **not** linearly separable. This is where the so called **kernel trick** comes into play.
 
-Because the objective function of the dual SVM contains inner products only between datapoints $\mathbf{x}_i, \mathbf{x}_j$, we can easily replace this inner product (that is, $\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle$ ) with some mapping function $\varphi(\mathbf{x}_i)^T \varphi(\mathbf{x}_j)$. This mapping function can be non-linear, allowing us to compute an SVM that is non-linear with respect to the input examples. The mapping function takes our input data (which is not linearly separable) and transforms it into some higher-dimensional space where it becomes linearly separable. This is illustrated in the figure below.
+Because the objective function of the dual SVM contains inner products only between datapoints $\mathbf{x}\_i, \mathbf{x}\_j$, we can easily replace this inner product (that is, $\left\langle\mathbf{x}\_{i}, \mathbf{x}\_{j}\right\rangle$ ) with some mapping function $\varphi(\mathbf{x}\_i)^T \varphi(\mathbf{x}\_j)$. This mapping function can be non-linear, allowing us to compute an SVM that is non-linear with respect to the input examples. The mapping function takes our input data (which is not linearly separable) and transforms it into some higher-dimensional space where it becomes linearly separable. This is illustrated in the figure below.
 
-{{< img src="/posts/machine_learning/images/feature_mapping_illustration.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/feature_mapping_illustration.png" width="60%" align="center" >}}
 
 In theory, we could use any mapping function we like. In practice, however, computing inner products is expensive. Therefore, we use mapping functions that have a corresponding kernel function. This will allow us to map the datapoints into a higher dimensional space without ever explicitely computing the (expensive) inner products.
 
@@ -591,11 +591,11 @@ Note: this example was taken from [this StackExchange post](https://stats.stacke
 
 We can create a simple polynomial kernel as follows: $k(\mathbf{x}, \mathbf{y}) = (1 + \mathbf x^T \mathbf y)^2$ with $\mathbf x, \mathbf y \in \mathbb R^2$. The kernel does not seem to correspond to any mapping function $\varphi$, it's just a function that returns a real number. Our input vectors $\mathbf{x}, \mathbf{y}$ are 2-dimensional: $\mathbf x = (x_1, x_2)$ and $\mathbf y = (y_1, y_2)$. With this knowledge we can expand the kernel computation:
 
-$\begin{align*}
+$\begin{align}
 k(\mathbf x, \mathbf y) & = (1 + \mathbf x^T \mathbf y)^2 \\
 &= (1 + x_1 \, y_1  + x_2 \, y_2)^2 \\
  & = 1 + x_1^2 y_1^2 + x_2^2 y_2^2 + 2 x_1 y_1 + 2 x_2 y_2 + 2 x_1 x_2 y_1 y_2
-\end{align*}$
+\end{align}$
 
 Note that this is nothing else but a dot product between two vectors $(1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt{2} x_2, \sqrt{2} x_1 x_2)$ and $(1, y_1^2, y_2^2, \sqrt{2} y_1, \sqrt{2} y_2, \sqrt{2} y_1 y_2)$. This can be expressed with the following mapping function: 
 $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt{2} x_2, \sqrt{2} x_1 x_2)$$
