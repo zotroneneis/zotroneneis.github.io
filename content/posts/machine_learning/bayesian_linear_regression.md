@@ -200,7 +200,7 @@ To perform Bayesian linear regression we follow three steps:
 
 ### 6.1 Step 1: Probabilistic model 
 
-We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian  prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are expected to lie in the interval $[−2,2]$ which is two standard deviations around the mean value 0.
+We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian  prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are normally distributed with mean 0 and standard deviation 1. In other words: the parameter values are most likely to fall into the interval $[−2,2]$ which is two standard deviations around the mean value.
 
 To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}\_0, \pmb{S}\_0)$. Let's further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.
 
