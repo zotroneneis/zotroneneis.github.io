@@ -179,7 +179,7 @@ $$
 
 We will reformulate this to simplify computing the gradient:
 $$
-J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big \\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\} \Big\\]
+J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big \\{ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\} \Big\\}
  
 $$
 
