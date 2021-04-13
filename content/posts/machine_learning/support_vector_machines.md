@@ -186,10 +186,10 @@ $$
 
 The gradient is given by:
 $$
-\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\{\begin{array}{ll}
+\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\\{\begin{array}{ll}
 \mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\\\\\
 \mathbf{w}-C  y\_{n} \mathbf{x}\_{n} & \text { otherwise }
-\end{array}\right.
+\end{array}\right \\}.
 $$
 
 With this formula we can apply stochastic gradient descent to solve the optimization problem.
