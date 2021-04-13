@@ -147,7 +147,7 @@ Let's understand the output of this loss function with a few examples:
 Using the hinge loss we can reformulate the optimization problem of the primal soft-margin SVM. Given a dataset $D = \big \\{ \mathbf{x}\_n, y_n \big \\}\_{n=1}^N$ we would like to minimize the total loss which is now given by:
 
 $$
-\min\_{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^{2} + C \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\}
+\min\_{\mathbf{w}, b} \frac{1}{2}\|\mathbf{w}\|^{2} + C \sum\_{n=1}^{N} \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\\}
 $$
 
 If you would like to understand why this is equivalent to our previous formulation of the soft-margin SVM please take a look at chapter 12.2.5 of the [Mathematics for Machine Learning book](https://mml-book.com).
@@ -160,7 +160,7 @@ Part 1: $\frac{1}{2}\|\mathbf{w}\|^{2}$
 
 This part is also called the *regularization term*. It expresses a preference for solutions that separate the datapoints well, thereby maximizing the margin. In theory, we could replace this term by a different regularization term that expresses a different preference.
 
-Part 2: $\sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\}$
+Part 2: $\sum\_{n=1}^{N} \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle+b\right)\right\\}$
 
 This part is also called the *empirical loss*. In our case it's the hinge loss which penalizes solutions that make mistakes when classifying the training examples. In theory, this term could be replaced with another loss function that expresses a different preference.
 
@@ -174,12 +174,12 @@ The hinge loss function is not differentiable (namely at the point $t=1$). There
 
 Our cost function is then given by 
 $$
-J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}
+J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\}
 $$
 
 We will reformulate this to simplify computing the gradient:
 $$
-J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big\\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}\Big\\]
+J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big\\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\}\Big\\]
 $$
 
 
@@ -205,7 +205,7 @@ $$ f(w) - f(w_0) \ge g \cdot (w - w_0) $$
 
 If $f$ is differentiable at $w_0$, the subgradient contains only one vector which equals the gradient $\nabla f(w_0)$. If, however, $f$ is not differentiable, there may be several values for $g$ that satisfy this inequality. This is illustrated in the figure below.
 
-{{< img src="/posts/machine_learning/images/gradient_vs_subgradient.png" width="60%" align="center" >}}
+{{< img src="/posts/machine_learning/images/gradient_vs_subgradient.png" width="65%" align="center" >}}
 
 #### Subgradient method
 
@@ -248,7 +248,7 @@ features_train, features_test, labels_train, labels_test = train_test_split(feat
 ```
 
 
-{{< img src="/posts/machine_learning/images/svm_dataset.png" width="60%" align="center" >}}
+{{< img src="/posts/machine_learning/images/svm_dataset.png" width="55%" align="center" >}}
 
 ### 5.2 SVM class definition 
 
@@ -256,7 +256,7 @@ Next, we would like to implement an SVM class. We will use the knowledge we alre
 
 1. Our objective function using the hinge loss function is given by: 
 $$
-J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\}
+J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\}
 $$
 2. We can minimize this function by computing the gradient: 
 $$
@@ -465,7 +465,7 @@ plt.xlabel("Feature 1")
 plt.show()
 ```
 
-{{< img src="/posts/machine_learning/images/svm_decision_boundary.png" width="60%" align="center" >}}
+{{< img src="/posts/machine_learning/images/svm_decision_boundary.png" width="55%" align="center" >}}
 
 
 ## 6. Dual approach 
