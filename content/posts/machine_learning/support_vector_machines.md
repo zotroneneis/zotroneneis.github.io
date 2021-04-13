@@ -65,7 +65,7 @@ $$
 
 In words: we want to find the values for $\mathbf{w}$ and $b$ that maximize the margin while classifying all training examples correctly. This approach is called the *hard-margin support vector machine*. "Hard" because it does not allow for violations of the margin requirement (= no points are allowed to be within the margin).
 
-## (Optional) Deriving the margin equation
+### 2.4 (Optional) Deriving the margin equation
 
 We can derive the width of the margin in several ways (see sections 12.2.1-12.2.2 of the [Mathematics for Machine Learning book](https://mml-book.com)). Personally, I found the explanation of [this MIT lecture on SVMs](https://www.youtube.com/watch?v=_PwhiWxHK8o) easiest to understand.
 
@@ -180,9 +180,7 @@ $$
 We will reformulate this to simplify computing the gradient:
 $$
 J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big \\{ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\} \Big\\}
- 
 $$
-
 
 The gradient is given by:
 $$
