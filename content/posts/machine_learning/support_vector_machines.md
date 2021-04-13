@@ -36,7 +36,7 @@ The support vectors lie exactly on the margin and the optimal separating hyperpl
 
 {{< img src="/posts/machine_learning/images/delimiting_hyperplanes.png" width="40%" align="center" >}}
 
-**Goal 1**    
+### 2.1 Goal 1
 When deriving a formal equation for the maximum margin hyperplane we assume that the two delimiting hyperplanes are given by:   
 $$\langle \mathbf{w}, \mathbf{x}\_{+} \rangle + b = +1$$ 
 $$\langle \mathbf{w}, \mathbf{x}\_{-} \rangle + b = -1$$
@@ -46,7 +46,7 @@ In other words: we want our datapoints two lie at least a distance of 1 away fro
 For our negative examples (those with label $y_n = -1$) we want the opposite: $\langle \mathbf{w}, \mathbf{x}\_n \rangle + b \le -1$. This can be combined into a single equation: $y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1$. This is our first goal: **We want a decision boundary that classifies our training examples correctly.**
 
 
-**Goal 2**     
+### 2.2 Goal 2
 Our second goal is to maximize the margin of this decision boundary. The margin is given by $\frac{1}{\mathbf{w}}$. If you would like to understand where this value is coming from take a look at the section "*(Optional) Deriving the margin equation*" below.
 
 Our goal to maximize the margin can be expressed as follows:
@@ -54,7 +54,7 @@ $$ \max\_{\mathbf{w}, b} \frac{1}{\Vert \mathbf{w} \Vert}$$
 
 Instead of maximizing $\frac{1}{\Vert \mathbf{w} \Vert}$ we can instead minimize $\frac{1}{2} \Vert \mathbf{w} \Vert^2$. This simplifies the computation of the gradient.
 
-**Combined goal**    
+### 2.3 Combined goal
 Combining goal one and goal two yields the following objective function:   
 $$
 \min\_{\mathbf{w}, b} \frac{1}{2} \Vert \mathbf{w} \Vert^2
@@ -152,7 +152,7 @@ $$
 
 If you would like to understand why this is equivalent to our previous formulation of the soft-margin SVM please take a look at chapter 12.2.5 of the [Mathematics for Machine Learning book](https://mml-book.com).
 
-### [Optional] Three parts of the objective function 
+### 4.3 [Optional] Three parts of the objective function 
 
 Our objective function can be divided into three distinct parts:
 
@@ -166,7 +166,7 @@ This part is also called the *empirical loss*. In our case it's the hinge loss w
 
 Part 3: The hyperparameter $C$ that controls the tradeoff between a large margin and a small hinge loss.
 
-### 4.3 Sub-gradient descent
+### 4.4 Sub-gradient descent
 
 The hinge loss function is not differentiable (namely at the point $t=1$). Therefore, we cannot compute the gradient right away. However, we can use a method called [subgradient descent](https://en.wikipedia.org/wiki/Subgradient_method) to solve our optimization problem. To simplify the derivation we will adapt two things:
 1. We assume that the bias $b$ is contained in our weight vector as the first entry $w_0$, that is $\mathbf{w} = [b, w_1, ..., w_D]$
@@ -194,11 +194,11 @@ $$
 
 With this formula we can apply stochastic gradient descent to solve the optimization problem.
 
-### [Optional] Difference subgradient descent and gradient descent 
+### 4.5 [Optional] Difference subgradient descent and gradient descent 
 
 The subgradient method allows us to minimize a non-differentiable convex function. Although looking similar to gradient descent the method has several important differences.
 
-#### What is a subgradient?
+#### 4.5.1 What is a subgradient?
 
 A subgradient can be described as a generalization of gradients to non-differentiable functions. Informally, a sub-tangent at a point is any line that lies below the function at the point. The subgradient is the slope of this line. Formally, the subgradient a convex function $f$ at $w_0$ is defined as all vectors $g$ such that for any other point $w$
 
@@ -208,7 +208,7 @@ If $f$ is differentiable at $w_0$, the subgradient contains only one vector whic
 
 {{< img src="/posts/machine_learning/images/gradient_vs_subgradient.png" width="65%" align="center" >}}
 
-#### Subgradient method
+#### 4.5.2 Subgradient method
 
 To minimize the objective function $f$ the subgradient method uses the following update formula for iteration $k+1$:
 
