@@ -82,7 +82,7 @@ Let's say we have a positive example $\mathbf{x}\_{+}$ that lies on the right de
 
 $$
 \begin{align}
-\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
+\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\\\\\
 &= \frac{\mathbf{x}\_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}\_{-} \cdot \mathbf{w}}{||\mathbf{w}||}
 \end{align}
 $$
@@ -91,10 +91,10 @@ For the positive example $\mathbf{x}\_{+}$ we have $y\_+ = +1$ and therefore $(\
 
 $$
 \begin{align}
-\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\
-&= \frac{\mathbf{x}\_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}\_{-} \cdot \mathbf{w}}{||\mathbf{w}||} \\ 
-&= \frac{(1 - b) + (1 + b)}{||\mathbf{w}||}\\ 
-&= \frac{2}{||\mathbf{w}||}\\ 
+\text{width} &= (\mathbf{x}\_{+} - \mathbf{x}\_{-}) \cdot \frac{\mathbf{w}}{||\mathbf{w}||} \\\\\\
+&= \frac{\mathbf{x}\_{+} \cdot \mathbf{w}}{||\mathbf{w}||} - \frac{\mathbf{x}\_{-} \cdot \mathbf{w}}{||\mathbf{w}||} \\\\\\
+&= \frac{(1 - b) + (1 + b)}{||\mathbf{w}||}\\\\\\
+&= \frac{2}{||\mathbf{w}||}\\\\\\
 \end{align}
 $$
 
@@ -179,14 +179,15 @@ $$
 
 We will reformulate this to simplify computing the gradient:
 $$
-J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big\\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\}\Big\\]
+J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^{N} \Big \\[ \frac{1}{2}\|\mathbf{w}\|^{2} + C \max \left\\{0,1-y\_{n}\left(\left\langle\mathbf{w}, \mathbf{x}\_{n}\right\rangle\right)\right\\} \Big\\]
+ 
 $$
 
 
 The gradient is given by:
 $$
 \nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\{\begin{array}{ll}
-\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\
+\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\\\\\
 \mathbf{w}-C  y\_{n} \mathbf{x}\_{n} & \text { otherwise }
 \end{array}\right.
 $$
@@ -260,10 +261,10 @@ J(\mathbf{w}) = \frac{1}{2}\|\mathbf{w}\|^{2} + C \frac{1}{N} \sum\_{n=1}^{N} \m
 $$
 2. We can minimize this function by computing the gradient: 
 $$
-\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left\{\begin{array}{ll}
-\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\
+\nabla\_{w} J(\mathbf{w}) = \frac{1}{N} \sum\_{n=1}^N \left \\{ \begin{array}{ll}
+\mathbf{w} & \text{if} \max \left(0,1-y\_{n} \left(\langle \mathbf{w}, \mathbf{x}\_{n} \rangle \right)\right)=0 \\\\\\
 \mathbf{w}-C  y\_{n} \mathbf{x}\_{n} & \text { otherwise }
-\end{array}\right.
+\end{array} \right \\}.
 $$
 3. Given the gradient we use stochastic gradient descent to train our model
 4. After training our model we can make predictions using the [sign function](https://en.wikipedia.org/wiki/Sign_function)
@@ -488,24 +489,24 @@ We want to find those values $x_m, y_m$ where $\nabla f(x_m, y_m) = \lambda \nab
 
 In our example the gradient vectors look as follows:
 $$ \nabla f(x, y)=\left[\begin{array}{c}
-\frac{\partial}{\partial x}(2 x+y) \\
+\frac{\partial}{\partial x}(2 x+y) \\\\\\
 \frac{\partial}{\partial y}(2 x+y)
 \end{array}\right]=\left[\begin{array}{c}
-2 \\ 1
+2 \\\\\\ 1
 \end{array}\right]$$
  
 $$ \nabla g(x, y)=\left[\begin{array}{c}
-\frac{\partial}{\partial x}\left(x^{2}+y^{2}-1\right) \\
+\frac{\partial}{\partial x}\left(x^{2}+y^{2}-1\right) \\\\\\
 \frac{\partial}{\partial y}\left(x^{2}+y^{2}-1\right)
 \end{array}\right]=\left[\begin{array}{c}
-2 x \\ 2 y
+2 x \\\\\\ 2 y
 \end{array}\right]$$
 
 Therefore, the tangency condition results in 
 $$ \left[\begin{array}{l}
-2 \\ 1
+2 \\\\\\ 1
 \end{array}\right]=\lambda \left[\begin{array}{l}
-2 x\_{m} \\ 2 y\_{m}
+2 x\_{m} \\\\\\ 2 y\_{m}
 \end{array}\right] $$
 
 We can rewrite the vector form into individual equations that can be solved by hand:
@@ -515,7 +516,7 @@ We can rewrite the vector form into individual equations that can be solved by h
 
 Solving the equations yields 
 $$ \begin{aligned}
-\left(x\_{0}, y\_{0}\right) &=\left(\frac{1}{\lambda\_{0}}, \frac{1}{2 \lambda\_{0}}\right) \\
+\left(x\_{0}, y\_{0}\right) &=\left(\frac{1}{\lambda\_{0}}, \frac{1}{2 \lambda\_{0}}\right) \\\\\\
 &=\left(\frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}}\right) \quad \text { or } \quad\left(\frac{-2}{\sqrt{5}}, \frac{-1}{\sqrt{5}}\right)
 \end{aligned} $$
 
@@ -543,7 +544,7 @@ To derive the corresponding Lagrangian we will introduce two Lagrange multiplier
 
 $$
 \begin{aligned}
-\mathfrak{L}(\boldsymbol{w}, b, \xi, \alpha, \gamma)=& \frac{1}{2}\|\boldsymbol{w}\|^{2}+C \sum\_{n=1}^{N} \xi\_{n} \\
+\mathfrak{L}(\boldsymbol{w}, b, \xi, \alpha, \gamma)=& \frac{1}{2}\|\boldsymbol{w}\|^{2}+C \sum\_{n=1}^{N} \xi\_{n} \\\\\\
 & \underbrace{-\sum\_{n=1}^{N} \alpha\_{n}\left(y\_{n}\left(\left\langle\boldsymbol{w}, \boldsymbol{x}\_{n}\right\rangle+b\right)-1+\xi\_{n}\right)}\_{\text{first constraint}} \underbrace{-\sum\_{n=1}^{N} \gamma\_{n} \xi\_{n}}\_{\text{second constraint}}
 \end{aligned}
 $$
@@ -592,8 +593,8 @@ Note: this example was taken from [this StackExchange post](https://stats.stacke
 We can create a simple polynomial kernel as follows: $k(\mathbf{x}, \mathbf{y}) = (1 + \mathbf x^T \mathbf y)^2$ with $\mathbf x, \mathbf y \in \mathbb R^2$. The kernel does not seem to correspond to any mapping function $\varphi$, it's just a function that returns a real number. Our input vectors $\mathbf{x}, \mathbf{y}$ are 2-dimensional: $\mathbf x = (x_1, x_2)$ and $\mathbf y = (y_1, y_2)$. With this knowledge we can expand the kernel computation:
 
 $\begin{align}
-k(\mathbf x, \mathbf y) & = (1 + \mathbf x^T \mathbf y)^2 \\
-&= (1 + x_1 \, y_1  + x_2 \, y_2)^2 \\
+k(\mathbf x, \mathbf y) & = (1 + \mathbf x^T \mathbf y)^2 \\\\\\
+&= (1 + x_1 \, y_1  + x_2 \, y_2)^2 \\\\\\
  & = 1 + x_1^2 y_1^2 + x_2^2 y_2^2 + 2 x_1 y_1 + 2 x_2 y_2 + 2 x_1 x_2 y_1 y_2
 \end{align}$
 
