@@ -1,6 +1,6 @@
 ---
 title: Support vector machines
-date: 2021-02-20
+date: 2021-04-13
 menu:
   sidebar:
     name: Support vector machines
