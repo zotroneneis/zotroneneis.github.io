@@ -36,7 +36,7 @@ The support vectors lie exactly on the margin and the optimal separating hyperpl
 
 {{< img src="/posts/machine_learning/images/delimiting_hyperplanes.png" width="40%" align="center" >}}
 
-#### 2.1 Goal 1:
+**Goal 1**
 When deriving a formal equation for the maximum margin hyperplane we assume that the two delimiting hyperplanes are given by:   
 $$\langle \mathbf{w}, \mathbf{x}\_{+} \rangle + b = +1$$ 
 $$\langle \mathbf{w}, \mathbf{x}\_{-} \rangle + b = -1$$
@@ -46,7 +46,7 @@ In other words: we want our datapoints two lie at least a distance of 1 away fro
 For our negative examples (those with label $y_n = -1$) we want the opposite: $\langle \mathbf{w}, \mathbf{x}\_n \rangle + b \le -1$. This can be combined into a single equation: $y_n(\langle \mathbf{w}, \mathbf{x}\_n \rangle + b) \ge 1$. This is our first goal: **We want a decision boundary that classifies our training examples correctly.**
 
 
-#### 2.2 Goal 2:
+**Goal 2**
 Our second goal is to maximize the margin of this decision boundary. The margin is given by $\frac{1}{\mathbf{w}}$. If you would like to understand where this value is coming from take a look at the section "*(Optional) Deriving the margin equation*" below.
 
 Our goal to maximize the margin can be expressed as follows:
@@ -54,7 +54,7 @@ $$ \max\_{\mathbf{w}, b} \frac{1}{\Vert \mathbf{w} \Vert}$$
 
 Instead of maximizing $\frac{1}{\Vert \mathbf{w} \Vert}$ we can instead minimize $\frac{1}{2} \Vert \mathbf{w} \Vert^2$. This simplifies the computation of the gradient.
 
-#### 2.3 Combined goal
+**Combined goal**
 Combining goal one and goal two yields the following objective function:   
 $$
 \min\_{\mathbf{w}, b} \frac{1}{2} \Vert \mathbf{w} \Vert^2
