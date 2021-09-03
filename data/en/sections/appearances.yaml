@@ -21,13 +21,13 @@ buttons:
 # your appearances
 appearances:
 - name: SpeakUp interview at Women in Tech
-  logo: 
+  logo: /images/sections/appearances/women_in_tech.png
   event: SpeakUp, Women in Tech
   timeline: "Jun 16, 2021"
   url: https://m.youtube.com/watch?v=e1URhUDX76I)
   summary: I'm a guest at the "#SpeakUp" series of Women in Tech 
   tags: ['talks']
-  logo: 
+  logo: /images/sections/appearances/women_in_tech.png
 - name: Testing without dependencies, mocking in Python
   logo: /images/sections/appearances/talkpython.png
   event: Talk Python To Me 
