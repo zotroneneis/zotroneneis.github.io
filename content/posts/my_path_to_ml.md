@@ -6,7 +6,7 @@ menu:
     name: My path to machine learning
     identifier: my_path_to_ml
     parent: 
-    weight: 1
+    weight: 2
 ---
 
 My enthusiasm for machine learning arose from my fascination for the human brain. I have been fascinated by the complexity of the human brain for most of my life. Consequently, I decided to study cognitive science in Osnabrück, Germany. After attending a machine learning class in my fourth semester I discovered my true passion: The study and delevopment of algorithms that can learn on their own, developing a sense of intelligence.

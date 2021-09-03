@@ -10,7 +10,7 @@ menu:
 ---
 
 ## 2021
-**2021-09-01** I have been selected as one of the three finalists for the ["Digital Female Leader Award 20201"](https://digital-female-leader.de/en/)!
+**2021-09-01** I have been selected as one of the [three finalists](https://journeytodiversity.de/en/finalists21/anna-lena-popkes/) for the ["Digital Female Leader Award 2021"](https://digital-female-leader.de/en/)!
 
 **2021-07-28** I will be talking at [Euro Python 2021](https://ep2021.europython.eu/) today, check out the talk description [here](https://ep2021.europython.eu/talks/8MPLDsh-finding-magic-in-python/)
 
