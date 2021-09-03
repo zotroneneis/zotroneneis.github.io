@@ -1,73 +1,301 @@
-<!doctype html><html><head><title>Bayesian linear regression</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/navigators/navbar.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=icon type=image/png href=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg><link rel=stylesheet href=/css/style.css><meta name=description content="Bayesian linear regression"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css><link rel=stylesheet href=/css/layouts/single.css><link rel=stylesheet href=/css/navigators/sidebar.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span></button>
-<a class=navbar-brand href=/><img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>Anna-Lena Popkes</a>
+<!doctype html><html>
+<head>
+<title>Bayesian linear regression</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<link rel=stylesheet href=/css/bootstrap.min.css>
+<link rel=stylesheet href=/css/layouts/main.css>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/navigators/navbar.css>
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
+<link rel=icon type=image/png href=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>
+<link rel=stylesheet href=/css/style.css>
+<meta name=description content="Bayesian linear regression">
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css>
+<link rel=stylesheet href=/css/layouts/single.css>
+<link rel=stylesheet href=/css/navigators/sidebar.css>
+</head>
+<body data-spy=scroll data-target=#TableOfContents data-offset=80>
+<div class="container-fluid bg-dimmed wrapper">
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+<div class=container>
+<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span>
+</button>
+<a class=navbar-brand href=/>
+<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>Anna-Lena Popkes</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=main-logo>
-<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=inverted-logo></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><input type=text placeholder=Search data-search id=search-box><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><a href=/posts/my_path_to_ml/>My path to machine learning</a></li><li><i class="fas fa-plus-circle"></i><a href=/posts/books/>Books</a><ul><li><a href=/posts/books/reading_list/>Personal reading List</a></li><li><a href=/posts/books/deep_work/>Deep work</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/posts/machine_learning/>Machine Learning</a><ul class=active><li><a class=active href=/posts/machine_learning/bayesian_linear_regression/>Bayesian linear regression</a></li><li><a href=/posts/machine_learning/kl_divergence/>KL Divergence</a></li><li><a href=/posts/machine_learning/support_vector_machines/>Support vector machines</a></li><li><a href=/posts/machine_learning/variational_inference/>Variational Inference</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/posts/python/>Python</a><ul><li><a href=/posts/python/mocking/>Mocking</a></li><li><i class="fas fa-plus-circle"></i><a href=/posts/python/magical_universe/>Magical Universe</a><ul><li><a href=/posts/python/magical_universe/day_1_start/>Start</a></li><li><a href=/posts/python/magical_universe/day_1_magical_universe/>The Tales of Castle Kilmere</a></li><li><a href=/posts/python/magical_universe/day_1_first_post_oop/>Object-oriented programming</a></li><li><a href=/posts/python/magical_universe/day_2_types_of_methods/>Types of methods</a></li><li><a href=/posts/python/magical_universe/day_3_type_annotations/>Type annotations</a></li><li><a href=/posts/python/magical_universe/day_4_to_string_conversion/>To-string conversion</a></li><li><a href=/posts/python/magical_universe/day_5_decorators/>Decorators</a></li><li><a href=/posts/python/magical_universe/day_6_properties/>Properties</a></li><li><a href=/posts/python/magical_universe/day_7_underscore_patterns/>Underscore patterns</a></li><li><a href=/posts/python/magical_universe/day_8_extending_universe/>Extending the universe</a></li><li><a href=/posts/python/magical_universe/day_9_duck_typing/>Duck Typing</a></li><li><a href=/posts/python/magical_universe/day_10_11_namedtuples/>Namedtuples</a></li><li><a href=/posts/python/magical_universe/day_12_to_15_abcs/>Abstract Base Classes</a></li><li><a href=/posts/python/magical_universe/day_16_to_18_data_classes/>Data classes</a></li><li><a href=/posts/python/magical_universe/day_19_immutable_data_classes/>Immutable data classes</a></li><li><a href=/posts/python/magical_universe/day_20_decorators_in_classes/>Decorators in classes</a></li><li><a href=/posts/python/magical_universe/day_21_if_main/>if __name__ == "__main__"</a></li><li><a href=/posts/python/magical_universe/day_22_to_24_context_managers/>Context managers</a></li><li><a href=/posts/python/magical_universe/day_25_to_28_pytest/>Testing with pytest</a></li><li><a href=/posts/python/magical_universe/day_29_to_31_iterators/>Iterators</a></li><li><a href=/posts/python/magical_universe/day_34_multisets/>Multisets</a></li><li><a href=/posts/python/magical_universe/day_37_extending_universe/>Extending the universe II</a></li><li><a href=/posts/python/magical_universe/day_43_to_45_exception_classes/>Exception classes</a></li><li><a href=/posts/python/magical_universe/day_46_functools_wraps/>functools.wraps</a></li><li><a href=/posts/python/magical_universe/day_47_to_48_defaultdict/>Defaultdict</a></li><li><a href=/posts/python/magical_universe/day_49_to_50_config_files/>Config files</a></li><li><a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/>Wrap up</a></li></ul></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/posts/software_engineering/>Software Engineering</a><ul><li><a href=/posts/software_engineering/containers/>Intro to containers</a></li><li><a href=/posts/software_engineering/docker/>Intro to Docker</a></li><li><a href=/posts/software_engineering/virtual_machines/>Intro to virtual machines</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class=content><div class="container p-0 read-area"><div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://alpopkes.com/images/default-hero.jpg)></div><div class=page-content><div class="author-profile ml-auto align-self-lg-center"><img class=rounded-circle src=/images/author/image_al.jpg><h5 class=author-name>Anna-Lena Popkes</h5><p>February 20, 2021</p></div><div class=title><h1>Bayesian linear regression</h1></div><div class=post-content id=post-content><p>I finally found time to continue working on my <a href=https://github.com/zotroneneis/machine_learning_basics>machine learning basics repository</a> which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb>original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the notebook directly in your Browser using Binder</a>.</p><h2 id=1-what-is-bayesian-linear-regression-blr>1. What is Bayesian linear regression (BLR)?</h2><p>Bayesian linear regression is the <em>Bayesian</em> interpretation of linear regression. What does that mean? To answer this question we first have to understand the Bayesian approach. In most of the algorithms we have looked at so far we computed <em>point estimates</em> of our parameters. For example, in linear regression we chose values for the weights and bias that minimized our mean squared error cost function. In the Bayesian approach we don&rsquo;t work with exact values but with <em>probabilities</em>. This allows us to model the <em>uncertainty</em> in our parameter estimates. Why is this important?</p><p>In nearly all real-world situations, our data and knowledge about the world is incomplete, indirect and noisy. Hence, uncertainty must be a fundamental part of our decision-making process. This is exactly what the Bayesian approach is about. It provides a formal and consistent way to reason in the presence of uncertainty. Bayesian methods have been around for a long time and are widely-used in many areas of science (e.g. astronomy). Although Bayesian methods have been applied to machine learning problems too, they are usually less well known to beginners. The major reason is that they require a good understanding of probability theory.</p><p>In the following post we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples. Remember: you can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the original notebook directly in your Browser using Binder</a>.</p><h2 id=2-recap-linear-regression>2. Recap linear regression</h2><ul><li>In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$.</li><li>We are given an input dataset $D = \Big \{ \mathbf{x}_n, y_n \Big \}_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise</li><li>Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations</li><li>In linear regression, we model the underlying function $f$ using a linear combination of the input features:</li></ul><p>$$
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
+<ul class="navbar-nav ml-auto">
+</ul>
+</div>
+</div>
+<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=main-logo>
+<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=inverted-logo>
+</nav>
+<section class=sidebar-section id=sidebar-section>
+<div class=sidebar-holder>
+<div class=sidebar id=sidebar>
+<input type=text placeholder=Search data-search id=search-box>
+<div class=sidebar-tree>
+<ul class=tree id=tree>
+<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
+<div class=subtree>
+<li><a href=/posts/my_path_to_ml/>My path to machine learning</a></li>
+<li><a href=/posts/news/>Personal news</a></li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/books/>Books</a>
+<ul>
+<li><a href=/posts/books/reading_list/>Personal reading List</a></li>
+<li><a href=/posts/books/deep_work/>Deep work</a></li>
+</ul>
+</li>
+<li>
+<i class="fas fa-minus-circle"></i><a class=active href=/posts/machine_learning/>Machine Learning</a>
+<ul class=active>
+<li><a class=active href=/posts/machine_learning/bayesian_linear_regression/>Bayesian linear regression</a></li>
+<li><a href=/posts/machine_learning/kl_divergence/>KL Divergence</a></li>
+<li><a href=/posts/machine_learning/support_vector_machines/>Support vector machines</a></li>
+<li><a href=/posts/machine_learning/variational_inference/>Variational Inference</a></li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/python/>Python</a>
+<ul>
+<li><a href=/posts/python/mocking/>Mocking</a></li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/python/magical_universe/>Magical Universe</a>
+<ul>
+<li><a href=/posts/python/magical_universe/day_1_start/>Start</a></li>
+<li><a href=/posts/python/magical_universe/day_1_magical_universe/>The Tales of Castle Kilmere</a></li>
+<li><a href=/posts/python/magical_universe/day_1_first_post_oop/>Object-oriented programming</a></li>
+<li><a href=/posts/python/magical_universe/day_2_types_of_methods/>Types of methods</a></li>
+<li><a href=/posts/python/magical_universe/day_3_type_annotations/>Type annotations</a></li>
+<li><a href=/posts/python/magical_universe/day_4_to_string_conversion/>To-string conversion</a></li>
+<li><a href=/posts/python/magical_universe/day_5_decorators/>Decorators</a></li>
+<li><a href=/posts/python/magical_universe/day_6_properties/>Properties</a></li>
+<li><a href=/posts/python/magical_universe/day_7_underscore_patterns/>Underscore patterns</a></li>
+<li><a href=/posts/python/magical_universe/day_8_extending_universe/>Extending the universe</a></li>
+<li><a href=/posts/python/magical_universe/day_9_duck_typing/>Duck Typing</a></li>
+<li><a href=/posts/python/magical_universe/day_10_11_namedtuples/>Namedtuples</a></li>
+<li><a href=/posts/python/magical_universe/day_12_to_15_abcs/>Abstract Base Classes</a></li>
+<li><a href=/posts/python/magical_universe/day_16_to_18_data_classes/>Data classes</a></li>
+<li><a href=/posts/python/magical_universe/day_19_immutable_data_classes/>Immutable data classes</a></li>
+<li><a href=/posts/python/magical_universe/day_20_decorators_in_classes/>Decorators in classes</a></li>
+<li><a href=/posts/python/magical_universe/day_21_if_main/>if __name__ == "__main__"</a></li>
+<li><a href=/posts/python/magical_universe/day_22_to_24_context_managers/>Context managers</a></li>
+<li><a href=/posts/python/magical_universe/day_25_to_28_pytest/>Testing with pytest</a></li>
+<li><a href=/posts/python/magical_universe/day_29_to_31_iterators/>Iterators</a></li>
+<li><a href=/posts/python/magical_universe/day_34_multisets/>Multisets</a></li>
+<li><a href=/posts/python/magical_universe/day_37_extending_universe/>Extending the universe II</a></li>
+<li><a href=/posts/python/magical_universe/day_43_to_45_exception_classes/>Exception classes</a></li>
+<li><a href=/posts/python/magical_universe/day_46_functools_wraps/>functools.wraps</a></li>
+<li><a href=/posts/python/magical_universe/day_47_to_48_defaultdict/>Defaultdict</a></li>
+<li><a href=/posts/python/magical_universe/day_49_to_50_config_files/>Config files</a></li>
+<li><a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/>Wrap up</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<i class="fas fa-plus-circle"></i><a href=/posts/software_engineering/>Software Engineering</a>
+<ul>
+<li><a href=/posts/software_engineering/containers/>Intro to containers</a></li>
+<li><a href=/posts/software_engineering/docker/>Intro to Docker</a></li>
+<li><a href=/posts/software_engineering/virtual_machines/>Intro to virtual machines</a></li>
+</ul>
+</li>
+</div>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class=content-section id=content-section>
+<div class=content>
+<div class="container p-0 read-area">
+<div class="hero-area col-sm-12" id=hero-area style=background-image:url(https://alpopkes.com/images/default-hero.jpg)>
+</div>
+<div class=page-content>
+<div class="author-profile ml-auto align-self-lg-center">
+<img class=rounded-circle src=/images/author/image_al.jpg>
+<h5 class=author-name>Anna-Lena Popkes</h5>
+<p>February 20, 2021</p>
+</div>
+<div class=title>
+<h1>Bayesian linear regression</h1>
+</div>
+<div class=post-content id=post-content>
+<p>I finally found time to continue working on my <a href=https://github.com/zotroneneis/machine_learning_basics>machine learning basics repository</a> which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb>original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the notebook directly in your Browser using Binder</a>.</p>
+<h2 id=1-what-is-bayesian-linear-regression-blr>1. What is Bayesian linear regression (BLR)?</h2>
+<p>Bayesian linear regression is the <em>Bayesian</em> interpretation of linear regression. What does that mean? To answer this question we first have to understand the Bayesian approach. In most of the algorithms we have looked at so far we computed <em>point estimates</em> of our parameters. For example, in linear regression we chose values for the weights and bias that minimized our mean squared error cost function. In the Bayesian approach we don&rsquo;t work with exact values but with <em>probabilities</em>. This allows us to model the <em>uncertainty</em> in our parameter estimates. Why is this important?</p>
+<p>In nearly all real-world situations, our data and knowledge about the world is incomplete, indirect and noisy. Hence, uncertainty must be a fundamental part of our decision-making process. This is exactly what the Bayesian approach is about. It provides a formal and consistent way to reason in the presence of uncertainty. Bayesian methods have been around for a long time and are widely-used in many areas of science (e.g. astronomy). Although Bayesian methods have been applied to machine learning problems too, they are usually less well known to beginners. The major reason is that they require a good understanding of probability theory.</p>
+<p>In the following post we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples. Remember: you can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the original notebook directly in your Browser using Binder</a>.</p>
+<h2 id=2-recap-linear-regression>2. Recap linear regression</h2>
+<ul>
+<li>In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$.</li>
+<li>We are given an input dataset $D = \Big \{ \mathbf{x}_n, y_n \Big \}_{n=1}^N$, where $y_n$ is a noisy observation value: $y_n = f(x_n) + \epsilon$, with $\epsilon$ being an i.i.d. random variable that describes measurement/observation noise</li>
+<li>Our goal is to infer the underlying function $f$ that generated the data such that we can predict function values at new input locations</li>
+<li>In linear regression, we model the underlying function $f$ using a linear combination of the input features:</li>
+</ul>
+<p>$$
 \begin{split}
-y &= \theta_0 + \theta_1 x_1 + \theta_2 x_2 + &mldr; + \theta_d x_d \\\<br>&= \pmb{x}^T \pmb{\theta}
+y &= \theta_0 + \theta_1 x_1 + \theta_2 x_2 + &mldr; + \theta_d x_d \\\<br>
+&= \pmb{x}^T \pmb{\theta}
 \end{split}
-$$</p><ul><li>For more details take a look at the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a></li></ul><h2 id=3-fundamental-concepts>3. Fundamental concepts</h2><ul><li>One fundamental tool in Bayesian learning is <a href=https://en.wikipedia.org/wiki/Bayes%27_theorem>Bayes' theorem</a></li><li>Bayes' theorem looks as follows:
+$$</p>
+<ul>
+<li>For more details take a look at the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a></li>
+</ul>
+<h2 id=3-fundamental-concepts>3. Fundamental concepts</h2>
+<ul>
+<li>One fundamental tool in Bayesian learning is <a href=https://en.wikipedia.org/wiki/Bayes%27_theorem>Bayes' theorem</a></li>
+<li>Bayes' theorem looks as follows:
 $$
 \begin{equation}
 p(\pmb{\theta} | \mathbf{x}, y) = \frac{p(y | \pmb{x}, \pmb{\theta})p(\pmb{\theta})}{p(\pmb{x}, y)}
 \end{equation}
-$$</li><li>$p(y | \pmb{x}, \pmb{\theta})$ is the <em>likelihood</em>. It describes the probability of the target values given the data and parameters.</li><li>$p(\pmb{\theta})$ is the <em>prior</em>. It describes our initial knowledge about which parameter values are likely and unlikely.</li><li>$p(\pmb{x}, y)$ is the <em>evidence</em>. It describes the joint probability of the data and targets.</li><li>$p(\pmb{\theta} | \pmb{x}, y)$ is the <em>posterior</em>. It describes the probability of the parameters given the observed data and targets.</li><li>Another important tool you need to know about is the <a href=https://en.wikipedia.org/wiki/Normal_distribution>Gaussian distribution</a>. If you are not familiar with it I suggest you pause for a minute and understand its main properties before reading on.</li></ul><p>The general Bayesian inference approach is as follows:</p><ol><li>We start with some prior belief about a hypothesis p(h)</li><li>We observe some data, gaining new evidence $e$</li><li>We update our belief using Bayes' theorem, resulting</li></ol><p>Finally, we use Bayes' theorem
+$$</li>
+<li>$p(y | \pmb{x}, \pmb{\theta})$ is the <em>likelihood</em>. It describes the probability of the target values given the data and parameters.</li>
+<li>$p(\pmb{\theta})$ is the <em>prior</em>. It describes our initial knowledge about which parameter values are likely and unlikely.</li>
+<li>$p(\pmb{x}, y)$ is the <em>evidence</em>. It describes the joint probability of the data and targets.</li>
+<li>$p(\pmb{\theta} | \pmb{x}, y)$ is the <em>posterior</em>. It describes the probability of the parameters given the observed data and targets.
+</li>
+<li>Another important tool you need to know about is the <a href=https://en.wikipedia.org/wiki/Normal_distribution>Gaussian distribution</a>. If you are not familiar with it I suggest you pause for a minute and understand its main properties before reading on.</li>
+</ul>
+<p>The general Bayesian inference approach is as follows:</p>
+<ol>
+<li>We start with some prior belief about a hypothesis p(h)</li>
+<li>We observe some data, gaining new evidence $e$</li>
+<li>We update our belief using Bayes' theorem, resulting</li>
+</ol>
+<p>Finally, we use Bayes' theorem
 $p(h|e) = \frac{p(e |h)p(h)}{p(e)}$
-to incorporate the new evidence yielding a refined posterior belief</p><h2 id=4-linear-regression-from-a-probabilistic-perspective>4. Linear regression from a probabilistic perspective</h2><p>In order to pave the way for Bayesian linear regression we will take a probabilistic spin on linear regression. Let&rsquo;s start by explicitly modelling the observation noise $\epsilon$. For simplicity, we assume that $\epsilon$ is normally distributed with mean $0$ and some known variance $\sigma^2$: $\epsilon \sim \mathcal{N}(0, \sigma^2)$.</p><p>As mentioned in the beginning, a simple linear regression model assumes that the target function $f(x)$ is given by a linear combination of the input features:
+to incorporate the new evidence yielding a refined posterior belief</p>
+<h2 id=4-linear-regression-from-a-probabilistic-perspective>4. Linear regression from a probabilistic perspective</h2>
+<p>In order to pave the way for Bayesian linear regression we will take a probabilistic spin on linear regression. Let&rsquo;s start by explicitly modelling the observation noise $\epsilon$. For simplicity, we assume that $\epsilon$ is normally distributed with mean $0$ and some known variance $\sigma^2$: $\epsilon \sim \mathcal{N}(0, \sigma^2)$.</p>
+<p>As mentioned in the beginning, a simple linear regression model assumes that the target function $f(x)$ is given by a linear combination of the input features:
 $$
 \begin{split}
-y = f(\pmb{x}) + \epsilon \\\<br>= \pmb{x}^T \pmb{\theta} + \epsilon
+y = f(\pmb{x}) + \epsilon \\\<br>
+= \pmb{x}^T \pmb{\theta} + \epsilon
 \end{split}
-$$</p><p>This corresponds to the following likelihood function:
-$$p(y | \pmb{x}, \pmb{\theta}) = \mathcal{N}(\pmb{x}^T \pmb{\theta}, \sigma^2)$$</p><p>Our goal is to find the parameters $\pmb{\theta} = \Big \{ \theta_1, &mldr;, \theta_D \Big \}$ that model the given data best.
-In standard linear regression we can find the best parameters using a least-squares, maximum likelihood (ML) or maximum a posteriori (MAP) approach. If you want to know more about these solutions take a look at the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a> or at chapter 9.2 of the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>.</p><h2 id=5-linear-regression-with-basis-functions>5. Linear regression with basis functions</h2><p>The simple linear regression model above is linear not only with respect to the parameters $\pmb{\theta}$ but also with respect to the inputs $\pmb{x}$. When $\pmb{x}$ is not a vector but a single value (that is, the dataset is one-dimensional) the model $y_i = x_i \cdot \theta$ describes straight lines with $\theta$ being the slope of the line.</p><p>The plot below shows example lines produced with the model $y = x \cdot \theta$, using different values for the slope $\theta$ and intercept 0.</p><img src=/posts/machine_learning/images/example_straight_lines.png width=50% class=center><p>Having a model which is linear both with respect to the parameters and inputs limits the functions it can learn significantly. We can make our model more powerful by making it <em>nonlinear</em> with respect to the inputs. After all, <em>linear regression</em> refers to models which are linear in the <em>parameters</em>, not necessarily in the <em>inputs</em> (linear in the parameters means that the model describes a function by a linear combination of input features).</p><p>Making the model nonlinear with respect to the inputs is easy. We can adapt it by using a nonlinear transformation of the input features $\phi(\pmb{x})$. With this adaptation our model looks as follows:
+$$</p>
+<p>This corresponds to the following likelihood function:
+$$p(y | \pmb{x}, \pmb{\theta}) = \mathcal{N}(\pmb{x}^T \pmb{\theta}, \sigma^2)$$</p>
+<p>Our goal is to find the parameters $\pmb{\theta} = \Big \{ \theta_1, &mldr;, \theta_D \Big \}$ that model the given data best.
+In standard linear regression we can find the best parameters using a least-squares, maximum likelihood (ML) or maximum a posteriori (MAP) approach. If you want to know more about these solutions take a look at the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a> or at chapter 9.2 of the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>.</p>
+<h2 id=5-linear-regression-with-basis-functions>5. Linear regression with basis functions</h2>
+<p>The simple linear regression model above is linear not only with respect to the parameters $\pmb{\theta}$ but also with respect to the inputs $\pmb{x}$. When $\pmb{x}$ is not a vector but a single value (that is, the dataset is one-dimensional) the model $y_i = x_i \cdot \theta$ describes straight lines with $\theta$ being the slope of the line.</p>
+<p>The plot below shows example lines produced with the model $y = x \cdot \theta$, using different values for the slope $\theta$ and intercept 0.</p>
+<img src=/posts/machine_learning/images/example_straight_lines.png width=50% class=center>
+<p>Having a model which is linear both with respect to the parameters and inputs limits the functions it can learn significantly. We can make our model more powerful by making it <em>nonlinear</em> with respect to the inputs. After all, <em>linear regression</em> refers to models which are linear in the <em>parameters</em>, not necessarily in the <em>inputs</em> (linear in the parameters means that the model describes a function by a linear combination of input features).</p>
+<p>Making the model nonlinear with respect to the inputs is easy. We can adapt it by using a nonlinear transformation of the input features $\phi(\pmb{x})$. With this adaptation our model looks as follows:
 $$
 \begin{split}
-y &= \pmb{\phi}^T(\pmb{x}) \pmb{\theta} + \epsilon \<br>&= \sum_{k=0}^{K-1} \theta_k \phi_k(\pmb{x}) + \epsilon
+y &= \pmb{\phi}^T(\pmb{x}) \pmb{\theta} + \epsilon \<br>
+&= \sum_{k=0}^{K-1} \theta_k \phi_k(\pmb{x}) + \epsilon
 \end{split}
-$$</p><p>Where $\pmb{\phi}: \mathbf{R}^D \rightarrow \mathbf{R}^K$ is a (non)linear transformation of the inputs $\pmb{x}$ and $\phi_k: \mathbf{R}^D \rightarrow \mathbf{R}$ is the $k-$th component of the <em>feature vector</em> $\pmb{\phi}$:</p><p>$$
+$$</p>
+<p>Where $\pmb{\phi}: \mathbf{R}^D \rightarrow \mathbf{R}^K$ is a (non)linear transformation of the inputs $\pmb{x}$ and $\phi_k: \mathbf{R}^D \rightarrow \mathbf{R}$ is the $k-$th component of the <em>feature vector</em> $\pmb{\phi}$:</p>
+<p>$$
 \pmb{\phi}(\pmb{x})=\left[\begin{array}{c}
-\phi_{0}(\pmb{x}) \\\<br>\phi_{1}(\pmb{x}) \\\<br>\vdots \\\<br>\phi_{K-1}(\pmb{x})
+\phi_{0}(\pmb{x}) \\\<br>
+\phi_{1}(\pmb{x}) \\\<br>
+\vdots \\\<br>
+\phi_{K-1}(\pmb{x})
 \end{array}
 \right]
 \in \mathbb{R}^{K}
-$$</p><p>With our new nonlinear transformation the likelihood function is given by</p><p>$$
+$$</p>
+<p>With our new nonlinear transformation the likelihood function is given by</p>
+<p>$$
 p(y | \pmb{x}, \pmb{\theta}) = \mathcal{N}(\pmb{\phi}^T(\pmb{x}) \pmb{\theta},, \sigma^2)
-$$</p><h3 id=51-example-basis-functions>5.1 Example basis functions</h3><h4 id=linear-regression>Linear regression</h4><p>The easiest example for a basis function (for one-dimensional data) would be simple linear regression, that is, no non-linear transformation at all. In this case we would choose $\phi_0(x) = 1$ and $\phi_i(x) = x$. This would result in the following vector $\pmb{\phi}(x)$:</p><p>$$
+$$</p>
+<h3 id=51-example-basis-functions>5.1 Example basis functions</h3>
+<h4 id=linear-regression>Linear regression</h4>
+<p>The easiest example for a basis function (for one-dimensional data) would be simple linear regression, that is, no non-linear transformation at all. In this case we would choose $\phi_0(x) = 1$ and $\phi_i(x) = x$. This would result in the following vector $\pmb{\phi}(x)$:</p>
+<p>$$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi_{0}(x) \\\<br>\phi_{1}(x) \\\<br>\vdots \\\<br>\phi_{K-1}(x)
+\phi_{0}(x) \\\<br>
+\phi_{1}(x) \\\<br>
+\vdots \\\<br>
+\phi_{K-1}(x)
 \end{array}
 \right] =
 \left[
 \begin{array}{c}
-1 \\\<br>x \\\<br>\vdots \\\<br>x
+1 \\\<br>
+x \\\<br>
+\vdots \\\<br>
+x
 \end{array}
 \right]
 \in \mathbb{R}^{K}
-$$</p><h4 id=polynomial-regression>Polynomial regression</h4><p>Another common choice of basis function for the one-dimensional case is polynomial regression. For this we would set $\phi_i(x) = x^i$ for $i=0, &mldr;, K-1$. The corresponding feature vector $\pmb{\phi}(x)$ would look as follows:</p><p>$$
+$$</p>
+<h4 id=polynomial-regression>Polynomial regression</h4>
+<p>Another common choice of basis function for the one-dimensional case is polynomial regression. For this we would set $\phi_i(x) = x^i$ for $i=0, &mldr;, K-1$. The corresponding feature vector $\pmb{\phi}(x)$ would look as follows:</p>
+<p>$$
 \pmb{\phi}(x)=
 \left[
 \begin{array}{c}
-\phi_{0}(x) \\\<br>\phi_{1}(x) \\\<br>\vdots \\\<br>\phi_{K-1}(x)
+\phi_{0}(x) \\\<br>
+\phi_{1}(x) \\\<br>
+\vdots \\\<br>
+\phi_{K-1}(x)
 \end{array}
 \right] =
 \left[
 \begin{array}{c}
-1 \\\<br>x \\\<br>x^2 \\\<br>x^3 \\\<br>\vdots \\\<br>x^{K-1}
+1 \\\<br>
+x \\\<br>
+x^2 \\\<br>
+x^3 \\\<br>
+\vdots \\\<br>
+x^{K-1}
 \end{array}
 \right]
 \in \mathbb{R}^{K}
-$$</p><p>With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum_{k=0}^{K-1} \theta_k x^k$</p><h3 id=52-the-design-matrix>5.2 The design matrix</h3><p>To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called <em>design matrix</em> (also called <em>feature matrix</em>). Given our dataset $D = { \pmb{x_n}, y_n }_{n=1}^N$ we define the design matrix as follows:</p><p>$$
+$$</p>
+<p>With this transformation we can lift our original one-dimensional input into a $K$-dimensional feature space. Our function $f$ can be any polynomial with degree $\le K-1$: $f(x) = \sum_{k=0}^{K-1} \theta_k x^k$</p>
+<h3 id=52-the-design-matrix>5.2 The design matrix</h3>
+<p>To make it easier to work with the transformations $\pmb{\phi}(\pmb{x})$ for the different input vectors $\pmb{x}$ we typically create a so called <em>design matrix</em> (also called <em>feature matrix</em>). Given our dataset $D = { \pmb{x_n}, y_n }_{n=1}^N$ we define the design matrix as follows:</p>
+<p>$$
 \boldsymbol{\Phi}:=\left[\begin{array}{c}
-\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{1}\right) \\\<br>\vdots \\\<br>\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{N}\right)
+\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{1}\right) \\\<br>
+\vdots \\\<br>
+\boldsymbol{\phi}^{\top}\left(\boldsymbol{x}_{N}\right)
 \end{array}\right]=\left[\begin{array}{ccc}
-\phi_{0}\left(\boldsymbol{x}_{1}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{1}\right) \\\<br>\phi_{0}\left(\boldsymbol{x}_{2}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{2}\right) \\\<br>\vdots & & \vdots \\\<br>\phi_{0}\left(\boldsymbol{x}_{N}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{N}\right)
+\phi_{0}\left(\boldsymbol{x}_{1}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{1}\right) \\\<br>
+\phi_{0}\left(\boldsymbol{x}_{2}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{2}\right) \\\<br>
+\vdots & & \vdots \\\<br>
+\phi_{0}\left(\boldsymbol{x}_{N}\right) & \cdots & \phi_{K-1}\left(\boldsymbol{x}_{N}\right)
 \end{array}\right] \in \mathbb{R}^{N \times K}
-$$</p><p>Note that the design matrix is of shape $N \times K$. $N$ is the number of input examples and $K$ is the output dimension of the non-linear transformation $\pmb{\phi}(\pmb{x})$.</p><h2 id=6-bayesian-linear-regression>6. Bayesian linear regression</h2><p>What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \Big \{ \pmb{x_n}, y_n \Big \}_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \Big \{ \pmb{x}_1, &mldr;, \pmb{x}_n \Big \}$ and the set of all targets as $\mathcal{Y} := \Big \{ y_1, &mldr;, y_n \Big \}$.</p><p>In simple linear regression we compute point estimates of our parameters (e.g. using a maximum likelihood approach) and use these estimates to make predictions. Different to this, Bayesian linear regression estimates <em>distributions</em> over the parameters and predictions. This allows us to model the uncertainty in our predictions.</p><p>To perform Bayesian linear regression we follow three steps:</p><ol><li>We set up a probabilistic model that describes our assumptions how the data and parameters are generated</li><li>We perform inference for the parameters $\pmb{\theta}$, that is, we compute the posterior probability distribution over the parameters</li><li>With this posterior we can perform inference for new, unseen inputs $y_{*}$. In this step we don&rsquo;t compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.</li></ol><h3 id=61-step-1-probabilistic-model>6.1 Step 1: Probabilistic model</h3><p>We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are normally distributed with mean 0 and standard deviation 1. In other words: the parameter values are most likely to fall into the interval $[−2,2]$ which is two standard deviations around the mean value.</p><p>To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}_0, \pmb{S}_0)$. Let&rsquo;s further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.</p><p>Note: When considering the set of all targets $\mathcal{Y} := \Big \{ y_1, &mldr;, y_n \Big \}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$</p><p>The nice thing about choosing a Gaussian distribution for our prior is that the posterior distributions will be Gaussian, too (keyword <a href=https://en.wikipedia.org/wiki/Conjugate_prior>conjugate prior</a>)!</p><p>We will start our <code>BayesianLinearRegression</code> class with the knowledge we have so far - our probabilistic model. As mentioned in the beginning we assume that the variance $\sigma^2$ of the noise $\epsilon$ is known. Furthermore, to allow plotting the data later on we will assume that it&rsquo;s two dimensional (d=2).</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> scipy.stats <span style=color:#f92672>import</span> multivariate_normal
-<span style=color:#f92672>import</span> numpy <span style=color:#f92672>as</span> np
+$$</p>
+<p>Note that the design matrix is of shape $N \times K$. $N$ is the number of input examples and $K$ is the output dimension of the non-linear transformation $\pmb{\phi}(\pmb{x})$.</p>
+<h2 id=6-bayesian-linear-regression>6. Bayesian linear regression</h2>
+<p>What changes when we consider a Bayesian interpretation of linear regression? Our data stays the same as before: $D = \Big \{ \pmb{x_n}, y_n \Big \}_{n=1}^N$. Given the data $D$ we can define the set of all inputs as $\mathcal{X} := \Big \{ \pmb{x}_1, &mldr;, \pmb{x}_n \Big \}$ and the set of all targets as $\mathcal{Y} := \Big \{ y_1, &mldr;, y_n \Big \}$.</p>
+<p>In simple linear regression we compute point estimates of our parameters (e.g. using a maximum likelihood approach) and use these estimates to make predictions. Different to this, Bayesian linear regression estimates <em>distributions</em> over the parameters and predictions. This allows us to model the uncertainty in our predictions.</p>
+<p>To perform Bayesian linear regression we follow three steps:</p>
+<ol>
+<li>We set up a probabilistic model that describes our assumptions how the data and parameters are generated</li>
+<li>We perform inference for the parameters $\pmb{\theta}$, that is, we compute the posterior probability distribution over the parameters</li>
+<li>With this posterior we can perform inference for new, unseen inputs $y_{*}$. In this step we don&rsquo;t compute point estimates of the outputs. Instead, we compute the parameters of the posterior distribution over the outputs.</li>
+</ol>
+<h3 id=61-step-1-probabilistic-model>6.1 Step 1: Probabilistic model</h3>
+<p>We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are normally distributed with mean 0 and standard deviation 1. In other words: the parameter values are most likely to fall into the interval $[−2,2]$ which is two standard deviations around the mean value.</p>
+<p>To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}_0, \pmb{S}_0)$. Let&rsquo;s further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.</p>
+<p>Note: When considering the set of all targets $\mathcal{Y} := \Big \{ y_1, &mldr;, y_n \Big \}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$</p>
+<p>The nice thing about choosing a Gaussian distribution for our prior is that the posterior distributions will be Gaussian, too (keyword <a href=https://en.wikipedia.org/wiki/Conjugate_prior>conjugate prior</a>)!</p>
+<p>We will start our <code>BayesianLinearRegression</code> class with the knowledge we have so far - our probabilistic model. As mentioned in the beginning we assume that the variance $\sigma^2$ of the noise $\epsilon$ is known. Furthermore, to allow plotting the data later on we will assume that it&rsquo;s two dimensional (d=2).</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> scipy.stats <span style=color:#f92672>import</span> multivariate_normal
+<span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
 
 <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BayesianLinearRegression</span>:
     <span style=color:#e6db74>&#34;&#34;&#34; Bayesian linear regression
@@ -101,8 +329,12 @@ prior_mean <span style=color:#f92672>=</span> np<span style=color:#f92672>.</spa
 prior_cov <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>array([[<span style=color:#ae81ff>0.5</span>, <span style=color:#ae81ff>0</span>], [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0.5</span>]])
 noise_var <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.2</span>
 blr <span style=color:#f92672>=</span> BayesianLinearRegression(prior_mean, prior_cov, noise_var)
-</code></pre></div><h3 id=62-generating-a-dataset>6.2 Generating a dataset</h3><p>Before going any further we need a dataset to test our implementation. Remember that we assume that our targets were generated by a function of the form $y = \pmb{\phi}^T(\pmb{x}) \pmb{\theta} + \epsilon$ where $\epsilon$ is normally distributed with mean $0$ and some known variance $\sigma^2$: $\epsilon \sim \mathcal{N}(0, \sigma^2)$.</p><p>To keep things simple we will work with one-dimensional data and simple linear regression (that is, no non-linear transformation of the inputs). Consequently, our data generating function will be of the form
-$$ y = \theta_0 + \theta_1 , x + \epsilon $$</p><p>Note that we added a parameter $\theta_0$ which corresponds to the intercept of the linear function. Until know we assumed $\theta_0 = 0$. As mentioned earlier, $\theta_1$ represents the slope of the linear function.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#f92672>as</span> plt
+</code></pre></div><h3 id=62-generating-a-dataset>6.2 Generating a dataset</h3>
+<p>Before going any further we need a dataset to test our implementation. Remember that we assume that our targets were generated by a function of the form $y = \pmb{\phi}^T(\pmb{x}) \pmb{\theta} + \epsilon$ where $\epsilon$ is normally distributed with mean $0$ and some known variance $\sigma^2$: $\epsilon \sim \mathcal{N}(0, \sigma^2)$.</p>
+<p>To keep things simple we will work with one-dimensional data and simple linear regression (that is, no non-linear transformation of the inputs). Consequently, our data generating function will be of the form
+$$ y = \theta_0 + \theta_1 , x + \epsilon $$</p>
+<p>Note that we added a parameter $\theta_0$ which corresponds to the intercept of the linear function. Until know we assumed $\theta_0 = 0$. As mentioned earlier, $\theta_1$ represents the slope of the linear function.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> matplotlib.pyplot <span style=color:#66d9ef>as</span> plt
 <span style=color:#f92672>%</span>matplotlib inline
 
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>compute_function_labels</span>(slope: float, intercept: float, noise_std_dev: float, data: np<span style=color:#f92672>.</span>ndarray) <span style=color:#f92672>-&gt;</span> np<span style=color:#f92672>.</span>ndarray:
@@ -123,7 +355,7 @@ $$ y = \theta_0 + \theta_1 , x + \epsilon $$</p><p>Note that we added a paramete
         <span style=color:#66d9ef>return</span> slope <span style=color:#f92672>*</span> data <span style=color:#f92672>+</span> intercept
     <span style=color:#66d9ef>else</span>: <span style=color:#75715e># Noise corrupted</span>
         <span style=color:#66d9ef>return</span> slope <span style=color:#f92672>*</span> data <span style=color:#f92672>+</span> intercept <span style=color:#f92672>+</span> np<span style=color:#f92672>.</span>random<span style=color:#f92672>.</span>normal(<span style=color:#ae81ff>0</span>, noise_std_dev, n_samples)
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Set random seed to ensure reproducibility</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Set random seed to ensure reproducibility</span>
 seed <span style=color:#f92672>=</span> <span style=color:#ae81ff>42</span>
 np<span style=color:#f92672>.</span>random<span style=color:#f92672>.</span>seed(seed)
 
@@ -140,7 +372,7 @@ upper_bound <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.5</sp
 features <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>random<span style=color:#f92672>.</span>uniform(lower_bound, upper_bound, n_datapoints)
 labels <span style=color:#f92672>=</span> compute_function_labels(slope, intercept, <span style=color:#ae81ff>0.</span>, features)
 noise_corrupted_labels <span style=color:#f92672>=</span> compute_function_labels(slope, intercept, noise_std_dev, features)
-</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Plot the dataset</span>
+</code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Plot the dataset</span>
 plt<span style=color:#f92672>.</span>figure(figsize<span style=color:#f92672>=</span>(<span style=color:#ae81ff>10</span>,<span style=color:#ae81ff>7</span>))
 plt<span style=color:#f92672>.</span>plot(features, labels, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;r&#39;</span>, label<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;True values&#34;</span>)
 plt<span style=color:#f92672>.</span>scatter(features, noise_corrupted_labels, label<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Noise corrupted values&#34;</span>)
@@ -148,17 +380,30 @@ plt<span style=color:#f92672>.</span>xlabel(<span style=color:#e6db74>&#34;Featu
 plt<span style=color:#f92672>.</span>ylabel(<span style=color:#e6db74>&#34;Labels&#34;</span>)
 plt<span style=color:#f92672>.</span>title(<span style=color:#e6db74>&#34;Real function along with noisy targets&#34;</span>)
 plt<span style=color:#f92672>.</span>legend();
-</code></pre></div><img src=/posts/machine_learning/images/real_function_with_noisy_targets.png width=80% class=center><h3 id=63-step-2-posterior-over-the-parameters>6.3 Step 2: Posterior over the parameters</h3><p>We finished setting up our probabilistic model. Next, we want to use this model and our dataset $\mathcal{X, Y}$ to estimate the parameter posterior $p(\pmb{\theta} | \mathcal{X, Y})$. Keep in mind that we don&rsquo;t compute point estimates of the parameters. Instead, we determine the mean and variance of the (Gaussian) posterior distribution and use this entire distribution when making predictions.</p><p>We can estimate the parameter posterior using Bayes theorem:
+</code></pre></div><img src=/posts/machine_learning/images/real_function_with_noisy_targets.png width=80% class=center>
+<h3 id=63-step-2-posterior-over-the-parameters>6.3 Step 2: Posterior over the parameters</h3>
+<p>We finished setting up our probabilistic model. Next, we want to use this model and our dataset $\mathcal{X, Y}$ to estimate the parameter posterior $p(\pmb{\theta} | \mathcal{X, Y})$. Keep in mind that we don&rsquo;t compute point estimates of the parameters. Instead, we determine the mean and variance of the (Gaussian) posterior distribution and use this entire distribution when making predictions.</p>
+<p>We can estimate the parameter posterior using Bayes theorem:
 $$
 p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y})=\frac{p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta}) p(\pmb{\theta})}{p(\mathcal{Y} \mid \mathcal{X})}
-$$</p><ul><li>$p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})$ is the likelihood function, $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$</li><li>$p(\pmb{\theta})$ is the prior distribution, $p(\pmb{\theta})=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{0}, \pmb{S}_{0}\right)$</li><li>$p(\mathcal{Y} \mid \mathcal{X})=\int p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta}) p(\pmb{\theta}) \mathrm{d} \pmb{\theta}$ is the evidence which ensures that the posterior is normalized (that is, that it integrates to 1).</li></ul><p>The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>):
+$$</p>
+<ul>
+<li>$p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})$ is the likelihood function, $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$</li>
+<li>$p(\pmb{\theta})$ is the prior distribution, $p(\pmb{\theta})=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{0}, \pmb{S}_{0}\right)$</li>
+<li>$p(\mathcal{Y} \mid \mathcal{X})=\int p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta}) p(\pmb{\theta}) \mathrm{d} \pmb{\theta}$ is the evidence which ensures that the posterior is normalized (that is, that it integrates to 1).</li>
+</ul>
+<p>The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>):
 $$
 \begin{aligned}
-p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \\\<br>\pmb{S}_{N} &=\left(\pmb{S}_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\\<br>\pmb{m}_{N} &=\pmb{S}_{N}\left(\pmb{S}_{0}^{-1} \pmb{m}_{0}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{y}\right)
+p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \\\<br>
+\pmb{S}_{N} &=\left(\pmb{S}_{0}^{-1}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{\Phi}\right)^{-1} \\\<br>
+\pmb{m}_{N} &=\pmb{S}_{N}\left(\pmb{S}_{0}^{-1} \pmb{m}_{0}+\sigma^{-2} \pmb{\Phi}^{\top} \pmb{y}\right)
 \end{aligned}
-$$</p><p>Coming back to our <code>BayesianLinearRegression</code> class we need to add a method which allows us to update the posterior distribution given a dataset.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> scipy.stats <span style=color:#f92672>import</span> multivariate_normal
+$$</p>
+<p>Coming back to our <code>BayesianLinearRegression</code> class we need to add a method which allows us to update the posterior distribution given a dataset.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> scipy.stats <span style=color:#f92672>import</span> multivariate_normal
 <span style=color:#f92672>from</span> scipy.stats <span style=color:#f92672>import</span> norm <span style=color:#66d9ef>as</span> univariate_normal
-<span style=color:#f92672>import</span> numpy <span style=color:#f92672>as</span> np
+<span style=color:#f92672>import</span> numpy <span style=color:#66d9ef>as</span> np
 
 <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>BayesianLinearRegression</span>:
     <span style=color:#e6db74>&#34;&#34;&#34; Bayesian linear regression
@@ -250,14 +495,19 @@ $$</p><p>Coming back to our <code>BayesianLinearRegression</code> class we need 
         
         pred_posterior <span style=color:#f92672>=</span> univariate_normal(loc<span style=color:#f92672>=</span>pred_mean<span style=color:#f92672>.</span>flatten(), scale<span style=color:#f92672>=</span>pred_cov<span style=color:#f92672>**</span><span style=color:#ae81ff>0.5</span>)
         <span style=color:#66d9ef>return</span> pred_posterior
-</code></pre></div><h3 id=64-visualizing-the-parameter-posterior>6.4 Visualizing the parameter posterior</h3><p>To ensure that our implementation is correct we can visualize how the posterior over the parameters changes as the model sees more data. We will visualize the distribution using a <a href=https://en.wikipedia.org/wiki/Contour_line>contour plot</a> - a method for visualizing three-dimensional functions. In our case we want to visualize the density of our bi-variate Gaussian for each point (that is, each slope/intercept combination). The plot below shows an example which illustrates how the lines and colours of a contour plot correspond to a Gaussian distribution:</p><img src=/posts/machine_learning/images/density_plot.png width=50% class=center><p>As we can see, the density is highest in the yellow regions decreasing when moving further out into the green and blue parts. This should give you a better understanding of contour plots.</p><p>To analyze our Bayesian linear regression class we will start by initializing a new model. We can visualize its prior distribution over the parameters <em>before</em> the model has seen any real data.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Initialize BLR model</span>
+</code></pre></div><h3 id=64-visualizing-the-parameter-posterior>6.4 Visualizing the parameter posterior</h3>
+<p>To ensure that our implementation is correct we can visualize how the posterior over the parameters changes as the model sees more data. We will visualize the distribution using a <a href=https://en.wikipedia.org/wiki/Contour_line>contour plot</a> - a method for visualizing three-dimensional functions. In our case we want to visualize the density of our bi-variate Gaussian for each point (that is, each slope/intercept combination). The plot below shows an example which illustrates how the lines and colours of a contour plot correspond to a Gaussian distribution:</p>
+<img src=/posts/machine_learning/images/density_plot.png width=50% class=center>
+<p>As we can see, the density is highest in the yellow regions decreasing when moving further out into the green and blue parts. This should give you a better understanding of contour plots.</p>
+<p>To analyze our Bayesian linear regression class we will start by initializing a new model. We can visualize its prior distribution over the parameters <em>before</em> the model has seen any real data.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e># Initialize BLR model</span>
 prior_mean <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>array([<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>])
 prior_cov <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>/</span><span style=color:#ae81ff>2</span> <span style=color:#f92672>*</span> np<span style=color:#f92672>.</span>identity(<span style=color:#ae81ff>2</span>)
 blr <span style=color:#f92672>=</span> BayesianLinearRegression(prior_mean, prior_cov, noise_var)
 
 <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>plot_param_posterior</span>(lower_bound, upper_bound, blr, title):
     fig <span style=color:#f92672>=</span> plt<span style=color:#f92672>.</span>figure()
-    mesh_features, mesh_labels <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>mgrid[lower_bound:upper_bound:<span style=color:#f92672>.</span><span style=color:#ae81ff>01</span>, lower_bound:upper_bound:<span style=color:#f92672>.</span><span style=color:#ae81ff>01</span>]
+    mesh_features, mesh_labels <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>mgrid[lower_bound:upper_bound:<span style=color:#ae81ff>.01</span>, lower_bound:upper_bound:<span style=color:#ae81ff>.01</span>]
     pos <span style=color:#f92672>=</span> np<span style=color:#f92672>.</span>dstack((mesh_features, mesh_labels))
     plt<span style=color:#f92672>.</span>contourf(mesh_features, mesh_labels, blr<span style=color:#f92672>.</span>param_posterior<span style=color:#f92672>.</span>pdf(pos), levels<span style=color:#f92672>=</span><span style=color:#ae81ff>15</span>)
     plt<span style=color:#f92672>.</span>scatter(intercept, slope, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;red&#39;</span>, label<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;True parameter values&#34;</span>)
@@ -268,7 +518,9 @@ blr <span style=color:#f92672>=</span> BayesianLinearRegression(prior_mean, prio
     
 <span style=color:#75715e># Visualize parameter prior distribution</span>
 plot_param_posterior(lower_bound, upper_bound, blr, title<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Prior parameter distribution&#34;</span>)
-</code></pre></div><img src=/posts/machine_learning/images/prior_parameter_distribution.png width=50% class=center><p>The plot above illustrates both the prior parameter distribution and the true parameter values that we want to find. If our model works correctly, the posterior distribution should become more narrow and move closer to the true parameter values as the model sees more datapoints. This can be visualized with contour plots, too! Below we update the posterior distribution iteratively as the model sees more and more data. The contour plots for each step show how the parameter posterior develops and converges close to the true values in the end.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>n_points_lst <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>1000</span>]
+</code></pre></div><img src=/posts/machine_learning/images/prior_parameter_distribution.png width=50% class=center>
+<p>The plot above illustrates both the prior parameter distribution and the true parameter values that we want to find. If our model works correctly, the posterior distribution should become more narrow and move closer to the true parameter values as the model sees more datapoints. This can be visualized with contour plots, too! Below we update the posterior distribution iteratively as the model sees more and more data. The contour plots for each step show how the parameter posterior develops and converges close to the true values in the end.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>n_points_lst <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>10</span>, <span style=color:#ae81ff>50</span>, <span style=color:#ae81ff>100</span>, <span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>500</span>, <span style=color:#ae81ff>1000</span>]
 previous_n_points <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
 <span style=color:#66d9ef>for</span> n_points <span style=color:#f92672>in</span> n_points_lst:
     train_features <span style=color:#f92672>=</span> features[previous_n_points:n_points]
@@ -279,7 +531,7 @@ previous_n_points <span style=color:#f92672>=</span> <span style=color:#ae81ff>0
     plot_param_posterior(lower_bound, 
                          upper_bound, 
                          blr, 
-                         title<span style=color:#f92672>=</span>f<span style=color:#e6db74>&#34;Updated parameter distribution using {n_points} datapoints&#34;</span>)
+                         title<span style=color:#f92672>=</span><span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Updated parameter distribution using </span><span style=color:#e6db74>{</span>n_points<span style=color:#e6db74>}</span><span style=color:#e6db74> datapoints&#34;</span>)
     
     previous_n_points <span style=color:#f92672>=</span> n_points
 </code></pre></div><p><img src=/posts/machine_learning/images/param_post_1_datapoint.png width=50% class=center>
@@ -288,11 +540,25 @@ previous_n_points <span style=color:#f92672>=</span> <span style=color:#ae81ff>0
 <img src=/posts/machine_learning/images/param_post_100_datapoints.png width=50% class=center>
 <img src=/posts/machine_learning/images/param_post_200_datapoints.png width=50% class=center>
 <img src=/posts/machine_learning/images/param_post_500_datapoints.png width=50% class=center>
-<img src=/posts/machine_learning/images/param_post_1000_datapoints.png width=50% class=center></p><h3 id=65-step-3-posterior-predictive-distribution>6.5 Step 3: Posterior predictive distribution</h3><p>Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}_*, y_*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can&rsquo;t use it to make predictions, right?</p><p>The posterior predictive distribution looks as follows:</p><p>$$
+<img src=/posts/machine_learning/images/param_post_1000_datapoints.png width=50% class=center>
+</p>
+<h3 id=65-step-3-posterior-predictive-distribution>6.5 Step 3: Posterior predictive distribution</h3>
+<p>Given the posterior distribution over the parameters we can determine the predictive distribution (= posterior over the outputs) for a new input $(\pmb{x}_*, y_*)$. This is the distribution we are really interested in. A trained model is not particularly useful when we can&rsquo;t use it to make predictions, right?</p>
+<p>The posterior predictive distribution looks as follows:</p>
+<p>$$
 \begin{aligned}
-p\left(y_{*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}_*\right) &=\int p\left(y_{*} \mid \pmb{x}_{*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\\<br>&=\int \mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \mathrm{d} \pmb{\theta} \\\<br>&=\mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{m}_{N}, \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}\right)
+p\left(y_{*} \mid \mathcal{X}, \mathcal{Y}, \pmb{x}_*\right) &=\int p\left(y_{*} \mid \pmb{x}_{*}, \pmb{\theta}\right) p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) \mathrm{d} \pmb{\theta} \\\<br>
+&=\int \mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{\theta}, \sigma^{2}\right) \mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \mathrm{d} \pmb{\theta} \\\<br>
+&=\mathcal{N}\left(y_{*} \mid \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{m}_{N}, \pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}\right)
 \end{aligned}
-$$</p><p>First of all: note that the predictive posterior for a new input $\pmb{x}_{*}$ is a <em>univariate</em> Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right)$) and the mean of the parameter posterior ($\pmb{m}_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}$) of the predictive posterior has two parts:</p><ol><li>$\sigma^{2}$: The variance of the noise</li><li>$\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$</li></ol><p>Let&rsquo;s add a <code>predict</code> method to our <code>BayesianLinearRegression</code> class which computes the predictive posterior for a new input (you will find the method in the class definition above):</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>predict</span>(self, features: np<span style=color:#f92672>.</span>ndarray):
+$$</p>
+<p>First of all: note that the predictive posterior for a new input $\pmb{x}_{*}$ is a <em>univariate</em> Gaussian distribution. We can see that the mean of the distribution is given by the product of the design matrix for the new example ($\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right)$) and the mean of the parameter posterior ($\pmb{m}_{N}$). The variance $(\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)+\sigma^{2}$) of the predictive posterior has two parts:</p>
+<ol>
+<li>$\sigma^{2}$: The variance of the noise</li>
+<li>$\pmb{\phi}^{\top}\left(\pmb{x}_{*}\right) \pmb{S}_{N} \pmb{\phi}\left(\pmb{x}_{*}\right)$: The posterior uncertainty associated with the parameters $\pmb{\theta}$</li>
+</ol>
+<p>Let&rsquo;s add a <code>predict</code> method to our <code>BayesianLinearRegression</code> class which computes the predictive posterior for a new input (you will find the method in the class definition above):</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>predict</span>(self, features: np<span style=color:#f92672>.</span>ndarray):
     <span style=color:#e6db74>&#34;&#34;&#34;
 </span><span style=color:#e6db74>    Compute predictive posterior given new datapoint
 </span><span style=color:#e6db74>
@@ -308,8 +574,19 @@ $$</p><p>First of all: note that the predictive posterior for a new input $\pmb{
 
     pred_posterior <span style=color:#f92672>=</span> univariate_normal(pred_mean<span style=color:#f92672>.</span>flatten(), pred_cov)
     <span style=color:#66d9ef>return</span> pred_posterior
-</code></pre></div><h3 id=66-visualizing-the-predictive-posterior--a-classanchor-idpredictive-posterior-visualizationa>6.6 Visualizing the predictive posterior</h3><p>Our original dataset follows a simple linear function. After training the model it should be able to predict labels for new datapoints, even if they lie beyond the range from [-1.5, 1.5]. But how can we get from the predictive distribution that our model computes to actual labels? That&rsquo;s easy: we <em>sample</em> from the predictive posterior.</p><p>To make sure that we are all on the same page: given a new input example our Bayesian linear regression model predicts not a single label but a <em>distribution</em> over possible labels. This distribution is Gaussian. We can get actual labels by sampling from this distribution.</p><p>The code below implements and visualizes this:</p><ul><li>We create some test features for which we want predictions</li><li>Each feature is given to the trained BLR model which returns a univariate Gaussian distribution over possible labels (<code>pred_posterior = blr.predict(np.array([feat]))</code>)</li><li>We sample from this distribution (<code>sample_predicted_labels = pred_posterior.rvs(size=sample_size)</code>)</li><li>The predicted labels are saved in a format that makes it easy to plot them</li><li>Finally, we plot each input feature, its true label and the sampled predictions. Remember: the samples are generated from the predictive posterior returned by the <code>predict</code> method. Think of a Gaussian distribution plotted along the y-axis for each feature. We visualize this with a histogram: more likely values close to the mean will be sampled more often than less likely values.</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> pandas <span style=color:#f92672>as</span> pd
-<span style=color:#f92672>import</span> seaborn <span style=color:#f92672>as</span> sns
+</code></pre></div><h3 id=66-visualizing-the-predictive-posterior--a-classanchor-idpredictive-posterior-visualizationa>6.6 Visualizing the predictive posterior </h3>
+<p>Our original dataset follows a simple linear function. After training the model it should be able to predict labels for new datapoints, even if they lie beyond the range from [-1.5, 1.5]. But how can we get from the predictive distribution that our model computes to actual labels? That&rsquo;s easy: we <em>sample</em> from the predictive posterior.</p>
+<p>To make sure that we are all on the same page: given a new input example our Bayesian linear regression model predicts not a single label but a <em>distribution</em> over possible labels. This distribution is Gaussian. We can get actual labels by sampling from this distribution.</p>
+<p>The code below implements and visualizes this:</p>
+<ul>
+<li>We create some test features for which we want predictions</li>
+<li>Each feature is given to the trained BLR model which returns a univariate Gaussian distribution over possible labels (<code>pred_posterior = blr.predict(np.array([feat]))</code>)</li>
+<li>We sample from this distribution (<code>sample_predicted_labels = pred_posterior.rvs(size=sample_size)</code>)</li>
+<li>The predicted labels are saved in a format that makes it easy to plot them</li>
+<li>Finally, we plot each input feature, its true label and the sampled predictions. Remember: the samples are generated from the predictive posterior returned by the <code>predict</code> method. Think of a Gaussian distribution plotted along the y-axis for each feature. We visualize this with a histogram: more likely values close to the mean will be sampled more often than less likely values.</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> pandas <span style=color:#66d9ef>as</span> pd
+<span style=color:#f92672>import</span> seaborn <span style=color:#66d9ef>as</span> sns
 
 all_rows <span style=color:#f92672>=</span> []
 sample_size <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>
@@ -330,7 +607,143 @@ plt<span style=color:#f92672>.</span>scatter(x<span style=color:#f92672>=</span>
 plt<span style=color:#f92672>.</span>title(<span style=color:#e6db74>&#34;Predictive posterior distributions&#34;</span>)
 plt<span style=color:#f92672>.</span>legend()
 plt<span style=color:#f92672>.</span>plot();
-</code></pre></div><img src=/posts/machine_learning/images/predictive_posterior.png width=40% class=center><h2 id=7-sources-and-further-reading>7. Sources and further reading</h2><p>The basis for this notebook is chapter 9.2 of the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>. I can highly recommend to read through chapter 9 to get a deeper understanding of (Bayesian) linear regression.</p><p>You will find explanations and an implementation of simple linear regression in the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a></p></div><div class=btn-improve-page><a href=https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/bayesian_linear_regression.md><i class="fas fa-code-branch"></i>
-Improve this page</a></div><hr><div class="row next-prev-navigator"><div class="col-md-6 previous-article"><a href=/posts/books/reading_list/ class="btn btn-outline-info"><span><i class="fas fa-chevron-circle-left"></i> Prev</span><br><span>Personal reading list of non-fiction books</span></a></div><div class="col-md-6 next-article"><a href=/posts/books/deep_work/ class="btn btn-outline-info"><span>Next <i class="fas fa-chevron-circle-right"></i></span><br><span>Deep Work</span></a></div></div><hr></div></div></div></section><section class=toc-section id=toc-section><div class=toc-holder><h5 class="text-center pl-3">Table of Contents</h5><hr><div class=toc><nav id=TableOfContents><ul><li><a href=#1-what-is-bayesian-linear-regression-blr>1. What is Bayesian linear regression (BLR)?</a></li><li><a href=#2-recap-linear-regression>2. Recap linear regression</a></li><li><a href=#3-fundamental-concepts>3. Fundamental concepts</a></li><li><a href=#4-linear-regression-from-a-probabilistic-perspective>4. Linear regression from a probabilistic perspective</a></li><li><a href=#5-linear-regression-with-basis-functions>5. Linear regression with basis functions</a><ul><li><a href=#51-example-basis-functions>5.1 Example basis functions</a><ul><li><a href=#linear-regression>Linear regression</a></li><li><a href=#polynomial-regression>Polynomial regression</a></li></ul></li><li><a href=#52-the-design-matrix>5.2 The design matrix</a></li></ul></li><li><a href=#6-bayesian-linear-regression>6. Bayesian linear regression</a><ul><li><a href=#61-step-1-probabilistic-model>6.1 Step 1: Probabilistic model</a></li><li><a href=#62-generating-a-dataset>6.2 Generating a dataset</a></li><li><a href=#63-step-2-posterior-over-the-parameters>6.3 Step 2: Posterior over the parameters</a></li><li><a href=#64-visualizing-the-parameter-posterior>6.4 Visualizing the parameter posterior</a></li><li><a href=#65-step-3-posterior-predictive-distribution>6.5 Step 3: Posterior predictive distribution</a></li><li><a href=#66-visualizing-the-predictive-posterior--a-classanchor-idpredictive-posterior-visualizationa>6.6 Visualizing the predictive posterior</a></li></ul></li><li><a href=#7-sources-and-further-reading>7. Sources and further reading</a></li></ul></nav></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=#about>About</a></li><li class=nav-item><a class=smooth-scroll href=#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=#appearances>Talks & Podcasts</a></li><li class=nav-item><a class=smooth-scroll href=#recent-posts>Recent Posts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>popkes@gmx.net</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=#><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_2.png>
-Toha</a></div><div class="col-md-4 text-center">© 2020-2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/js/jquery-3.4.1.min.js></script><script src=/js/popper.min.js></script><script src=/js/bootstrap.min.js></script><script src=/js/navbar.js></script><script src=/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script><script src=/js/single.js></script><script>hljs.initHighlightingOnLoad()</script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script><script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],processEnvironments:!0}}</script></body></html>
+</code></pre></div><img src=/posts/machine_learning/images/predictive_posterior.png width=40% class=center>
+<h2 id=7-sources-and-further-reading>7. Sources and further reading</h2>
+<p>The basis for this notebook is chapter 9.2 of the book <a href=https://mml-book.com>Mathematics for Machine Learning</a>. I can highly recommend to read through chapter 9 to get a deeper understanding of (Bayesian) linear regression.</p>
+<p>You will find explanations and an implementation of simple linear regression in the <a href=https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb>notebook on linear regression</a></p>
+</div>
+<div class=btn-improve-page>
+<a href=https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/bayesian_linear_regression.md>
+<i class="fas fa-code-branch"></i>
+Improve this page
+</a>
+</div>
+<hr>
+<div class="row next-prev-navigator">
+<div class="col-md-6 previous-article">
+<a href=/posts/books/reading_list/ class="btn btn-outline-info">
+<span><i class="fas fa-chevron-circle-left"></i> Prev</span>
+<br>
+<span>Personal reading list of non-fiction books</span>
+</a>
+</div>
+<div class="col-md-6 next-article">
+<a href=/posts/books/deep_work/ class="btn btn-outline-info">
+<span>Next <i class="fas fa-chevron-circle-right"></i></span>
+<br>
+<span>Deep Work</span>
+</a>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</section>
+<section class=toc-section id=toc-section>
+<div class=toc-holder>
+<h5 class="text-center pl-3">Table of Contents</h5>
+<hr>
+<div class=toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#1-what-is-bayesian-linear-regression-blr>1. What is Bayesian linear regression (BLR)?</a></li>
+<li><a href=#2-recap-linear-regression>2. Recap linear regression</a></li>
+<li><a href=#3-fundamental-concepts>3. Fundamental concepts</a></li>
+<li><a href=#4-linear-regression-from-a-probabilistic-perspective>4. Linear regression from a probabilistic perspective</a></li>
+<li><a href=#5-linear-regression-with-basis-functions>5. Linear regression with basis functions</a>
+<ul>
+<li><a href=#51-example-basis-functions>5.1 Example basis functions</a>
+<ul>
+<li><a href=#linear-regression>Linear regression</a></li>
+<li><a href=#polynomial-regression>Polynomial regression</a></li>
+</ul>
+</li>
+<li><a href=#52-the-design-matrix>5.2 The design matrix</a></li>
+</ul>
+</li>
+<li><a href=#6-bayesian-linear-regression>6. Bayesian linear regression</a>
+<ul>
+<li><a href=#61-step-1-probabilistic-model>6.1 Step 1: Probabilistic model</a></li>
+<li><a href=#62-generating-a-dataset>6.2 Generating a dataset</a></li>
+<li><a href=#63-step-2-posterior-over-the-parameters>6.3 Step 2: Posterior over the parameters</a></li>
+<li><a href=#64-visualizing-the-parameter-posterior>6.4 Visualizing the parameter posterior</a></li>
+<li><a href=#65-step-3-posterior-predictive-distribution>6.5 Step 3: Posterior predictive distribution</a></li>
+<li><a href=#66-visualizing-the-predictive-posterior--a-classanchor-idpredictive-posterior-visualizationa>6.6 Visualizing the predictive posterior </a></li>
+</ul>
+</li>
+<li><a href=#7-sources-and-further-reading>7. Sources and further reading</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</section>
+</div>
+<footer class="container-fluid text-center align-content-center footer pb-2">
+<div class="container pt-5">
+<div class="row text-left">
+<div class="col-md-4 col-sm-12">
+<h5>Navigation</h5>
+<ul>
+<li class=nav-item>
+<a class=smooth-scroll href=#about>About</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#skills>Skills</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#experiences>Experiences</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#education>Education</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#projects>Projects</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#recent-posts>Recent Posts</a>
+</li>
+<li class=nav-item>
+<a class=smooth-scroll href=#appearances>Talks & Podcasts</a>
+</li>
+</ul>
+</div>
+<div class="col-md-4 col-sm-12">
+<h5>Contact me:</h5>
+<ul>
+<li><span>Email: </span> <span>popkes@gmx.net</span></li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<div class=container>
+<div class="row text-left">
+<div class=col-md-4>
+<a id=theme href=https://github.com/hossainemruz/toha target=#>
+<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png>
+Toha
+</a>
+</div>
+<div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+<div class="col-md-4 text-right">
+<a id=hugo href=https://gohugo.io/>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script src=/js/jquery-3.4.1.min.js></script>
+<script src=/js/popper.min.js></script>
+<script src=/js/bootstrap.min.js></script>
+<script src=/js/navbar.js></script>
+<script src=/js/main.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js></script>
+<script src=/js/single.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
+<script>window.MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],processEnvironments:!0}}</script>
+</body>
+</html>
