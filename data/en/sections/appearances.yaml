@@ -28,7 +28,6 @@ appearances:
   summary: Talk title: "Finding Magic in Python" 
   tags: ['talks']
   logo: /images/sections/appearances/euro_python.png
-
 - name: SpeakUp interview at Women in Tech
   logo: /images/sections/appearances/women_in_tech.png
   event: SpeakUp, Women in Tech
@@ -37,7 +36,6 @@ appearances:
   summary: I'm a guest at the "#SpeakUp" series of Women in Tech, talking about teaching kids about AI and ML, how it's like to be a women in tech, and much more.
   tags: ['talks']
   logo: /images/sections/appearances/women_in_tech.png
-
 - name: Testing without dependencies, mocking in Python
   logo: /images/sections/appearances/talkpython.png
   event: Talk Python To Me 
