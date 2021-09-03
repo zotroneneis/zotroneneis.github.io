@@ -20,9 +20,9 @@ buttons:
 
 # your appearances
 appearances:
-- name: EuroPython 2021
+- name: EuroPython
   logo: /images/sections/appearances/euro_python.png
-  event: EuroPython 2021
+  event: EuroPython
   timeline: "June 16, 2021"
   url: https://ep2021.europython.eu/talks/8MPLDsh-finding-magic-in-python/
   summary: Talk title: "Finding Magic in Python" 
