@@ -20,6 +20,14 @@ buttons:
 
 # your appearances
 appearances:
+- name: EuroPython 2021
+  logo: /images/sections/appearances/euro_python.png
+  event: EuroPython 2021
+  timeline: "Jun 16, 2021"
+  url: https://ep2021.europython.eu/talks/8MPLDsh-finding-magic-in-python/
+  summary: Talk title: "Finding Magic in Python" 
+  tags: ['talks']
+  logo: /images/sections/appearances/euro_python.png
 - name: SpeakUp interview at Women in Tech
   logo: /images/sections/appearances/women_in_tech.png
   event: SpeakUp, Women in Tech
@@ -41,7 +49,7 @@ appearances:
   event: PyCon Estonia
   timeline: "Oct 13, 2020"
   youtube: Kf92pycivt4
-  summary: Some of Python's exciting features explained using the world of magic.
+  summary: Keynote talk at PyCon Estonia. I explained some of Python's exciting features using the world of magic.
   url: https://www.youtube.com/watch?v=Kf92pycivt4
   tags: ['talks']
 - name: 100 Days of Python in a Magical Universe
