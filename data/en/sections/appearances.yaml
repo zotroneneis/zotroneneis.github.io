@@ -21,13 +21,13 @@ buttons:
 # your appearances
 appearances:
 - name: EuroPython
-  logo: /images/sections/appearances/women_in_tech.png
+  logo: /images/sections/appearances/euro_python.png
   event: EuroPython
   timeline: "Jun 16, 2021"
   url: 
   summary: 
   tags: ['talks']
-  logo: /images/sections/appearances/women_in_tech.png
+  logo: /images/sections/appearances/euro_python.png
 - name: SpeakUp interview at Women in Tech
   logo: /images/sections/appearances/women_in_tech.png
   event: SpeakUp, Women in Tech
