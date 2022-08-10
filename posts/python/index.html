@@ -1,436 +1,47 @@
-<!doctype html><html>
-<head>
-<title>Python</title>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=x-ua-compatible content="ie=edge">
-<link rel=stylesheet href=/css/bootstrap.min.css>
-<link rel=stylesheet href=/css/layouts/main.css>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/navigators/navbar.css>
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet>
-<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css>
-<link rel=icon type=image/png href=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/layouts/list.css>
-<link rel=stylesheet href=/css/navigators/sidebar.css>
-</head>
-<body data-spy=scroll data-target=#TableOfContents data-offset=80>
-<div class="container-fluid bg-dimmed wrapper">
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
-<div class=container>
-<button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
-<span class=navbar-toggler-icon></span>
-</button>
-<a class=navbar-brand href=/>
-<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>Anna-Lena Popkes</a>
+<!doctype html><html><head><title>Python</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=x-ua-compatible content="ie=edge"><link rel=stylesheet href=/css/bootstrap.min.css><link rel=stylesheet href=/css/layouts/main.css><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/navigators/navbar.css><link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel=stylesheet><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css><link rel=icon type=image/png href=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/layouts/list.css><link rel=stylesheet href=/css/navigators/sidebar.css></head><body data-spy=scroll data-target=#TableOfContents data-offset=80><div class="container-fluid bg-dimmed wrapper"><nav class="navbar navbar-expand-xl top-navbar final-navbar shadow"><div class=container><button class="navbar-toggler navbar-light" id=sidebar-toggler type=button onclick=toggleSidebar()>
+<span class=navbar-toggler-icon></span></button>
+<a class=navbar-brand href=/><img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg>Anna-Lena Popkes</a>
 <button class="navbar-toggler navbar-light" id=toc-toggler type=button onclick=toggleTOC()>
-<span class=navbar-toggler-icon></span>
-</button>
-<div class="collapse navbar-collapse lang-selector" id=top-nav-items>
-<ul class="navbar-nav ml-auto">
-</ul>
-</div>
-</div>
-<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=main-logo>
-<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=inverted-logo>
-</nav>
-<section class=sidebar-section id=sidebar-section>
-<div class=sidebar-holder>
-<div class=sidebar id=sidebar>
-<input type=text placeholder=Search data-search id=search-box>
-<div class=sidebar-tree>
-<ul class=tree id=tree>
-<li id=list-heading><a href=/posts data-filter=all>Posts</a></li>
-<div class=subtree>
-<li><a href=/posts/news/>Personal news</a></li>
-<li><a href=/posts/my_path_to_ml/>My path to machine learning</a></li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/books/>Books</a>
-<ul>
-<li><a href=/posts/books/reading_list/>Personal reading List</a></li>
-<li><a href=/posts/books/deep_work/>Deep work</a></li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/machine_learning/>Machine Learning</a>
-<ul>
-<li><a href=/posts/machine_learning/bayesian_linear_regression/>Bayesian linear regression</a></li>
-<li><a href=/posts/machine_learning/kl_divergence/>KL Divergence</a></li>
-<li><a href=/posts/machine_learning/support_vector_machines/>Support vector machines</a></li>
-<li><a href=/posts/machine_learning/variational_inference/>Variational Inference</a></li>
-</ul>
-</li>
-<li>
-<i class="fas fa-minus-circle"></i><a class=active href=/posts/python/>Python</a>
-<ul class=active>
-<li><a href=/posts/python/mocking/>Mocking</a></li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/python/magical_universe/>Magical Universe</a>
-<ul>
-<li><a href=/posts/python/magical_universe/day_1_start/>Start</a></li>
-<li><a href=/posts/python/magical_universe/day_1_magical_universe/>The Tales of Castle Kilmere</a></li>
-<li><a href=/posts/python/magical_universe/day_1_first_post_oop/>Object-oriented programming</a></li>
-<li><a href=/posts/python/magical_universe/day_2_types_of_methods/>Types of methods</a></li>
-<li><a href=/posts/python/magical_universe/day_3_type_annotations/>Type annotations</a></li>
-<li><a href=/posts/python/magical_universe/day_4_to_string_conversion/>To-string conversion</a></li>
-<li><a href=/posts/python/magical_universe/day_5_decorators/>Decorators</a></li>
-<li><a href=/posts/python/magical_universe/day_6_properties/>Properties</a></li>
-<li><a href=/posts/python/magical_universe/day_7_underscore_patterns/>Underscore patterns</a></li>
-<li><a href=/posts/python/magical_universe/day_8_extending_universe/>Extending the universe</a></li>
-<li><a href=/posts/python/magical_universe/day_9_duck_typing/>Duck Typing</a></li>
-<li><a href=/posts/python/magical_universe/day_10_11_namedtuples/>Namedtuples</a></li>
-<li><a href=/posts/python/magical_universe/day_12_to_15_abcs/>Abstract Base Classes</a></li>
-<li><a href=/posts/python/magical_universe/day_16_to_18_data_classes/>Data classes</a></li>
-<li><a href=/posts/python/magical_universe/day_19_immutable_data_classes/>Immutable data classes</a></li>
-<li><a href=/posts/python/magical_universe/day_20_decorators_in_classes/>Decorators in classes</a></li>
-<li><a href=/posts/python/magical_universe/day_21_if_main/>if __name__ == "__main__"</a></li>
-<li><a href=/posts/python/magical_universe/day_22_to_24_context_managers/>Context managers</a></li>
-<li><a href=/posts/python/magical_universe/day_25_to_28_pytest/>Testing with pytest</a></li>
-<li><a href=/posts/python/magical_universe/day_29_to_31_iterators/>Iterators</a></li>
-<li><a href=/posts/python/magical_universe/day_34_multisets/>Multisets</a></li>
-<li><a href=/posts/python/magical_universe/day_37_extending_universe/>Extending the universe II</a></li>
-<li><a href=/posts/python/magical_universe/day_43_to_45_exception_classes/>Exception classes</a></li>
-<li><a href=/posts/python/magical_universe/day_46_functools_wraps/>functools.wraps</a></li>
-<li><a href=/posts/python/magical_universe/day_47_to_48_defaultdict/>Defaultdict</a></li>
-<li><a href=/posts/python/magical_universe/day_49_to_50_config_files/>Config files</a></li>
-<li><a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/>Wrap up</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<i class="fas fa-plus-circle"></i><a href=/posts/software_engineering/>Software Engineering</a>
-<ul>
-<li><a href=/posts/software_engineering/containers/>Intro to containers</a></li>
-<li><a href=/posts/software_engineering/docker/>Intro to Docker</a></li>
-<li><a href=/posts/software_engineering/virtual_machines/>Intro to virtual machines</a></li>
-</ul>
-</li>
-</div>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section class=content-section id=content-section>
-<div class="content container-fluid" id=content>
-<div class="container-fluid post-card-holder" id=post-card-holder>
-<div class=post-card>
-<a href=/posts/python/mocking/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Mocking in Python</h5>
-<p class="card-text post-summary">Topics: Mocking in Python
-Today, I want to talk about mocking. I became interested in this topic a few months back when I started to work in a data engineering project at work. In this project we have a lot of tests that relies on mocking to test code with external dependencies. If you don&rsquo;t like reading long blog posts, consider listening to one of the podcast episodes I did on this topic: there is one at Talk Python to Me and the other at Test and Code.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>October 11, 2020</span>
-<a href=/posts/python/mocking/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Wrap up</h5>
-<p class="card-text post-summary">Topics: Wrap up
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse lang-selector" id=top-nav-items><ul class="navbar-nav ml-auto"></ul></div></div><img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=main-logo>
+<img src=/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg class=d-none id=inverted-logo></nav><section class=sidebar-section id=sidebar-section><div class=sidebar-holder><div class=sidebar id=sidebar><input type=text placeholder=Search data-search id=search-box><div class=sidebar-tree><ul class=tree id=tree><li id=list-heading><a href=/posts data-filter=all>Posts</a></li><div class=subtree><li><a href=/posts/news/>Personal news</a></li><li><a href=/posts/my_path_to_ml/>My path to machine learning</a></li><li><i class="fas fa-plus-circle"></i><a href=/posts/books/>Books</a><ul><li><a href=/posts/books/reading_list/>Personal reading List</a></li><li><a href=/posts/books/deep_work/>Deep work</a></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/posts/machine_learning/>Machine Learning</a><ul><li><a href=/posts/machine_learning/bayesian_linear_regression/>Bayesian linear regression</a></li><li><a href=/posts/machine_learning/kl_divergence/>KL Divergence</a></li><li><a href=/posts/machine_learning/principal_component_analysis/>Principal component analysis (PCA)</a></li><li><a href=/posts/machine_learning/support_vector_machines/>Support vector machines</a></li><li><a href=/posts/machine_learning/variational_inference/>Variational Inference</a></li></ul></li><li><i class="fas fa-minus-circle"></i><a class=active href=/posts/python/>Python</a><ul class=active><li><a href=/posts/python/mocking/>Mocking</a></li><li><i class="fas fa-plus-circle"></i><a href=/posts/python/magical_universe/>Magical Universe</a><ul><li><a href=/posts/python/magical_universe/day_1_start/>Start</a></li><li><a href=/posts/python/magical_universe/day_1_magical_universe/>The Tales of Castle Kilmere</a></li><li><a href=/posts/python/magical_universe/day_1_first_post_oop/>Object-oriented programming</a></li><li><a href=/posts/python/magical_universe/day_2_types_of_methods/>Types of methods</a></li><li><a href=/posts/python/magical_universe/day_3_type_annotations/>Type annotations</a></li><li><a href=/posts/python/magical_universe/day_4_to_string_conversion/>To-string conversion</a></li><li><a href=/posts/python/magical_universe/day_5_decorators/>Decorators</a></li><li><a href=/posts/python/magical_universe/day_6_properties/>Properties</a></li><li><a href=/posts/python/magical_universe/day_7_underscore_patterns/>Underscore patterns</a></li><li><a href=/posts/python/magical_universe/day_8_extending_universe/>Extending the universe</a></li><li><a href=/posts/python/magical_universe/day_9_duck_typing/>Duck Typing</a></li><li><a href=/posts/python/magical_universe/day_10_11_namedtuples/>Namedtuples</a></li><li><a href=/posts/python/magical_universe/day_12_to_15_abcs/>Abstract Base Classes</a></li><li><a href=/posts/python/magical_universe/day_16_to_18_data_classes/>Data classes</a></li><li><a href=/posts/python/magical_universe/day_19_immutable_data_classes/>Immutable data classes</a></li><li><a href=/posts/python/magical_universe/day_20_decorators_in_classes/>Decorators in classes</a></li><li><a href=/posts/python/magical_universe/day_21_if_main/>if __name__ == "__main__"</a></li><li><a href=/posts/python/magical_universe/day_22_to_24_context_managers/>Context managers</a></li><li><a href=/posts/python/magical_universe/day_25_to_28_pytest/>Testing with pytest</a></li><li><a href=/posts/python/magical_universe/day_29_to_31_iterators/>Iterators</a></li><li><a href=/posts/python/magical_universe/day_34_multisets/>Multisets</a></li><li><a href=/posts/python/magical_universe/day_37_extending_universe/>Extending the universe II</a></li><li><a href=/posts/python/magical_universe/day_43_to_45_exception_classes/>Exception classes</a></li><li><a href=/posts/python/magical_universe/day_46_functools_wraps/>functools.wraps</a></li><li><a href=/posts/python/magical_universe/day_47_to_48_defaultdict/>Defaultdict</a></li><li><a href=/posts/python/magical_universe/day_49_to_50_config_files/>Config files</a></li><li><a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/>Wrap up</a></li></ul></li></ul></li><li><i class="fas fa-plus-circle"></i><a href=/posts/software_engineering/>Software Engineering</a><ul><li><a href=/posts/software_engineering/containers/>Intro to containers</a></li><li><a href=/posts/software_engineering/docker/>Intro to Docker</a></li><li><a href=/posts/software_engineering/virtual_machines/>Intro to virtual machines</a></li></ul></li></div></ul></div></div></div></section><section class=content-section id=content-section><div class="content container-fluid" id=content><div class="container-fluid post-card-holder" id=post-card-holder><div class=post-card><a href=/posts/python/mocking/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Mocking in Python</h5><p class="card-text post-summary">Topics: Mocking in Python
+Today, I want to talk about mocking. I became interested in this topic a few months back when I started to work in a data engineering project at work. In this project we have a lot of tests that relies on mocking to test code with external dependencies. If you don&rsquo;t like reading long blog posts, consider listening to one of the podcast episodes I did on this topic: there is one at Talk Python to Me and the other at Test and Code.</p></div><div class=card-footer><span class=float-left>October 11, 2020</span>
+<a href=/posts/python/mocking/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Wrap up</h5><p class="card-text post-summary">Topics: Wrap up
 During the past 50 days we studied several highly useful Python concepts using a Magical Universe. Overall, we looked at the following concepts:
-General Python concepts: Object oriented programming, how to use classes, how inheritance works, etc. The differences between class, instance and static methods How to convert objects to strings How to properly name variables and functions The &lsquo;It&rsquo;s easier to ask for forgiveness than permission&rsquo; EAFP principle The functioning of if __name__ == '__name__' Testing code with pytest Advanced Python concepts: How to use function annotations What decorators are and how we can use them, e.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>September 16, 2018</span>
-<a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_49_to_50_config_files/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Config files</h5>
-<p class="card-text post-summary">Topics: Using config files
+General Python concepts: Object oriented programming, how to use classes, how inheritance works, etc. The differences between class, instance and static methods How to convert objects to strings How to properly name variables and functions The &lsquo;It&rsquo;s easier to ask for forgiveness than permission&rsquo; EAFP principle The functioning of if __name__ == '__name__' Testing code with pytest Advanced Python concepts: How to use function annotations What decorators are and how we can use them, e.</p></div><div class=card-footer><span class=float-left>September 16, 2018</span>
+<a href=/posts/python/magical_universe/2018-09-16-blog-post-day-51/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_49_to_50_config_files/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Config files</h5><p class="card-text post-summary">Topics: Using config files
 What are config files As a last topic I would like to take a look at the usage of config files. First of all we have to establish what a config file is. The Wikipedia definition definition is precise and easy to understand: configuration files (or config files) are files used to configure the parameters and initial settings for some computer programs.
-In our case we can use a config file to organize and speed up the process of creating members of our magical universe.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>September 10, 2018</span>
-<a href=/posts/python/magical_universe/day_49_to_50_config_files/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_47_to_48_defaultdict/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>collections.defaultdict</h5>
-<p class="card-text post-summary">Topics: collections.defaultdict Updated 2020-10-06
+In our case we can use a config file to organize and speed up the process of creating members of our magical universe.</p></div><div class=card-footer><span class=float-left>September 10, 2018</span>
+<a href=/posts/python/magical_universe/day_49_to_50_config_files/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_47_to_48_defaultdict/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>collections.defaultdict</h5><p class="card-text post-summary">Topics: collections.defaultdict Updated 2020-10-06
 The collections module The collections module in Python contains several useful classes. One of them is especially helpful for our Magical Universe: collections.defaultdict.
-When defining our CastleKilmereMember class we specified self.traits to be an empty dictionary. New positive and negative traits can be added to a person using the add_trait() function. We can check whether a person possesses a certain trait using the exhibits_trait() function. The relevant parts of the class look as follows:</p>
-</div>
-<div class=card-footer>
-<span class=float-left>September 7, 2018</span>
-<a href=/posts/python/magical_universe/day_47_to_48_defaultdict/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_46_functools_wraps/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>functools.wraps - avoiding losing metdata when applying decorators</h5>
-<p class="card-text post-summary">Topics: functools.wraps
+When defining our CastleKilmereMember class we specified self.traits to be an empty dictionary. New positive and negative traits can be added to a person using the add_trait() function. We can check whether a person possesses a certain trait using the exhibits_trait() function. The relevant parts of the class look as follows:</p></div><div class=card-footer><span class=float-left>September 7, 2018</span>
+<a href=/posts/python/magical_universe/day_47_to_48_defaultdict/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_46_functools_wraps/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>functools.wraps - avoiding losing metdata when applying decorators</h5><p class="card-text post-summary">Topics: functools.wraps
 We have discussed decorators on day 5, day 6 and day 20 already. Therefore, we know that decorators allow us to extend or modify the behavior of a function without permanently modifying the function itself. In our example we modified the says() function of our CastleKilmereMember class to be whispering instead of talking normally:
-class CastleKilmereMember: """ Creates a member of the Castle Kilmere School of Magic """ def __init__(self, name: str, birthyear: int, sex: str): self.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>September 6, 2018</span>
-<a href=/posts/python/magical_universe/day_46_functools_wraps/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_43_to_45_exception_classes/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Custom exception classes</h5>
-<p class="card-text post-summary">Topics: Custom exception classes
+class CastleKilmereMember: """ Creates a member of the Castle Kilmere School of Magic """ def __init__(self, name: str, birthyear: int, sex: str): self.</p></div><div class=card-footer><span class=float-left>September 6, 2018</span>
+<a href=/posts/python/magical_universe/day_46_functools_wraps/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_43_to_45_exception_classes/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Custom exception classes</h5><p class="card-text post-summary">Topics: Custom exception classes
 Errors and Exceptions First of all, what is an exception? As outlined in the Python docs there are two big kinds of errors: syntax errors and exceptions.
 Syntax Error:
-A syntax error is an error that makes it impossible to parse a program. That&rsquo;s why it&rsquo;s also called a parsing error. Whenever we made a mistake in the syntax of our code (for example, we might forgot a &lsquo;:&rsquo; somewhere) the parser will complain with a Syntax Error: invalid syntax, pointing us to the offending line.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>September 3, 2018</span>
-<a href=/posts/python/magical_universe/day_43_to_45_exception_classes/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_37_extending_universe/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Extending the Magical Universe</h5>
-<p class="card-text post-summary">Topics: Extending the Magical Universe with classmethods for Charm, Hex, Curse, etc.
-Today I added classmethods to the different Spell subclasses. Speficially, I added one classmethod for each spell type: Charm, Transfiguration, Jinx, Hex, Curse, CounterSpell, HealingSpell such that at least one charm, hex, jinx, &mldr; exists in our universe. Tomorrow I will write test code for the entire abstract base class Spell.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 29, 2018</span>
-<a href=/posts/python/magical_universe/day_37_extending_universe/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_34_multisets/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Multisets, `collections.Counter`</h5>
-<p class="card-text post-summary">Topics: Multisets, collections.Counter
-Counting objects Today I want to present a very useful class in Python: collections.Counter. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn&rsquo;t love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using collections.Counter.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 25, 2018</span>
-<a href=/posts/python/magical_universe/day_34_multisets/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_29_to_31_iterators/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Iterators</h5>
-<p class="card-text post-summary">Topics: Iterators, iterables and iteration
+A syntax error is an error that makes it impossible to parse a program. That&rsquo;s why it&rsquo;s also called a parsing error. Whenever we made a mistake in the syntax of our code (for example, we might forgot a &lsquo;:&rsquo; somewhere) the parser will complain with a Syntax Error: invalid syntax, pointing us to the offending line.</p></div><div class=card-footer><span class=float-left>September 3, 2018</span>
+<a href=/posts/python/magical_universe/day_43_to_45_exception_classes/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_37_extending_universe/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Extending the Magical Universe</h5><p class="card-text post-summary">Topics: Extending the Magical Universe with classmethods for Charm, Hex, Curse, etc.
+Today I added classmethods to the different Spell subclasses. Speficially, I added one classmethod for each spell type: Charm, Transfiguration, Jinx, Hex, Curse, CounterSpell, HealingSpell such that at least one charm, hex, jinx, &mldr; exists in our universe. Tomorrow I will write test code for the entire abstract base class Spell.</p></div><div class=card-footer><span class=float-left>August 29, 2018</span>
+<a href=/posts/python/magical_universe/day_37_extending_universe/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_34_multisets/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Multisets, `collections.Counter`</h5><p class="card-text post-summary">Topics: Multisets, collections.Counter
+Counting objects Today I want to present a very useful class in Python: collections.Counter. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn&rsquo;t love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using collections.Counter.</p></div><div class=card-footer><span class=float-left>August 25, 2018</span>
+<a href=/posts/python/magical_universe/day_34_multisets/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_29_to_31_iterators/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Iterators</h5><p class="card-text post-summary">Topics: Iterators, iterables and iteration
 Iterators Although we need to create more test functions for the other Magical Universe classes, I want to spend a few days on iterators. First of all, what is meant by the term iteration? Iteration describes the process of taking an item and looking at each of its components one by one. Any time we use a loop like
-for component in item: print(component) we use iteration.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 20, 2018</span>
-<a href=/posts/python/magical_universe/day_29_to_31_iterators/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_25_to_28_pytest/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Testing code with pytest</h5>
-<p class="card-text post-summary">Topics: Testing code with pytest Updated 2020-10-05
+for component in item: print(component) we use iteration.</p></div><div class=card-footer><span class=float-left>August 20, 2018</span>
+<a href=/posts/python/magical_universe/day_29_to_31_iterators/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_25_to_28_pytest/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Testing code with pytest</h5><p class="card-text post-summary">Topics: Testing code with pytest Updated 2020-10-05
 Writing test functions for our code is extremely important. Since I have been lazy writing test code myself, I want to spend a little more time on this topic. My favorite testing framework is pytest. I&rsquo;m not an expert on testing, so please consider this post an introduction to testing rather than a thorough guide.
-Why pytest? Using pytest has several advantages. First of all, pytest makes testing very easy because its syntax is simple and easy to understand.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 17, 2018</span>
-<a href=/posts/python/magical_universe/day_25_to_28_pytest/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_22_to_24_context_managers/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>Context managers and the `with` statement</h5>
-<p class="card-text post-summary">Topics: with statement and context managers Updated 2020-10-05
+Why pytest? Using pytest has several advantages. First of all, pytest makes testing very easy because its syntax is simple and easy to understand.</p></div><div class=card-footer><span class=float-left>August 17, 2018</span>
+<a href=/posts/python/magical_universe/day_25_to_28_pytest/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_22_to_24_context_managers/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>Context managers and the `with` statement</h5><p class="card-text post-summary">Topics: with statement and context managers Updated 2020-10-05
 Context managers and the with statement Similar to decorators, context managers are a concept many people use but only few understand. If you haven&rsquo;t heard of the term &lsquo;context manager&rsquo; before: you probably encountered them already while reading or writing from/to a file using the with statement.
-The most common use of context managers is the proper management of resources. In simple terms this means that we want to make sure that we open, read, write and close files correctly.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 14, 2018</span>
-<a href=/posts/python/magical_universe/day_22_to_24_context_managers/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-<div class=post-card>
-<a href=/posts/python/magical_universe/day_21_if_main/ class=post-card-link>
-<div class=card>
-<div class=card-head>
-<img class=card-img-top src=/images/default-hero.jpg>
-</div>
-<div class=card-body>
-<h5 class=card-title>The mysterious `if __name__ == "__main__"`</h5>
-<p class="card-text post-summary">Topics: What is if __name__ == "__main__" doing?
+The most common use of context managers is the proper management of resources. In simple terms this means that we want to make sure that we open, read, write and close files correctly.</p></div><div class=card-footer><span class=float-left>August 14, 2018</span>
+<a href=/posts/python/magical_universe/day_22_to_24_context_managers/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/python/magical_universe/day_21_if_main/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg></div><div class=card-body><h5 class=card-title>The mysterious `if __name__ == "__main__"`</h5><p class="card-text post-summary">Topics: What is if __name__ == "__main__" doing?
 I always wanted to dig into the statement if __name__ == "__main__" that is used in so many programs. I have used it for a long time already but until recently I had no idea what exactly it is doing. To make the topic as understandable as possible, I will divide the explanation into three steps.
-Step 1: Two ways of running code We saved our Magical Universe in a file named magical_universe.</p>
-</div>
-<div class=card-footer>
-<span class=float-left>August 12, 2018</span>
-<a href=/posts/python/magical_universe/day_21_if_main/ class="float-right btn btn-outline-info btn-sm">Read</a>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class=paginator>
-<ul class="pagination pagination-default">
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a>
-</li>
-<li class="page-item disabled">
-<a href=# aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a>
-</li>
-<li class="page-item active">
-<a href=# aria-current=page aria-label="Page 1" class=page-link role=button>1</a>
-</li>
-<li class=page-item>
-<a href=/posts/python/page/2/ aria-label="Page 2" class=page-link role=button>2</a>
-</li>
-<li class=page-item>
-<a href=/posts/python/page/3/ aria-label="Page 3" class=page-link role=button>3</a>
-</li>
-<li class=page-item>
-<a href=/posts/python/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a>
-</li>
-<li class=page-item>
-<a href=/posts/python/page/3/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a>
-</li>
-</ul>
-</div>
-</div>
-</section>
-</div>
-<footer class="container-fluid text-center align-content-center footer pb-2">
-<div class="container pt-5">
-<div class="row text-left">
-<div class="col-md-4 col-sm-12">
-<h5>Navigation</h5>
-<ul>
-<li class=nav-item>
-<a class=smooth-scroll href=#about>About</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#skills>Skills</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#experiences>Experiences</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#education>Education</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#projects>Projects</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#recent-posts>Recent Posts</a>
-</li>
-<li class=nav-item>
-<a class=smooth-scroll href=#appearances>Talks & Podcasts</a>
-</li>
-</ul>
-</div>
-<div class="col-md-4 col-sm-12">
-<h5>Contact me:</h5>
-<ul>
-<li><span>Email: </span> <span>popkes@gmx.net</span></li>
-</ul>
-</div>
-</div>
-</div>
-<hr>
-<div class=container>
-<div class="row text-left">
-<div class=col-md-4>
-<a id=theme href=https://github.com/hossainemruz/toha target=#>
-<img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png>
-Toha
-</a>
-</div>
-<div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
-<div class="col-md-4 text-right">
-<a id=hugo href=https://gohugo.io/>Powered by
-<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18>
-</a>
-</div>
-</div>
-</div>
-</footer>
-<script src=/js/jquery-3.4.1.min.js></script>
+Step 1: Two ways of running code We saved our Magical Universe in a file named magical_universe.</p></div><div class=card-footer><span class=float-left>August 12, 2018</span>
+<a href=/posts/python/magical_universe/day_21_if_main/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div></div><div class=paginator><ul class="pagination pagination-default"><li class="page-item disabled"><a aria-disabled=true aria-label=First class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;&#171;</span></a></li><li class="page-item disabled"><a aria-disabled=true aria-label=Previous class=page-link role=button tabindex=-1><span aria-hidden=true>&#171;</span></a></li><li class="page-item active"><a aria-current=page aria-label="Page 1" class=page-link role=button>1</a></li><li class=page-item><a href=/posts/python/page/2/ aria-label="Page 2" class=page-link role=button>2</a></li><li class=page-item><a href=/posts/python/page/3/ aria-label="Page 3" class=page-link role=button>3</a></li><li class=page-item><a href=/posts/python/page/2/ aria-label=Next class=page-link role=button><span aria-hidden=true>&#187;</span></a></li><li class=page-item><a href=/posts/python/page/3/ aria-label=Last class=page-link role=button><span aria-hidden=true>&#187;&#187;</span></a></li></ul></div></div></section></div><footer class="container-fluid text-center align-content-center footer pb-2"><div class="container pt-5"><div class="row text-left"><div class="col-md-4 col-sm-12"><h5>Navigation</h5><ul><li class=nav-item><a class=smooth-scroll href=#about>About</a></li><li class=nav-item><a class=smooth-scroll href=#skills>Skills</a></li><li class=nav-item><a class=smooth-scroll href=#experiences>Experiences</a></li><li class=nav-item><a class=smooth-scroll href=#education>Education</a></li><li class=nav-item><a class=smooth-scroll href=#projects>Projects</a></li><li class=nav-item><a class=smooth-scroll href=#recent-posts>Recent Posts</a></li><li class=nav-item><a class=smooth-scroll href=#appearances>Talks & Podcasts</a></li></ul></div><div class="col-md-4 col-sm-12"><h5>Contact me:</h5><ul><li><span>Email:</span> <span>popkes@gmx.net</span></li></ul></div></div></div><hr><div class=container><div class="row text-left"><div class=col-md-4><a id=theme href=https://github.com/hossainemruz/toha target=#><img src=/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png>
+Toha</a></div><div class="col-md-4 text-center">© 2020-2021 Copyright.</div><div class="col-md-4 text-right"><a id=hugo href=https://gohugo.io/>Powered by
+<img src=/images/hugo-logo.svg alt="Hugo Logo" height=18></a></div></div></div></footer><script src=/js/jquery-3.4.1.min.js></script>
 <script src=/js/popper.min.js></script>
 <script src=/js/bootstrap.min.js></script>
 <script src=/js/navbar.js></script>
 <script src=/js/main.js></script>
-<script src=/js/list.js></script>
-</body>
-</html>
+<script src=/js/list.js></script></body></html>
