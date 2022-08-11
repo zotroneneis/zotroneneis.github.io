@@ -1,6 +1,6 @@
 ---
 title: Principal component analysis (PCA)
-date: 2022-08-10
+date: 2022-08-11
 menu:
   sidebar:
     name: Principal component analysis (PCA)
@@ -26,10 +26,7 @@ Luckily, many dimensions in high-dimensional data are often redundant and can be
 
 ## 4. Two ways of deriving PCA  
 
-Let's say we have an i.i.d dataset $\boldsymbol{X}$ with $D$ dimensions and a mean value of $0$:
-
-$$
-\mathcal{\boldsymbol{X}} = \{\boldsymbol{x}_1, ..., \boldsymbol{x}_N\}, \boldsymbol{x}_n \in \mathbb{R}^D$. The data covariance matrix (which will be needed later on) is computed as follows:
+Let's say we have an i.i.d dataset $\boldsymbol{X}$ with $D$ dimensions and a mean value of $0$: $\mathcal{\boldsymbol{X}} = \{\boldsymbol{x}_1, ..., \boldsymbol{x}_N\}, \boldsymbol{x}_n \in \mathbb{R}^D$. The data covariance matrix (which will be needed later on) is computed as follows:
 
 $\boldsymbol{S} = \frac{1}{N} \sum_{n=1}^{N} \boldsymbol{x}_n \boldsymbol{x}_n^T$
 
@@ -64,11 +61,14 @@ $\boldsymbol{z}_n = \boldsymbol{B}^T \boldsymbol{x}_n \in \mathbb{R}^M$
 
 Using matrix multiplications we could represent the computation as follows:
 
-{{< img src="/posts/machine_learning/images/pca/pca_matrix_multiplications.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/pca_matrix_multiplications.png" width="60%" align="center" >}}
 
 ### 4.2 Projection perspective  
 
-Another way to derive PCA is to consider the original data points $\boldsymbol{x}_n$ and their reconstructions $\boldsymbol{\tilde{x}}_n$. In this perspective we are trying to find reconstructions $\boldsymbol{\tilde{x}}_n$ that minimize the averaged squared Euclidean distance between the original datapoints and their reconstructions: $J = \frac{1}{N} \sum_{n=1}^{N}||\boldsymbol{x}_n - \boldsymbol{\tilde{x}}_n ||^2$.
+Another way to derive PCA is to consider the original data points $\boldsymbol{x}_n$ and their reconstructions $\boldsymbol{\tilde{x}}_n$. In this perspective we are trying to find reconstructions $\boldsymbol{\tilde{x}}_n$ that minimize the averaged squared Euclidean distance between the original datapoints and their reconstructions:
+$$
+J = \frac{1}{N} \sum\_{n=1}^{N}||\boldsymbol{x}_n - \boldsymbol{\tilde{x}}_n ||^2
+$$
 
 You can find more details about this perspective in chapter 10.3 of the book [Mathematics for Machine Learning](https://mml-book.com).
 
@@ -76,10 +76,15 @@ You can find more details about this perspective in chapter 10.3 of the book [Ma
 
 In the beginning I mentioned that PCA constructs new features (the principal components) that are linear combinations of the original features. Let's take a closer look at what this means.
 
-Each datapoint is stored in a vector with $D$ elements: $\boldsymbol{x}_n = [x_{n1}, ..., x_{nD}]$. Each of the $D$ dimensions represents a different feature. For example, think of an image with $D = 64$ pixels. We can describe each datapoint as a linear combinations of the features: $\boldsymbol{x}_n = x_{n1} \cdot \text{feature}_1 + x_{n2} \cdot \text{feature}_2 + ... + x_{nD} \cdot \text{feature}_D$
+Each datapoint is stored in a vector with $D$ elements: $\boldsymbol{x}_n = [x\_{n1}, ..., x\_{nD}]$. Each of the $D$ dimensions represents a different feature. For example, think of an image with $D = 64$ pixels. We can describe each datapoint as a linear combinations of the features:
+$$
+\boldsymbol{x}_n = x\_{n1} \cdot \text{feature}_1 + x\_{n2} \cdot \text{feature}_2 + ... + x\_{nD} \cdot \text{feature}_D
+$$
 
 Using the example of pixels this would correspond to:
-$\boldsymbol{x}_n = x_{n1} \cdot \text{pixel}_1 + x_{n2} \cdot \text{pixel}_2 + ... + x_{nD} \cdot \text{pixel}_D$
+$$
+\boldsymbol{x}_n = x\_{n1} \cdot \text{pixel}_1 + x\_{n2} \cdot \text{pixel}_2 + ... + x\_{nD} \cdot \text{pixel}_D
+$$
 
 When PCA projects the data to a low-dimensional space it also uses a combination of the features. This becomes evident in the projection equation we have seen above:
 
@@ -89,7 +94,7 @@ In this equation we find the compressed representation $\boldsymbol{z}_n$ of the
 
 Let's say our data matrix $\boldsymbol{X}$ has 3 datapoints and 2 features, so  $\boldsymbol{X} \in \mathbb{R}^{3x2}$ and we consider only the first principal component when performing PCA. Hence we have  $\boldsymbol{B} \in \mathbb{R}^{2x1}$. When multiplying the data matrix with the projection matrix we receive the compressed versions of the datapoints as a matrix $\boldsymbol{Z} \in \mathbb{R}^{3x1}$. Each one-dimensional code $\boldsymbol{z}_n$ is given by a linear combination of the original feature values:
 
-{{< img src="/posts/machine_learning/images/pca/linear_combinations.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/linear_combinations.png" width="70%" align="center" >}}
 
 ## 6. Computing the eigenvectors  
 
@@ -137,7 +142,7 @@ plt.imshow(digits.images[42], cmap="gray");
     Shape of data matrix: (1797, 64)
     Shape of label matrix: (1797,)
 
-{{< img src="/posts/machine_learning/images/pca/digit_example.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/digit_example.png" width="20%" align="center" >}}
 
 ### 8.2 Standardization  
 
@@ -288,7 +293,7 @@ In order to actually project the original data $\boldsymbol{X}$ into the lower-d
 
 $\boldsymbol{Z} = \boldsymbol{X} \boldsymbol{B} \in \mathbb{R}^{N x M}$
 
-{{< img src="/posts/machine_learning/images/pca/pca_digits_matrix_multiplications.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/pca_digits_matrix_multiplications.png" width="60%" align="center" >}}
 
 
 ```python
@@ -320,7 +325,7 @@ plt.show();
 ```
 
 
-{{< img src="/posts/machine_learning/images/pca/plot_pca.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/plot_pca.png" width="50%" align="center" >}}
 
 
 ### 8.9 Comparison to scikit-learn  
@@ -347,7 +352,7 @@ plt.title("Compressed digits dataset with labels (sklearn version)")
 plt.show()
 ```
 
-{{< img src="/posts/machine_learning/images/pca/plot_sklearn.png" width="40%" align="center" >}}
+{{< img src="/posts/machine_learning/images/pca/plot_sklearn.png" width="50%" align="center" >}}
 
 ## 9. Sources and further reading 
 
