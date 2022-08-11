@@ -2,58 +2,89 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Anna-Lena Popkes</title>
-    <link>zotroneneis.github.io/</link>
+    <link>https://alpopkes.com/</link>
     <description>Recent content on Anna-Lena Popkes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="zotroneneis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alpopkes.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Principal component analysis (PCA)</title>
+      <link>https://alpopkes.com/posts/machine_learning/principal_component_analysis/</link>
+      <pubDate>Thu, 11 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alpopkes.com/posts/machine_learning/principal_component_analysis/</guid>
+      <description>After a longer break I continued working on my machine learning basics repository which implements fundamental machine learning algorithms in plain Python. This time, I took a detailed look at principal component analysis (PCA). The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What is PCA? In simple terms, principal component analysis (PCA) is a technique to perform dimensionality reduction.</description>
+    </item>
+    
+    <item>
+      <title>Support vector machines</title>
+      <link>https://alpopkes.com/posts/machine_learning/support_vector_machines/</link>
+      <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alpopkes.com/posts/machine_learning/support_vector_machines/</guid>
+      <description>I posted another notebook in my machine learning basics repository. This time, I took a detailed look at support vector machines. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What are support vector machines? Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of kernel methods.</description>
+    </item>
+    
     <item>
       <title>Personal reading list of non-fiction books</title>
-      <link>zotroneneis.github.io/posts/books/reading_list/</link>
-      <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+      <link>https://alpopkes.com/posts/books/reading_list/</link>
+      <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/books/reading_list/</guid>
-      <description>Books I am currently reading  A Promised Land by Barack Obama  Link to book     Books I have read   The Alchemy of Air by Thomas Hager (Link to book)
-  Superintelligence: Paths, Dangers, Strategies by Nick Bostrom (Link to book)
-  Beethoven, A Life by Jan Caeyers (Link to book)
-  Deep Work: Rules for Focused Success in a Distracted World by Cal Newport (Link to book)</description>
+      <guid>https://alpopkes.com/posts/books/reading_list/</guid>
+      <description>Books I am currently reading Atomic Habits by James Clear Link to book Books I have read A Promised Land by Barack Obama (Link to book)
+The Alchemy of Air by Thomas Hager (Link to book)
+Superintelligence: Paths, Dangers, Strategies by Nick Bostrom (Link to book)
+Beethoven, A Life by Jan Caeyers (Link to book)
+Deep Work: Rules for Focused Success in a Distracted World by Cal Newport (Link to book)</description>
+    </item>
+    
+    <item>
+      <title>Bayesian linear regression</title>
+      <link>https://alpopkes.com/posts/machine_learning/bayesian_linear_regression/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alpopkes.com/posts/machine_learning/bayesian_linear_regression/</guid>
+      <description>I finally found time to continue working on my machine learning basics repository which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What is Bayesian linear regression (BLR)? Bayesian linear regression is the Bayesian interpretation of linear regression.</description>
     </item>
     
     <item>
       <title>Deep Work</title>
-      <link>zotroneneis.github.io/posts/books/deep_work/</link>
+      <link>https://alpopkes.com/posts/books/deep_work/</link>
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/books/deep_work/</guid>
+      <guid>https://alpopkes.com/posts/books/deep_work/</guid>
       <description>I recently finished reading the book Deep Work by Cal Newport. For years, I have been interested in the question of how we can improve our learning and work habits. There is a ton of research on this topic and many great resources (like, for example, the podcast The Learning Scientists). I don&amp;rsquo;t want to use this blog post to talk about all the different things I have learned and tried in the past years.</description>
     </item>
     
     <item>
       <title>Mocking in Python</title>
-      <link>zotroneneis.github.io/posts/python/mocking/</link>
+      <link>https://alpopkes.com/posts/python/mocking/</link>
       <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/mocking/</guid>
+      <guid>https://alpopkes.com/posts/python/mocking/</guid>
       <description>Topics: Mocking in Python
 Today, I want to talk about mocking. I became interested in this topic a few months back when I started to work in a data engineering project at work. In this project we have a lot of tests that relies on mocking to test code with external dependencies. If you don&amp;rsquo;t like reading long blog posts, consider listening to one of the podcast episodes I did on this topic: there is one at Talk Python to Me and the other at Test and Code.</description>
     </item>
     
     <item>
       <title>Variational Inference</title>
-      <link>zotroneneis.github.io/posts/machine_learning/variational_inference/</link>
+      <link>https://alpopkes.com/posts/machine_learning/variational_inference/</link>
       <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/machine_learning/variational_inference/</guid>
+      <guid>https://alpopkes.com/posts/machine_learning/variational_inference/</guid>
       <description>Introduction Variational inference is an important topic that is widely used in machine learning. For example, it&amp;rsquo;s the basis for variational autoencoders. Also Bayesian learning often makes use variational of inference. To understand what variational inference is, how it works and why it&amp;rsquo;s useful we will go through each point step by step.
 What are latent variables? A latent variable is the opposite of an observed variable. This means that a latent variable is not directly observed but inferred from other variables which are observed.</description>
     </item>
     
     <item>
       <title>Kullback-Leibler Divergence</title>
-      <link>zotroneneis.github.io/posts/machine_learning/kl_divergence/</link>
+      <link>https://alpopkes.com/posts/machine_learning/kl_divergence/</link>
       <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/machine_learning/kl_divergence/</guid>
+      <guid>https://alpopkes.com/posts/machine_learning/kl_divergence/</guid>
       <description>One of the points on my long &amp;lsquo;stuff-you-have-to-look-at&amp;rsquo; list is the Kullback-Leibler divergence. I finally took the time to take a detailed look at this topic.
 Definition The KL-divergence is a measure of how similar (or different) two probablity distributions are. When having a discrete probability distribution $P$ and another probability distribution $Q$ the KL-divergence for a set of points $X$ is defined as:
 $$D_{KL}(P ,|| ,Q) = \sum_{x \in X} P(x) \log \big( \frac{P(x)}{Q(x)} \big)$$</description>
@@ -61,51 +92,51 @@ $$D_{KL}(P ,|| ,Q) = \sum_{x \in X} P(x) \log \big( \frac{P(x)}{Q(x)} \big)$$</d
     
     <item>
       <title>An introduction to Docker</title>
-      <link>zotroneneis.github.io/posts/software_engineering/docker/</link>
+      <link>https://alpopkes.com/posts/software_engineering/docker/</link>
       <pubDate>Sat, 10 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/software_engineering/docker/</guid>
+      <guid>https://alpopkes.com/posts/software_engineering/docker/</guid>
       <description>Topics: Docker
 I have been wanting to learn more about Docker for months. However, when starting to read Dockers get started page I quickly had to find out that I&amp;rsquo;m lacking knowledge in too many other concepts. Since my background isn&amp;rsquo;t computer science I often run across this problem. Luckily, this allows me to constantly learn new things! After writing a post on virtual machines and another about containers this one is finally about Docker!</description>
     </item>
     
     <item>
       <title>An introduction to containers</title>
-      <link>zotroneneis.github.io/posts/software_engineering/containers/</link>
+      <link>https://alpopkes.com/posts/software_engineering/containers/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/software_engineering/containers/</guid>
+      <guid>https://alpopkes.com/posts/software_engineering/containers/</guid>
       <description>Topics: Containers
 I have been wanting to learn more about Docker for months. However, when starting to read Dockers get started page I quickly had to find out that I&amp;rsquo;m lacking knowledge in too many other concepts. Since my background isn&amp;rsquo;t computer science I often run across this problem. Luckily, this allows me to constantly learn new things! With the goal of eventually reaching the topic of Docker, the first post introduced virtual machines.</description>
     </item>
     
     <item>
       <title>An introduction to virtual machines</title>
-      <link>zotroneneis.github.io/posts/software_engineering/virtual_machines/</link>
+      <link>https://alpopkes.com/posts/software_engineering/virtual_machines/</link>
       <pubDate>Sat, 29 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/software_engineering/virtual_machines/</guid>
+      <guid>https://alpopkes.com/posts/software_engineering/virtual_machines/</guid>
       <description>Topics: Virtual machines
 I have been wanting to learn more about Docker for months. However, when starting to read Dockers get started page I quickly had to find out that I&amp;rsquo;m lacking knowledge in too many other concepts. Since my background isn&amp;rsquo;t computer science I often run across this problem. Luckily, this allows me to constantly learn new things! With the goal of eventually reaching the topic of Docker, this post will introduce virtual machines, while the next one will be about containers.</description>
     </item>
     
     <item>
       <title>Wrap up</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/2018-09-16-blog-post-day-51/</link>
       <pubDate>Sun, 16 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/2018-09-16-blog-post-day-51/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/2018-09-16-blog-post-day-51/</guid>
       <description>Topics: Wrap up
 During the past 50 days we studied several highly useful Python concepts using a Magical Universe. Overall, we looked at the following concepts:
-General Python concepts:  Object oriented programming, how to use classes, how inheritance works, etc. The differences between class, instance and static methods How to convert objects to strings How to properly name variables and functions The &amp;lsquo;It&amp;rsquo;s easier to ask for forgiveness than permission&amp;rsquo; EAFP principle The functioning of if __name__ == &#39;__name__&#39; Testing code with pytest  Advanced Python concepts:  How to use function annotations What decorators are and how we can use them, e.</description>
+General Python concepts: Object oriented programming, how to use classes, how inheritance works, etc. The differences between class, instance and static methods How to convert objects to strings How to properly name variables and functions The &amp;lsquo;It&amp;rsquo;s easier to ask for forgiveness than permission&amp;rsquo; EAFP principle The functioning of if __name__ == &#39;__name__&#39; Testing code with pytest Advanced Python concepts: How to use function annotations What decorators are and how we can use them, e.</description>
     </item>
     
     <item>
       <title>Config files</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_49_to_50_config_files/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_49_to_50_config_files/</link>
       <pubDate>Mon, 10 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_49_to_50_config_files/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_49_to_50_config_files/</guid>
       <description>Topics: Using config files
 What are config files As a last topic I would like to take a look at the usage of config files. First of all we have to establish what a config file is. The Wikipedia definition definition is precise and easy to understand: configuration files (or config files) are files used to configure the parameters and initial settings for some computer programs.
 In our case we can use a config file to organize and speed up the process of creating members of our magical universe.</description>
@@ -113,10 +144,10 @@ In our case we can use a config file to organize and speed up the process of cre
     
     <item>
       <title>collections.defaultdict</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_47_to_48_defaultdict/</link>
       <pubDate>Fri, 07 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_47_to_48_defaultdict/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_47_to_48_defaultdict/</guid>
       <description>Topics: collections.defaultdict Updated 2020-10-06
 The collections module The collections module in Python contains several useful classes. One of them is especially helpful for our Magical Universe: collections.defaultdict.
 When defining our CastleKilmereMember class we specified self.traits to be an empty dictionary. New positive and negative traits can be added to a person using the add_trait() function. We can check whether a person possesses a certain trait using the exhibits_trait() function. The relevant parts of the class look as follows:</description>
@@ -124,10 +155,10 @@ When defining our CastleKilmereMember class we specified self.traits to be an em
     
     <item>
       <title>functools.wraps - avoiding losing metdata when applying decorators</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_46_functools_wraps/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_46_functools_wraps/</link>
       <pubDate>Thu, 06 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_46_functools_wraps/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_46_functools_wraps/</guid>
       <description>Topics: functools.wraps
 We have discussed decorators on day 5, day 6 and day 20 already. Therefore, we know that decorators allow us to extend or modify the behavior of a function without permanently modifying the function itself. In our example we modified the says() function of our CastleKilmereMember class to be whispering instead of talking normally:
 class CastleKilmereMember: &amp;#34;&amp;#34;&amp;#34; Creates a member of the Castle Kilmere School of Magic &amp;#34;&amp;#34;&amp;#34; def __init__(self, name: str, birthyear: int, sex: str): self.</description>
@@ -135,10 +166,10 @@ class CastleKilmereMember: &amp;#34;&amp;#34;&amp;#34; Creates a member of the C
     
     <item>
       <title>Custom exception classes</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_43_to_45_exception_classes/</link>
       <pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_43_to_45_exception_classes/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_43_to_45_exception_classes/</guid>
       <description>Topics: Custom exception classes
 Errors and Exceptions First of all, what is an exception? As outlined in the Python docs there are two big kinds of errors: syntax errors and exceptions.
 Syntax Error:
@@ -147,30 +178,30 @@ A syntax error is an error that makes it impossible to parse a program. That&amp
     
     <item>
       <title>Extending the Magical Universe</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_37_extending_universe/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_37_extending_universe/</link>
       <pubDate>Wed, 29 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_37_extending_universe/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_37_extending_universe/</guid>
       <description>Topics: Extending the Magical Universe with classmethods for Charm, Hex, Curse, etc.
 Today I added classmethods to the different Spell subclasses. Speficially, I added one classmethod for each spell type: Charm, Transfiguration, Jinx, Hex, Curse, CounterSpell, HealingSpell such that at least one charm, hex, jinx, &amp;hellip; exists in our universe. Tomorrow I will write test code for the entire abstract base class Spell.</description>
     </item>
     
     <item>
       <title>Multisets, `collections.Counter`</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_34_multisets/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_34_multisets/</link>
       <pubDate>Sat, 25 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_34_multisets/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_34_multisets/</guid>
       <description>Topics: Multisets, collections.Counter
 Counting objects Today I want to present a very useful class in Python: collections.Counter. You might wonder what is so great about this class: it allows us to count all kinds of objects! And who doesn&amp;rsquo;t love counting? For example, consider all the potion ingredients Cleon, Flynn and Cassidy need to buy for a school year. We can easily create a shopping list for them using collections.Counter.</description>
     </item>
     
     <item>
       <title>Iterators</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_29_to_31_iterators/</link>
       <pubDate>Mon, 20 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_29_to_31_iterators/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_29_to_31_iterators/</guid>
       <description>Topics: Iterators, iterables and iteration
 Iterators Although we need to create more test functions for the other Magical Universe classes, I want to spend a few days on iterators. First of all, what is meant by the term iteration? Iteration describes the process of taking an item and looking at each of its components one by one. Any time we use a loop like
 for component in item: print(component) we use iteration.</description>
@@ -178,10 +209,10 @@ for component in item: print(component) we use iteration.</description>
     
     <item>
       <title>Testing code with pytest</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_25_to_28_pytest/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_25_to_28_pytest/</link>
       <pubDate>Fri, 17 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_25_to_28_pytest/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_25_to_28_pytest/</guid>
       <description>Topics: Testing code with pytest Updated 2020-10-05
 Writing test functions for our code is extremely important. Since I have been lazy writing test code myself, I want to spend a little more time on this topic. My favorite testing framework is pytest. I&amp;rsquo;m not an expert on testing, so please consider this post an introduction to testing rather than a thorough guide.
 Why pytest? Using pytest has several advantages. First of all, pytest makes testing very easy because its syntax is simple and easy to understand.</description>
@@ -189,10 +220,10 @@ Why pytest? Using pytest has several advantages. First of all, pytest makes test
     
     <item>
       <title>Context managers and the `with` statement</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_22_to_24_context_managers/</link>
       <pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_22_to_24_context_managers/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_22_to_24_context_managers/</guid>
       <description>Topics: with statement and context managers Updated 2020-10-05
 Context managers and the with statement Similar to decorators, context managers are a concept many people use but only few understand. If you haven&amp;rsquo;t heard of the term &amp;lsquo;context manager&amp;rsquo; before: you probably encountered them already while reading or writing from/to a file using the with statement.
 The most common use of context managers is the proper management of resources. In simple terms this means that we want to make sure that we open, read, write and close files correctly.</description>
@@ -200,10 +231,10 @@ The most common use of context managers is the proper management of resources. I
     
     <item>
       <title>The mysterious `if __name__ == &#34;__main__&#34;`</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_21_if_main/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_21_if_main/</link>
       <pubDate>Sun, 12 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_21_if_main/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_21_if_main/</guid>
       <description>Topics: What is if __name__ == &amp;quot;__main__&amp;quot; doing?
 I always wanted to dig into the statement if __name__ == &amp;quot;__main__&amp;quot; that is used in so many programs. I have used it for a long time already but until recently I had no idea what exactly it is doing. To make the topic as understandable as possible, I will divide the explanation into three steps.
 Step 1: Two ways of running code We saved our Magical Universe in a file named magical_universe.</description>
@@ -211,10 +242,10 @@ Step 1: Two ways of running code We saved our Magical Universe in a file named m
     
     <item>
       <title>Decorators within classes</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_20_decorators_in_classes/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_20_decorators_in_classes/</link>
       <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_20_decorators_in_classes/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_20_decorators_in_classes/</guid>
       <description>Topics: Decorators within a class Updated 2020-10-05
 After having talked about decorators already on day 5 and day 6 I would like to revisit the topic to discuss how decorators can be used within classes.
 Let&amp;rsquo;s put ourselves in the position of a Castle Kilmere member during the time the school is in war with Master Odon and his Dark Army. So these are dark, scary times. People at Castle Kilmere are constantly scared that something might happen to them, their family or their friends.</description>
@@ -222,10 +253,10 @@ Let&amp;rsquo;s put ourselves in the position of a Castle Kilmere member during 
     
     <item>
       <title>Immutable data classes</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_19_immutable_data_classes/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_19_immutable_data_classes/</link>
       <pubDate>Fri, 10 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_19_immutable_data_classes/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_19_immutable_data_classes/</guid>
       <description>Topics: Immutable data classes Updated 2020-10-05
 We have talked a lot about data classes in the last post. There is one further characteristic of data classes that I would like to study - immutability.
 We can make a dataclass immutable such that it fulfills the same purpose as typing.NamedTuple. To make a dataclass immutable we have to set frozen=True when creating the class. Let&amp;rsquo;s see how we can change our DarkArmyMember class from typing.</description>
@@ -233,10 +264,10 @@ We can make a dataclass immutable such that it fulfills the same purpose as typi
     
     <item>
       <title>Data classes</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_16_to_18_data_classes/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_16_to_18_data_classes/</link>
       <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_16_to_18_data_classes/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_16_to_18_data_classes/</guid>
       <description>Topics: Data classes Updated 2020-10-05
 Data classes are a feature that is new in Python 3.7. And taking a look at them is definitely worth it!
 Data classes According to the PEP on data classes, they are basically &amp;ldquo;mutable namedtuples with defaults&amp;rdquo;. We already looked at namedtuples on day 10 and 11. Namedtuples allow us to create an immutable class that primarily stores values (i.e. attributes). We used namedtuples for our DarkArmyMember class (because once you become a member of the dark army there is no way back.</description>
@@ -244,10 +275,10 @@ Data classes According to the PEP on data classes, they are basically &amp;ldquo
     
     <item>
       <title>Abstract Base Classes</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_12_to_15_abcs/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_12_to_15_abcs/</link>
       <pubDate>Sat, 04 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_12_to_15_abcs/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_12_to_15_abcs/</guid>
       <description>Topics: Abstract Base Classes, ABC&amp;rsquo;s Updated 2020-10-05
 The last days I have been working on a lot of new classes and methods. Since they all belong to the same big concept, I decided to create one big post on the whole topic instead of several small ones. So let&amp;rsquo;s get right into it!
 Abtract Base Classes Up to now, our Magical Universe has a parent class (CastleKilmereMember) and several child classes (Pupil, Professor, etc.</description>
@@ -255,20 +286,20 @@ Abtract Base Classes Up to now, our Magical Universe has a parent class (CastleK
     
     <item>
       <title>Namedtuples</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_10_11_namedtuples/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_10_11_namedtuples/</link>
       <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_10_11_namedtuples/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_10_11_namedtuples/</guid>
       <description>Topics: Immutable classes, namedtuples Updated 2020-10-04
 Tuples Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simple data structure that can be used for grouping arbitrary objects. Important to know is that tuples are immutable. That means that once a tuple has been created, it can not be changed anymore. We already used tuples in our Magical Universe. For example, we defined the pet attribute of the Pupil class to be a tuple:</description>
     </item>
     
     <item>
       <title>Duck typing, EAFP principle</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_9_duck_typing/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_9_duck_typing/</link>
       <pubDate>Tue, 31 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_9_duck_typing/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_9_duck_typing/</guid>
       <description>Topics: Duck typing, EAFP principle Updated 2020-10-04
 Duck typing Today we are going to look at some fundamental philosophies of programming: duck typing, EAFP and its opposite LBYL. Some of you may have heard of these principles already. However, because they are so fundamental we want to make sure that we apply them to our magical universe correctly.
 So what is duck typing? The most common saying regarding duck typing is “If it walks like a duck, and it quacks like a duck, then it must be a duck.</description>
@@ -276,33 +307,33 @@ So what is duck typing? The most common saying regarding duck typing is “If it
     
     <item>
       <title>Extending the Magical Universe</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_8_extending_universe/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_8_extending_universe/</link>
       <pubDate>Mon, 30 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_8_extending_universe/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_8_extending_universe/</guid>
       <description>Topics: Adding new classes and methods to the Magical Universe
 Today I used some of the concepts introduced during the last days to extend my Magical Universe. Specifically:
- I added a classmethod for creating the ghost &amp;lsquo;the mocking knight&amp;rsquo; I added a &amp;lsquo;friends&amp;rsquo; attribute to the Pupil class I added methods for adding and listing all current friends of a Pupil I implemented a new Charm class that allows to create charms I added two classmethods for creating popular charms  </description>
+I added a classmethod for creating the ghost &amp;rsquo;the mocking knight&#39; I added a &amp;lsquo;friends&amp;rsquo; attribute to the Pupil class I added methods for adding and listing all current friends of a Pupil I implemented a new Charm class that allows to create charms I added two classmethods for creating popular charms </description>
     </item>
     
     <item>
       <title>Underscore patterns for variable naming</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_7_underscore_patterns/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_7_underscore_patterns/</link>
       <pubDate>Sun, 29 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_7_underscore_patterns/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_7_underscore_patterns/</guid>
       <description>Topics: underscore patterns for variable naming, _variable, __variable, __variable__, _ Updated 2020-10-04
 Underscore patterns for variable naming Today we are going to look at a very important concept in Python: the usage of underscores when naming variables! In Python we have five different naming conventions that involve underscores.
 A variable with a single leading underscore like _elms
- This is a naming convention followed by most Python code A name prefixed with an underscore should be treated as a non-public part of the API and it might be changed without notice This holds independent of whether it is a function, a method or a data member   A variable with (at least) two leading underscores and at most one trailing underscore like __my_private_variable</description>
+This is a naming convention followed by most Python code A name prefixed with an underscore should be treated as a non-public part of the API and it might be changed without notice This holds independent of whether it is a function, a method or a data member A variable with (at least) two leading underscores and at most one trailing underscore like __my_private_variable</description>
     </item>
     
     <item>
       <title>Properties, setter and getter methods</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_6_properties/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_6_properties/</link>
       <pubDate>Sat, 28 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_6_properties/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_6_properties/</guid>
       <description>Topics: properties, @property and property(), setters, getters Updated 2020-10-04
 Today, I digged a little deeper into the @property decorator, how it is related to the property() function and how its getter and setter methods work. These two links (link1, link2) were really helpful. Of course, there is also the official Python docs on the property() function.
 The @property decorator Yesterday we looked at decorators. The @property decorator allows us to create a read-only property.</description>
@@ -310,41 +341,41 @@ The @property decorator Yesterday we looked at decorators. The @property decorat
     
     <item>
       <title>Decorators</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_5_decorators/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_5_decorators/</link>
       <pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_5_decorators/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_5_decorators/</guid>
       <description>Topics: decorators Updated 2020-10-04
 Today, we are going to look at decorators. Python&amp;rsquo;s decorators are an advanced concept so don&amp;rsquo;t worry if you don&amp;rsquo;t immediately understand how they work. The more you will use and read about them, the clearer the concept will become. I won&amp;rsquo;t go into too much detail here, so if you want to know more about decorators, take a look at Dan Bader&amp;rsquo;s website or the PEP on decorators.</description>
     </item>
     
     <item>
       <title>To-string conversion</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_4_to_string_conversion/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_4_to_string_conversion/</link>
       <pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_4_to_string_conversion/</guid>
-      <description>Topics: to-string conversion, __repr__, __str__  Updated: 2020-10-04
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_4_to_string_conversion/</guid>
+      <description>Topics: to-string conversion, __repr__, __str__ Updated: 2020-10-04
 To-string conversion Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won&amp;rsquo;t get a useful representation. For example, when trying to print the bromley instance:
 bromley = CastleKilmereMember(name=&amp;#39;Bromley Huckabee&amp;#39;, birthyear=1959, sex=&amp;#39;male&amp;#39;) print(bromley) We get this output: &amp;lt;__main__.CastleKilmereMember object at 0x7f81853bfc50&amp;gt;. It contains the name of the class an the ID of the object (its memory address).</description>
     </item>
     
     <item>
       <title>Type annotations</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_3_type_annotations/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_3_type_annotations/</link>
       <pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_3_type_annotations/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_3_type_annotations/</guid>
       <description>Topics: Type annotations Updated 2020-10-04
 Type annotations Type annotations are a very cool feature that came out with Python 3.5. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows us to document of what type our function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look here.</description>
     </item>
     
     <item>
       <title>Types of class methods</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_2_types_of_methods/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_2_types_of_methods/</link>
       <pubDate>Tue, 24 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_2_types_of_methods/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_2_types_of_methods/</guid>
       <description>Topics: class methods, instance methods, static methods, using class methods as alternative constructors Updated 2020-10-03
 Types of methods A class can have three types of methods: instance methods, class methods and static methods.
 Instance methods are the most common type of method. They take at least the parameter self as an input. This parameter points towards an instance of the class when the method is called. An instance method can modify both object state (through the self parameter) and class state indirectly (through the self.</description>
@@ -352,10 +383,10 @@ Instance methods are the most common type of method. They take at least the para
     
     <item>
       <title>Object-oriented programming</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_1_first_post_oop/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_1_first_post_oop/</link>
       <pubDate>Mon, 23 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_1_first_post_oop/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_1_first_post_oop/</guid>
       <description>Topics: object oriented programming, classes, inheritance
 I want to start with using some of the things I learned from the &amp;ldquo;Python Tricks&amp;rdquo; book (see my reading list for more details on the book). Therefore, I will start creating a little Magical Universe with classes and methods related to the Tales of Castle Kilmere.
 So let&amp;rsquo;s start with the most important basics.
@@ -364,31 +395,43 @@ What is Object Oriented Programming ? Object-oriented programming (OOP) is a spe
     
     <item>
       <title>100 Days of code - Creating my personal Magical Universe</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_1_start/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_1_start/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_1_start/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_1_start/</guid>
       <description>I have decided to take on a new habit using a technique I found on the &amp;lsquo;get discplined&amp;rsquo; subreddit. The technique works as follows:
- Take a piece of paper or card Draw 6 vertical lines intersecting 6 horizontal lines. This creates a 7x7 grid of 49 squares Choose a daily habit you want to work on and write it down on the back of the card Also put down WHY you want to work on the habit Start working on the habit TODAY!</description>
+Take a piece of paper or card Draw 6 vertical lines intersecting 6 horizontal lines. This creates a 7x7 grid of 49 squares Choose a daily habit you want to work on and write it down on the back of the card Also put down WHY you want to work on the habit Start working on the habit TODAY!</description>
     </item>
     
     <item>
       <title>The Tales of Castle Kilmere</title>
-      <link>zotroneneis.github.io/posts/python/magical_universe/day_1_magical_universe/</link>
+      <link>https://alpopkes.com/posts/python/magical_universe/day_1_magical_universe/</link>
       <pubDate>Sun, 22 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/python/magical_universe/day_1_magical_universe/</guid>
+      <guid>https://alpopkes.com/posts/python/magical_universe/day_1_magical_universe/</guid>
       <description>My magical universe: &amp;ldquo;The Tales of Castle Kilmere&amp;rdquo;
 The main character of our magical universe is named Lissy Spinster. Lissy is a quiet, clumsy girl of age twelve. Although she is sticking her nose into books most of the time, she is always watching her surroundings very closely. Lissy and her older brother Gary don&amp;rsquo;t get along very well. Gary considers his sister a little weird and is spending most of his time outside, playing broom socker with his friends.</description>
     </item>
     
     <item>
       <title>My path to machine learning</title>
-      <link>zotroneneis.github.io/posts/my_path_to_ml/</link>
+      <link>https://alpopkes.com/posts/my_path_to_ml/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>zotroneneis.github.io/posts/my_path_to_ml/</guid>
+      <guid>https://alpopkes.com/posts/my_path_to_ml/</guid>
       <description>My enthusiasm for machine learning arose from my fascination for the human brain. I have been fascinated by the complexity of the human brain for most of my life. Consequently, I decided to study cognitive science in Osnabrück, Germany. After attending a machine learning class in my fourth semester I discovered my true passion: The study and delevopment of algorithms that can learn on their own, developing a sense of intelligence.</description>
+    </item>
+    
+    <item>
+      <title>Personal news</title>
+      <link>https://alpopkes.com/posts/news/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alpopkes.com/posts/news/</guid>
+      <description>2021 2021-09-01 I have been selected as one of the three finalists for the &amp;ldquo;Digital Female Leader Award 2021&amp;rdquo;!
+2021-07-28 I will be talking at Euro Python 2021 today, check out the talk description here
+2021-07-10 I was a guest on the Podcast KnowIt and talked about why coding is important, learning how to code, Python and much more. Check out the episode here.
+2021-06-16 I was invited to speak at the #SpeakUp series of Women in Tech.</description>
     </item>
     
   </channel>

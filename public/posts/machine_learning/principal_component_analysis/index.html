@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Principal component analysis (PCA)</title>
+    
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+<link rel="icon" type="image/png" href="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
+
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+    
+<meta name="description" content="Principal component analysis (PCA)" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+
+    
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
+  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/news/">Personal news</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/my_path_to_ml/">My path to machine learning</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/books/">Books</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/books/reading_list/">Personal reading List</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/books/deep_work/">Deep work</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/machine_learning/">Machine Learning</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/machine_learning/bayesian_linear_regression/">Bayesian linear regression</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active" href="/posts/machine_learning/principal_component_analysis/">Principal component analysis (PCA)</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/machine_learning/support_vector_machines/">Support vector machines</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/mocking/">Mocking</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/magical_universe/">Magical Universe</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_1_start/">Start</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i class="fas fa-plus-circle"></i><a class="" href="/posts/software_engineering/">Software Engineering</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/software_engineering/containers/">Intro to containers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/software_engineering/docker/">Intro to Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class="" href="/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://alpopkes.com/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/image_al.jpg'/>
+          <h5 class="author-name">Anna-Lena Popkes</h5>
+          <p>August 11, 2022</p>
+        </div>
+
+        <div class="title">
+          <h1>Principal component analysis (PCA)</h1>
+        </div>
+
+        <div class="post-content" id="post-content">
+          <p>After a longer break I continued working on my <a href="https://github.com/zotroneneis/machine_learning_basics">machine learning basics repository</a> which implements fundamental machine learning algorithms in plain Python. This time, I took a detailed look at principal component analysis (PCA). The blog post below contains the same content as the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/principal_component_analysis.ipynb">original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=principal_component_analysis.ipynb">run the notebook directly in your Browser using Binder</a>.</p>
+<h2 id="1-what-is-pca">1. What is PCA?</h2>
+<p>In simple terms, principal component analysis (PCA) is a technique to perform dimensionality reduction. It has been around for more than 100 years and is still heavily used. Although PCA is most often applied to find a lower-dimensional representation of data, it can also be used for other purposes, e.g. to detect simple patterns in data.</p>
+<h2 id="2-why-do-we-need-pca">2. Why do we need PCA?</h2>
+<p>A lot of data is high-dimensional. Imagine patient data collected in a hospital. For each patient we can have hundreds or even thousands of measurements (blood pressure, heart rate, respiratory rate, etc.). Working with such data is difficult - it&rsquo;s expensive to store, hard to analyze and almost impossible to visualize.</p>
+<p>Luckily, many dimensions in high-dimensional data are often redundant and can be expressed by combining some of the other dimensions. Also, the key part of the data is often contained in a more compact lower-dimensional structure. Consequently, we can simplify high-dimensional datapoints using dimensionality reduction techniques like PCA.</p>
+<h2 id="3-key-ideas-of-pca">3. Key ideas of PCA</h2>
+<ul>
+<li>PCA finds a lower-dimensional representation of data by constructing new features (called principal components) which are linear combinations of the original features</li>
+<li>The new features are selected carefully: PCA looks for features that can summarize the data best without losing too much information</li>
+</ul>
+<h2 id="4-two-ways-of-deriving-pca">4. Two ways of deriving PCA</h2>
+<p>Let&rsquo;s say we have an i.i.d dataset $\boldsymbol{X}$ with $D$ dimensions and a mean value of $0$: $\mathcal{\boldsymbol{X}} = {\boldsymbol{x}_1, &hellip;, \boldsymbol{x}_N}, \boldsymbol{x}_n \in \mathbb{R}^D$. The data covariance matrix (which will be needed later on) is computed as follows:</p>
+<p>$\boldsymbol{S} = \frac{1}{N} \sum_{n=1}^{N} \boldsymbol{x}_n \boldsymbol{x}_n^T$</p>
+<p>In PCA our goal is to find projections of the datapoints $\boldsymbol{x}_n$ that are as similar to the original datapoints as possible but have lower dimensionality. We can approach this goal from two perspectives:</p>
+<ol>
+<li>Maximum variance perspective: We try to find a low-dimensional representation which maximizes the variance of the projected data.</li>
+<li>Projection perspective: We try to find a low-dimensional representation which minimizes the average reconstruction error between the original data and the reconstructed data.</li>
+</ol>
+<p>Both approaches reach the same result.</p>
+<h3 id="41-maximum-variance-perspective">4.1 Maximum variance perspective</h3>
+<p>In the maximum variance perspective PCA is derived as an algorithm that tries to find a transformation matrix $\boldsymbol{B}$ which projects the original data $\boldsymbol{X}$ to a low-dimensional space, ideally without losing information. Let&rsquo;s say that this low-dimensional space has dimension $M$.</p>
+<p>How can we make sure that we find a matrix $B$ that retains as much information as possible? It turns out that this is achieved when $\boldsymbol{B}$ projects the data in a way that maximizes the variance of the data in the (new) low-dimensional space.</p>
+<p>Let&rsquo;s take a closer look at $\boldsymbol{B}$. We can define $\boldsymbol{B}$ as a collection of vectors $\boldsymbol{b}_1, &hellip;, \boldsymbol{b}_M$:</p>
+<p>$\boldsymbol{B} := [\boldsymbol{b}_1, &hellip;, \boldsymbol{b}_M] \in \mathbb{R}^{D x M}$</p>
+<p>The vectors $\boldsymbol{b}_m$ are called <em>basis vectors</em> and form the axes of the new $M$-dimensional space we project our data to.</p>
+<p>When deriving which vectors $\boldsymbol{b}_m$ we should select to maximize the variance we will find that maximizing the variance is equivalent to selecting those vectors that belong to the largest eigenvalues of the data covariance matrix $\boldsymbol{S}$. That means that we can construct our matrix $\boldsymbol{B}$ by first computing the eigenvalues and eigenvectors of the covariance matrix $\boldsymbol{S}$ and then selecting the $M$ eigenvectors with the largest eigenvalues.</p>
+<p>To be more precise: $\boldsymbol{b}_1$ will be the eigenvector with the largest eigenvalue. In the context of PCA it&rsquo;s called the <em>first principal component</em>. $\boldsymbol{b}_2$ will be the eigenvector with the second largest eigenvalue and is called <em>second principal component</em> and so on.</p>
+<p>If you are interested in the derivation take a look at chapter 10.2 of the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>.</p>
+<p>Once we have found our projection matrix $\boldsymbol{B}$ we can transform each data vector $\boldsymbol{x}_n$ by multiplying it with $\boldsymbol{B}$. This will give us a low-dimensional compressed representation of $\boldsymbol{x}_n$:</p>
+<p>$\boldsymbol{z}_n = \boldsymbol{B}^T \boldsymbol{x}_n \in \mathbb{R}^M$</p>
+<p>Using matrix multiplications we could represent the computation as follows:</p>
+<img src="/posts/machine_learning/images/pca/pca_matrix_multiplications.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="42-projection-perspective">4.2 Projection perspective</h3>
+<p>Another way to derive PCA is to consider the original data points $\boldsymbol{x}_n$ and their reconstructions $\boldsymbol{\tilde{x}}_n$. In this perspective we are trying to find reconstructions $\boldsymbol{\tilde{x}}_n$ that minimize the averaged squared Euclidean distance between the original datapoints and their reconstructions:
+$$
+J = \frac{1}{N} \sum_{n=1}^{N}||\boldsymbol{x}_n - \boldsymbol{\tilde{x}}_n ||^2
+$$</p>
+<p>You can find more details about this perspective in chapter 10.3 of the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>.</p>
+<h2 id="5-interpreting-the-projection-matrix">5. Interpreting the projection matrix</h2>
+<p>In the beginning I mentioned that PCA constructs new features (the principal components) that are linear combinations of the original features. Let&rsquo;s take a closer look at what this means.</p>
+<p>Each datapoint is stored in a vector with $D$ elements: $\boldsymbol{x}_n = [x_{n1}, &hellip;, x_{nD}]$. Each of the $D$ dimensions represents a different feature. For example, think of an image with $D = 64$ pixels. We can describe each datapoint as a linear combinations of the features:
+$$
+\boldsymbol{x}_n = x_{n1} \cdot \text{feature}_1 + x_{n2} \cdot \text{feature}_2 + &hellip; + x_{nD} \cdot \text{feature}_D
+$$</p>
+<p>Using the example of pixels this would correspond to:
+$$
+\boldsymbol{x}_n = x_{n1} \cdot \text{pixel}_1 + x_{n2} \cdot \text{pixel}_2 + &hellip; + x_{nD} \cdot \text{pixel}_D
+$$</p>
+<p>When PCA projects the data to a low-dimensional space it also uses a combination of the features. This becomes evident in the projection equation we have seen above:</p>
+<p>$\boldsymbol{z}_n = \boldsymbol{B}^T \boldsymbol{x}_n \in \mathbb{R}^M$</p>
+<p>In this equation we find the compressed representation $\boldsymbol{z}_n$ of the datapoint $\boldsymbol{x}_n$ by performing a matrix multiplication. The new, compressed representation of a datapoint $\boldsymbol{x}_n$ will be given by a linear combination of all its features values. We can make this more clear when considering an example.</p>
+<p>Let&rsquo;s say our data matrix $\boldsymbol{X}$ has 3 datapoints and 2 features, so  $\boldsymbol{X} \in \mathbb{R}^{3x2}$ and we consider only the first principal component when performing PCA. Hence we have  $\boldsymbol{B} \in \mathbb{R}^{2x1}$. When multiplying the data matrix with the projection matrix we receive the compressed versions of the datapoints as a matrix $\boldsymbol{Z} \in \mathbb{R}^{3x1}$. Each one-dimensional code $\boldsymbol{z}_n$ is given by a linear combination of the original feature values:</p>
+<img src="/posts/machine_learning/images/pca/linear_combinations.png"
+    
+    
+        width="70%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h2 id="6-computing-the-eigenvectors">6. Computing the eigenvectors</h2>
+<p>By now we know that we have to compute eigenvalues and eigenvectors to perform PCA. We have to ways to do that:</p>
+<ol>
+<li>Perform an eigendecomposition of the data covariance matrix $\boldsymbol{S}$</li>
+<li>Perform a singular value decomposition of the data matrix $\boldsymbol{X}$</li>
+</ol>
+<p>The standard approach (which we will use in this tutorial) is approach one. You can find more on approach two in chapter 10.4 of the <a href="https://mml-book.com">Mathematics for Machine Learning</a> book.</p>
+<p>Note: in many applications we only need the first few eigenvectors. Performing a full eigendecomposition or singular value decomposition would be computationally wasteful. Therefore, most software packages implement iterative methods which directly optimize the required number of eigenvectors.</p>
+<h2 id="7-summary-of-important-terminology">7. Summary of important terminology</h2>
+<ul>
+<li>$\boldsymbol{x}_n$ are our datapoints, stored in the matrix $\mathcal{\boldsymbol{X}} = {\boldsymbol{x}_1, &hellip;, \boldsymbol{x}_N}$, $\boldsymbol{x}_n \in \mathbb{R}^D$</li>
+<li>$\boldsymbol{S}$ is the data covariance matrix</li>
+<li>$\boldsymbol{B}$ is the projection matrix and consists of column vectors $\boldsymbol{b}_m$: $\boldsymbol{B} := [\boldsymbol{b}_1, &hellip;, \boldsymbol{b}_M] \in \mathbb{R}^{D x M}$</li>
+<li>$\boldsymbol{z}_n$ is the low-dimensional representation of $\boldsymbol{x}_n$: $\boldsymbol{z}_n = \boldsymbol{B}^T \boldsymbol{x}_n \in \mathbb{R}^M$</li>
+</ul>
+<h2 id="8-implementation">8. Implementation</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.datasets <span style="color:#f92672">import</span> load_digits
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span></code></pre></div><h3 id="81-dataset">8.1 Dataset</h3>
+<p>We will use the digits dataset from scikit-learn for our implemetation. It contains 8x8 images of handwritten digits (1797 in total). The data is stored in a data matrix with 1797 rows and 64 columns (corresponding to all 8x8=64 pixel values).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>digits <span style="color:#f92672">=</span> load_digits()
+</span></span><span style="display:flex;"><span>data, labels <span style="color:#f92672">=</span> digits<span style="color:#f92672">.</span>data, digits<span style="color:#f92672">.</span>target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of data matrix: </span><span style="color:#e6db74">{</span>data<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of label matrix: </span><span style="color:#e6db74">{</span>labels<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Example image</span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>imshow(digits<span style="color:#f92672">.</span>images[<span style="color:#ae81ff">42</span>], cmap<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gray&#34;</span>);
+</span></span></code></pre></div><pre><code>Shape of data matrix: (1797, 64)
+Shape of label matrix: (1797,)
+</code></pre>
+<img src="/posts/machine_learning/images/pca/digit_example.png"
+    
+    
+        width="20%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="82-standardization">8.2 Standardization</h3>
+<p>Before we can apply PCA we should standardize the data. If you are wondering why this is necessary <a href="https://stats.stackexchange.com/questions/69157/why-do-we-need-to-normalize-data-before-principal-component-analysis-pca">check out this explanation on StackExchange</a>. Standardization rescales the data to have mean zero and standard deviation one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>mean <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>mean(data, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>std <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>std(data, axis<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># If values have a standard deviation of zero, the normalization step</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># will contain a division by zero. To prevent this we replace standard</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># deviations of zero with one.</span>
+</span></span><span style="display:flex;"><span>std[std <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.</span>
+</span></span><span style="display:flex;"><span>data_norm <span style="color:#f92672">=</span> (data <span style="color:#f92672">-</span> mean) <span style="color:#f92672">/</span> std
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># We could also perform standardization using scikit learn</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.preprocessing <span style="color:#f92672">import</span> StandardScaler
+</span></span><span style="display:flex;"><span>data_norm_sklearn <span style="color:#f92672">=</span> StandardScaler()<span style="color:#f92672">.</span>fit_transform(data)
+</span></span></code></pre></div><h3 id="83-computing-the-data-covariance-matrix">8.3 Computing the data covariance matrix</h3>
+<p>To find the principal components we first have to compute the data covariance matrix $\boldsymbol{S}$:</p>
+<p>$\boldsymbol{S} = \frac{1}{N} \sum_{n=1}^{N} \boldsymbol{x}_n \boldsymbol{x}_n^T$</p>
+<p>We can summarize the summation as follows:</p>
+<p>$\boldsymbol{S} = \frac{1}{N} \boldsymbol{X}^T \boldsymbol{X}$</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>n_samples, n_features <span style="color:#f92672">=</span> data_norm<span style="color:#f92672">.</span>shape
+</span></span><span style="display:flex;"><span>cov_matrix <span style="color:#f92672">=</span> (data_norm<span style="color:#f92672">.</span>T<span style="color:#f92672">.</span>dot(data_norm)) <span style="color:#f92672">/</span> (n_samples)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># We could also compute the covariance matrix with numpy (see code below)</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Note: the numpy implementation divides by n_samples - 1. This</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># is known as Bessel&#39;s correction. Refer to the corresponding </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Wikipedia article if interested in more details.</span>
+</span></span><span style="display:flex;"><span>cov_matrix_numpy <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>cov(data_norm<span style="color:#f92672">.</span>T)
+</span></span></code></pre></div><h3 id="84-computing-the-eigenvalues-and-eigenvectors">8.4 Computing the eigenvalues and eigenvectors</h3>
+<p>To compute eigenvalues and eigenvectors we perform an eigendecomposition of the covariance matrix $\boldsymbol{S}$. Doing this manually is messy and it&rsquo;s hard to do the computations correctly. Therefore, we will make use of numpy to get both eigenvalues and eigenvectors. If you want to learn more about how to perform an eigendecomposition take a look at the <a href="https://en.wikipedia.org/wiki/Eigendecomposition_of_a_matrix#Numerical_computations">Wikipedia article</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>eig_vals, eig_vecs <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>linalg<span style="color:#f92672">.</span>eig(cov_matrix)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of eigenvalue matrix: </span><span style="color:#e6db74">{</span>eig_vals<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of eigenvectors matrix: </span><span style="color:#e6db74">{</span>eig_vecs<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;=====================================&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># We want to find the eigenvectors with the highest eigenvalues. </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># To do so, we use argsort which returns the indices that would </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sort the array of eigenvalues. Since we want to sort from largest</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># to lowest value we need to reverse the order of the result</span>
+</span></span><span style="display:flex;"><span>sorted_indices <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>argsort(eig_vals)[::<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Look at the first few eigenvalues to make sure that we sorted them correctly</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> idx <span style="color:#f92672">in</span> sorted_indices[:<span style="color:#ae81ff">3</span>]:
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Eigenvalue: </span><span style="color:#e6db74">{</span>eig_vals[idx]<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)   
+</span></span></code></pre></div><pre><code>Shape of eigenvalue matrix: (64,)
+Shape of eigenvectors matrix: (64, 64)
+=====================================
+Eigenvalue: 7.340688819618325
+Eigenvalue: 5.832243185889725
+Eigenvalue: 5.151093084500989
+</code></pre>
+<h3 id="85-choosing-the-number-of-eigenvalues">8.5 Choosing the number of eigenvalues</h3>
+<p>In order to decide how many eigenvalues we want to use we should ask ourselves what our goal is. Remember that the number of eigenvalues that we select corresponds to the dimensionality of the new low-dimensional space we are creating.</p>
+<p>Most of the time, PCA is used to reduce the dimensionality of data. But at the same time we want to make sure that our solution is good, meaning that we don&rsquo;t lose a lot of information. Consequently, we should try to select the eigenvalues that explain most of the variance in the data.</p>
+<p>Typically, the first few eigenvalues capture most of the variance whereas later ones don&rsquo;t add much information. When using tools like scikit-learn we can specify how much variance should be explained by the solution so we don&rsquo;t have to choose the number of eigenvalues ourselves.</p>
+<p>In our case we can decide how many principal components to use by computing the <em>explained variance</em> of the individual eigenvectors.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>sum_eig_vals <span style="color:#f92672">=</span> sum(eig_vals)
+</span></span><span style="display:flex;"><span>sorted_eig_vals <span style="color:#f92672">=</span> sorted(eig_vals, reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>explained_variance <span style="color:#f92672">=</span> [(eig_val <span style="color:#f92672">/</span> sum_eig_vals) <span style="color:#f92672">*</span>  <span style="color:#ae81ff">100</span> <span style="color:#66d9ef">for</span> eig_val <span style="color:#f92672">in</span> sorted_eig_vals]
+</span></span><span style="display:flex;"><span>cumulative_explained_variance <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>cumsum(explained_variance)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>bar(range(len(eig_vals)), explained_variance, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Explained variance&#34;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;red&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Index of principal components&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Explained variance in percent&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Variance captured by the individual principal components&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>bar(range(len(eig_vals)), cumulative_explained_variance, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Cumulative explained variance&#34;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;blue&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#34;Number of principal components&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#34;Cumulative explained variance in percent&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Cumulative variance captured by the principal components&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><img src="/posts/machine_learning/images/pca/explained_variance.png"
+    
+    
+        width="40%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<img src="/posts/machine_learning/images/pca/cumulative_explained_variance.png"
+    
+    
+        width="40%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<p>The upper plot shows that the first principal components explain more variance than latter ones. However, the amount of variance explained is not very high. Consequently, we would lose a lot of information when using only the first few principal components. The lower plot shows that we would have to keep 31 principal components to explain 90% of the variance. This is a lot but still better than keeping all 64 values.</p>
+<p>For the purpose of this tutorial we will keep only the 2 largest eigenvalues and their corresponding eigenvectors. This will allow us to visualize the result in two dimensions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Select only the number of eigenvalues / principal components that we want to use</span>
+</span></span><span style="display:flex;"><span>n_principal_comps <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>eig_vals <span style="color:#f92672">=</span> eig_vals[sorted_indices[:n_principal_comps]]
+</span></span><span style="display:flex;"><span>eig_vecs <span style="color:#f92672">=</span> eig_vecs[:, sorted_indices[:n_principal_comps]]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Eigenvalues shape: </span><span style="color:#e6db74">{</span>eig_vals<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Eigenvectors shape: </span><span style="color:#e6db74">{</span>eig_vecs<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><pre><code>Eigenvalues shape: (2,)
+Eigenvectors shape: (64, 2)
+</code></pre>
+<h3 id="86-constructing-the-projection-matrix">8.6 Constructing the projection matrix</h3>
+<p>After finding the eigenvectors/principal components we can arrange them into a matrix (our <em>projection matrix</em> $\boldsymbol{B}$).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>vector_list <span style="color:#f92672">=</span> [vec<span style="color:#f92672">.</span>reshape(n_features, <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">for</span> vec <span style="color:#f92672">in</span> eig_vecs<span style="color:#f92672">.</span>T]
+</span></span><span style="display:flex;"><span>proj_matrix <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>hstack(vector_list) <span style="color:#75715e"># This is our projection matrix B</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of projection matrix: </span><span style="color:#e6db74">{</span>proj_matrix<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><pre><code>Shape of projection matrix: (64, 2)
+</code></pre>
+<h3 id="87-projecting-the-data">8.7 Projecting the data</h3>
+<p>In order to actually project the original data $\boldsymbol{X}$ into the lower-dimensional space we multiply it with the matrix $\boldsymbol{B}$:</p>
+<p>$\boldsymbol{Z} = \boldsymbol{X} \boldsymbol{B} \in \mathbb{R}^{N x M}$</p>
+<img src="/posts/machine_learning/images/pca/pca_digits_matrix_multiplications.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>data_proj <span style="color:#f92672">=</span> data_norm<span style="color:#f92672">.</span>dot(proj_matrix) <span style="color:#75715e"># This is our compressed data matrix Z</span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Shape of projected data matrix: </span><span style="color:#e6db74">{</span>data_proj<span style="color:#f92672">.</span>shape<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>)
+</span></span></code></pre></div><pre><code>Shape of projected data matrix: (1797, 2)
+</code></pre>
+<h3 id="88-plotting-the-transformed-data">8.8 Plotting the transformed data</h3>
+<p>With only two principal components we can plot the transformed data easily. One axis will correspond to the first principle component, the other axis to the second.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>labels_str <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;0&#34;</span>, <span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span>, <span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#e6db74">&#34;4&#34;</span>, <span style="color:#e6db74">&#34;5&#34;</span>, <span style="color:#e6db74">&#34;6&#34;</span>, <span style="color:#e6db74">&#34;7&#34;</span>, <span style="color:#e6db74">&#34;8&#34;</span>, <span style="color:#e6db74">&#34;9&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>scatter <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>scatter(data_proj[:, <span style="color:#ae81ff">0</span>], data_proj[:, <span style="color:#ae81ff">1</span>], c<span style="color:#f92672">=</span>labels)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(handles<span style="color:#f92672">=</span>scatter<span style="color:#f92672">.</span>legend_elements()[<span style="color:#ae81ff">0</span>], labels<span style="color:#f92672">=</span>labels_str, loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Principal Component 1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Principal Component 2&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Compressed digit dataset with labels&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stackoverflow post to add legend: </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># https://stackoverflow.com/questions/17411940/matplotlib-scatter-plot-legend</span>
+</span></span></code></pre></div><img src="/posts/machine_learning/images/pca/plot_pca.png"
+    
+    
+        width="50%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="89-comparison-to-scikit-learn">8.9 Comparison to scikit-learn</h3>
+<p>In practice it doesn&rsquo;t make sense to perform PCA manually. Instead, we can use packages like scikit-learn. This simplifies the computation substantially. Let&rsquo;s apply PCA as contained in scikit-learn to the digits dataset and compare it to our solution. As visibile in the plot below, our implementation of PCA gives the same result as the scikit-learn version!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> sklearn.decomposition <span style="color:#f92672">import</span> PCA
+</span></span><span style="display:flex;"><span>sklearn_pca <span style="color:#f92672">=</span> PCA(n_components<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>data_proj_sklearn <span style="color:#f92672">=</span> sklearn_pca<span style="color:#f92672">.</span>fit_transform(data_norm)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># The eigenvectors in scikit-learn will point into the opposite direction</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># compared to our eigenvectors (in other words: they are flipped). This</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># does not make a difference regarding the solution. However, to make </span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># sure that we get exactly the same plot we multiply the result by -1.</span>
+</span></span><span style="display:flex;"><span>data_proj_sklearn <span style="color:#f92672">*=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">6</span>))
+</span></span><span style="display:flex;"><span>scatter <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>scatter(data_proj_sklearn[:, <span style="color:#ae81ff">0</span>], data_proj_sklearn[:, <span style="color:#ae81ff">1</span>], c<span style="color:#f92672">=</span>labels, label<span style="color:#f92672">=</span>labels_str)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>xlabel(<span style="color:#e6db74">&#39;Principal Component 1&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>ylabel(<span style="color:#e6db74">&#39;Principal Component 2&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend(handles<span style="color:#f92672">=</span>scatter<span style="color:#f92672">.</span>legend_elements()[<span style="color:#ae81ff">0</span>], labels<span style="color:#f92672">=</span>labels_str, loc<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;upper left&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>title(<span style="color:#e6db74">&#34;Compressed digits dataset with labels (sklearn version)&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><img src="/posts/machine_learning/images/pca/plot_sklearn.png"
+    
+    
+        width="50%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h2 id="9-sources-and-further-reading">9. Sources and further reading</h2>
+<p>The basis for this notebook is chapter 10 of the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>. I can highly recommend to read through the chapter to get a deeper understanding of PCA.</p>
+<p>Another fantastic explanation of PCA is given <a href="https://stats.stackexchange.com/a/140579">in this post on StackExchange</a>.</p>
+
+        </div>
+
+        
+        
+          <div class="btn-improve-page">
+              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/principal_component_analysis.md">
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+
+        
+      <hr />
+        <div class="row next-prev-navigator">
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+      
+        
+        
+        <div class="col-md-12 next-article">
+          <a href="/posts/machine_learning/support_vector_machines/" class="btn btn-outline-info">
+            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
+            <br />
+            <span>Support vector machines</span>
+          </a>
+        </div>
+      
+    
+  
+
+</div>
+
+      <hr />
+      
+      
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-what-is-pca">1. What is PCA?</a></li>
+    <li><a href="#2-why-do-we-need-pca">2. Why do we need PCA?</a></li>
+    <li><a href="#3-key-ideas-of-pca">3. Key ideas of PCA</a></li>
+    <li><a href="#4-two-ways-of-deriving-pca">4. Two ways of deriving PCA</a>
+      <ul>
+        <li><a href="#41-maximum-variance-perspective">4.1 Maximum variance perspective</a></li>
+        <li><a href="#42-projection-perspective">4.2 Projection perspective</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-interpreting-the-projection-matrix">5. Interpreting the projection matrix</a></li>
+    <li><a href="#6-computing-the-eigenvectors">6. Computing the eigenvectors</a></li>
+    <li><a href="#7-summary-of-important-terminology">7. Summary of important terminology</a></li>
+    <li><a href="#8-implementation">8. Implementation</a>
+      <ul>
+        <li><a href="#81-dataset">8.1 Dataset</a></li>
+        <li><a href="#82-standardization">8.2 Standardization</a></li>
+        <li><a href="#83-computing-the-data-covariance-matrix">8.3 Computing the data covariance matrix</a></li>
+        <li><a href="#84-computing-the-eigenvalues-and-eigenvectors">8.4 Computing the eigenvalues and eigenvectors</a></li>
+        <li><a href="#85-choosing-the-number-of-eigenvalues">8.5 Choosing the number of eigenvalues</a></li>
+        <li><a href="#86-constructing-the-projection-matrix">8.6 Constructing the projection matrix</a></li>
+        <li><a href="#87-projecting-the-data">8.7 Projecting the data</a></li>
+        <li><a href="#88-plotting-the-transformed-data">8.8 Plotting the transformed data</a></li>
+        <li><a href="#89-comparison-to-scikit-learn">8.9 Comparison to scikit-learn</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-sources-and-further-reading">9. Sources and further reading</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+
+  
+
+
+
+
+  
+
+
+
+
+  
+  
+    
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<footer class="container-fluid text-center align-content-center footer pb-2">
+  <div class="container pt-5">
+    <div class="row text-left">
+      <div class="col-md-4 col-sm-12">
+        <h5>Navigation</h5>
+        
+        <ul>
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#about">About</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#skills">Skills</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#experiences">Experiences</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#projects">Projects</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#education">Education</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
+              </li>
+            
+            
+              
+              
+                
+              
+              <li class="nav-item">
+                <a class="smooth-scroll" href="#appearances">Talks &amp; Podcasts</a>
+              </li>
+            
+        </ul>
+        
+
+      </div>
+      
+      <div class="col-md-4 col-sm-12">
+        <h5>Contact me:</h5>
+        <ul>
+          
+          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
+          
+        </ul>
+      </div>
+      
+      
+    </div>
+  </div>
+  <hr />
+  <div class="container">
+    <div class="row text-left">
+      <div class="col-md-4">
+        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
+          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png">
+          Toha
+        </a>
+      </div>
+      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+      <div class="col-md-4 text-right">
+        <a id="hugo" href="https://gohugo.io/">Powered by
+        <img
+          src="/images/hugo-logo.svg"
+          alt="Hugo Logo"
+          height="18"
+        />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+<script src="/js/navbar.js"></script>
+<script src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<script>
+window.MathJax = {
+	tex: {
+		inlineMath: [['$', '$'], ['\\(', '\\)']],
+		processEnvironments: true
+	}
+};
+</script>
+
+
+
+
+  </body>
+</html>
