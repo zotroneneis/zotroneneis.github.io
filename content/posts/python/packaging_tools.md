@@ -12,7 +12,7 @@ menu:
 **Topics:** An unbiased evaluation of environment management and packaging tools
 
 ## Motivation
-When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn't sure which one to use. I'm sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs. Several talks and blog post on the topic exist, but none of them gives a complete overview or evaluates the tools in a structured fasion. This is what this post is about. I want to give you a truly unbiased evaluation of existing packaging and environment management tools. In case you'd rather watch a talk, take a look at the recording of [PyCon DE 2023](https://www.youtube.com/watch?v=MsJjzVIVs6M).
+When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn't sure which one to use. I'm sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs. Several talks and blog post on the topic exist, but none of them gives a complete overview or evaluates the tools in a structured fashion. This is what this post is about. I want to give you a truly unbiased evaluation of existing packaging and environment management tools. In case you'd rather watch a talk, take a look at the recording of [PyCon DE 2023](https://www.youtube.com/watch?v=MsJjzVIVs6M).
 
 ## Categorization
 
@@ -23,15 +23,15 @@ For the purpose of the talk I identified five main categories that are important
 - Package building
 - Package publishing
 
-As you can see in the figure below, lots of tools exist. Some can do a single thing (i.e. they are single-purpose), others can perform multiple tasks (hence I call them multi-puprose tools). 
+As you can see in the figure below, lots of tools exist. Some can do a single thing (i.e. they are single-purpose), others can perform multiple tasks (hence I call them multi-purpose tools). 
 
 {{< img src="/posts/python/figures/venn_diagram.png" width="50%" align="center" >}}
 
-Let's walk through the categories keeping a developers perspective in mind. Let's say you are working on a personal project alongside your work projects. At work you're using Python 3.7 whereas your personal project should be using the newest Python version (currently 3.11). In other words: you want to be able to install different Python versions and switch between them. That's what our first category, **Python version management** is about. Within your projects you are using other packages (e.g. `pandas` or `sklearn` for data science). These are dependencies of your project that you have to install and manage (e.g. upgrade when new versions are released). This is what **package management** is about. Because different projects might require different versions of the same package you need to create (and manage) virtual environments to avoid dependency conflicts. Tools for this are collected in the category **environment management**. Most tools use virtual environments, but some use another concept called "local packages" which we will look at later. Once your code is in a proper state you might want to share it with fellow developers. For this you first have to build your package (**package building**) before you can publish it to PyPi or another index (**package publishing**).
+Let's walk through the categories keeping a developers perspective in mind. Let's say you are working on a personal project alongside your work projects. At work you're using Python 3.7 whereas your personal project should be using the newest Python version (currently 3.11). In other words: you want to be able to install different Python versions and switch between them. That's what our first category, **Python version management** is about. Within your projects you are using other packages (e.g. `pandas` or `sklearn` for data science). These are dependencies of your project that you have to install and manage (e.g. upgrade when new versions are released). This is what **package management** is about. Because different projects might require different versions of the same package you need to create (and manage) virtual environments to avoid dependency conflicts. Tools for this are collected in the category **environment management**. Most tools use virtual environments, but some use another concept called "local packages" which we will look at later. Once your code is in a proper state you might want to share it with fellow developers. For this you first have to build your package (**package building**) before you can publish it to PyPI or another index (**package publishing**).
 
 In the following we will look at each category in more detail, including a short definition, motivation and the available tools. I will present some single-purpose tools in more detail and several multi-purpose tools in a separate section at the end. Let's get started with the first category: Python version management.
 
-## Python version managment
+## Python version management
 
 ### Definition
 A tool that can perform Python version management allows you to install Python versions and switch between the versions easily.
@@ -43,7 +43,7 @@ Why would we want to use different Python versions? There are several reasons. F
 {{< img src="/posts/python/figures/python_version_management.png" width="50%" align="center" >}}
 
 #### pyenv
-Python has one single-purpose tool that lets you install and manage Python versions: `pyenv`! Pyenv is easy to use. The most important commands are the following:
+Python has one single-purpose tool that lets you install and manage Python versions: [pyenv](https://github.com/pyenv/pyenv)! Pyenv is easy to use. The most important commands are the following:
 ```bash
 # Install specific Python version
 pyenv install 3.10.4
@@ -57,16 +57,16 @@ pyenv global <version>
 ## (Virtual) environment management
 
 ### Definition
-A tool that can perform enviornment management allows you to create and manage (virtual) environments.
+A tool that can perform environment management allows you to create and manage (virtual) environments.
 
 ### Motivation
-Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It's often the case that different projects require different versions of the same package. This can cause depenency conflicts. In addition, problems can occur when using `pip install` to install a package because the package is placed with your system-wide Python installation (e.g. system pollution). Some of these problems can be solved by using the `--user` flag. However, this option might not be known to everyone, especially beginners. Python has two main single-purpose tools that can be used to manage virtual envs: `venv` and `virtualenv`. Let's look at both of them in more detail.
+Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It's often the case that different projects require different versions of the same package. This can cause dependency conflicts. In addition, problems can occur when using `pip install` to install a package because the package is placed with your system-wide Python installation (e.g. system pollution). Some of these problems can be solved by using the `--user` flag. However, this option might not be known to everyone, especially beginners. Python has two main single-purpose tools that can be used to manage virtual environments: `venv` and `virtualenv`. Let's look at both of them in more detail.
 
 ### Tools
 {{< img src="/posts/python/figures/env_management.png" width="50%" align="center" >}}
 
 ### venv
-`venv` is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:
+[Venv](https://docs.python.org/3/library/venv.html) is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:
 ```bash
 # Create env
 python3 -m venv <env_name>
@@ -79,7 +79,7 @@ deactivate
 ```
 
 ### virtualenv
-`virtualenv` tries to improve `venv`. It offers more features than `venv` and is faster and more powerful. The most important commands are similar to the ones of `venv`, only creating a new environment is cleaner:
+[Virtualenv](https://virtualenv.pypa.io/en/latest/) tries to improve `venv`. It offers more features than `venv` and is faster and more powerful. The most important commands are similar to the ones of `venv`, only creating a new environment is cleaner:
 ```bash
 # Create env
 virtualenv <env_name>
@@ -95,7 +95,7 @@ deactivate
 
 Before we can talk about packaging I want to make sure that you are aware of the most important file for packaging: `pyproject.toml`.
 
-Packaging in Python has come a long way. Until PEP 518 `setup.py` files where used for packaging, using `setuptools` as a build tool. PEP 518 introduced the usage of a `pyproject.toml` file. So right now, when creating a package we need a pyproject.toml file. It is used to define the settings of a project, set metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml).
+Packaging in Python has come a long way. Until PEP 518 `setup.py` files where used for packaging, using `setuptools` as a build tool. PEP 518 introduced the usage of a `pyproject.toml` file. So right now, when creating a package we need a `pyproject.toml` file. It is used to define the settings of a project, set metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml).
 
 With this knowledge we can go on at take a look at package management.
 
@@ -118,7 +118,7 @@ Why do we care about packages? Packages allow us to define a hierarchy of module
 The standard package manager for Python is `pip`. It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`.
 
 ## Recap II - lock file
-Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducability of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
+Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducibility of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
 
 {{< img src="/posts/python/figures/poetry_lock.png" width="50%" align="center" >}}
 
@@ -127,7 +127,7 @@ Before we go on to the multi-purpose tools, there is one more file that's import
 ### Pipenv
 {{< img src="/posts/python/figures/pipenv.png" width="50%" align="center" >}}
 
-As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package managementby introducing two additional files:
+As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package management introducing two additional files:
 - `Pipfile`
 - `Pipfile.lock`
 
@@ -199,7 +199,7 @@ flit publish
 
 ### Poetry
 
-[Poetry](https://python-poetry.org/) is a well known tool in the packaging world. As visible in the Venn diagram it can do everything except for Python version management. Taking a look at the feature evaluation below you will see than Poetry does **not** support PEP 621. There has been an open issue about this on Github for about 1.5 years, but it hasn't been integrated into the main code base (yet). 
+[Poetry](https://python-poetry.org/) is a well known tool in the packaging world. As visible in the Venn diagram it can do everything except for Python version management. Taking a look at the feature evaluation below you will see than Poetry does **not** support PEP 621. There has been an open issue about this on GitHub for about 1.5 years, but it hasn't been integrated into the main code base (yet). 
 
 {{< img src="/posts/python/figures/poetry.png" width="50%" align="center" >}}
 
@@ -259,7 +259,7 @@ When installing a package for the first time, Poetry simply resolves all depende
 # Package code (creates `.tar.gz` and `.whl` files)
 poetry build
 
-# Publish to PyPi
+# Publish to PyPI
 poetry publish 
 ```
 
@@ -322,7 +322,7 @@ The locking functionality of PDM is similar to Poetry. When installing a package
 # Package code (creates `.tar.gz` and `.whl` files)
 pdm build
 
-# Publish to PyPi
+# Publish to PyPI
 pdm publish 
 ```
 
@@ -384,7 +384,7 @@ hatch run python <script_name.py>
 # Package code (creates `.tar.gz` and `.whl` files)
 hatch build
 
-# Publish to PyPi
+# Publish to PyPI
 hatch publish 
 ```
 
@@ -393,7 +393,7 @@ Special about Hatch is that it allows you to configure your virtual environments
 
 ### Rye
 
-[Rye](https://rye-up.com/) was recently developed by Armin Ronacher (first release May 2023), the creator of the Flask framework. It is strongly inspired by rustup and cargo, the packaging tools of the programming language Rust. Rye is written in Rust and is able to perform all tasks in our Venn diagram:
+[Rye](https://rye-up.com/) was recently developed by Armin Ronacher (first release May 2023), the creator of the Flask framework. It is strongly inspired by `rustup` and `cargo`, the packaging tools of the programming language Rust. Rye is written in Rust and is able to perform all tasks in our Venn diagram:
 
 - Python version management: ✅
 - Package management: ✅
@@ -448,7 +448,7 @@ rye run python <script_name.py>
 # Package code (creates `.tar.gz` and `.whl` files)
 rye build
 
-# Publish to PyPi
+# Publish to PyPI
 rye publish 
 ```
 
