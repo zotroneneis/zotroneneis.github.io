@@ -168,18 +168,17 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 - [PEP 621](https://peps.python.org/pep-0621/) specifies how to write a project’s core metadata in a pyproject.toml file. I added it because one package (spoiler: it's `poetry`) currently does not support this PEP but uses its own way for declaring metadata.
 
 ### Flit
-[Flit](https://flit.pypa.io/en/stable/) tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it's meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn't care about any of the other tasks (Python version management, etc.). This is also reflected in the feature evaluation below.
-
-{{< img src="/posts/python/figures/flit.png" width="50%" align="center" >}}
-
-#### Flit - Capabilities
+[Flit](https://flit.pypa.io/en/stable/) tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it's meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn't care about any of the other tasks:
 - Python version management: ❌
 - Package management: ❌
 - Environment management: ❌
 - Building a package: ✅
 - Publishing a package: ✅
 
-#### Flit - Feature evaluation
+{{< img src="/posts/python/figures/flit.png" width="50%" align="center" >}}
+
+
+#### Feature evaluation
 | |  |    
 | -------                       |--|   
 | Manages dependencies          | ❌|   
@@ -189,7 +188,7 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 | Supports PEP 660 (editable installs) |✅|    
 | Supports PEP 621 (project metadata)  |✅|   
 
-#### Flit - Main commands
+#### Main commands
 ```bash
 # Create new pyproject.toml
 flit init
@@ -204,14 +203,14 @@ flit publish
 
 {{< img src="/posts/python/figures/poetry.png" width="50%" align="center" >}}
 
-#### Poetry - Capabilities
+#### Capabilities
 - Python version management: ❌
 - Package management: ✅
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
 
-#### Poetry - Feature evaluation
+#### Feature evaluation
 | |  |    
 | -------                       |--|   
 | Manages dependencies          | ✅|   
@@ -222,7 +221,7 @@ flit publish
 | Supports PEP 621 (project metadata)  |❌||   
 
 
-#### Poetry - Main commands
+#### Main commands
 ```bash
 # Create directory structure and pyproject.toml
 poetry new <project_name>
@@ -234,7 +233,7 @@ poetry init
 poetry install
 ```
 
-#### Poetry - Dependency management
+#### Dependency management
 ```bash
 # Add dependency
 poetry add <package_name>
@@ -243,7 +242,7 @@ poetry add <package_name>
 poetry show --tree
 ```
 
-#### Poetry - Running code
+#### Running code
 ```bash
 # Activate virtual env
 poetry shell
@@ -252,10 +251,10 @@ poetry shell
 poetry run python <script_name.py>
 ```
 
-#### Poetry - Lock file
+#### Lock file
 When installing a package for the first time, Poetry simply resolves all dependencies listed in your `pyproject.toml` file and downloads the latest version of the packages.Once Poetry has finished installing, it writes all the packages and their exact versions that it downloaded to a `poetry.lock` file, locking the project to those specific versions. It's recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the `poetry update` command.
 
-## Poetry - Build/publish flow
+#### Build/publish flow
 ```bash
 # Package code (creates `.tar.gz` and `.whl` files)
 poetry build
@@ -265,20 +264,21 @@ poetry publish
 ```
 
 ### PDM
-[PDM](https://pdm.fming.dev/latest/) is a relatively new package and dependency manager (started in 2019) that is strongly inspired by Poetry and PyFlow. You will notice that I'm not talking about PyFlow in this article. That's because PyFlow is not actively developed anymore - a must in the quickly evolving landscape of packaging. As visible in the Venn diagram, PDM sits right next to Poetry. That means that it can do everything except for Python version management. Being a new(er) tool, PDM requires Python 3.7 or higher. Another difference to other tools is that PDM allows users to choose a build backend. PDM is the only tool (apart from PyFlow) that implements [PEP 582](https://peps.python.org/pep-0582/) on local packages, an alternative way of implementing environment management. Note that this PEP was recently rejected.
+[PDM](https://pdm.fming.dev/latest/) is a relatively new package and dependency manager (started in 2019) that is strongly inspired by Poetry and PyFlow. You will notice that I'm not talking about PyFlow in this article. That's because PyFlow is not actively developed anymore - a must in the quickly evolving landscape of packaging. Being a new(er) tool, PDM requires Python 3.7 or higher. Another difference to other tools is that PDM allows users to choose a build backend. PDM is the only tool (apart from PyFlow) that implements [PEP 582](https://peps.python.org/pep-0582/) on local packages, an alternative way of implementing environment management. Note that this PEP was recently rejected.
 
-The main commands of PDM are similar to Poetry. However, less commands exist. For example, there is no `pdm shell` or `pdm new` at the moment.
-
-{{< img src="/posts/python/figures/pdm.png" width="50%" align="center" >}}
-
-#### PDM - Capabilities
+As visible in the Venn diagram, PDM sits right next to Poetry. That means that it can do everything except for Python version management:
 - Python version management: ❌
 - Package management: ✅
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
 
-#### PDM - Feature evaluation
+The main commands of PDM are similar to Poetry. However, less commands exist. For example, there is no `pdm shell` or `pdm new` at the moment.
+
+{{< img src="/posts/python/figures/pdm.png" width="50%" align="center" >}}
+
+
+#### Feature evaluation
 | |  |    
 | -------                       |--|   
 | Manages dependencies          | ✅|   
@@ -288,7 +288,7 @@ The main commands of PDM are similar to Poetry. However, less commands exist. Fo
 | Supports PEP 660 (editable installs) |✅|    
 | Supports PEP 621 (project metadata)  |✅|   
 
-#### PDM - Main commands
+#### Creating a new project
 ```bash
 # Create pyproject.toml interactively
 pdm init
@@ -297,7 +297,7 @@ pdm init
 pdm install
 ```
 
-#### PDM - Dependency management
+#### Dependency management
 ```bash
 # Add dependency
 pdm add <package_name>
@@ -306,7 +306,7 @@ pdm add <package_name>
 pdm list --graph
 ```
 
-#### PDM - Running code
+#### Running code
 ```bash
 # No pdm shell command 
 
@@ -314,7 +314,7 @@ pdm list --graph
 pdm run python <script_name.py>
 ```
 
-#### PDM - Lock file
+#### Lock file
 The locking functionality of PDM is similar to Poetry. When installing a package for the first time, PDM resolves all dependencies listed in your `pyproject.toml` file and downloads the latest version of the packages. Once PDM has finished installing, it writes all the packages and their exact versions that it downloaded to a `pdm.lock` file, locking the project to those specific versions. It's recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the `pdm update` command.
 
 #### Build/publish flow
@@ -327,16 +327,19 @@ pdm publish
 ```
 
 ### Hatch
-{{< img src="/posts/python/figures/hatch.png" width="50%" align="center" >}}
 
-#### Hatch - Capabilities
+[Hatch](https://hatch.pypa.io/latest/) can perform the following tasks:
 - Python version management: ❌
 - Package management: ❌
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
 
-#### Hatch - Feature evaluation
+It should be noted that the author of Hatch has promised that locking functionality will be added soon, which will also enable package management. Please make sure to check the latest version of Hatch to see if this has been implemented when you read this article.
+
+{{< img src="/posts/python/figures/hatch.png" width="50%" align="center" >}}
+
+#### Feature evaluation
 | |  |    
 | -------                       |--|   
 | Manages dependencies          | ❌|   
@@ -346,7 +349,7 @@ pdm publish
 | Supports PEP 660 (editable installs) |✅|    
 | Supports PEP 621 (project metadata)  |✅|   
 
-#### Hatch - Creating a new project
+#### Creating a new project
 ```bash
 # Create directory structure and pyproject.toml
 hatch new <project_name>
@@ -358,7 +361,7 @@ hatch new -i <project_name>
 hatch new --init
 ```
 
-#### Hatch - Dependency management
+#### Dependency management
 ```python
 # Packages are added manually to pyproject.toml
 hatch add <package_name> # This command doesn't exist!
@@ -367,7 +370,7 @@ hatch add <package_name> # This command doesn't exist!
 hatch dep show table
 ```
 
-#### Hatch - Running code
+#### Running code
 ```bash
 # Activate virtual env
 hatch shell
@@ -376,7 +379,7 @@ hatch shell
 hatch run python <script_name.py>
 ```
 
-#### Hatch - Build/publish flow
+#### Build/publish flow
 ```bash
 # Package code (creates `.tar.gz` and `.whl` files)
 hatch build
@@ -385,27 +388,24 @@ hatch build
 hatch publish 
 ```
 
-#### Hatch - Declarative environment management
-- Environments can be configured within `pyproject.toml`
-- We can define scripts for an environment 
-- Example use case: [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts)
+#### Declarative environment management
+Special about Hatch is that it allows you to configure your virtual environments within the `pyproject.toml` file. In addition if lets you define scripts specifically for an environment. And example use case for this is [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts).
 
 ### Rye
-{{< img src="/posts/python/figures/rye.png" width="50%" align="center" >}}
 
-#### Rye - Capabilities
+[Rye](https://rye-up.com/) was recently developed by Armin Ronacher (first release May 2023), the creator of the Flask framework. It is strongly inspired by rustup and cargo, the packaging tools of the programming language Rust. Rye is written in Rust and is able to perform all tasks in our Venn diagram:
+
 - Python version management: ✅
 - Package management: ✅
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
 
-#### Rye
-- Very new (first release May 2023)
-- Inspired by rustup and cargo from Rust
-- Written in Rust
+Currently, rye does not have a plugin interface. However, since new releases are published on a regular basis, this might be added in the future.
 
-#### Rye - Feature evaluation
+{{< img src="/posts/python/figures/rye.png" width="50%" align="center" >}}
+
+#### Feature evaluation
 | |  |    
 | -------                       |--|   
 | Manages dependencies          | ✅|
@@ -415,7 +415,7 @@ hatch publish
 | Supports PEP 660 (editable installs) |✅|    
 | Supports PEP 621 (project metadata)  |✅|   
 
-#### Rye - Creating a new project
+#### Creating a new project
 ```bash
 # Create directory structure and pyproject.toml
 rye init <project_name>
@@ -424,7 +424,7 @@ rye init <project_name>
 rye pin 3.10
 ```
 
-#### Rye - Dependency management
+#### Dependency management
 ```python
 # Add dependency - this does not install the package!
 rye add <package_name>
@@ -434,7 +434,7 @@ rye add <package_name>
 rye sync
 ```
 
-#### Rye - Running code
+#### Running code
 ```bash
 # Activate virtual env
 rye shell
@@ -443,7 +443,7 @@ rye shell
 rye run python <script_name.py>
 ```
 
-#### Rye - Build/publish flow
+#### Build/publish flow
 ```bash
 # Package code (creates `.tar.gz` and `.whl` files)
 rye build
