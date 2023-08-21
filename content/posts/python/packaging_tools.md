@@ -25,7 +25,7 @@ For the purpose of the talk I identified five main categories that are important
 
 As you can see in the figure below, lots of tools exist. Some can do a single thing (i.e. they are single-purpose), others can perform multiple tasks (hence I call them multi-puprose tools). 
 
-<img src="figures/venn_diagram.png" alt="drawing" width="700"/>
+{{< img src="/posts/python/figures/venn_diagram.png" width="50%" align="center" >}}
 
 Let's walk through the categories keeping a developers perspective in mind. Let's say you are working on a personal project alongside your work projects. At work you're using Python 3.7 whereas your personal project should be using the newest Python version (currently 3.11). In other words: you want to be able to install different Python versions and switch between them. That's what our first category, **Python version management** is about. Within your projects you are using other packages (e.g. `pandas` or `sklearn` for data science). These are dependencies of your project that you have to install and manage (e.g. upgrade when new versions are released). This is what **package management** is about. Because different projects might require different versions of the same package you need to create (and manage) virtual environments to avoid dependency conflicts. Tools for this are collected in the category **environment management**. Most tools use virtual environments, but some use another concept called "local packages" which we will look at later. Once your code is in a proper state you might want to share it with fellow developers. For this you first have to build your package (**package building**) before you can publish it to PyPi or another index (**package publishing**).
 
@@ -40,7 +40,7 @@ A tool that can perform Python version management allows you to install Python v
 Why would we want to use different Python versions? There are several reasons. For example, you might be working of several projects where each projects requires a different Python version. Or you might develop a project that supports several Python versions and you want to test all of them. Besides that it can be nice to check out what the newest Python version has to offer, or test a pre-release version of Python for bugs. 
 
 ### Tools
-<img src="figures/python_version_management.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/python_version_management.png" width="50%" align="center" >}}
 
 #### pyenv
 Python has one single-purpose tool that lets you install and manage Python versions: `pyenv`! Pyenv is easy to use. The most important commands are the following:
@@ -63,7 +63,7 @@ A tool that can perform enviornment management allows you to create and manage (
 Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It's often the case that different projects require different versions of the same package. This can cause depenency conflicts. In addition, problems can occur when using `pip install` to install a package because the package is placed with your system-wide Python installation (e.g. system pollution). Some of these problems can be solved by using the `--user` flag. However, this option might not be known to everyone, especially beginners. Python has two main single-purpose tools that can be used to manage virtual envs: `venv` and `virtualenv`. Let's look at both of them in more detail.
 
 ### Tools
-<img src="figures/env_management.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/env_management.png" width="50%" align="center" >}}
 
 ### venv
 `venv` is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:
@@ -112,7 +112,7 @@ A tool that can perform package management is able to download and install libra
 Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (`from package.module import my_function`). In addition, they make it easy to share code with other developers. Since each package as a `pyproject.toml` file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its `pyproject.toml` file. 
 
 ### Tools
-<img src="figures/package_management.png" alt="drawing" width="650"/>
+{{< img src="/posts/python/figures/package_management.png" width="50%" align="center" >}}
 
 #### pip
 The standard package manager for Python is `pip`. It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`.
@@ -120,12 +120,12 @@ The standard package manager for Python is `pip`. It's shipped with Python and a
 ## Recap II - lock file
 Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducability of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
 
-<img src="figures/poetry_lock.png" alt="drawing" width="550"/>
+{{< img src="/posts/python/figures/poetry_lock.png" width="50%" align="center" >}}
 
 ## Multi-purpose tools
 
 ### Pipenv
-<img src="figures/pipenv.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/pipenv.png" width="50%" align="center" >}}
 
 As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package managementby introducing two additional files:
 - `Pipfile`
@@ -147,7 +147,7 @@ pipenv shell
 
 ### Conda
 
-<img src="figures/conda.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/conda.png" width="50%" align="center" >}}
 
 Conda is a general-purpose package management system. That means that it's not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot's of tutorials and blog posts exist (for example [the official one](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)) so I won't go into more detail here. 
 
@@ -170,7 +170,7 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 ### Flit
 [Flit](https://flit.pypa.io/en/stable/) tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it's meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn't care about any of the other tasks (Python version management, etc.). This is also reflected in the feature evaluation below.
 
-<img src="figures/flit.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/flit.png" width="50%" align="center" >}}
 
 #### Flit - Capabilities
 - Python version management: ❌
@@ -199,7 +199,10 @@ flit publish
 ```
 
 ### Poetry
-<img src="figures/poetry.png" alt="drawing" width="600"/>
+
+[Poetry](https://python-poetry.org/) is a well known tool in the packaging world. As visible in the Venn diagram it can do everything except for Python version management. Taking a look at the feature evaluation below you will see than Poetry does **not** support PEP 621. There has been an open issue about this on Github for about 1.5 years, but it hasn't been integrated into the main code base (yet). 
+
+{{< img src="/posts/python/figures/poetry.png" width="50%" align="center" >}}
 
 #### Poetry - Capabilities
 - Python version management: ❌
@@ -250,8 +253,7 @@ poetry run python <script_name.py>
 ```
 
 #### Poetry - Lock file
-- When installing package, poetry resolves its dependencies and creates `poetry.lock`
-- Updating dependencies to latest versions with `poetry update`
+When installing a package for the first time, Poetry simply resolves all dependencies listed in your `pyproject.toml` file and downloads the latest version of the packages.Once Poetry has finished installing, it writes all the packages and their exact versions that it downloaded to a `poetry.lock` file, locking the project to those specific versions. It's recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the `poetry update` command.
 
 ## Poetry - Build/publish flow
 ```bash
@@ -263,7 +265,11 @@ poetry publish
 ```
 
 ### PDM
-<img src="figures/pdm.png" alt="drawing" width="600"/>
+[PDM](https://pdm.fming.dev/latest/) is a relatively new package and dependency manager (started in 2019) that is strongly inspired by Poetry and PyFlow. You will notice that I'm not talking about PyFlow in this article. That's because PyFlow is not actively developed anymore - a must in the quickly evolving landscape of packaging. As visible in the Venn diagram, PDM sits right next to Poetry. That means that it can do everything except for Python version management. Being a new(er) tool, PDM requires Python 3.7 or higher. Another difference to other tools is that PDM allows users to choose a build backend. PDM is the only tool (apart from PyFlow) that implements [PEP 582](https://peps.python.org/pep-0582/) on local packages, an alternative way of implementing environment management. Note that this PEP was recently rejected.
+
+The main commands of PDM are similar to Poetry. However, less commands exist. For example, there is no `pdm shell` or `pdm new` at the moment.
+
+{{< img src="/posts/python/figures/pdm.png" width="50%" align="center" >}}
 
 #### PDM - Capabilities
 - Python version management: ❌
@@ -271,14 +277,6 @@ poetry publish
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
-
-#### PDM
-- Strongly inspired by `poetry` and `pyflow`
-- Requires Python 3.7 or higher
-- Implements PEP 582 (local packages)
-- PEP 582 ("local packages"): https://peps.python.org/pep-0582/
-- Was rejected
-- Allows users to choose build backend
 
 #### PDM - Feature evaluation
 | |  |    
@@ -290,7 +288,7 @@ poetry publish
 | Supports PEP 660 (editable installs) |✅|    
 | Supports PEP 621 (project metadata)  |✅|   
 
-#### Main commands
+#### PDM - Main commands
 ```bash
 # Create pyproject.toml interactively
 pdm init
@@ -299,7 +297,7 @@ pdm init
 pdm install
 ```
 
-#### Dependency management
+#### PDM - Dependency management
 ```bash
 # Add dependency
 pdm add <package_name>
@@ -308,7 +306,7 @@ pdm add <package_name>
 pdm list --graph
 ```
 
-#### Running code
+#### PDM - Running code
 ```bash
 # No pdm shell command 
 
@@ -316,10 +314,8 @@ pdm list --graph
 pdm run python <script_name.py>
 ```
 
-#### Lock file
-- Similar to poetry
-- When installing package, pdm resolves its dependencies and creates `pdm.lock`
-- Updating dependencies to latest versions with `pdm update`
+#### PDM - Lock file
+The locking functionality of PDM is similar to Poetry. When installing a package for the first time, PDM resolves all dependencies listed in your `pyproject.toml` file and downloads the latest version of the packages. Once PDM has finished installing, it writes all the packages and their exact versions that it downloaded to a `pdm.lock` file, locking the project to those specific versions. It's recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the `pdm update` command.
 
 #### Build/publish flow
 ```bash
@@ -331,7 +327,7 @@ pdm publish
 ```
 
 ### Hatch
-<img src="figures/hatch.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/hatch.png" width="50%" align="center" >}}
 
 #### Hatch - Capabilities
 - Python version management: ❌
@@ -395,7 +391,7 @@ hatch publish
 - Example use case: [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts)
 
 ### Rye
-<img src="figures/rye.png" alt="drawing" width="600"/>
+{{< img src="/posts/python/figures/rye.png" width="50%" align="center" >}}
 
 #### Rye - Capabilities
 - Python version management: ✅
