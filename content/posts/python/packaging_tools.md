@@ -93,9 +93,15 @@ deactivate
 
 ## Recap I - `pyproject.toml`
 
+Before we can talk about packaging I want to make sure that you are aware of the most important file for packaging: `pyproject.toml`.
+
+Packaging in Python has come a long way. Until PEP 518 `setup.py` files where used for packaging, using `setuptools` as a build tool. PEP 518 introduced the usage of a `pyproject.toml` file. So right now, when creating a package we need a pyproject.toml file. It is used to define the settings of a project, set metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml).
+
+With this knowledge we can go on at take a look at package management.
+
 ## Package management
 ### Definition
-Download and install libraries and their dependencies
+A tool that can perform package management is able to download and install libraries and their dependencies. 
 
 ### Motivation
 - Packages allow us to define a hierarchy of modules
@@ -103,23 +109,23 @@ Download and install libraries and their dependencies
 - Code can easily be shared with other developers
 - Project dependencies are bundled in `pyproject.toml`
 
+Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (`from package.module import my_function`). In addition, they make it easy to share code with other developers. Since each package as a `pyproject.toml` file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its `pyproject.toml` file. 
+
 ### Tools
 <img src="figures/package_management.png" alt="drawing" width="650"/>
 
 #### pip
-- Standard package manager for Python
-- Shipped with Python
-- Allows to install packages from PyPI and other indexes
-- Main command: `pip install <package_name>`
+The standard package manager for Python is `pip`. It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`.
 
 ## Recap II - lock file
-- Records exact versions of all dependencies installed for a project
-- This enables reproducability of projects across multiple platforms
-- [Example file from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
+Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducability of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
+
 <img src="figures/poetry_lock.png" alt="drawing" width="550"/>
 
 ## Multi-purpose tools
-### Features for evaluation
+
+We are finally ready to take a look at some of the most popular multi-purpose tools. I promised an unbiased evaluation. For this purpose I created a list of features that are important when comparing the different tools. The features are the following:
+
 | |  |    
 | --------------                       |--|   
 | Manages dependencies                 |? |   
@@ -129,33 +135,9 @@ Download and install libraries and their dependencies
 | Supports PEP 660 (editable installs) |? |    
 | Supports PEP 621 (project metadata)  |? |   
 
-### PEPs
-- Overview: https://peps.python.org/topic/packaging/
-- Finished PEPs (done, with a stable interface):
-    - PEP 517
-    - PEP 518 (pyproject.toml): https://peps.python.org/pep-0518/
-
-- PEP 660 (Editable installs for pyproject.toml based builds): https://peps.python.org/pep-0660/
-    - Poetry: yes
-    - PyFlow: no
-    - PDM: yes
-    - Hatch: yes
-    - Flit: yes (see version 3.4 https://flit.pypa.io/en/stable/history.html)
-    
-- PEP 621 Storing project metadata in pyproject.toml
-    - Poetry: no (https://github.com/python-poetry/roadmap/issues/3)
-    - PyFlow: no
-    - PDM: yes
-    - Hatch: yes
-    - Flit: yes (see version 3.3 https://flit.pypa.io/en/stable/history.html)
-
-- PEP 582 ("local packages"): https://peps.python.org/pep-0582/
-    - Poetry: no
-    - PyFlow: yes
-    - PDM: yes
-    - Hatch: no
-    - Flit: no
-    - Currently "open/under consideration"
+Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. For a full overview take a look at [this page](https://peps.python.org/topic/packaging/). I only included PEP 660 and PEP 621 for specific reasons:
+- [PEP 660](https://peps.python.org/pep-0660/) is about editable installs for pyproject.toml based builds. When you install a package using `pip` you have the option to install it in editable mode using `pip install -e package_name`. This is an important features to have when you are developing a package and want your changes to be directly reflected in your environment.
+- [PEP 621](https://peps.python.org/pep-0621/) specifies how to write a project’s core metadata in a pyproject.toml file. I added it because one package (spoiler: it's `poetry`) currently does not support this PEP but uses its own way for declaring metadata.
 
 ### Flit
 <img src="figures/flit.png" alt="drawing" width="600"/>
@@ -267,6 +249,8 @@ poetry publish
 - Strongly inspired by `poetry` and `pyflow`
 - Requires Python 3.7 or higher
 - Implements PEP 582 (local packages)
+- PEP 582 ("local packages"): https://peps.python.org/pep-0582/
+- Was rejected
 - Allows users to choose build backend
 
 #### PDM - Feature evaluation
