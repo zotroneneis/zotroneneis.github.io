@@ -124,7 +124,35 @@ Before we go on to the multi-purpose tools, there is one more file that's import
 
 ## Multi-purpose tools
 
-We are finally ready to take a look at some of the most popular multi-purpose tools. I promised an unbiased evaluation. For this purpose I created a list of features that are important when comparing the different tools. The features are the following:
+### Pipenv
+<img src="figures/pipenv.png" alt="drawing" width="600"/>
+
+As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package managementby introducing two additional files:
+- `Pipfile`
+- `Pipfile.lock`
+
+`Pipfile` is a TOML file (similar to `pyproject.toml`) used to define project dependencies. It is managed by the developer when she invokes pipenv commands (like `pipenv install`). `Pipfile.lock` allows for deterministic builds. It eliminates the need for a `requirements.txt` file and is managed automatically through locking actions .
+
+The most important `pipenv` commands are:
+```bash
+# Install package
+pipenv install <package_name>
+
+# Run Python script within virtual env
+pipenv run <script_name.py>
+
+# Activate virtual env
+pipenv shell
+```
+
+### Conda
+
+<img src="figures/conda.png" alt="drawing" width="600"/>
+
+Conda is a general-purpose package management system. That means that it's not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot's of tutorials and blog posts exist (for example [the official one](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)) so I won't go into more detail here. 
+
+### Feature evaluation
+Last but not least we will take a look at multi-purpose tools for packaging. I promised an unbiased evaluation. For this purpose I created a list of features that are important when comparing the different tools. The features are the following:
 
 | |  |    
 | --------------                       |--|   
@@ -140,6 +168,8 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 - [PEP 621](https://peps.python.org/pep-0621/) specifies how to write a project’s core metadata in a pyproject.toml file. I added it because one package (spoiler: it's `poetry`) currently does not support this PEP but uses its own way for declaring metadata.
 
 ### Flit
+[Flit](https://flit.pypa.io/en/stable/) tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it's meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn't care about any of the other tasks (Python version management, etc.). This is also reflected in the feature evaluation below.
+
 <img src="figures/flit.png" alt="drawing" width="600"/>
 
 #### Flit - Capabilities
@@ -148,10 +178,6 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 - Environment management: ❌
 - Building a package: ✅
 - Publishing a package: ✅
-
-#### Flit
-- Specifically for pure Python packages
-- Cares only about packaging
 
 #### Flit - Feature evaluation
 | |  |    
@@ -171,6 +197,7 @@ flit init
 # Build and publish 
 flit publish
 ```
+
 ### Poetry
 <img src="figures/poetry.png" alt="drawing" width="600"/>
 
