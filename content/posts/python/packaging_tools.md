@@ -72,7 +72,7 @@ Why do we want to use environments in the first place? As mentioned in the begin
 
 Many tools allow users to create and manage environments. These are: `venv, virtualenv, pipenv, conda, pdm, poetry, hatch, rye` and `PyFlow`. Only two of them are single-purpose tools: `venv` and `virtualenv`. Let's look at both of them in more detail.
 
-{{< img src="/posts/python/figures/env_management.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/env_management.png" width="60%" align="center" >}}
 
 ### venv
 [Venv](https://docs.python.org/3/library/venv.html) is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:
@@ -119,7 +119,7 @@ A tool that can perform package management is able to download and install libra
 Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (`from package.module import my_function`). In addition, they make it easy to share code with other developers. Since each package as a `pyproject.toml` file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its `pyproject.toml` file. 
 
 ### Tools
-{{< img src="/posts/python/figures/package_management.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/package_management.png" width="60%" align="center" >}}
 
 #### pip
 The standard package manager for Python is `pip`. It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`.
@@ -127,12 +127,12 @@ The standard package manager for Python is `pip`. It's shipped with Python and a
 ## Recap II - lock file
 Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducibility of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
 
-{{< img src="/posts/python/figures/poetry_lock.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/poetry_lock.png" width="60%" align="center" >}}
 
 ## Multi-purpose tools
 
 ### Pipenv
-{{< img src="/posts/python/figures/pipenv.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/pipenv.png" width="60%" align="center" >}}
 
 As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package management introducing two additional files:
 - `Pipfile`
@@ -154,7 +154,7 @@ pipenv shell
 
 ### Conda
 
-{{< img src="/posts/python/figures/conda.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/conda.png" width="60%" align="center" >}}
 
 Conda is a general-purpose package management system. That means that it's not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot's of tutorials and blog posts exist (for example [the official one](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)) so I won't go into more detail here. 
 
@@ -182,7 +182,7 @@ Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. F
 - Building a package: ✅
 - Publishing a package: ✅
 
-{{< img src="/posts/python/figures/flit.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/flit.png" width="60%" align="center" >}}
 
 
 #### Feature evaluation
@@ -208,7 +208,7 @@ flit publish
 
 [Poetry](https://python-poetry.org/) is a well known tool in the packaging world. As visible in the Venn diagram it can do everything except for Python version management. Taking a look at the feature evaluation below you will see than Poetry does **not** support PEP 621. There has been an open issue about this on GitHub for about 1.5 years, but it hasn't been integrated into the main code base (yet). 
 
-{{< img src="/posts/python/figures/poetry.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/poetry.png" width="60%" align="center" >}}
 
 #### Capabilities
 - Python version management: ❌
@@ -282,7 +282,7 @@ As visible in the Venn diagram, PDM sits right next to Poetry. That means that i
 
 The main commands of PDM are similar to Poetry. However, less commands exist. For example, there is no `pdm shell` or `pdm new` at the moment.
 
-{{< img src="/posts/python/figures/pdm.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/pdm.png" width="60%" align="center" >}}
 
 
 #### Feature evaluation
@@ -344,7 +344,7 @@ pdm publish
 
 It should be noted that the author of Hatch has promised that locking functionality will be added soon, which will also enable package management. Please make sure to check the latest version of Hatch to see if this has been implemented when you read this article.
 
-{{< img src="/posts/python/figures/hatch.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/hatch.png" width="60%" align="center" >}}
 
 #### Feature evaluation
 | |  |    
@@ -410,7 +410,7 @@ Special about Hatch is that it allows you to configure your virtual environments
 
 Currently, rye does not have a plugin interface. However, since new releases are published on a regular basis, this might be added in the future.
 
-{{< img src="/posts/python/figures/rye.png" width="50%" align="center" >}}
+{{< img src="/posts/python/figures/rye.png" width="60%" align="center" >}}
 
 #### Feature evaluation
 | |  |    
