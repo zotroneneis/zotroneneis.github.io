@@ -129,10 +129,15 @@ Before we go on to the multi-purpose tools, there is one more file that's import
 
 ## Multi-purpose tools
 
+Knowing about lock files we can start looking at tools that perform several tasks. We will start with `pipenv` and `conda` before we transition to packaging tools like `poetry` and `pdm`.
+
 ### Pipenv
+
+As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package management  as we can see in our Venn diagram:
+
 {{< img src="/posts/python/figures/pipenv.png" width="60%" align="center" >}}
 
-As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pip` and `virtualenv`. It allows you to perform virtual environment management and package management introducing two additional files:
+`pipenv` introduces two additional files:
 - `Pipfile`
 - `Pipfile.lock`
 
