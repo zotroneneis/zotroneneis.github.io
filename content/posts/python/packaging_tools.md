@@ -37,15 +37,18 @@ In the following we will look at each of the categories in more detail, includin
 ## Python version management
 
 ### Definition
-A tool that can perform Python version management allows you to install Python versions and switch between the versions easily.
+A tool that can perform Python version management allows you to install Python versions and switch between them easily.
 
 ### Motivation
 Why would we want to use different Python versions? There are several reasons. For example, you might be working of several projects where each projects requires a different Python version. Or you might develop a project that supports several Python versions and you want to test all of them. Besides that it can be nice to check out what the newest Python version has to offer, or test a pre-release version of Python for bugs. 
 
 ### Tools
-{{< img src="/posts/python/figures/python_version_management.png" width="50%" align="center" >}}
 
-#### pyenv
+Our Venn diagram displays the available tools for Python version management: `pyenv, conda, rye` and `PyFlow`. We will first look at `pyenv` and consider the multi-purpose tools in a separate section.
+
+{{< img src="/posts/python/figures/python_version_management.png" width="70%" align="center" >}}
+
+### pyenv
 Python has one single-purpose tool that lets you install and manage Python versions: [pyenv](https://github.com/pyenv/pyenv)! Pyenv is easy to use. The most important commands are the following:
 ```bash
 # Install specific Python version
@@ -63,34 +66,37 @@ pyenv global <version>
 A tool that can perform environment management allows you to create and manage (virtual) environments.
 
 ### Motivation
-Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It's often the case that different projects require different versions of the same package. This can cause dependency conflicts. In addition, problems can occur when using `pip install` to install a package because the package is placed with your system-wide Python installation (e.g. system pollution). Some of these problems can be solved by using the `--user` flag. However, this option might not be known to everyone, especially beginners. Python has two main single-purpose tools that can be used to manage virtual environments: `venv` and `virtualenv`. Let's look at both of them in more detail.
+Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It's often the case that different projects require different versions of the same package. This can cause dependency conflicts. In addition, problems can occur when using `pip install` to install a package because the package is placed with your system-wide Python installation. Some of these problems can be solved by using the `--user` flag in the `pip` command. However, this option might not be known to everyone, especially beginners. 
 
 ### Tools
+
+Many tools allow users to create and manage environments. These are: `venv, virtualenv, pipenv, conda, pdm, poetry, hatch, rye` and `PyFlow`. Only two of them are single-purpose tools: `venv` and `virtualenv`. Let's look at both of them in more detail.
+
 {{< img src="/posts/python/figures/env_management.png" width="50%" align="center" >}}
 
 ### venv
 [Venv](https://docs.python.org/3/library/venv.html) is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:
 ```bash
-# Create env
+# Create new environment
 python3 -m venv <env_name>
 
-# Activate env 
+# Activate an environment
 source <env_name>/bin/activate
 
-# Deactivate env
+# Deactivate an active environment
 deactivate
 ```
 
 ### virtualenv
 [Virtualenv](https://virtualenv.pypa.io/en/latest/) tries to improve `venv`. It offers more features than `venv` and is faster and more powerful. The most important commands are similar to the ones of `venv`, only creating a new environment is cleaner:
 ```bash
-# Create env
+# Create new environment
 virtualenv <env_name>
 
-# Activate env 
+# Activate an environment
 source <env_name>/bin/activate
 
-# Deactivate env
+# Deactivate an active environment
 deactivate
 ```
 
@@ -98,9 +104,7 @@ deactivate
 
 Before we can talk about packaging I want to make sure that you are aware of the most important file for packaging: `pyproject.toml`.
 
-Packaging in Python has come a long way. Until PEP 518 `setup.py` files where used for packaging, using `setuptools` as a build tool. PEP 518 introduced the usage of a `pyproject.toml` file. So right now, when creating a package we need a `pyproject.toml` file. It is used to define the settings of a project, set metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml).
-
-With this knowledge we can go on at take a look at package management.
+Packaging in Python has come a long way. Until [PEP 518](https://peps.python.org/pep-0518/) `setup.py` files where used for packaging, using `setuptools` as a build tool. [PEP 518](https://peps.python.org/pep-0518/) introduced the usage of a `pyproject.toml` file. As a consequence, you need a `pyproject.toml` file when creating a package. `pyproject.toml` is used to define the settings of a project, define metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml). With the knowledge on `pyproject.toml` we can go on at take a look at package management.
 
 ## Package management
 ### Definition
