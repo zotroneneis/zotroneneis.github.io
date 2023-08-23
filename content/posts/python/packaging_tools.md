@@ -46,7 +46,7 @@ Why would we want to use different Python versions? There are several reasons. F
 
 Our Venn diagram displays the available tools for Python version management: `pyenv, conda, rye` and `PyFlow`. We will first look at `pyenv` and consider the multi-purpose tools in a separate section.
 
-{{< img src="/posts/python/figures/python_version_management.png" width="70%" align="center" >}}
+{{< img src="/posts/python/figures/python_version_management.png" width="60%" align="center" >}}
 
 ### pyenv
 Python has one single-purpose tool that lets you install and manage Python versions: [pyenv](https://github.com/pyenv/pyenv)! Pyenv is easy to use. The most important commands are the following:
@@ -125,7 +125,7 @@ The standard package manager for Python is [`pip`](https://pip.pypa.io/en/stable
 ## Recap II - Lock file
 Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, a lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project (e.g. `pandas==2.0.3`). This enables reproducibility of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
 
-{{< img src="/posts/python/figures/poetry_lock.png" width="80%" align="center" >}}
+{{< img src="/posts/python/figures/poetry_lock.png" width="100%" align="center" >}}
 
 ## Multi-purpose tools
 
@@ -141,7 +141,7 @@ As the name suggests, [`pipenv`](https://pipenv.pypa.io/en/latest/) combines `pi
 - `Pipfile`
 - `Pipfile.lock`
 
-`Pipfile` is a TOML file (similar to `pyproject.toml`) used to define project dependencies. It is managed by the developer when she invokes pipenv commands (like `pipenv install`). `Pipfile.lock` allows for deterministic builds. It eliminates the need for a `requirements.txt` file and is managed automatically through locking actions .
+`Pipfile` is a TOML file (similar to `pyproject.toml`) used to define project dependencies. It is managed by the developer when she invokes `pipenv` commands (like `pipenv install`). `Pipfile.lock` allows for deterministic builds. It eliminates the need for a `requirements.txt` file and is managed automatically through locking actions .
 
 The most important `pipenv` commands are:
 ```bash
@@ -157,9 +157,9 @@ pipenv shell
 
 ### Conda
 
-{{< img src="/posts/python/figures/conda.png" width="60%" align="center" >}}
+Conda is a general-purpose package management system. That means that it's not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot's of tutorials and blog posts exist (for example [the official one](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)) so I won't go into more detail here. However, I want to mention one thing: while it is possible to build and publish a package with `conda` I did not include the tool in the appropriate categories. That's because packaging with `conda` works a little differently and the resulting packages will be `conda` packages.
 
-Conda is a general-purpose package management system. That means that it's not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot's of tutorials and blog posts exist (for example [the official one](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python)) so I won't go into more detail here. 
+{{< img src="/posts/python/figures/conda.png" width="60%" align="center" >}}
 
 ### Feature evaluation
 Last but not least we will take a look at multi-purpose tools for packaging. I promised an unbiased evaluation. For this purpose I created a list of features that are important when comparing the different tools. The features are the following:
