@@ -25,7 +25,7 @@ For the purpose of this article I identified five main categories that are impor
 
 As you can see in the Venn diagram below, lots of tools exist. Some can do a single thing (i.e. they are single-purpose), others can perform multiple tasks (hence I call them multi-purpose tools). 
 
-{{< img src="/posts/python/figures/venn_diagram.png" width="70%" align="center" >}}
+{{< img src="/posts/python/figures/venn_diagram.png" width="60%" align="center" >}}
 
 Let's walk through the categories keeping a developers perspective in mind. Let's say you are working on a personal project alongside your work projects. At work you're using Python 3.7 whereas your personal project should be using the newest Python version (currently 3.11). In other words: you want to be able to install different Python versions and switch between them. That's what our first category, **Python version management** is about.   
 Within your projects you are using other packages (e.g. `pandas` or `sklearn` for data science). These are dependencies of your project that you have to install and manage (e.g. upgrade when new versions are released). This is what **package management** is about.   
