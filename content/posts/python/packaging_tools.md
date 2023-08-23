@@ -104,21 +104,19 @@ deactivate
 
 Before we can talk about packaging I want to make sure that you are aware of the most important file for packaging: `pyproject.toml`.
 
-Packaging in Python has come a long way. Until [PEP 518](https://peps.python.org/pep-0518/) `setup.py` files where used for packaging, using `setuptools` as a build tool. [PEP 518](https://peps.python.org/pep-0518/) introduced the usage of a `pyproject.toml` file. As a consequence, you need a `pyproject.toml` file when creating a package. `pyproject.toml` is used to define the settings of a project, define metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml). With the knowledge on `pyproject.toml` we can go on at take a look at package management.
+Packaging in Python has come a long way. Until [PEP 518](https://peps.python.org/pep-0518/) `setup.py` files where used for packaging, using `setuptools` as a build tool. [PEP 518](https://peps.python.org/pep-0518/) introduced the usage of a `pyproject.toml` file. As a consequence, you always need a `pyproject.toml` file when creating a package. `pyproject.toml` is used to define the settings of a project, define metadata and lots of other things. If you would like to see an example check out the [`pyproject.toml` file of the pandas library](https://github.com/pandas-dev/pandas/blob/main/pyproject.toml). With the knowledge on `pyproject.toml` we can go on at take a look at package management.
 
 ## Package management
 ### Definition
 A tool that can perform package management is able to download and install libraries and their dependencies. 
 
 ### Motivation
-- Packages allow us to define a hierarchy of modules
-- Modules can be accessed easily using the dot-syntax
-- Code can easily be shared with other developers
-- Project dependencies are bundled in `pyproject.toml`
-
-Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (`from package.module import my_function`). In addition, they make it easy to share code with other developers. Since each package as a `pyproject.toml` file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its `pyproject.toml` file. 
+Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (`from package.module import my_function`). In addition, they make it easy to share code with other developers. Since each package contains a `pyproject.toml` file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its `pyproject.toml` file.
 
 ### Tools
+
+Lots of tools can perform package management: `pip, pipx, pipenv, conda, pdm, poetry, rye` and `PyFlow`. The single-purpose tool for package management is `pip` which is well known in the Python community.
+
 {{< img src="/posts/python/figures/package_management.png" width="60%" align="center" >}}
 
 #### pip
