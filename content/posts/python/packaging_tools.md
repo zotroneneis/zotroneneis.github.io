@@ -467,7 +467,7 @@ rye publish
 ```
 
 ### Overview
-|                                   |`flit`  |`poetry`| `pdm`  | `hatch`| `rye` |
+|                                   |Flit  |Poetry| PDM  | Hatch| Rye |
 | -------                           |--------|--------|--------|--------|-------|
 | Does the tool manage dependencies?   | ❌     | ✅     | ✅     | ❌     |  ✅   |
 | Does it resolve/lock dependencies?   | ❌     | ✅     | ✅     | ❌     |  ✅   |   
