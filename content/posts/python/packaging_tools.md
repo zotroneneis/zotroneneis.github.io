@@ -226,6 +226,7 @@ Taking a look at the feature evaluation below you will see than Poetry does **no
 
 
 #### Feature evaluation
+| |  |    
 | --------------                               |--|   
 | Does the tool manage dependencies?          |✅|
 | Does it resolve/lock dependencies?           |✅|
@@ -294,6 +295,7 @@ The main commands of PDM are similar to Poetry. However, less commands exist. Fo
 
 
 #### Feature evaluation
+| |  |    
 | --------------                               |--|   
 | Does the tool manage dependencies?          |✅|
 | Does it resolve/lock dependencies?           |✅|
