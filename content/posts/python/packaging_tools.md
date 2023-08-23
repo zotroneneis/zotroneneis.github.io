@@ -162,20 +162,20 @@ Conda is a general-purpose package management system. That means that it's not l
 {{< img src="/posts/python/figures/conda.png" width="60%" align="center" >}}
 
 ### Feature evaluation
-Last but not least we will take a look at multi-purpose tools for packaging. I promised an unbiased evaluation. For this purpose I created a list of features that are important when comparing the different tools. The features are the following:
+Last but not least I want to present multi-purpose tools for packaging. I promised an unbiased evaluation. For this purpose I created a list of features that I consider important when comparing different tools. The features are:
 
 | |  |    
 | --------------                       |--|   
-| Manages dependencies                 |? |   
-| Resolves/locks dependencies          |? |   
-| Clean build/publish flow             |? |   
-| Allows to use plugins                |? |   
-| Supports PEP 660 (editable installs) |? |    
-| Supports PEP 621 (project metadata)  |? |   
-
+| Does the tools manage dependencies?                 |? |   
+| Does it resolve/lock dependencies?          |? |   
+| Is there a clean build/publish flow?             |? |   
+| Does it allow to use plugins?                |? |   
+| Does it support PEP 660 (editable installs)? |? |    
+| Does it support PEP 621 (project metadata)?  |? |   
+   
 Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. For a full overview take a look at [this page](https://peps.python.org/topic/packaging/). I only included PEP 660 and PEP 621 for specific reasons:
-- [PEP 660](https://peps.python.org/pep-0660/) is about editable installs for pyproject.toml based builds. When you install a package using `pip` you have the option to install it in editable mode using `pip install -e package_name`. This is an important features to have when you are developing a package and want your changes to be directly reflected in your environment.
-- [PEP 621](https://peps.python.org/pep-0621/) specifies how to write a project’s core metadata in a pyproject.toml file. I added it because one package (spoiler: it's `poetry`) currently does not support this PEP but uses its own way for declaring metadata.
+- [PEP 660](https://peps.python.org/pep-0660/) is about editable installs for `pyproject.toml` based builds. When you install a package using `pip` you have the option to install it in editable mode using `pip install -e package_name`. This is an important features to have when you are developing a package and want your changes to be directly reflected in your environment.
+- [PEP 621](https://peps.python.org/pep-0621/) specifies how to write a project’s core metadata in a `pyproject.toml` file. I added it because one package (spoiler: it's `poetry`) currently does not support this PEP but uses its own way for declaring metadata.
 
 ### Flit
 [Flit](https://flit.pypa.io/en/stable/) tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it's meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn't care about any of the other tasks:
