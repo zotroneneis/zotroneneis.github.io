@@ -120,7 +120,7 @@ Lots of tools can perform package management: `pip, pipx, pipenv, conda, pdm, po
 {{< img src="/posts/python/figures/package_management.png" width="60%" align="center" >}}
 
 #### pip
-The standard package manager for Python is `pip`. It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`.
+The standard package manager for Python is [`pip`](https://pip.pypa.io/en/stable/). It's shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is `pip install <package_name>`. Of course, `pip` offers lots of other options. Check out [the documentation](https://pip.pypa.io/en/stable/) for more information about available flags, etc.
 
 ## Recap II - lock file
 Before we go on to the multi-purpose tools, there is one more file that's important for packaging: the lock file. While `pyproject.toml` contains abstract dependencies, the lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project. This enables reproducibility of projects across multiple platforms. If you have never seen a lock file before, take a look at [this one from `poetry`](https://github.com/python-poetry/poetry/blob/master/poetry.lock):
