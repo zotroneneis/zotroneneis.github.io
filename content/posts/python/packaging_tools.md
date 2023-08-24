@@ -9,8 +9,6 @@ menu:
     weight: 1
 ---
 
-**Topics:** An unbiased evaluation of environment management and packaging tools
-
 ## Motivation
 When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn't sure which one to use. I'm sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs. Several talks and blog post on the topic exist, but none of them gives a complete overview or evaluates the tools in a structured fashion. This is what this post is about. I want to give you a truly unbiased evaluation of existing packaging and environment management tools. In case you'd rather watch a talk, take a look at the recording of [PyCon DE 2023](https://www.youtube.com/watch?v=MsJjzVIVs6M).
 
