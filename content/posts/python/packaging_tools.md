@@ -53,9 +53,9 @@ Python has one single-purpose tool that lets you install and manage Python versi
 pyenv install 3.10.4
 
 # Switch between Python versions
-pyenv shell <version>
-pyenv local <version>
-pyenv global <version>
+pyenv shell <version> # select version just for current shell session
+pyenv local <version> # automatically select version whenever you are in the current directory 
+pyenv global <version> # select version globally for your user account
 ```
 
 ## (Virtual) environment management
