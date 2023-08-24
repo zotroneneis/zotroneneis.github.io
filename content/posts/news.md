@@ -9,6 +9,14 @@ menu:
     weight: 1
 ---
 
+## 2023
+**2023-07-19** I presented an updated version of the talk "An unbiased evaluation of environment management and packaging tools" at EuroPython in Prague.
+    
+**2023-04-17** I presented the talk "An unbiased evaluation of environment management and packaging tools" at PyCon DE in Berlin. Check out the [YouTube recording](https://www.youtube.com/watch?v=MsJjzVIVs6M).
+
+## 2022
+**2022-07-01** I was a guest on the podcast "Digital Future" and talked about enabling kids in technical fields ("Nachwuchsförderung im MINT Bereich"). Find the full episode [here](https://podcasts.apple.com/de/podcast/nachwuchsf%C3%B6rderung-im-mint-bereich/id1597282125?i=1000568407902).
+
 ## 2021
 **2021-09-01** I have been selected as one of the [three finalists](https://journeytodiversity.de/en/finalists21/anna-lena-popkes/) for the ["Digital Female Leader Award 2021"](https://digital-female-leader.de/en/)!
 
