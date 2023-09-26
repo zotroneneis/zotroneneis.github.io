@@ -9,8 +9,8 @@ menu:
     weight: 1
 ---
 
-## 2023
-**2023-07-19** I presented an updated version of the talk "An unbiased evaluation of environment management and packaging tools" at EuroPython in Prague.
+## 2023 
+**2023-07-19** I presented an updated version of the talk "An unbiased evaluation of environment management and packaging tools" at EuroPython in Prague. Check out the [YouTube recording](https://www.youtube.com/watch?v=3-drZY3u5vo).
     
 **2023-04-17** I presented the talk "An unbiased evaluation of environment management and packaging tools" at PyCon DE in Berlin. Check out the [YouTube recording](https://www.youtube.com/watch?v=MsJjzVIVs6M).
 
