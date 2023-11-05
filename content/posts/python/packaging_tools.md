@@ -480,5 +480,5 @@ rye publish
 
 Some tools exist which don't fit into any of my categories. These are:
 - [pip-tools](https://pip-tools.readthedocs.io/en/latest/) which helps to keep the versions of your `pip`-based packages up-to-date.
-- [tox](https://tox.wiki/en/4.10.0/) which is mainly used for testing but also handles virtual environments.
+- [tox](https://tox.wiki/) and [nox](https://nox.thea.codes/) which are mainly used for testing but also handles virtual environments.
 
