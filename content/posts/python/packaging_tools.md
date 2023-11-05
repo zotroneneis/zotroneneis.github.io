@@ -79,7 +79,7 @@ Many tools allow users to create and manage environments. These are: `venv, virt
 python3 -m venv <env_name>
 
 # Activate an environment
-source <env_name>/bin/activate
+. <env_name>/bin/activate
 
 # Deactivate an active environment
 deactivate
@@ -92,7 +92,7 @@ deactivate
 virtualenv <env_name>
 
 # Activate an environment
-source <env_name>/bin/activate
+. <env_name>/bin/activate
 
 # Deactivate an active environment
 deactivate
