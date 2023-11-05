@@ -403,7 +403,7 @@ hatch publish
 ```
 
 #### Declarative environment management
-Special about Hatch is that it allows you to configure your virtual environments within the `pyproject.toml` file. In addition if lets you define scripts specifically for an environment. And example use case for this is [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts).
+Special about Hatch is that it allows you to configure your virtual environments within the `pyproject.toml` file. In addition it lets you define scripts specifically for an environment. And example use case for this is [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts).
 
 ### Rye
 
