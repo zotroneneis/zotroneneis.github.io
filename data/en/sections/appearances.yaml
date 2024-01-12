@@ -20,7 +20,7 @@ buttons:
 
 # your appearances
 appearances:
-- name: Talk at EuroPython
+- name: Talk at EuroPython 2023
   logo: /images/sections/appearances/euro_python.png
   event: EuroPython
   timeline: "Jul 19, 2023"
@@ -28,7 +28,7 @@ appearances:
   summary: Talk title: "An unbiased evaluation of environment management and packaging tools"
   tags: ['talks']
   logo: /images/sections/appearances/euro_python.png
-- name: Talk at PyCon DE
+- name: Talk at PyCon DE 2023
   logo: /images/sections/appearances/pycon_de.png
   event: PyCon DE
   timeline: "Apr 17, 2023"
@@ -36,7 +36,7 @@ appearances:
   summary: Talk title: "An unbiased evaluation of environment management and packaging tools"
   tags: ['talks']
   logo: /images/sections/appearances/pycon_de.png
-- name: Talk at EuroPython
+- name: Talk at EuroPython 2021
   logo: /images/sections/appearances/euro_python.png
   event: EuroPython
   timeline: "Jul 27, 2021"
