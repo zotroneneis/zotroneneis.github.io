@@ -23,6 +23,22 @@ appearances:
 - name: Talk at EuroPython
   logo: /images/sections/appearances/euro_python.png
   event: EuroPython
+  timeline: "Jul 19, 2023"
+  url: https://www.youtube.com/watch?v=3-drZY3u5vo
+  summary: Talk title: "An unbiased evaluation of environment management and packaging tools"
+  tags: ['talks']
+  logo: /images/sections/appearances/euro_python.png
+- name: Talk at PyCon DE
+  logo: /images/sections/appearances/pycon_de.png
+  event: PyCon DE
+  timeline: "Apr 17, 2023"
+  url: https://www.youtube.com/watch?v=MsJjzVIVs6M
+  summary: Talk title: "An unbiased evaluation of environment management and packaging tools"
+  tags: ['talks']
+  logo: /images/sections/appearances/pycon_de.png
+- name: Talk at EuroPython
+  logo: /images/sections/appearances/euro_python.png
+  event: EuroPython
   timeline: "Jul 27, 2021"
   url: https://ep2021.europython.eu/talks/8MPLDsh-finding-magic-in-python/
   summary: I gave a new version of my talk "Finding Magic in Python", talking about several Python features using a magical universe called "The Tales of Castle Kilmere".
