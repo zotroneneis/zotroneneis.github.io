@@ -79,7 +79,7 @@ Many tools allow users to create and manage environments. These are: `venv, virt
 python3 -m venv <env_name>
 
 # Activate an environment
-source <env_name>/bin/activate
+. <env_name>/bin/activate
 
 # Deactivate an active environment
 deactivate
@@ -92,7 +92,7 @@ deactivate
 virtualenv <env_name>
 
 # Activate an environment
-source <env_name>/bin/activate
+. <env_name>/bin/activate
 
 # Deactivate an active environment
 deactivate
@@ -403,7 +403,7 @@ hatch publish
 ```
 
 #### Declarative environment management
-Special about Hatch is that it allows you to configure your virtual environments within the `pyproject.toml` file. In addition if lets you define scripts specifically for an environment. And example use case for this is [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts).
+Special about Hatch is that it allows you to configure your virtual environments within the `pyproject.toml` file. In addition it lets you define scripts specifically for an environment. And example use case for this is [code formatting](https://hatch.pypa.io/1.1/config/environment/#scripts).
 
 ### Rye
 
@@ -480,5 +480,5 @@ rye publish
 
 Some tools exist which don't fit into any of my categories. These are:
 - [pip-tools](https://pip-tools.readthedocs.io/en/latest/) which helps to keep the versions of your `pip`-based packages up-to-date.
-- [tox](https://tox.wiki/en/4.10.0/) which is mainly used for testing but also handles virtual environments.
+- [tox](https://tox.wiki/) and [nox](https://nox.thea.codes/) which are mainly used for testing but also handles virtual environments.
 
