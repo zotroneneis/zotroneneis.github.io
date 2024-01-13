@@ -18,6 +18,9 @@ skills:
 - name: Machine Learning
   icon: /images/sections/skills/linux.png
   summary: "I am deeply fascinated by machine learning and its applications in research and production."
+- name: Generative AI
+  icon: /images/sections/skills/linux.png
+  summary: "Experienced with modern developments in generative AI."
 - name: Vim
   icon: /images/sections/skills/vim.png
   summary: "My favorite editor and programming environment."
@@ -35,4 +38,4 @@ skills:
   summary: "I love to share my knowledge and skills. That's also why I'm part of KI macht Schule."
 - name: Cloud computing
   icon: 
-  summary: "Certified Google Cloud Engineer."
+  summary: "Certified Google Cloud Engineer. Experience in other cloud providers like AWS and Azure"
