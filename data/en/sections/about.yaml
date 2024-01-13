@@ -41,9 +41,15 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: ML
+- name: Machine Learning
   percentage: 100
   color: blue
+- name: Generative AI
+  percentage: 100
+  color: purple
+- name: Python
+  percentage: 100
+  color: yellow
 - name: Research
   percentage: 100
   color: sky
@@ -52,4 +58,4 @@ softSkills:
   color: orange
 - name: Teaching
   percentage: 100
-  color: yellow
+  color: red
