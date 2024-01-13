@@ -46,16 +46,16 @@ softSkills:
   color: blue
 - name: Generative AI
   percentage: 100
-  color: purple
+  color: yellow
 - name: Python
   percentage: 100
-  color: yellow
+  color: pink
 - name: Research
   percentage: 100
-  color: sky
+  color: green
 - name: Engineering
   percentage: 100
-  color: orange
+  color: sky
 - name: Teaching
   percentage: 100
-  color: red
+  color: orange
