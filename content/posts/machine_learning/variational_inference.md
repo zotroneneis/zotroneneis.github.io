@@ -78,7 +78,7 @@ The last term in this equation is exactly the evidence we came across earlier $p
 
 **Solution:** Instead of minimizing the KL divergence, we minimize an alternative quanitity which is equivalent up to an added constant. This is the so called *evidence lower bound* or *ELBO*:
 
-$$\text{ELBO}(q) = - \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big]$$
+$$\text{ELBO}(q) = - \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] + \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big]$$
 
 When comparing the ELBO with the KL divergence we can see that the ELBO is simply the negative KL divergence plus our problematic evidence term $p(\pmb{x})$. Maximizing the ELBO is equivalent to minimizing the KL divergence. 
 
@@ -104,9 +104,9 @@ Let's take a closer look at the individual terms:
 The name 'evidence lower bound' comes from an important property of the ELBO: it provides a lower bound on the (log) evidence $p(\pmb{x})$.
 
 We already determined that:
-1. $D\_{KL}\big(q(\pmb{z}) || p(\pmb{z} | \pmb{x})\big) = \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big] + \log \big( p(\pmb{x}) \big) $
+1. $D\_{KL}\big(q(\pmb{z}) || p(\pmb{z} | \pmb{x})\big) = \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] + \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big] + \log \big( p(\pmb{x}) \big) $
      
-2. $\text{ELBO}(q) = - \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big]$
+2. $\text{ELBO}(q) = - \mathbb{E}\_{q(\pmb{z})} \big[ \log \big( q(\pmb{z}) \big) \big] + \mathbb{E}\_{q(\pmb{z})} \big[ \log \big(p(\pmb{z},\pmb{x}) \big) \big]$
 
 Combining 1 and 2 gives us:    
 
