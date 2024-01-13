@@ -35,7 +35,7 @@ skills:
   url: "https://git-scm.com/"
 - name: Teaching
   icon: 
-  summary: "I love to share my knowledge and skills. That's also why I'm part of KI macht Schule."
+  summary: "I love to share my knowledge and skills at conferences, podcasts, etc."
 - name: Cloud computing
-  icon: 
-  summary: "Certified Google Cloud Engineer. Experience in other cloud providers like AWS and Azure"
+  icon: "images/sections/skills/cloud.png"
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
