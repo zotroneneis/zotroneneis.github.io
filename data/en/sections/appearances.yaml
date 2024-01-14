@@ -20,6 +20,13 @@ buttons:
 
 # your appearances
 appearances:
+- name: Guest at the German 'Python Podacst'
+  logo: /images/sections/appearances/python_podcast.png
+  event: Python Podcast
+  timeline: "Oct 6, 2023"
+  url: https://talkpython.fm/episodes/show/436/an-unbiased-evaluation-of-environment-and-packaging-tools
+  summary: I'm a guest at the German 'Python Podcast' to talk about packaging and environment management.
+  tags: ['podcasts']
 - name: Guest at 'Talk Python to Me'
   logo: /images/sections/appearances/talkpython.png
   event: Talk Python To Me
