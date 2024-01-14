@@ -10,6 +10,10 @@ menu:
 ---
 
 ## 2023 
+**2023-11-01** I was invited to the podcast "Talk Python to Me" to talk about environment management and packaging. Check out the episode [here](https://talkpython.fm/episodes/show/436/an-unbiased-evaluation-of-environment-and-packaging-tools).
+
+**2023-10-06** I was invited to the German "Python Podcast" to talk about environment management and packaging. Check out the episode [here](https://python-podcast.de/show/environment-management-und-packaging/).
+
 **2023-07-19** I presented an updated version of the talk "An unbiased evaluation of environment management and packaging tools" at EuroPython in Prague. Check out the [YouTube recording](https://www.youtube.com/watch?v=3-drZY3u5vo).
     
 **2023-04-17** I presented the talk "An unbiased evaluation of environment management and packaging tools" at PyCon DE in Berlin. Check out the [YouTube recording](https://www.youtube.com/watch?v=MsJjzVIVs6M).
