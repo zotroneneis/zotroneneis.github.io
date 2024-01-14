@@ -20,7 +20,7 @@ skills:
   summary: "Building state-of-the-art deep learning models for research and production"
   url: "https://pytorch.org/"
 - name: Generative AI
-  logo: /images/sections/skills/linux.png
+  logo: /images/sections/skills/gen_ai.png
   summary: "Experienced with modern algorithms and prompt engineering."
 - name: (Neo)vim
   logo: /images/sections/skills/vim.gif
@@ -35,7 +35,7 @@ skills:
   summary: "Where there is code, there is version control. Experienced with git-based development, continuous integration, etc."
   url: "https://git-scm.com/"
 - name: Teaching
-  logo: 
+  logo: /images/sections/skills/teaching.png
   summary: "I love to share my knowledge and skills at conferences, podcasts, etc."
 - name: Cloud computing
   logo: "images/sections/skills/gcp.png"
