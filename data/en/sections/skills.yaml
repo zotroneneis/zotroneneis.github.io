@@ -38,5 +38,5 @@ skills:
   logo: 
   summary: "I love to share my knowledge and skills at conferences, podcasts, etc."
 - name: Cloud computing
-  logo: "images/sections/skills/cloud.png"
+  logo: "images/sections/skills/gcp.png"
   summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."
