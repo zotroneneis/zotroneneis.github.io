@@ -20,7 +20,7 @@ buttons:
 
 # your appearances
 appearances:
-- name: Guest at the German "Python Podacst"
+- name: Guest at the German "Python Podcast"
   logo: /images/sections/appearances/python_podcast.png
   event: Python Podcast
   timeline: "Oct 6, 2023"
