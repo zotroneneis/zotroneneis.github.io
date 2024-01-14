@@ -18,7 +18,7 @@ company:
 resume: "files/cv_apopkes.pdf"
 
 # a summary about you
-summary: 'I am an enthusiastic learner who is always looking for new projects and challenges. I am deeply fascinated by machine learning and its applications in questions that affect and benefit many people.'
+summary: 'I am an enthusiastic learner who is always looking for new projects and challenges. I am deeply fascinated by machine learning and its applications to questions that affect and benefit society.'
 
 # your social links
 # give as many as you want. use font-awesome for the icons.
@@ -41,7 +41,7 @@ socialLinks:
 # give the percentage between 50 to 100 with 5 intervals.
 # currently supported colors: blue, yellow, pink, green, sky, orange
 softSkills:
-- name: Machine Learning
+- name: Machine \n Learning
   percentage: 100
   color: blue
 - name: Generative AI
