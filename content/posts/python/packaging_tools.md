@@ -343,13 +343,16 @@ pdm publish
 ### Hatch
 
 [Hatch](https://hatch.pypa.io/latest/) can perform the following tasks:
-- Python version management: ❌
+- Python version management: ✅(*Major versions only)
 - Package management: ❌
 - Environment management: ✅
 - Building a package: ✅
 - Publishing a package: ✅
 
 It should be noted that the author of Hatch promised that locking functionality will be added soon, which should also enable package management. Please make sure to check the latest version of Hatch to see if this has been implemented when you read this article.
+
+* Hatch allows Python version management but not in the same way Pyenv does. It won't allow you to use any patch or minor version of Python; instead, it will let you switch between major versions. 
+  (Pick the latest version available under your major version.) 
 
 {{< img src="/posts/python/figures/hatch.png" width="60%" align="center" >}}
 
