@@ -362,6 +362,7 @@ It should be noted that the author of Hatch promised that locking functionality 
 | --------------                               |--|   
 | Does the tool manage dependencies?          |❌|
 | Does it resolve/lock dependencies?           |❌|
+| Does the tool manage Python versions?        |✅|
 | Is there a clean build/publish flow?         |✅|
 | Does it allow to use plugins?                |✅|
 | Does it support PEP 660 (editable installs)? |✅|
@@ -377,6 +378,18 @@ hatch new -i <project_name>
 
 # Initialize existing project / create pyproject.toml
 hatch new --init
+```
+
+#### Managing Python versions
+```bash
+# Show all available to install Python versions
+hatch python show
+
+# Install Python vesion
+hatch python install <version>
+
+# install all available Python versions
+hatch python install all
 ```
 
 #### Dependency management
