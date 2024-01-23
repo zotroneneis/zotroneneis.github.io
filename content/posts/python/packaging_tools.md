@@ -351,7 +351,7 @@ pdm publish
 
 It should be noted that the author of Hatch promised that locking functionality will be added soon, which should also enable package management. Please make sure to check the latest version of Hatch to see if this has been implemented when you read this article.
 
-Update: Since version 1.8.0, Hatch provides the ability to manage Python installations, e.g. using `hatch python install`.
+Update: Since version 1.8.0, Hatch provides the ability to manage Python installations, e.g. using `hatch python install`. Currently, only major.minor versions can be installed like 3.7 or 3.8, but not specific patches like 3.7.4.
 
 {{< img src="/posts/python/figures/hatch.png" width="60%" align="center" >}}
 
