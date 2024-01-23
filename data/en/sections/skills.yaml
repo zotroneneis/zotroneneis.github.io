@@ -12,27 +12,31 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
 - name: Python
-  icon: /images/sections/skills/python.png
-  summary: "My first and foremost language choice for professional software development and hobby projects."
+  logo: /images/sections/skills/python.png
+  summary: "5+ years of professional programming experience."
   url: "https://www.python.org/"
-- name: Machine Learning
-  icon: /images/sections/skills/linux.png
-  summary: "I am deeply fascinated by machine learning and its applications in research and production."
-- name: Vim
-  icon: /images/sections/skills/vim.png
-  summary: "My favorite editor and programming environment."
+- name: PyTorch
+  logo: /images/sections/skills/pytorch.png
+  summary: "Building state-of-the-art deep learning models for research and production"
+  url: "https://pytorch.org/"
+- name: Generative AI
+  logo: /images/sections/skills/gen_ai.png
+  summary: "Experienced with modern algorithms and prompt engineering."
+- name: (Neo)vim
+  logo: /images/sections/skills/vim.gif
+  summary: "Ninja-Editor. Unix is my IDE."
   url: "https://www.vim.org/"
 - name: Docker
-  icon: /images/sections/skills/docker.svg
+  logo: /images/sections/skills/docker.svg
   summary: "Experienced with (multi-stage) containerization of apps."
   url: "https://www.docker.com/"
 - name: Git
-  icon: /images/sections/skills/git.png
-  summary: "Experienced with git-based development, continuous integration, etc."
+  logo: /images/sections/skills/git.png
+  summary: "Where there is code, there is version control. Experienced with git-based development, continuous integration, etc."
   url: "https://git-scm.com/"
 - name: Teaching
-  icon: 
-  summary: "I love to share my knowledge and skills. That's also why I'm part of KI macht Schule."
+  logo: /images/sections/skills/teaching.png
+  summary: "I love to share my knowledge and skills at conferences, podcasts, etc."
 - name: Cloud computing
-  icon: 
-  summary: "Certified Google Cloud Engineer."
+  logo: "images/sections/skills/gcp.png"
+  summary: "Worked with most of the major clouds such as GCP, AWS, Azure etc."

@@ -23,15 +23,15 @@ experiences:
     # end: Dec 2020
     # give some points about what was your responsibilities at the company.
     responsibilities:
-    - 06.2023 until today (under NDA): Working in the speech recognition team. Main tasks were setting up an MLOps pipeline in AWS, taking existing ML models into production.
-    # - "02.2023 until today (inovex)": Lead developer and teacher of inovex Python trainings.
-    # - "04.2023 - 11.2023 (inovex)": Supervision of bachelor thesis in the field of LLMs. Title "A Question Answering-based Search Engine for Bachelor and Master Theses Documents"
-    # - "09.2022 - 08.2023 (under NDA)": Development of a forecasting engine
-    # - "09.2022 - 12.2022 (under NDA)": Python Code Quality Coaching
-    # - "06.2021 - 12.2021 (inovex)": Supervision of master thesis in the field of recommender systems
-    # - "07.2021 - 10.2021 (under NDA)": Creation of a POC on the topic of consumer decision trees
-    # - "04.2021 - 07.2021 (under NDA)": Creation of a POC on the topic of demand forecasting
-    # - "02.2020 - 04.2021 (under NDA)": Conceptual design and implementation of a data lake in the Google Cloud
+    - 06.2023 until today (under NDA). Working in the speech recognition team. Main tasks are setting up an MLOps pipeline in AWS, taking existing ML models into production.
+    - 02.2023 until today (inovex). Lead developer and teacher of inovex Python trainings.
+    - 04.2023 - 11.2023 (inovex). Supervision of bachelor thesis in the field of LLMs. Title "A Question Answering-based Search Engine for Bachelor and Master Theses Documents"
+    - 09.2022 - 08.2023 (under NDA). Development of a forecasting engine
+    - 09.2022 - 12.2022 (under NDA). Python Code Quality Coaching
+    - 06.2021 - 12.2021 (inovex). Supervision of master thesis in the field of recommender systems
+    - 07.2021 - 10.2021 (under NDA). Creation of a POC on the topic of consumer decision trees
+    - 04.2021 - 07.2021 (under NDA). Creation of a POC on the topic of demand forecasting
+    - 02.2020 - 04.2021 (under NDA). Conceptual design and implementation of a data lake in the Google Cloud
 
 - company:
     name: KI macht Schule
