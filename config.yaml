@@ -88,32 +88,32 @@ params:
               right: \\)
               display: false
 
-    # Provide footer configuration.
-    footer:
+  # Provide footer configuration.
+  footer:
+    enable: true
+    # You can provide your custom footer template using this option.
+    # Put your template in "layouts/partials" folder of your repo.
+    template: footer.html
+    # Show/hide navigation in the footer. Default is "true".
+    navigation:
       enable: true
-      # You can provide your custom footer template using this option.
-      # Put your template in "layouts/partials" folder of your repo.
-      template: footer.html
-      # Show/hide navigation in the footer. Default is "true".
-      navigation:
-        enable: true
-        # show custom menus in the footer
-        customMenus: true
-      # Show/hide "Contact Me" section in the footer. Default is "true".
-      contactMe:
-        enable: true
-      # Show/hide credentials section in the footer. Default is "true".
-      credentials:
-        enable: true
+      # show custom menus in the footer
+      customMenus: true
+    # Show/hide "Contact Me" section in the footer. Default is "true".
+    contactMe:
+      enable: true
+    # Show/hide credentials section in the footer. Default is "true".
+    credentials:
+      enable: true
 
-      # Show/hide newsletter section in the footer. Default is "true".
-      # Currently, it supports "mailchimp".
-      newsletter:
-        enable: false
-        # provider: mailchimp
-        # mailchimpURL: https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;id=094a24c76e
+    # Show/hide newsletter section in the footer. Default is "true".
+    # Currently, it supports "mailchimp".
+    newsletter:
+      enable: false
+      # provider: mailchimp
+      # mailchimpURL: https://github.us1.list-manage.com/subscribe/post?u=19de52a4603135aae97163fd8&amp;id=094a24c76e
 
-      # Show/hide disclaimer notice in the footer. Default is "false".
-      disclaimer:
-        enable: true
+    # Show/hide disclaimer notice in the footer. Default is "false".
+    disclaimer:
+      enable: true
 
