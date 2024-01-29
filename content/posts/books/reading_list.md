@@ -10,11 +10,11 @@ menu:
 ---
 
 ## Books I am currently reading
+- **Mindset** by Carol Dweck ([Link to book](https://www.amazon.com/Mindset-Updated-Changing-Fulfil-Potential/dp/147213995X/ref=sr_1_4?crid=3KVQKMQ2N5EJQ&keywords=mindset+carol+dweck&qid=1706554923&sprefix=mindset+%2Caps%2C184&sr=8-4))
    
-- **Atomic Habits** by James Clear
-	- [Link to book](https://atomichabits.com/)
 ---
 ## Books I have read   
+- **Atomic Habits** by James Clear ([Link to book](https://atomichabits.com/))
 
 - **A Promised Land** by Barack Obama ([Link to book](https://obamabook.com/))
 
