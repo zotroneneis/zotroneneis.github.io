@@ -51,7 +51,7 @@ params:
       
   # GitHub repo URL of your site
   gitRepo: https://github.com/zotroneneis/zotroneneis.github.io
-  gitBranch: main
+  gitBranch: change-version
 
   # Configure various features of this theme
   features:
@@ -122,5 +122,5 @@ params:
 
       # Show/hide disclaimer notice in the footer. Default is "false".
       disclaimer:
-        enable: false
+        enable: true
 
