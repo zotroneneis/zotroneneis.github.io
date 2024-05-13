@@ -1,6 +1,6 @@
 ---
 title: When and how to start coding with kids
-date: 2024-07-10
+date: 2024-07-12
 menu:
   sidebar:
     name: Coding with kids
@@ -13,9 +13,9 @@ menu:
 
 Coding with childrean is a topic close to my heart. This has four main reasons:
 1. I did not have any coding opportunities growing up. My family had nothing to do with coding, neither did my friends. Also, we did not have computer science or coding classes at school. I would very much like this to be different for other children, including my own.
-2. I love learning and teaching! You might have seen that from my GitHub projects or my voluntary work at the German initiative "KI macht Schule" where we teach AI to kids in German schools.
+2. I love learning and teaching! You might have seen that from my GitHub projects or my voluntary work at the German initiative ["KI macht Schule"](https://ki-macht-schule.de/) where we teach AI to kids in German schools.
 3. I have always been fascinated by how the brain works. That's why I studied cognitive science in my undergraduate degree. The human brain is at the center of all our cognitive abilities, including learning. Therefore, we must understand how it functions and develops to understand how to improve learning and how to teach coding to children.
-4. I love kids! I have spent a lot of time with children: after school working as an Au-Pair in London, professionally working at kids events and KI macht Schule and at home with my own children.
+4. I love kids! I have spend a lot of time with children: after school working as an Au-Pair in London, professionally working at kids events and KI macht Schule and at home with my own children.
 
 If you are a parent yourself, an expecting parent, a grandparent, godparent, teacher or just a friend of children, this blog post will leave you with enough knowledge to understand **when** and **how** to start coding with children. I hope you enjoy learning about this as much as I did!
 
@@ -24,48 +24,48 @@ All images in this post containing children were generated using Open AI's [Dall
 
 ## Motivation
 Learning to program isn’t just about learning a skill for a job. It's more about being enabled to create anything you can imagine: stories, art, animation, music, websites, and more. Coding allows us to create things that we like and even have fun doing it! 
-Of course, there are also obvious advantages like improved career opportunities. Coders are constantly in high demand, and a coder can earn a high income compared to their peers. In addition, children acquire valuable skills while learning to code. We will take a look at a few of these skills as an example. 
+Of course, there are also obvious advantages like improved career opportunities. Coders are constantly in high demand, and a coder can earn a high income compared to their peers. In addition, children acquire valuable skills while learning to code. We will take a look at a few of these skills as examples.
 
 {{< img src="/posts/python/figures/coding_with_kids/coding_is_fun.jpg" width="45%" align="center" >}}
 
 ### Logical thinking
-Coding helps children develop logical thinking skills by breaking down complex problems into smaller, more manageable parts. Not only can they solve a problem, but they’re also able to explain how and why they solved it that way. This skill is essential in everyday life as it helps you make structured decisions and solve problems in a more efficient way.
+Coding helps children develop logical thinking skills by breaking down complex problems into smaller, more manageable parts. They not only learn how to solve a problem, but they will be able to explain how and why they solved it that way. This skill is essential in everyday life as it helps us make structured decisions and solve problems in a more efficient way.
 
 {{< img src="/posts/python/figures/coding_with_kids/logical_thinking.jpg" width="35%" align="center" >}}
     
 ### Problem-solving
-While kids are writing their code, they’re also forced to solve errors that come up with their program (what we call debugging). So they develop problem-solving skills by understanding how to analyze, debug and troubleshoot code. These skills can be applied to everyday life situations and are invaluable in any career.
+While kids are writing code, they are forced to solve errors that come up with their program (what we call debugging). So they develop problem-solving skills by understanding how to analyze, debug and troubleshoot code. These skills can be applied to everyday life situations and are invaluable in any career.
 
 {{< img src="/posts/python/figures/coding_with_kids/problem_solving.jpg" width="35%" align="center" >}}
     
 ### Creativity
-Coding also helps children develop their creativity by allowing them to express themselves through code. It encourages them to think outside the box and come up with unique solutions to problems. In other words: it creates room for innovation.
+Coding helps children develop their creativity by allowing them to express themselves through code. It encourages them to think outside the box and come up with unique solutions to problems. In other words: it creates room for innovation.
 
 {{< img src="/posts/python/figures/coding_with_kids/creativity.jpg" width="35%" align="center" >}}
     
 ### Perseverance
-We all know that coding is challenging. Not every solution is simple or straightforward. Perseverance is the ability to keep moving towards the end goal, even when the path is difficult. With the right encouragement, children will learn to try again when they fail. As a parent/tutor/friend/... make sure that you celebrate their wins and their failures you can make them stronger. Specifically, praise their effort, independent of the result! An example would be something like: "Wow, you tried really hard to solve this problem and did not give up. That's fantastic!"
+We all know that coding is challenging. Not every solution is simple or straightforward. Perseverance is the ability to keep moving towards an end goal, even when the path is difficult. With the right encouragement, children will learn to try again when they fail. As a parent/tutor/friend/... make sure to celebrate both their wins and their failures. Specifically, praise their *effort* independent of the result! An example would be something like: "Wow, you tried really hard to solve this problem and did not give up. That's fantastic!"
 
 {{< img src="/posts/python/figures/coding_with_kids/coding_is_hard.JPG" width="35%" align="center" >}}
 
 ### Should all children learn how to code?
-In my opinion: Yes, but not for the sake of becoming future computer programmers. We really don’t know programming will look like in the future. It's changing rapidly at the moment with new generative AI tools popping up every week. However, what we do know with a reasonable amount of certainty is that the computational thinking that children gain through learning how to code will remain relevant and in demand.
+In my opinion: Yes, but not for the sake of becoming future computer programmers. We really don’t know programming will look like in the future. It's changing rapidly at the moment with new GenAI tools popping up every week. However, what we *do* know with a reasonable amount of certainty is that computational thinking (which is gained through learning how to code) will remain relevant and in demand.
 
 ## Brain development
 
-As mentioned in the beginning, the brain sits at the center of all our cognitive abilities, including learning. Therefore, to understand what cognitive abilities children have at different ages, we need to understand how their brain develops. Don't worry: this is not going to be a neuroscience lecture. We will only look at the very basics of brain development and how it's related to the topic of coding with children.
+As mentioned in the beginning, the brain sits at the center of all our cognitive abilities, including learning. Therefore, to understand what cognitive abilities children have at different ages, we need to understand how their brain develops. Don't worry: this is not going to be a neuroscience lecture. We will only look at the very basics of brain development and how they are related to the topic of coding with children.
 
 ### The brain
 
-In case you didn't know: The brain is the most complex part of the human body. It controls thought, memory, emotion, and much more. The brain can be divided into different sections that specialize in different functions. However, regions of the brain interact a lot. So when performing a task, it's usually a whole network of regions functioning together as a whole. For our case it's important to understand that the different parts of the brain (and hence different functions) mature at different ages. 
+In case you didn't know: The brain is the most complex part of the human body. It controls thought, memory, emotion, and much more. The brain can be divided into sections that specialize in different functions. However, regions of the brain interact a lot. When performing a task, it's usually a whole network of brain regions functioning together as a whole. For our topic, it's important to understand that different parts of the brain (and hence different functions) mature at different ages. 
 
 {{< img src="/posts/python/figures/coding_with_kids/functions_of_the_brain.png" width="40%" align="center" >}}
 
 ### Neuroplasticity
-While in some species brains are mature at birth, the human brain matures over many years. In other words: brain development is a life-long process! This means that as the brain develops, it can be influenced by our interactions with the environment. During the early years when the brain is growing most rapidly, it shows a lot more plasticity than during later years. This is especially true for influence up to ages 3–4, where the brain is more reactive to environmental influences than in later development. Consequently, this time lays the foundation for the rest of our lives! We, as parents/teachers/caregivers/... can support optimal brain development through positive influences such like responsive caregiving, appropriate stimulation, and diverse learning experiences.
+When talking about brain development one of the key terms is neuroplasticity. While in some species brains are mature at birth, the human brain matures over many years. In other words: brain development is a life-long process! This means that as the brain develops, it can be influenced by our interactions with the environment. During the early years when the brain is growing most rapidly, it shows a lot more plasticity than during later years. This is especially true up to ages 3–4, where the brain is more reactive to environmental influences than in later development. Consequently, this time lays the foundation for the rest of our lives! We, as parents/teachers/caregivers/... can support optimal brain development through positive influences such as responsive caregiving, appropriate stimulation, diverse learning experiences, etc.
 
 ### Brain development at birth
-When a child is born, the brain has about 100 billion neurons and an average of 2,500 synaptic connections per neuron. Side note: synapses are the connections between neurons. They are the pathway along which neurons pass on signals.
+When a child is born, the brain already has about 100 billion neurons and an average of 2,500 synaptic connections per neuron. Isn't that amazing? (Side note: synapses are the connections between neurons. They are the pathway along which neurons pass on signals). 
 
 At birth, the brain reaches 25% of adult size. Newborns have basic reflexes for survival, e.g. rooting, sucking, startle, grasp. However, they don't show any directed actions yet.
 
@@ -75,7 +75,7 @@ At birth, the brain reaches 25% of adult size. Newborns have basic reflexes for 
 ### Brain development 0-4 years
 The brain develops "from the bottom up". The "primitive" areas of the brain like the brainstem already develop during gestation and in the early months after birth. Also motor reflexes and sensory abilities, including hearing and vision, are fairly well developed at birth and undergo rapid maturation during the first 6 months of life. The limbic system, which is associated with the emotional processing and emotional regulation, and the cortical areas, associated with cognitive and executive functions, develop over the first 3 years. 
 
-However, other areas mature over much longer periods. For example, synapses in the neocortex, which controls higher cognitive functions, develop throughout the years of middle childhood and do not attain their final organization until late adolescence.
+Other areas mature over much longer periods. For example, synapses in the neocortex, which controls higher cognitive functions, develop throughout the years of middle childhood and do not attain their final organization until late adolescence.
 
 By the age of 4, the brain grows to 80% of adult size. Until this age, children are not capable of learning how to code or understand computational principles.
 
@@ -104,25 +104,25 @@ In the overview below we can see that coding can basically be split into four di
 - Starting with about 6 years of age, visual programming tools can be used
 - After reaching the age of 9, children can get started with textual programming
 
-We will look at each age range individually to learn more about cognitive abiltities that have developed at the time.
+We will look at each age range individually to learn more about the cognitive abiltities that have developed at the time.
 
 {{< img src="/posts/python/figures/coding_with_kids/overview_when_and_how.png" width="80%" align="center" >}}
 
 ### Age 4
-With about four years of age, we can teach algorithmic thinking without any coding whatsoever. You might know that an algorithm is just a set of rules that describes how to solve a problem or how to perform a task. This principle can be taught with basic questions like "Which steps would you follow to guide a lost puppy home?". Exercises like this help children understand step-by-step thinking. They will learn how algorithms function in breaking down tasks into smaller, manageable parts. This enhances their ability to think sequentially and logically.
+With about four years of age, we can teach basic algorithmic thinking without any coding whatsoever. You probably know that an algorithm is just a set of rules that describes how to solve a problem or how to perform a task. This principle can be taught with basic questions like "Which steps would you follow to guide a lost puppy home?". Exercises like this help children understand step-by-step thinking. They will learn how algorithms function in breaking down tasks into smaller, manageable parts. This enhances their ability to think sequentially and logically.
 
-Further, by the age of about four, a child is likely to have the motor skills and perceptual abilities to begin to interact with simple toys that introduce the very basics of coding. These child-friendly robots are a good tool to get started. Bee-Bot and Cubelets are both excellent examples of child-friendly toy robots that can be programmed. We will take a more detailed look at them in a later section.
+Further, by the age of about four, a child is likely to have the motor skills and perceptual abilities to begin interacting with simple toys that introduce the very basics of coding. These child-friendly robots are a good tool to get started. Bee-Bot and Cubelets are both excellent examples of child-friendly toy robots that can be programmed. We will take a more detailed look at them in a later section.
 
 {{< img src="/posts/python/figures/coding_with_kids/girl_age_4.jpg" width="30%" align="center" >}}
 
 
 ### Age 6
-As your child gets older and reach the age of six they become more used to using technology and their eye-hand coordination improves. Also, the prefrontal cortex undergoes a big growth spurt between 5 and 8, which results in vast improvements in working memory, planning, selective attention and inhibition. So six years is a good age to try out tools for visual programming. 
+As your child gets older and reaches the age of six they become more used to using technology and their eye-hand coordination improves. Also, the prefrontal cortex undergoes a big growth spurt between 5 and 8, which results in vast improvements in working memory, planning, selective attention and inhibition. These are all important skills for coding. So six years is a good age to try out tools for visual programming. 
 
 {{< img src="/posts/python/figures/coding_with_kids/girl_age_6.jpg" width="30%" align="center" >}}
 
 ### Age 9+
-At around the ages of nine or ten, children’s language abilities are well developed. Also, typing skills are often sufficient for them to start using text-based languages. At this age the prefrontal cortex matures and stabilized. This means that a child’s executive functions, such as planning, organizing, and thinking abstractly, become fully developed.
+At around the age of nine or ten, children’s language abilities are well developed. Also, typing skills are often sufficient for them to start using text-based languages. At this age the prefrontal cortex matures and stabilized. This means that a child’s executive functions, such as planning, organizing, and thinking abstractly, become more fully developed.
 
 {{< img src="/posts/python/figures/coding_with_kids/girl_age_8.jpg" width="30%" align="center" >}}
 
