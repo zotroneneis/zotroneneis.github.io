@@ -11,7 +11,7 @@ menu:
 
 ## Introduction
 
-Coding with childrean is a topic close to my heart. This has four main reasons:
+Coding with children is a topic close to my heart. This has four main reasons:
 1. I did not have any coding opportunities growing up. My family had nothing to do with coding, neither did my friends. Also, we did not have computer science or coding classes at school. I would very much like this to be different for other children, including my own.
 2. I love learning and teaching! You might have seen that from my GitHub projects or my voluntary work at the German initiative ["KI macht Schule"](https://ki-macht-schule.de/) where we teach AI to kids in German schools.
 3. I have always been fascinated by how the brain works. That's why I studied cognitive science in my undergraduate degree. The human brain is at the center of all our cognitive abilities, including learning. Therefore, we must understand how it functions and develops to understand how to improve learning and how to teach coding to children.
@@ -23,7 +23,7 @@ If you are a parent yourself, an expecting parent, a grandparent, godparent, tea
 All images in this post containing children were generated using Open AI's [Dall-e 3](https://openai.com/index/dall-e-3/).
 
 ## Motivation
-Learning to program isn’t just about learning a skill for a job. It's more about being enabled to create anything you can imagine: stories, art, animation, music, websites, and more. Coding allows us to create things that we like and even have fun doing it! 
+Learning to program is not just about learning a skill for a job. It's more about being enabled to create anything you can imagine: stories, art, animation, music, websites, and more. Coding allows us to create things that we like and even have fun doing it! 
 Of course, there are also obvious advantages like improved career opportunities. Coders are constantly in high demand, and a coder can earn a high income compared to their peers. In addition, children acquire valuable skills while learning to code. We will take a look at a few of these skills as examples.
 
 {{< img src="/posts/python/figures/coding_with_kids/coding_is_fun.jpg" width="45%" align="center" >}}
@@ -104,7 +104,7 @@ In the overview below we can see that coding can basically be split into four di
 - Starting with about 6 years of age, visual programming tools can be used
 - After reaching the age of 9, children can get started with textual programming
 
-We will look at each age range individually to learn more about the cognitive abiltities that have developed at the time.
+We will look at each age range individually to learn more about the cognitive abilities that have developed at the time.
 
 {{< img src="/posts/python/figures/coding_with_kids/overview_when_and_how.png" width="80%" align="center" >}}
 
@@ -128,12 +128,12 @@ At around the age of nine or ten, children’s language abilities are well devel
 
 ## Platforms, tutorials, etc.
 
-Hopefully, you now have a good idea of what your child can do at the different age ranges. Next, I would like to present some concrete tools to get started. A ton of possibilities exist, so this won't be an exhaustive list. Instead, I selected some options that will be presented in more detail and listed further resources at the end.
+Hopefully, you now have a good idea of what your child can do different ages. Next, I would like to present some concrete tools to get started with coding. A ton of possibilities exist, so this won't be an exhaustive list. Instead, I selected some options that will be presented in more detail and listed further resources at the end.
 
 ### Robots and devices
 
 #### Bee-Bot
-The [bee-bot](https://b-bot.de/bee-bot) is a programmable floor robot designed for children ages 4-7. It costs about 93€ per robot. The bee-bot can move into four directions: forward, backward, left and right and can remember up to 200 commands
+The [bee-bot](https://b-bot.de/bee-bot) is a programmable floor robot designed for children ages 4-7. It costs about 93€ per robot. It can be programmed to move into different directions by pressing the buttons on top of the robot. A bee-bot can remember up to 200 commands!
  
 {{< img src="/posts/python/figures/coding_with_kids/bee_bot.jpeg" width="25%" align="center" >}}
 
@@ -144,26 +144,28 @@ The [video below](https://youtube.com/shorts/kri_1cnRNd4?feature=shared) gives a
 </video>
 
 #### Cubelets
-[Cubelets](https://modrobotics.com/) are small blocks that can be used to introduce physical computing to children. Children can snap together physical blocks to create their own unique robots. These robots will perform actions such as moving or lighting up, depending on their surroundings, such as the distance your hand is from the robot. A nice thing on top: cubelets can also be programmed using [MakeCode](https://makecode.microbit.org/), a visual programming language, when a child grows older. A disadvantage of cubelets is their cost: a single block costs around 50€.
+[Cubelets](https://modrobotics.com/) are small blocks that can be used to introduce physical computing to children. Children can snap together different types of blocks to create their own unique robots. These robots will perform actions such as moving or lighting up, depending on their surroundings, such as the distance your hand is from the robot. A nice thing on top: cubelets can be programmed using [MakeCode](https://makecode.microbit.org/), a visual programming language, when a child grows older. A disadvantage of cubelets is their cost: a single block costs around 50€.
 
 {{< img src="/posts/python/figures/coding_with_kids/cubelets.png" width="30%" align="center" >}}
+
+Short [demo video](https://youtube.com/shorts/g69iscnh_rs?feature=shared):
 
 <video controls autoplay muted loop height="550">
   <source src="/posts/python/figures/coding_with_kids/cubelet.mp4" type="video/mp4">
 </video>
 
 #### Micro:bit
-The [micro:bit](https://microbit.org/get-started/what-is-the-microbit/) is a small programmable device with an LED display, buttons, and sensors. It can be used to create games, animations, interactive projects, and lots more. It's recommended for children of at least 8 years of age as it involves visual programming using [MakeCode](https://makecode.microbit.org/). Compared to other devices it cheap, with the starter bundle costing about 20€.
+The [micro:bit](https://microbit.org/get-started/what-is-the-microbit/) is a small programmable device with an LED display, buttons, and sensors. It can be used to create games, animations, interactive projects, and lots more. It's recommended for children age 8+ years because it involves visual programming using [MakeCode](https://makecode.microbit.org/). Compared to other devices it is cheap, with the starter bundle costing only 20€.
 
 {{< img src="/posts/python/figures/coding_with_kids/microbit.png" width="30%" align="center" >}}
 
 #### Zumi
-[Zumi](https://www.robolink.com/products/zumi) is a tiny buildable self-driving car kit. It's recommended for ages 10+ years and can be programming using Python and Blockly. It's quite costly with 170€ per robot but a lot of fun for children. We have used these robots at several kids events here at inovex.
+[Zumi](https://www.robolink.com/products/zumi) is a tiny buildable self-driving car kit. It's recommended for ages 10+ years and can be programmed using Python and Blockly. It's quite costly with 170€ per robot but a lot of fun for children. We have used these robots at several kids events here at [inovex](https://www.inovex.de/en).
 
 {{< img src="/posts/python/figures/coding_with_kids/zumi.png" width="30%" align="center" >}}
     
 #### Raspberry Pi
-A Raspberry Pi is a very small and cheap (86€ for a Raspberry Pi 5) computer that runs Linux, but it also provides a set of GPIO (general purpose input/output) pins, allowing you to control electronic components for physical computing and explore the Internet of Things (IoT). It can be used to learn programming skills, build hardware projects and do home automation. Because it requires actual coding, it's recommended for children that are at least 11 years old.
+A [Raspberry Pi](https://www.raspberrypi.com/) is a very small and cheap (86€ for a Raspberry Pi 5) computer that runs Linux. It also provides a set of GPIO (general purpose input/output) pins, allowing you to control electronic components for physical computing and explore the Internet of Things (IoT). It can be used to learn programming skills, build hardware projects and do home automation. Because it requires actual coding, it's recommended for children that are at least 11 years old.
 
 {{< img src="/posts/python/figures/coding_with_kids/raspberry_pi.png" width="30%" align="center" >}}
 
@@ -172,33 +174,33 @@ A Raspberry Pi is a very small and cheap (86€ for a Raspberry Pi 5) computer t
 - [Open Roberta](https://www.open-roberta.org/)
 - [CodeBug](https://www.codebug.org.uk/)
 - [Piper](https://www.playpiper.in/)
-- [Arduion](https://www.arduino.cc/)
+- [Arduino](https://www.arduino.cc/)
 
 ### Visual programming
 
 Visual programming uses puzzle-pieces (or blocks) to represent code concepts like variables, logical expressions, loops, and more. It lets users program without having to worry about syntax or the intimidation of the command line. Several visual programming languages exist. We will look at a few of them below.
 
 #### Scratch Junior
-[Scratch Junior](https://www.scratchjr.org/) is a simplified version of Scratch. It's a free app (Android, iOS) recommeded for children of age 5-7 years. It contains simple drag-and-drop blocks for creating basic programs, but no textual elements. 
+[Scratch Junior](https://www.scratchjr.org/) is a simplified version of Scratch. It's a free app (Android, iOS) recommended for children aged 5-7 years. It contains simple drag-and-drop blocks for creating basic programs, but no textual elements. 
 
 {{< img src="/posts/python/figures/coding_with_kids/scratch_junior.jpeg" width="50%" align="center" >}}
     
 #### Scratch
-[Scratch](https://scratch.mit.edu/) is a free, web-based visual coding interface developed by the Scratch foundation and MIT. It allows kids to create digital stories, games and animations and contains a lot of possibilities to bring projects to live, including graphics, sounds and music. It's available in more than 70 languages and does not require an internet connection.
+[Scratch](https://scratch.mit.edu/) is a free, web-based visual coding interface developed by the Scratch foundation and the MIT. It allows kids to create digital stories, games and animations and contains a lot of possibilities to bring projects to live, including graphics, sounds and music. It's available in more than 70 languages and does not require an internet connection.
 
-Although it's primarily meant for kids ages 8 to 16, I know adults that still use it for some of their projects. This [demo video](https://www.youtube.com/watch?v=98awWpkx9UM) might give you a better idea of how Scratch looks like. 
+Although it's primarily meant for kids aged 8 to 16 years, I know adults that still use it for some of their projects. This [demo video](https://www.youtube.com/watch?v=98awWpkx9UM) might give you a better idea of how Scratch looks like. 
 
 {{< img src="/posts/python/figures/coding_with_kids/scratch.png" width="80%" align="center" >}}
 
 #### Blockly
-[Blockly](https://developers.google.com/blockly) is a free web library that lets you add a blocks-based code editor to your app. It's the basis of many other block-based languages (e.g. Scratch, MakeCode).
+[Blockly](https://developers.google.com/blockly) is a free web library that lets you add block-based code editor to your app. It's the basis of many other block-based languages (e.g. Scratch, MakeCode).
 
 The Blockly editor can represent JavaScript, Python, PHP, Lua or Dart as interlocking blocks and can export the text form of the code. Compared to Scratch, it's more low-level with increased flexibility for creating customized blocks and integrating with other programming languages. It's recommended for children that are at least 10 years old.
 
 {{< img src="/posts/python/figures/coding_with_kids/blockly.png" width="80%" align="center" >}}
 
 #### Code Club World
-[Code Club World](https://codeclubworld.org/) is a platform created by the Raspberry Pi Foundation. It allows kids ti design their own avatar, make it dance, and play music. It guides children through learning Scratch, moving on to Python in later lessons. Coherent with the recommendation of the Scratch foundation, children can get started with Code Club World when they reach the age of 8 years.
+[Code Club World](https://codeclubworld.org/) is a platform created by the Raspberry Pi Foundation. It allows kids to design their own avatar, make it dance, and play music. It guides children through learning Scratch, moving on to Python in later lessons. Coherent with the recommendation of the Scratch foundation, children can get started with Code Club World when they reach the age of 8 years.
 
 {{< img src="/posts/python/figures/coding_with_kids/code_club_world.png" width="60%" align="center" >}}
 
@@ -206,6 +208,7 @@ The Blockly editor can represent JavaScript, Python, PHP, Lua or Dart as interlo
 - Blockly lessons: [Blockly games](https://blockly.games/), [Codecademy](https://www.codecademy.com/learn/learn-to-code-with-blockly), [Code.org](https://studio.code.org/s/starwarsblocks), etc.
 - [Pencil Code](https://pencilcode.net/): A programming site and code editor that uses visual programming to draw art, make games and play music. 
 - [Alice](https://www.alice.org/about/): From Carnegie Mellon University, free visual programming software with a library of lessons, exercises, projects, etc. 
+- [Edu blocks](https://edublocks.org/): Free tool by Anaconda, helps to learn text-based languages like Python or HTML using a drag-and-drop blocks system
 
 ### Textual programming
 #### Code Combat
@@ -220,15 +223,15 @@ Officially, Code Combat can be used when reaching the age of 7 years. Personally
 
 At the end of the Hedy level sequence, kids master a subset of syntactically valid Python. Hedy is recommended for age 10+ years.
 
-{{< img src="/posts/python/figures/coding_with_kids/hedy.png" width="60%" align="center" >}}
+{{< img src="/posts/python/figures/coding_with_kids/hedy.png" width="80%" align="center" >}}
 
-#### Traditional proramming languages
-If you’re looking for more traditional programming languages for your child to progress on to you can best do that with 12 years of age and beyond. Recommended are Python and languages that the World Wide Web is built on, particularly HTML, CSS, and JavaScript. Many options are available. For example:
+#### Traditional programming languages
+If you’re looking for more traditional programming languages for your child you can best do that with 12 years of age and beyond. Recommended are Python and languages that the World Wide Web is built on, particularly HTML, CSS, and JavaScript. Many options are available. For example:
 - [RaspberryPi Python Courses](https://projects.raspberrypi.org/en/pathways/python-intro)
 - [Udemy Python Course](https://www.udemy.com/course/teach-your-kids-to-code/)
 - [RaspberryPi course - Intro to web development](https://projects.raspberrypi.org/en/pathways/web-intro)
 
-Note that trying Python or another textual programming language doesn’t mean you can’t go back to tools like Scratch or switch between them for different purposes.
+Note that trying Python or another textual programming language does not mean you can’t go back to tools like Scratch or switch between them for different purposes.
 
 ### Online and on-site classes
 - [Tynker](https://www.tynker.com/): Full platform with visual and text-based coding classes, age 6+ years
@@ -239,8 +242,12 @@ Note that trying Python or another textual programming language doesn’t mean y
 
 ### More ideas to start coding
 - Local events like [GirlsDay](https://www.girls-day.de/), [Devoxx4kids](https://www.devoxx4kids.de/), [Codeweek](https://www.codeweek.de/)
-- Offers at local universities and companies
-- Coding clubs: [CoderDojo](https://coderdojo.com/en/), [CodeClub](https://codeclub.org/en/)
+- Offers at local universities and companies. 
+- Coding clubs (in case your child likes coding together with friends and/or other children): [CoderDojo](https://coderdojo.com/en/), [CodeClub](https://codeclub.org/en/)
+
+### Screen-free offers
+- [Robot turtles](http://www.robotturtles.com/): Programming board game, for kids ages 3-8 years
+- [Turing tumble](https://upperstory.com/turingtumble/): Game where you use ramps, bits, gears and other parts to create mechanical computers that solve logic puzzles
 
 ### Other offers
 - [Ear Sketch](https://earsketch.gatech.edu/landing/#/): Students learn to code in Python or JavaScript while composing music (14-18 years)
@@ -254,17 +261,21 @@ Note that trying Python or another textual programming language doesn’t mean y
 In the past years I have researched and learned a lot about how humans learn. Some of these principles also apply to children so I would like to share some of the main points.
 
 ### Learning set-up
-- No matter at what age you introduce children to coding, one key element is empowering them to create things that are relevant to them. They should be allowed to follow their own interests. Above all else, coding should be a fun activity for kids. Therefore, it's important to make learning entertaining.
+- No matter at what age you introduce children to coding, one key element is empowering them to create things that are relevant to them. They should be allowed to follow their own interests. Above all else, coding should be a fun activity for kids! Therefore, it's important to make learning entertaining.
 - Children benefit from having a variety of learning experiences. For example, you can use real life situations to explain concepts like loops, etc.
 - Don't be afraid to switch tracks if your child is not enjoying their work! It can take a while to find the right path for you and your kid. Take your time and don't be afraid to make changes.
 
 ### Learning sessions
 - To improve learning outcomes it can be helpful to use spaced learning. This means that we distribute learning sessions over time. A single, long lesson is usually less effective than multiple, shorter lessons. Having multiple (shorter) sessions helps to transfer knowledge to our long-term memory. Also, it prevents cognitive fatigue.
 - In addition to spaced learning, encourage active recall testing. For example, ask questions to encourage your child to actively retrieve learned information!
-- How long should a session be? There is no "one size fits all" answer to this questions. We know that attention spans increase with age. Make sure to observe if your child is still focused and enthisiastic about continuing the session
+- How long should a session be? There is no "one size fits all" answer to this question. We know that attention spans increase with age. Make sure to observe if your child is still focused and enthusiastic about continuing the session.
 
 ### Supporting children in their learning
-- Be patient, e.g. use words of encouragement to keep them going if they’re struggling
-- This goes hand in hand with encouraging your child to try new things. Keep praising your child for trying new things.
+- Be patient! For example, use words of encouragement to keep a child going if they’re struggling.
+- This goes hand in hand with encouraging your child to try new things. Keep praising your child for trying new things, not only for succeeding!
 - Learn together with your kids! You could make learning a family activity and sit down yourself to improve your coding skills. Another idea is to let your child be the expert sometimes, explaining concepts to you instead of the other way around.
 - Show an interest in what your child is doing and learning. Engage with the child to learn more about the project they are working on.
+
+## Conclusion
+
+I hope this blog post leaves you with enough knowledge about when and how to start coding with children. In case you can recommend resources that aren't listed yet or have thoughts on this topic you are welcome to send me an e-mail. Happy coding!
