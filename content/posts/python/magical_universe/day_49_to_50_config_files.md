@@ -27,7 +27,7 @@ Using configuration files has many benefits. A few of them are:
 
 ## YAML and JSON
 
-There are different languages that can be used for creating config files. Major ones are JSON and YAML. I prefer using yaml because yaml config files are very readable and easy to compose. If you are interested in the differences between the two formats you can check out [this link](https://www.json2yaml.com/).
+There are different languages that can be used for creating config files. Major ones are JSON and YAML. I prefer using yaml because yaml config files are very readable and easy to compose. If you are interested in the differences between the two formats you can check out [this link](https://www.bairesdev.com/tools/json2yaml/).
 
 To create a yaml file we first have to install PyYAML using `pip install pyyaml`. Afterwards, we can create a config file by using the ending `.yaml`, as in `config.yaml`. The syntax of the file looks as follows:
 
