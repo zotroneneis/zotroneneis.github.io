@@ -1,6 +1,6 @@
 ---
 title: When and how to start coding with kids
-date: 2024-07-12
+date: 2024-08-05
 menu:
   sidebar:
     name: Coding with kids
@@ -139,9 +139,7 @@ The [bee-bot](https://b-bot.de/bee-bot) is a programmable floor robot designed f
 
 The [video below](https://youtube.com/shorts/kri_1cnRNd4?feature=shared) gives a short demonstration:
 
-<video controls autoplay muted loop height="550">
-  <source src="/posts/python/figures/coding_with_kids/beebot.mp4" type="video/mp4">
-</video>
+{{<video src="/posts/python/figures/coding_with_kids/beebot.mp4" align="center">}}
 
 #### Cubelets
 [Cubelets](https://modrobotics.com/) are small blocks that can be used to introduce physical computing to children. Children can snap together different types of blocks to create their own unique robots. These robots will perform actions such as moving or lighting up, depending on their surroundings, such as the distance your hand is from the robot. A nice thing on top: cubelets can be programmed using [MakeCode](https://makecode.microbit.org/), a visual programming language, when a child grows older. A disadvantage of cubelets is their cost: a single block costs around 50€.
@@ -150,9 +148,8 @@ The [video below](https://youtube.com/shorts/kri_1cnRNd4?feature=shared) gives a
 
 Short [demo video](https://youtube.com/shorts/g69iscnh_rs?feature=shared):
 
-<video controls autoplay muted loop height="550">
-  <source src="/posts/python/figures/coding_with_kids/cubelet.mp4" type="video/mp4">
-</video>
+
+{{<video src="/posts/python/figures/coding_with_kids/cubelet.mp4" width="10px">}}
 
 #### Micro:bit
 The [micro:bit](https://microbit.org/get-started/what-is-the-microbit/) is a small programmable device with an LED display, buttons, and sensors. It can be used to create games, animations, interactive projects, and lots more. It's recommended for children age 8+ years because it involves visual programming using [MakeCode](https://makecode.microbit.org/). Compared to other devices it is cheap, with the starter bundle costing only 20€.
