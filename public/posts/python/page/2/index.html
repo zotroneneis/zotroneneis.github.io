@@ -1,53 +1,61 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>Python</title>
-    
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/style.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/application.b896cc6be95aba26430ee0585857aeda204b1b895c4fb4822daeab0075b9cab7.css" integrity="sha256-uJbMa&#43;lauiZDDuBYWFeu2iBLG4lcT7SCLa6rAHW5yrc=" />
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
-<link rel="icon" type="image/png" href="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
 
+  
 
-<link rel="stylesheet" href="/css/style.css"/>
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/author/image_al_hu15845133475761513827.jpg" />
+
+<meta property="og:url" content="http://localhost:1313/posts/python/">
+  <meta property="og:site_name" content="Anna-Lena Popkes">
+  <meta property="og:title" content="Python">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="website">
 
     
-    <link rel="stylesheet" href="/css/layouts/list.css">
-    <link rel="stylesheet" href="/css/navigators/sidebar.css">
-
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Python">
 
     
+     
+
     
+
+
+
+
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-section" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -56,17 +64,9 @@
 
 
 
-  
 
 
 
-  
-
-
-
-
-
-  
 
 
 
@@ -75,27 +75,201 @@
   
 
 
+  
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
-      <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+      
+        <img src="/images/author/image_al_hu15845133475761513827.jpg" id="logo" alt="Logo">
+      Anna-Lena Popkes</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#education">Education</a>
+                </li>
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#projects">Projects</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#recent-posts">Recent Posts</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#appearances">Talks &amp; Podcasts</a>
+                    
+                  
+              </div>
+            </li>
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
+          <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+</a>
+<div id="themeMenu" class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" data-scheme="light">
+    <img class="theme-icon" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="dark">
+    <img class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="system">
+    <img class="theme-icon" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
+  </a>
+</div>
+</li>
+
+        
       </ul>
     </div>
   </div>
   
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
 </nav>
 
 
@@ -108,7 +282,9 @@
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
             <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
@@ -120,7 +296,7 @@
   
   
     
-    <li><a class="" href="/posts/news/">Personal news</a></li>
+    <li><a class=" list-link" href="/posts/news/" title="Personal news">Personal news</a></li>
   
 
   
@@ -129,7 +305,7 @@
   
   
     
-    <li><a class="" href="/posts/my_path_to_ml/">My path to machine learning</a></li>
+    <li><a class=" list-link" href="/posts/my_path_to_ml/" title="My path to machine learning">My path to machine learning</a></li>
   
 
   
@@ -139,7 +315,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/books/">Books</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/books/"> Books</a>
       
       <ul class="">
         
@@ -149,7 +325,7 @@
   
   
     
-    <li><a class="" href="/posts/books/reading_list/">Personal reading List</a></li>
+    <li><a class=" list-link" href="/posts/books/reading_list/" title="Personal reading List">Personal reading List</a></li>
   
 
   
@@ -158,7 +334,7 @@
   
   
     
-    <li><a class="" href="/posts/books/deep_work/">Deep work</a></li>
+    <li><a class=" list-link" href="/posts/books/deep_work/" title="Deep work">Deep work</a></li>
   
 
 
@@ -173,7 +349,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/machine_learning/">Machine Learning</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/machine_learning/"> Machine Learning</a>
       
       <ul class="">
         
@@ -183,7 +359,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/bayesian_linear_regression/">Bayesian linear regression</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/bayesian_linear_regression/" title="Bayesian linear regression">Bayesian linear regression</a></li>
   
 
   
@@ -192,7 +368,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/kl_divergence/" title="KL Divergence">KL Divergence</a></li>
   
 
   
@@ -201,7 +377,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/principal_component_analysis/">Principal component analysis (PCA)</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/principal_component_analysis/" title="Principal component analysis (PCA)">Principal component analysis (PCA)</a></li>
   
 
   
@@ -210,7 +386,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/support_vector_machines/">Support vector machines</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/support_vector_machines/" title="Support vector machines">Support vector machines</a></li>
   
 
   
@@ -219,7 +395,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/variational_inference/" title="Variational Inference">Variational Inference</a></li>
   
 
 
@@ -237,7 +413,7 @@
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/python/">Python</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/python/"> Python</a>
       
       <ul class="active">
         
@@ -247,7 +423,25 @@
   
   
     
-    <li><a class="" href="/posts/python/mocking/">Mocking</a></li>
+    <li><a class=" list-link" href="/posts/python/coding_with_kids/" title="Coding with kids">Coding with kids</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/mocking/" title="Mocking">Mocking</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/packaging_tools/" title="Packaging tools">Packaging tools</a></li>
   
 
   
@@ -257,7 +451,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/magical_universe/">Magical Universe</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/magical_universe/"> Magical Universe</a>
       
       <ul class="">
         
@@ -267,7 +461,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_start/">Start</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_start/" title="Start">Start</a></li>
   
 
   
@@ -276,7 +470,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_magical_universe/" title="The Tales of Castle Kilmere">The Tales of Castle Kilmere</a></li>
   
 
   
@@ -285,7 +479,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_first_post_oop/" title="Object-oriented programming">Object-oriented programming</a></li>
   
 
   
@@ -294,7 +488,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_2_types_of_methods/" title="Types of methods">Types of methods</a></li>
   
 
   
@@ -303,7 +497,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_3_type_annotations/" title="Type annotations">Type annotations</a></li>
   
 
   
@@ -312,7 +506,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_4_to_string_conversion/" title="To-string conversion">To-string conversion</a></li>
   
 
   
@@ -321,7 +515,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_5_decorators/" title="Decorators">Decorators</a></li>
   
 
   
@@ -330,7 +524,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_6_properties/" title="Properties">Properties</a></li>
   
 
   
@@ -339,7 +533,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_7_underscore_patterns/" title="Underscore patterns">Underscore patterns</a></li>
   
 
   
@@ -348,7 +542,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_8_extending_universe/" title="Extending the universe">Extending the universe</a></li>
   
 
   
@@ -357,7 +551,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_9_duck_typing/" title="Duck Typing">Duck Typing</a></li>
   
 
   
@@ -366,7 +560,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_10_11_namedtuples/" title="Namedtuples">Namedtuples</a></li>
   
 
   
@@ -375,7 +569,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_12_to_15_abcs/" title="Abstract Base Classes">Abstract Base Classes</a></li>
   
 
   
@@ -384,7 +578,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_16_to_18_data_classes/" title="Data classes">Data classes</a></li>
   
 
   
@@ -393,7 +587,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_19_immutable_data_classes/" title="Immutable data classes">Immutable data classes</a></li>
   
 
   
@@ -402,7 +596,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_20_decorators_in_classes/" title="Decorators in classes">Decorators in classes</a></li>
   
 
   
@@ -411,7 +605,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_21_if_main/" title="if __name__ == &#34;__main__&#34;">if __name__ == &#34;__main__&#34;</a></li>
   
 
   
@@ -420,7 +614,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_22_to_24_context_managers/" title="Context managers">Context managers</a></li>
   
 
   
@@ -429,7 +623,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_25_to_28_pytest/" title="Testing with pytest">Testing with pytest</a></li>
   
 
   
@@ -438,7 +632,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_29_to_31_iterators/" title="Iterators">Iterators</a></li>
   
 
   
@@ -447,7 +641,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_34_multisets/" title="Multisets">Multisets</a></li>
   
 
   
@@ -456,7 +650,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_37_extending_universe/" title="Extending the universe II">Extending the universe II</a></li>
   
 
   
@@ -465,7 +659,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_43_to_45_exception_classes/" title="Exception classes">Exception classes</a></li>
   
 
   
@@ -474,7 +668,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_46_functools_wraps/" title="functools.wraps">functools.wraps</a></li>
   
 
   
@@ -483,7 +677,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_47_to_48_defaultdict/" title="Defaultdict">Defaultdict</a></li>
   
 
   
@@ -492,7 +686,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_49_to_50_config_files/" title="Config files">Config files</a></li>
   
 
   
@@ -501,7 +695,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/" title="Wrap up">Wrap up</a></li>
   
 
 
@@ -521,7 +715,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/software_engineering/">Software Engineering</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/software_engineering/"> Software Engineering</a>
       
       <ul class="">
         
@@ -531,7 +725,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/containers/">Intro to containers</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/containers/" title="Intro to containers">Intro to containers</a></li>
   
 
   
@@ -540,7 +734,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/docker/">Intro to Docker</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/docker/" title="Intro to Docker">Intro to Docker</a></li>
   
 
   
@@ -549,7 +743,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/virtual_machines/" title="Intro to virtual machines">Intro to virtual machines</a></li>
   
 
 
@@ -573,303 +767,366 @@
     <div class="container-fluid post-card-holder" id="post-card-holder">
       
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_20_decorators_in_classes/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+      
+      
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_22_to_24_context_managers/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_22_to_24_context_managers/" class="post-card-link">
+        <h5 class="card-title">Context managers and the `with` statement</h5>
+        <p class="card-text post-summary">Topics: with statement and context managers Updated 2020-10-05
+Context managers and the with statement Similar to decorators, context managers are a concept many people use but only few understand. If you haven&rsquo;t heard of the term &lsquo;context manager&rsquo; before: you probably encountered them already while reading or writing from/to a file using the with statement.
+The most common use of context managers is the proper management of resources. In simple terms this means that we want to make sure that we open, read, write and close files correctly.</p>
+      </a>
+      
+    </div>
+    <div class="card-footer">
+      <span class="float-start">
+          Tuesday, August 14, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_22_to_24_context_managers/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_21_if_main/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_21_if_main/" class="post-card-link">
+        <h5 class="card-title">The mysterious `if __name__ == &#34;__main__&#34;`</h5>
+        <p class="card-text post-summary">Topics: What is if __name__ == &quot;__main__&quot; doing?
+I always wanted to dig into the statement if __name__ == &quot;__main__&quot; that is used in so many programs. I have used it for a long time already but until recently I had no idea what exactly it is doing. To make the topic as understandable as possible, I will divide the explanation into three steps.
+Step 1: Two ways of running code We saved our Magical Universe in a file named magical_universe.</p>
+      </a>
+      
+    </div>
+    <div class="card-footer">
+      <span class="float-start">
+          Sunday, August 12, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_21_if_main/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_20_decorators_in_classes/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_20_decorators_in_classes/" class="post-card-link">
         <h5 class="card-title">Decorators within classes</h5>
         <p class="card-text post-summary">Topics: Decorators within a class Updated 2020-10-05
 After having talked about decorators already on day 5 and day 6 I would like to revisit the topic to discuss how decorators can be used within classes.
 Let&rsquo;s put ourselves in the position of a Castle Kilmere member during the time the school is in war with Master Odon and his Dark Army. So these are dark, scary times. People at Castle Kilmere are constantly scared that something might happen to them, their family or their friends.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 11, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_20_decorators_in_classes/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Saturday, August 11, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_20_decorators_in_classes/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_19_immutable_data_classes/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_19_immutable_data_classes/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_19_immutable_data_classes/" class="post-card-link">
         <h5 class="card-title">Immutable data classes</h5>
         <p class="card-text post-summary">Topics: Immutable data classes Updated 2020-10-05
 We have talked a lot about data classes in the last post. There is one further characteristic of data classes that I would like to study - immutability.
 We can make a dataclass immutable such that it fulfills the same purpose as typing.NamedTuple. To make a dataclass immutable we have to set frozen=True when creating the class. Let&rsquo;s see how we can change our DarkArmyMember class from typing.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 10, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_19_immutable_data_classes/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Friday, August 10, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_19_immutable_data_classes/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_16_to_18_data_classes/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_16_to_18_data_classes/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_16_to_18_data_classes/" class="post-card-link">
         <h5 class="card-title">Data classes</h5>
         <p class="card-text post-summary">Topics: Data classes Updated 2020-10-05
 Data classes are a feature that is new in Python 3.7. And taking a look at them is definitely worth it!
 Data classes According to the PEP on data classes, they are basically &ldquo;mutable namedtuples with defaults&rdquo;. We already looked at namedtuples on day 10 and 11. Namedtuples allow us to create an immutable class that primarily stores values (i.e. attributes). We used namedtuples for our DarkArmyMember class (because once you become a member of the dark army there is no way back.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 8, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_16_to_18_data_classes/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Wednesday, August 8, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_16_to_18_data_classes/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_12_to_15_abcs/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_12_to_15_abcs/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_12_to_15_abcs/" class="post-card-link">
         <h5 class="card-title">Abstract Base Classes</h5>
         <p class="card-text post-summary">Topics: Abstract Base Classes, ABC&rsquo;s Updated 2020-10-05
 The last days I have been working on a lot of new classes and methods. Since they all belong to the same big concept, I decided to create one big post on the whole topic instead of several small ones. So let&rsquo;s get right into it!
 Abtract Base Classes Up to now, our Magical Universe has a parent class (CastleKilmereMember) and several child classes (Pupil, Professor, etc.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 4, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_12_to_15_abcs/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Saturday, August 4, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_12_to_15_abcs/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_10_11_namedtuples/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_10_11_namedtuples/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_10_11_namedtuples/" class="post-card-link">
         <h5 class="card-title">Namedtuples</h5>
         <p class="card-text post-summary">Topics: Immutable classes, namedtuples Updated 2020-10-04
 Tuples Before looking at namedtuples, we should review what a tuple is. In Python, a tuple is a simple data structure that can be used for grouping arbitrary objects. Important to know is that tuples are immutable. That means that once a tuple has been created, it can not be changed anymore. We already used tuples in our Magical Universe. For example, we defined the pet attribute of the Pupil class to be a tuple:</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">August 1, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_10_11_namedtuples/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Wednesday, August 1, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_10_11_namedtuples/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_9_duck_typing/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_9_duck_typing/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_9_duck_typing/" class="post-card-link">
         <h5 class="card-title">Duck typing, EAFP principle</h5>
         <p class="card-text post-summary">Topics: Duck typing, EAFP principle Updated 2020-10-04
 Duck typing Today we are going to look at some fundamental philosophies of programming: duck typing, EAFP and its opposite LBYL. Some of you may have heard of these principles already. However, because they are so fundamental we want to make sure that we apply them to our magical universe correctly.
 So what is duck typing? The most common saying regarding duck typing is “If it walks like a duck, and it quacks like a duck, then it must be a duck.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 31, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_9_duck_typing/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Tuesday, July 31, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_9_duck_typing/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_8_extending_universe/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_8_extending_universe/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_8_extending_universe/" class="post-card-link">
         <h5 class="card-title">Extending the Magical Universe</h5>
         <p class="card-text post-summary">Topics: Adding new classes and methods to the Magical Universe
 Today I used some of the concepts introduced during the last days to extend my Magical Universe. Specifically:
 I added a classmethod for creating the ghost &rsquo;the mocking knight' I added a &lsquo;friends&rsquo; attribute to the Pupil class I added methods for adding and listing all current friends of a Pupil I implemented a new Charm class that allows to create charms I added two classmethods for creating popular charms </p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 30, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_8_extending_universe/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Monday, July 30, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_8_extending_universe/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_7_underscore_patterns/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_7_underscore_patterns/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_7_underscore_patterns/" class="post-card-link">
         <h5 class="card-title">Underscore patterns for variable naming</h5>
         <p class="card-text post-summary">Topics: underscore patterns for variable naming, _variable, __variable, __variable__, _ Updated 2020-10-04
 Underscore patterns for variable naming Today we are going to look at a very important concept in Python: the usage of underscores when naming variables! In Python we have five different naming conventions that involve underscores.
 A variable with a single leading underscore like _elms
 This is a naming convention followed by most Python code A name prefixed with an underscore should be treated as a non-public part of the API and it might be changed without notice This holds independent of whether it is a function, a method or a data member A variable with (at least) two leading underscores and at most one trailing underscore like __my_private_variable</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 29, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_7_underscore_patterns/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Sunday, July 29, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_7_underscore_patterns/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_6_properties/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src=''/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_6_properties/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_6_properties/" class="post-card-link">
         <h5 class="card-title">Properties, setter and getter methods</h5>
         <p class="card-text post-summary">Topics: properties, @property and property(), setters, getters Updated 2020-10-04
 Today, I digged a little deeper into the @property decorator, how it is related to the property() function and how its getter and setter methods work. These two links (link1, link2) were really helpful. Of course, there is also the official Python docs on the property() function.
 The @property decorator Yesterday we looked at decorators. The @property decorator allows us to create a read-only property.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 28, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_6_properties/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
+      </a>
+      
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Saturday, July 28, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_6_properties/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
+        
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_5_decorators/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
+        
+          <div class="post-card">
+  <div class="card">
+    <div class="card-head">
+      <a href="/posts/python/magical_universe/day_5_decorators/" class="post-card-link">
+        <img class="card-img-top" src='/images/default-hero.jpg' alt="Hero Image">
+      </a>
+    </div>
+    <div class="card-body">
+      <a href="/posts/python/magical_universe/day_5_decorators/" class="post-card-link">
         <h5 class="card-title">Decorators</h5>
         <p class="card-text post-summary">Topics: decorators Updated 2020-10-04
 Today, we are going to look at decorators. Python&rsquo;s decorators are an advanced concept so don&rsquo;t worry if you don&rsquo;t immediately understand how they work. The more you will use and read about them, the clearer the concept will become. I won&rsquo;t go into too much detail here, so if you want to know more about decorators, take a look at Dan Bader&rsquo;s website or the PEP on decorators.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 27, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_5_decorators/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
+      </a>
       
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_4_to_string_conversion/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">To-string conversion</h5>
-        <p class="card-text post-summary">Topics: to-string conversion, __repr__, __str__ Updated: 2020-10-04
-To-string conversion Today we are going to look at the two methods that control how an object is converted into a string object. When we just print an object, we won&rsquo;t get a useful representation. For example, when trying to print the bromley instance:
-bromley = CastleKilmereMember(name=&#39;Bromley Huckabee&#39;, birthyear=1959, sex=&#39;male&#39;) print(bromley) We get this output: &lt;__main__.CastleKilmereMember object at 0x7f81853bfc50&gt;. It contains the name of the class an the ID of the object (its memory address).</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 26, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_4_to_string_conversion/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
     </div>
-  </a>
+    <div class="card-footer">
+      <span class="float-start">
+          Friday, July 27, 2018
+          </span>
+      <a
+      href="/posts/python/magical_universe/day_5_decorators/"
+      class="float-end btn btn-outline-info btn-sm">Read</a>
+    </div>
+  </div>
 </div>
 
-      
-        <div class="post-card">
-  <a href="/posts/python/magical_universe/day_3_type_annotations/" class="post-card-link">
-    <div class="card">
-      <div class="card-head">
-        <img class="card-img-top" src='/images/default-hero.jpg'/>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Type annotations</h5>
-        <p class="card-text post-summary">Topics: Type annotations Updated 2020-10-04
-Type annotations Type annotations are a very cool feature that came out with Python 3.5. They allow us to add arbitrary metadata to function arguments and the return value of a function. Why this is useful? First of all, it allows us to document of what type our function parameters are. Furthermore, they can be used for things like type checking. For more use cases, look here.</p>
-      </div>
-      <div class="card-footer">
-        <span class="float-left">July 25, 2018</span>
-        <a
-        href="/posts/python/magical_universe/day_3_type_annotations/"
-        class="float-right btn btn-outline-info btn-sm"
-        >Read</a
-        >
-      </div>
-    </div>
-  </a>
-</div>
-
+        
       
     </div>
     <div class="paginator">
@@ -907,13 +1164,15 @@ Type annotations Type annotations are a very cool feature that came out with Pyt
     </div>
 
     
-
-  
-
+    
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -923,143 +1182,177 @@ Type annotations Type annotations are a very cool feature that came out with Pyt
     
   
 
+  
+  
+    
+  
 
+  
+  
 
-
-
-
-
-
-
+  
+  
+    
+    
+      
+    
   
 
 
+  
+  
+  
 
+  
+  
+  
 
+  
+  
+  
+    
+  
+  
 
+  
+  
+  
 
-
-<footer class="container-fluid text-center align-content-center footer pb-2">
-  <div class="container pt-5">
-    <div class="row text-left">
-      <div class="col-md-4 col-sm-12">
-        <h5>Navigation</h5>
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-start">
         
-        <ul>
-            
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#about">About</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#about">About</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#skills">Skills</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#experiences">Experiences</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#experiences">Experiences</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#education">Education</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#projects">Projects</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#appearances">Talks &amp; Podcasts</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#appearances">Talks &amp; Podcasts</a>
-              </li>
-            
-            
-              
-              
                 
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#recent-posts">Recent Posts</a>
+                </li>
               
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
-              </li>
             
-        </ul>
+              
+            
+          </ul>
+          
+        </div>
         
-
-      </div>
-      
-      <div class="col-md-4 col-sm-12">
-        <h5>Contact me:</h5>
-        <ul>
-          
-          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
-          
-        </ul>
-      </div>
-      
-      
-    </div>
-  </div>
-  <hr />
-  <div class="container">
-    <div class="row text-left">
-      <div class="col-md-4">
-        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png">
-          Toha
-        </a>
-      </div>
-      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
-      <div class="col-md-4 text-right">
-        <a id="hugo" href="https://gohugo.io/">Powered by
-        <img
-          src="/images/hugo-logo.svg"
-          alt="Hugo Logo"
-          height="18"
-        />
-        </a>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:popkes@gmx.net target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>popkes@gmx.net</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/zotroneneis target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>zotroneneis</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
       </div>
     </div>
-  </div>
-</footer>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+        <div class="col-md-4 text-end">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
 
-    <script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 
-<script src="/js/navbar.js"></script>
-<script src="/js/main.js"></script>
+    <script src="/application.cc91051931b43fe247c674f2359ddb534b993b1148bb7cc4f32b9869fb9c9b6c.js" integrity="sha256-zJEFGTG0P&#43;JHxnTyNZ3bU0uZOxFIu3zE8yuYafucm2w=" defer></script>
 
 
     
-    
-    <script src="/js/list.js"></script>
+     
 
-  </body>
+    
+</body>
 </html>

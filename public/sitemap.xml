@@ -2,147 +2,264 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://alpopkes.com/</loc>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/python/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/python/coding_with_kids/</loc>
+    <lastmod>2024-08-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/python/packaging_tools/</loc>
+    <lastmod>2023-08-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/machine_learning/</loc>
     <lastmod>2022-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/</loc>
+    <loc>http://localhost:1313/posts/machine_learning/principal_component_analysis/</loc>
     <lastmod>2022-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/</loc>
-    <lastmod>2022-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/principal_component_analysis/</loc>
-    <lastmod>2022-08-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/support_vector_machines/</loc>
+    <loc>http://localhost:1313/posts/machine_learning/support_vector_machines/</loc>
     <lastmod>2021-04-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/books/</loc>
+    <loc>http://localhost:1313/posts/books/</loc>
     <lastmod>2021-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/books/reading_list/</loc>
+    <loc>http://localhost:1313/posts/books/reading_list/</loc>
     <lastmod>2021-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/bayesian_linear_regression/</loc>
+    <loc>http://localhost:1313/posts/machine_learning/bayesian_linear_regression/</loc>
     <lastmod>2021-02-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/books/deep_work/</loc>
+    <loc>http://localhost:1313/posts/books/deep_work/</loc>
     <lastmod>2020-12-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/mocking/</loc>
+    <loc>http://localhost:1313/posts/python/mocking/</loc>
     <lastmod>2020-10-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/</loc>
-    <lastmod>2020-10-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/variational_inference/</loc>
+    <loc>http://localhost:1313/posts/machine_learning/variational_inference/</loc>
     <lastmod>2019-02-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/machine_learning/kl_divergence/</loc>
+    <loc>http://localhost:1313/posts/machine_learning/kl_divergence/</loc>
     <lastmod>2019-02-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/software_engineering/docker/</loc>
+    <loc>http://localhost:1313/posts/software_engineering/docker/</loc>
     <lastmod>2018-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/software_engineering/</loc>
+    <loc>http://localhost:1313/posts/software_engineering/</loc>
     <lastmod>2018-11-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/software_engineering/containers/</loc>
+    <loc>http://localhost:1313/posts/software_engineering/containers/</loc>
     <lastmod>2018-10-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/software_engineering/virtual_machines/</loc>
+    <loc>http://localhost:1313/posts/software_engineering/virtual_machines/</loc>
     <lastmod>2018-09-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/</loc>
     <lastmod>2018-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/2018-09-16-blog-post-day-51/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/2018-09-16-blog-post-day-51/</loc>
     <lastmod>2018-09-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_49_to_50_config_files/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_49_to_50_config_files/</loc>
     <lastmod>2018-09-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_47_to_48_defaultdict/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_47_to_48_defaultdict/</loc>
     <lastmod>2018-09-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_46_functools_wraps/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_46_functools_wraps/</loc>
     <lastmod>2018-09-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_43_to_45_exception_classes/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_43_to_45_exception_classes/</loc>
     <lastmod>2018-09-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_37_extending_universe/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_37_extending_universe/</loc>
     <lastmod>2018-08-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_34_multisets/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_34_multisets/</loc>
     <lastmod>2018-08-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_29_to_31_iterators/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_29_to_31_iterators/</loc>
     <lastmod>2018-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_25_to_28_pytest/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_25_to_28_pytest/</loc>
     <lastmod>2018-08-17T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_22_to_24_context_managers/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_22_to_24_context_managers/</loc>
     <lastmod>2018-08-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_21_if_main/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_21_if_main/</loc>
     <lastmod>2018-08-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_20_decorators_in_classes/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_20_decorators_in_classes/</loc>
     <lastmod>2018-08-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_19_immutable_data_classes/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_19_immutable_data_classes/</loc>
     <lastmod>2018-08-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_16_to_18_data_classes/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_16_to_18_data_classes/</loc>
     <lastmod>2018-08-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_12_to_15_abcs/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_12_to_15_abcs/</loc>
     <lastmod>2018-08-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_10_11_namedtuples/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_10_11_namedtuples/</loc>
     <lastmod>2018-08-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_9_duck_typing/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_9_duck_typing/</loc>
     <lastmod>2018-07-31T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_8_extending_universe/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_8_extending_universe/</loc>
     <lastmod>2018-07-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_7_underscore_patterns/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_7_underscore_patterns/</loc>
     <lastmod>2018-07-29T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_6_properties/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_6_properties/</loc>
     <lastmod>2018-07-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_5_decorators/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_5_decorators/</loc>
     <lastmod>2018-07-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_4_to_string_conversion/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_4_to_string_conversion/</loc>
     <lastmod>2018-07-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_3_type_annotations/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_3_type_annotations/</loc>
     <lastmod>2018-07-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_2_types_of_methods/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_2_types_of_methods/</loc>
     <lastmod>2018-07-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_1_first_post_oop/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_1_first_post_oop/</loc>
     <lastmod>2018-07-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_1_start/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_1_start/</loc>
     <lastmod>2018-07-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/python/magical_universe/day_1_magical_universe/</loc>
+    <loc>http://localhost:1313/posts/python/magical_universe/day_1_magical_universe/</loc>
     <lastmod>2018-07-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/categories/</loc>
+    <loc>http://localhost:1313/notes/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/my_path_to_ml/</loc>
+    <loc>http://localhost:1313/search/</loc>
+    <lastmod>2010-06-08T08:06:25+06:00</lastmod>
   </url><url>
-    <loc>https://alpopkes.com/posts/news/</loc>
+    <loc>http://localhost:1313/posts/books/fixed_growth_mindset/</loc>
   </url><url>
-    <loc>https://alpopkes.com/tags/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/my_path_to_ml/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/news/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+    <priority>0.1</priority>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

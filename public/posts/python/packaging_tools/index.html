@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>An unbiased evaluation of environment management and packaging tools</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<link rel="stylesheet" href="/application.b896cc6be95aba26430ee0585857aeda204b1b895c4fb4822daeab0075b9cab7.css" integrity="sha256-uJbMa&#43;lauiZDDuBYWFeu2iBLG4lcT7SCLa6rAHW5yrc=" />
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+  
+
+  <link rel="icon" type="image/png" href="/images/author/image_al_hu15845133475761513827.jpg" />
+
+<meta property="og:url" content="http://localhost:1313/posts/python/packaging_tools/">
+  <meta property="og:site_name" content="Anna-Lena Popkes">
+  <meta property="og:title" content="An unbiased evaluation of environment management and packaging tools">
+  <meta property="og:description" content="Last update This post was last updated on August 29th, 2024.
+Motivation When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn’t sure which one to use. I’m sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-08-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-08-24T00:00:00+00:00">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="An unbiased evaluation of environment management and packaging tools">
+  <meta name="twitter:description" content="Last update This post was last updated on August 29th, 2024.
+Motivation When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn’t sure which one to use. I’m sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs.">
+
+    
+    
+<meta name="description" content="An unbiased evaluation of environment management and packaging tools" />
+
+
+    
+
+
+
+
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
+  </head>
+
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
+  <div class="container">
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
+    </button>
+    
+    <a class="navbar-brand" href="/">
+      
+        <img src="/images/author/image_al_hu15845133475761513827.jpg" id="logo" alt="Logo">
+      Anna-Lena Popkes</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
+    </button>
+
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#projects">Projects</a>
+                </li>
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#projects">Projects</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#appearances">Talks &amp; Podcasts</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#recent-posts">Recent Posts</a>
+                    
+                  
+              </div>
+            </li>
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
+          <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+</a>
+<div id="themeMenu" class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" data-scheme="light">
+    <img class="theme-icon" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="dark">
+    <img class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="system">
+    <img class="theme-icon" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
+  </a>
+</div>
+</li>
+
+        
+      </ul>
+    </div>
+  </div>
+  
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/news/" title="Personal news">Personal news</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/my_path_to_ml/" title="My path to machine learning">My path to machine learning</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/books/"> Books</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/books/reading_list/" title="Personal reading List">Personal reading List</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/books/deep_work/" title="Deep work">Deep work</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/machine_learning/"> Machine Learning</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine_learning/bayesian_linear_regression/" title="Bayesian linear regression">Bayesian linear regression</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine_learning/kl_divergence/" title="KL Divergence">KL Divergence</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine_learning/principal_component_analysis/" title="Principal component analysis (PCA)">Principal component analysis (PCA)</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine_learning/support_vector_machines/" title="Support vector machines">Support vector machines</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/machine_learning/variational_inference/" title="Variational Inference">Variational Inference</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/python/"> Python</a>
+      
+      <ul class="active">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/coding_with_kids/" title="Coding with kids">Coding with kids</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/mocking/" title="Mocking">Mocking</a></li>
+  
+
+  
+  
+  
+  
+    
+    
+  
+  
+    
+    <li><a class="active list-link" href="/posts/python/packaging_tools/" title="Packaging tools">Packaging tools</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/magical_universe/"> Magical Universe</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_start/" title="Start">Start</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_magical_universe/" title="The Tales of Castle Kilmere">The Tales of Castle Kilmere</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_first_post_oop/" title="Object-oriented programming">Object-oriented programming</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_2_types_of_methods/" title="Types of methods">Types of methods</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_3_type_annotations/" title="Type annotations">Type annotations</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_4_to_string_conversion/" title="To-string conversion">To-string conversion</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_5_decorators/" title="Decorators">Decorators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_6_properties/" title="Properties">Properties</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_7_underscore_patterns/" title="Underscore patterns">Underscore patterns</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_8_extending_universe/" title="Extending the universe">Extending the universe</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_9_duck_typing/" title="Duck Typing">Duck Typing</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_10_11_namedtuples/" title="Namedtuples">Namedtuples</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_12_to_15_abcs/" title="Abstract Base Classes">Abstract Base Classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_16_to_18_data_classes/" title="Data classes">Data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_19_immutable_data_classes/" title="Immutable data classes">Immutable data classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_20_decorators_in_classes/" title="Decorators in classes">Decorators in classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_21_if_main/" title="if __name__ == &#34;__main__&#34;">if __name__ == &#34;__main__&#34;</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_22_to_24_context_managers/" title="Context managers">Context managers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_25_to_28_pytest/" title="Testing with pytest">Testing with pytest</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_29_to_31_iterators/" title="Iterators">Iterators</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_34_multisets/" title="Multisets">Multisets</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_37_extending_universe/" title="Extending the universe II">Extending the universe II</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_43_to_45_exception_classes/" title="Exception classes">Exception classes</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_46_functools_wraps/" title="functools.wraps">functools.wraps</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_47_to_48_defaultdict/" title="Defaultdict">Defaultdict</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_49_to_50_config_files/" title="Config files">Config files</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/" title="Wrap up">Wrap up</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+      </ul>
+    </li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/software_engineering/"> Software Engineering</a>
+      
+      <ul class="">
+        
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/software_engineering/containers/" title="Intro to containers">Intro to containers</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/software_engineering/docker/" title="Intro to Docker">Intro to Docker</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/software_engineering/virtual_machines/" title="Intro to virtual machines">Intro to virtual machines</a></li>
+  
+
+
+      </ul>
+    </li>
+  
+
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
+      </div>
+
+      
+      <div class="page-content">
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/image_al_hu6187147171234605626.jpg' alt="Author Image">
+          <h5 class="author-name">Anna-Lena Popkes</h5>
+          <p class="text-muted">Thursday, August 24, 2023</p>
+        </div>
+        
+        
+        <div class="title">
+          <h1>An unbiased evaluation of environment management and packaging tools</h1>
+        </div>
+
+        
+
+        
+        <div class="post-content" id="post-content">
+          <h2 id="last-update">Last update</h2>
+<p>This post was last updated on August 29th, 2024.</p>
+<h2 id="motivation">Motivation</h2>
+<p>When I started with Python and created my first package I was confused. Creating and managing a package seemed much harder than I expected. In addition, multiple tools existed and I wasn&rsquo;t sure which one to use. I&rsquo;m sure most of you had the very same problem in the past. Python has a zillion tools to manage virtual environments and create packages and it can be hard (or almost impossible) to understand which one fits your needs. Several talks and blog post on the topic exist, but none of them gives a complete overview or evaluates the tools in a structured fashion. This is what this post is about. I want to give you a truly unbiased evaluation of existing packaging and environment management tools. In case you&rsquo;d rather watch a talk, take a look at the recording of <a href="https://www.youtube.com/watch?v=MsJjzVIVs6M" target="_blank" rel="noopener">PyCon DE 2023</a> or <a href="https://www.youtube.com/watch?v=3-drZY3u5vo" target="_blank" rel="noopener">EuroPython 2023</a>.</p>
+<h2 id="categorization">Categorization</h2>
+<p>For the purpose of this article I identified five main categories that are important when it comes to environment and package management:</p>
+<ul>
+<li>Environment management (which is mostly concerned with virtual environments)</li>
+<li>Package management</li>
+<li>Python version management</li>
+<li>Package building</li>
+<li>Package publishing</li>
+</ul>
+<p>As you can see in the Venn diagram below, lots of tools exist. Some can do a single thing (i.e. they are single-purpose), others can perform multiple tasks (hence I call them multi-purpose tools).</p>
+<img src="/posts/python/figures/venn_diagram_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<p>Let&rsquo;s walk through the categories keeping a developers perspective in mind. Let&rsquo;s say you are working on a personal project alongside your work projects. At work you&rsquo;re using Python 3.7 whereas your personal project should be using the newest Python version (currently 3.11). In other words: you want to be able to install different Python versions and switch between them. That&rsquo;s what our first category, <strong>Python version management</strong> is about.<br>
+Within your projects you are using other packages (e.g. <code>pandas</code> or <code>sklearn</code> for data science). These are dependencies of your project that you have to install and manage (e.g. upgrade when new versions are released). This is what <strong>package management</strong> is about.<br>
+Because different projects might require different versions of the same package you need to create (and manage) virtual environments to avoid dependency conflicts. Tools for this are collected in the category <strong>environment management</strong>. Most tools use virtual environments, but some use another concept called &ldquo;local packages&rdquo; which we will look at later.<br>
+Once your code is in a proper state you might want to share it with fellow developers. For this you first have to build your package (<strong>package building</strong>) before you can publish it to PyPI or another index (<strong>package publishing</strong>).</p>
+<p>In the following we will look at each of the categories in more detail, including a short definition, motivation and the available tools. I will present some single-purpose tools in more detail and several multi-purpose tools in a separate section at the end. Let&rsquo;s get started with the first category: Python version management.</p>
+<h2 id="python-version-management">Python version management</h2>
+<h3 id="definition">Definition</h3>
+<p>A tool that can perform Python version management allows you to install Python versions and switch between them easily.</p>
+<h3 id="motivation-1">Motivation</h3>
+<p>Why would we want to use different Python versions? There are several reasons. For example, you might be working of several projects where each projects requires a different Python version. Or you might develop a project that supports several Python versions and you want to test all of them. Besides that it can be nice to check out what the newest Python version has to offer, or test a pre-release version of Python for bugs.</p>
+<h3 id="tools">Tools</h3>
+<p>Our Venn diagram displays the available tools for Python version management: <code>pyenv, conda, rye, pdm, hatch</code> and <code>PyFlow</code>. We will first look at <code>pyenv</code> and consider the multi-purpose tools in a separate section.</p>
+<img src="/posts/python/figures/python_version_management_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="pyenv">pyenv</h3>
+<p>Python has one single-purpose tool that lets you install and manage Python versions: <a href="https://github.com/pyenv/pyenv" target="_blank" rel="noopener">pyenv</a>! Pyenv is easy to use. The most important commands are the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install specific Python version</span>
+</span></span><span style="display:flex;"><span>pyenv install 3.10.4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Switch between Python versions</span>
+</span></span><span style="display:flex;"><span>pyenv shell &lt;version&gt; <span style="color:#75715e"># select version just for current shell session</span>
+</span></span><span style="display:flex;"><span>pyenv local &lt;version&gt; <span style="color:#75715e"># automatically select version whenever you are in the current directory </span>
+</span></span><span style="display:flex;"><span>pyenv global &lt;version&gt; <span style="color:#75715e"># select version globally for your user account</span>
+</span></span></code></pre></div><h2 id="virtual-environment-management">(Virtual) environment management</h2>
+<h3 id="definition-1">Definition</h3>
+<p>A tool that can perform environment management allows you to create and manage (virtual) environments.</p>
+<h3 id="motivation-2">Motivation</h3>
+<p>Why do we want to use environments in the first place? As mentioned in the beginning, projects have specific requirements (i.e. they depend on other packages). It&rsquo;s often the case that different projects require different versions of the same package. This can cause dependency conflicts. In addition, problems can occur when using <code>pip install</code> to install a package because the package is placed with your system-wide Python installation. Some of these problems can be solved by using the <code>--user</code> flag in the <code>pip</code> command. However, this option might not be known to everyone, especially beginners.</p>
+<h3 id="tools-1">Tools</h3>
+<p>Many tools allow users to create and manage environments. These are: <code>venv, virtualenv, pipenv, conda, pdm, poetry, hatch, rye</code> and <code>PyFlow</code>. Only two of them are single-purpose tools: <code>venv</code> and <code>virtualenv</code>. Let&rsquo;s look at both of them in more detail.</p>
+<img src="/posts/python/figures/env_management_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="venv">venv</h3>
+<p><a href="https://docs.python.org/3/library/venv.html" target="_blank" rel="noopener">Venv</a> is the built-in Python package for creating virtual environments. This means that it is shipped with Python and does not have to be installed by the user. The most important commands are the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create new environment</span>
+</span></span><span style="display:flex;"><span>python3 -m venv &lt;env_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Activate an environment</span>
+</span></span><span style="display:flex;"><span>. &lt;env_name&gt;/bin/activate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deactivate an active environment</span>
+</span></span><span style="display:flex;"><span>deactivate
+</span></span></code></pre></div><h3 id="virtualenv">virtualenv</h3>
+<p><a href="https://virtualenv.pypa.io/en/latest/" target="_blank" rel="noopener">Virtualenv</a> tries to improve <code>venv</code>. It offers more features than <code>venv</code> and is faster and more powerful. The most important commands are similar to the ones of <code>venv</code>, only creating a new environment is cleaner:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create new environment</span>
+</span></span><span style="display:flex;"><span>virtualenv &lt;env_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Activate an environment</span>
+</span></span><span style="display:flex;"><span>. &lt;env_name&gt;/bin/activate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Deactivate an active environment</span>
+</span></span><span style="display:flex;"><span>deactivate
+</span></span></code></pre></div><h2 id="recap-i---pyprojecttoml">Recap I - <code>pyproject.toml</code></h2>
+<p>Before we can talk about packaging I want to make sure that you are aware of the most important file for packaging: <code>pyproject.toml</code>.</p>
+<p>Packaging in Python has come a long way. Until <a href="https://peps.python.org/pep-0518/" target="_blank" rel="noopener">PEP 518</a> <code>setup.py</code> files where used for packaging, using <code>setuptools</code> as a build tool. <a href="https://peps.python.org/pep-0518/" target="_blank" rel="noopener">PEP 518</a> introduced the usage of a <code>pyproject.toml</code> file. As a consequence, you always need a <code>pyproject.toml</code> file when creating a package. <code>pyproject.toml</code> is used to define the settings of a project, define metadata and lots of other things. If you would like to see an example check out the <a href="https://github.com/pandas-dev/pandas/blob/main/pyproject.toml" target="_blank" rel="noopener"><code>pyproject.toml</code> file of the pandas library</a>. With the knowledge on <code>pyproject.toml</code> we can go on at take a look at package management.</p>
+<h2 id="package-management">Package management</h2>
+<h3 id="definition-2">Definition</h3>
+<p>A tool that can perform package management is able to download and install libraries and their dependencies.</p>
+<h3 id="motivation-3">Motivation</h3>
+<p>Why do we care about packages? Packages allow us to define a hierarchy of modules and to access modules easily using the dot-syntax (<code>from package.module import my_function</code>). In addition, they make it easy to share code with other developers. Since each package contains a <code>pyproject.toml</code> file which defines its dependencies, other developers don’t have to install the required packages separately but can simply install the package from its <code>pyproject.toml</code> file.</p>
+<h3 id="tools-2">Tools</h3>
+<p>Lots of tools can perform package management: <code>pip, pipx, pipenv, conda, pdm, poetry, rye</code> and <code>PyFlow</code>. The single-purpose tool for package management is <code>pip</code> which is well known in the Python community.</p>
+<img src="/posts/python/figures/package_management_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h4 id="pip">pip</h4>
+<p>The standard package manager for Python is <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noopener"><code>pip</code></a>. It&rsquo;s shipped with Python and allows you to install packages from PyPI and other indexes. The main command (probably one of the first commands a Python developer learns) is <code>pip install &lt;package_name&gt;</code>. Of course, <code>pip</code> offers lots of other options. Check out <a href="https://pip.pypa.io/en/stable/" target="_blank" rel="noopener">the documentation</a> for more information about available flags, etc.</p>
+<h2 id="recap-ii---lock-file">Recap II - Lock file</h2>
+<p>Before we go on to the multi-purpose tools, there is one more file that&rsquo;s important for packaging: the lock file. While <code>pyproject.toml</code> contains abstract dependencies, a lock file contains concrete dependencies. It records exact versions of all dependencies installed for a project (e.g. <code>pandas==2.0.3</code>). This enables reproducibility of projects across multiple platforms. If you have never seen a lock file before, take a look at <a href="https://github.com/python-poetry/poetry/blob/master/poetry.lock" target="_blank" rel="noopener">this one from <code>poetry</code></a>:</p>
+<img src="/posts/python/figures/poetry_lock.png"
+    
+    
+        width="100%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h2 id="multi-purpose-tools">Multi-purpose tools</h2>
+<p>Knowing about lock files we can start looking at tools that perform several tasks. We will start with <code>pipenv</code> and <code>conda</code> before we transition to packaging tools like <code>poetry</code> and <code>pdm</code>.</p>
+<h3 id="pipenv">Pipenv</h3>
+<p>As the name suggests, <a href="https://pipenv.pypa.io/en/latest/" target="_blank" rel="noopener"><code>pipenv</code></a> combines <code>pip</code> and <code>virtualenv</code>. It allows you to perform virtual environment management and package management  as we can see in our Venn diagram:</p>
+<img src="/posts/python/figures/pipenv_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<p><code>pipenv</code> introduces two additional files:</p>
+<ul>
+<li><code>Pipfile</code></li>
+<li><code>Pipfile.lock</code></li>
+</ul>
+<p><code>Pipfile</code> is a TOML file (similar to <code>pyproject.toml</code>) used to define project dependencies. It is managed by the developer when she invokes <code>pipenv</code> commands (like <code>pipenv install</code>). <code>Pipfile.lock</code> allows for deterministic builds. It eliminates the need for a <code>requirements.txt</code> file and is managed automatically through locking actions .</p>
+<p>The most important <code>pipenv</code> commands are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Install package</span>
+</span></span><span style="display:flex;"><span>pipenv install &lt;package_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run Python script within virtual env</span>
+</span></span><span style="display:flex;"><span>pipenv run &lt;script_name.py&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Activate virtual env</span>
+</span></span><span style="display:flex;"><span>pipenv shell
+</span></span></code></pre></div><h3 id="conda">Conda</h3>
+<p><a href="https://conda.io/projects/conda/en/latest/index.html" target="_blank" rel="noopener"><code>Conda</code></a> is a general-purpose package management system. That means that it&rsquo;s not limited to Python packages. Conda is a huge tool with lots of capabilities. Lot&rsquo;s of tutorials and blog posts exist (for example <a href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-python" target="_blank" rel="noopener">the official one</a>) so I won&rsquo;t go into more detail here. However, I want to mention one thing: while it is possible to build and publish a package with <code>conda</code> I did not include the tool in the appropriate categories. That&rsquo;s because packaging with <code>conda</code> works a little differently and the resulting packages will be <code>conda</code> packages.</p>
+<img src="/posts/python/figures/conda_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h3 id="feature-evaluation">Feature evaluation</h3>
+<p>Last but not least I want to present multi-purpose tools for packaging. I promised an unbiased evaluation. For this purpose I created a list of features that I consider important when comparing different tools. The features are:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<p>Regarding the two PEPs: Python has a lot of open and closed PEPs on packaging. For a full overview take a look at <a href="https://peps.python.org/topic/packaging/" target="_blank" rel="noopener">this page</a>. I only included PEP 660 and PEP 621 for specific reasons:</p>
+<ul>
+<li><a href="https://peps.python.org/pep-0660/" target="_blank" rel="noopener">PEP 660</a> is about editable installs for <code>pyproject.toml</code> based builds. When you install a package using <code>pip</code> you have the option to install it in editable mode using <code>pip install -e package_name</code>. This is an important features to have when you are developing a package and want your changes to be directly reflected in your environment.</li>
+<li><a href="https://peps.python.org/pep-0621/" target="_blank" rel="noopener">PEP 621</a> specifies how to write a project’s core metadata in a <code>pyproject.toml</code> file. I added it because one package (spoiler: it&rsquo;s <code>poetry</code>) currently does not support this PEP but uses its own way for declaring metadata.</li>
+</ul>
+<h3 id="flit">Flit</h3>
+<p><a href="https://flit.pypa.io/en/stable/" target="_blank" rel="noopener">Flit</a> tries to create a simple way to put Python packages and modules on PyPI. It has a very specific use case: it&rsquo;s meant to be used for packaging pure Python packages (that is, packages without a build step). It doesn&rsquo;t care about any of the other tasks:</p>
+<ul>
+<li>Python version management: ❌</li>
+<li>Package management: ❌</li>
+<li>Environment management: ❌</li>
+<li>Building a package: ✅</li>
+<li>Publishing a package: ✅</li>
+</ul>
+<p>This is also reflected in our Venn diagram:</p>
+<img src="/posts/python/figures/flit_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h4 id="feature-evaluation-1">Feature evaluation</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id="main-commands">Main commands</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create new pyproject.toml</span>
+</span></span><span style="display:flex;"><span>flit init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Build and publish </span>
+</span></span><span style="display:flex;"><span>flit publish
+</span></span></code></pre></div><h3 id="poetry">Poetry</h3>
+<p><a href="https://python-poetry.org/" target="_blank" rel="noopener">Poetry</a> is a well known tool in the packaging world. As visible in the Venn diagram it can do everything except for Python version management:</p>
+<ul>
+<li>Python version management: ❌</li>
+<li>Package management: ✅</li>
+<li>Environment management: ✅</li>
+<li>Building a package: ✅</li>
+<li>Publishing a package: ✅</li>
+</ul>
+<img src="/posts/python/figures/poetry_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<p>Taking a look at the feature evaluation below you will see than Poetry does <strong>not</strong> support PEP 621. There has been an open issue about this on GitHub for about 1.5 years, but it hasn&rsquo;t been integrated into the main code base (yet).</p>
+<p>Update (29.08.2024): The next major release of Poetry (Poetry 2.0) will support PEP 621 (see <a href="https://github.com/orgs/python-poetry/discussions/5833" target="_blank" rel="noopener">this discussion</a> on GitHub).</p>
+<h4 id="feature-evaluation-2">Feature evaluation</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<h4 id="main-commands-1">Main commands</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create directory structure and pyproject.toml</span>
+</span></span><span style="display:flex;"><span>poetry new &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Create pyproject.toml interactively</span>
+</span></span><span style="display:flex;"><span>poetry init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install package from pyproject.toml</span>
+</span></span><span style="display:flex;"><span>poetry install
+</span></span></code></pre></div><h4 id="dependency-management">Dependency management</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Add dependency</span>
+</span></span><span style="display:flex;"><span>poetry add &lt;package_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display all dependencies</span>
+</span></span><span style="display:flex;"><span>poetry show --tree
+</span></span></code></pre></div><h4 id="running-code">Running code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Activate virtual env</span>
+</span></span><span style="display:flex;"><span>poetry shell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run script within virtual env</span>
+</span></span><span style="display:flex;"><span>poetry run python &lt;script_name.py&gt;
+</span></span></code></pre></div><h4 id="lock-file">Lock file</h4>
+<p>When installing a package for the first time, Poetry resolves all dependencies listed in your <code>pyproject.toml</code> file and downloads the latest version of the packages. Once Poetry has finished installing, it writes all the packages and the exact versions that it downloaded to a <code>poetry.lock</code> file, locking the project to those specific versions. It&rsquo;s recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the <code>poetry update</code> command.</p>
+<h4 id="buildpublish-flow">Build/publish flow</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Package code (creates `.tar.gz` and `.whl` files)</span>
+</span></span><span style="display:flex;"><span>poetry build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Publish to PyPI</span>
+</span></span><span style="display:flex;"><span>poetry publish 
+</span></span></code></pre></div><h3 id="pdm">PDM</h3>
+<p><a href="https://pdm.fming.dev/latest/" target="_blank" rel="noopener">PDM</a> is a relatively new package and dependency manager (started in 2019) that is strongly inspired by Poetry and PyFlow. You will notice that I&rsquo;m not talking about PyFlow in this article. That&rsquo;s because PyFlow is not actively developed anymore - a must in the quickly evolving landscape of packaging. Being a new(er) tool, PDM requires Python 3.7 or higher. Another difference to other tools is that PDM allows users to choose a build backend.<br>
+PDM is the only tool (apart from PyFlow) that implements <a href="https://peps.python.org/pep-0582/" target="_blank" rel="noopener">PEP 582</a> on local packages, an alternative way of implementing environment management. Note that this PEP was recently rejected.</p>
+<p>As visible in the Venn diagram, PDM sits right next to Poetry. That means that it can do everything except for Python version management.</p>
+<p>Update (29.08.2024): PDM has added the functionality to install Python versions using the <code>pdm python install</code> command (<a href="https://pdm-project.org/latest/reference/cli/#python" target="_blank" rel="noopener">official documentation</a>). You can switch between different Python versions using the <code>pdm use</code> command (<a href="https://pdm-project.org/latest/usage/hooks/#switching-python-version" target="_blank" rel="noopener">official documentation</a>).</p>
+<p>The updated table now looks as follows:</p>
+<ul>
+<li>Python version management: ✅</li>
+<li>Package management: ✅</li>
+<li>Environment management: ✅</li>
+<li>Building a package: ✅</li>
+<li>Publishing a package: ✅</li>
+</ul>
+<p>The main commands of PDM are similar to Poetry. However, less commands exist. For example, there is no <code>pdm shell</code> or <code>pdm new</code> at the moment.</p>
+<img src="/posts/python/figures/pdm_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h4 id="feature-evaluation-3">Feature evaluation</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id="creating-a-new-project">Creating a new project</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create pyproject.toml interactively</span>
+</span></span><span style="display:flex;"><span>pdm init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install package from pyproject.toml</span>
+</span></span><span style="display:flex;"><span>pdm install
+</span></span></code></pre></div><h4 id="dependency-management-1">Dependency management</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Add dependency</span>
+</span></span><span style="display:flex;"><span>pdm add &lt;package_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display all dependencies</span>
+</span></span><span style="display:flex;"><span>pdm list --graph
+</span></span></code></pre></div><h4 id="running-code-1">Running code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># No pdm shell command </span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run script within env</span>
+</span></span><span style="display:flex;"><span>pdm run python &lt;script_name.py&gt;
+</span></span></code></pre></div><h4 id="lock-file-1">Lock file</h4>
+<p>The locking functionality of PDM is similar to Poetry. When installing a package for the first time, PDM resolves all dependencies listed in your <code>pyproject.toml</code> file and downloads the latest version of the packages. Once PDM has finished installing, it writes all packages and the exact versions that it downloaded to a <code>pdm.lock</code> file, locking the project to those specific versions. It&rsquo;s recommended to commit the lock file to your project repo so that all people working on the project are locked to the same versions of dependencies. To update your dependencies to the latest versions, use the <code>pdm update</code> command.</p>
+<h4 id="buildpublish-flow-1">Build/publish flow</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Package code (creates `.tar.gz` and `.whl` files)</span>
+</span></span><span style="display:flex;"><span>pdm build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Publish to PyPI</span>
+</span></span><span style="display:flex;"><span>pdm publish 
+</span></span></code></pre></div><h3 id="hatch">Hatch</h3>
+<p><a href="https://hatch.pypa.io/latest/" target="_blank" rel="noopener">Hatch</a> can perform the following tasks:</p>
+<ul>
+<li>Python version management: ✅</li>
+<li>Package management: ❌</li>
+<li>Environment management: ✅</li>
+<li>Building a package: ✅</li>
+<li>Publishing a package: ✅</li>
+</ul>
+<p>Update: Since version 1.8.0, Hatch provides the ability to manage Python installations, e.g. using <code>hatch python install</code>. Currently, only major.minor versions can be installed like 3.7 or 3.8, but not specific patches like 3.7.4.</p>
+<p>It should be noted that the author of Hatch promised that locking functionality will be added soon, which should also enable package management. Please make sure to check the latest version of Hatch to see if this has been implemented when you read this article.</p>
+<p>Update (29.08.2024): Hatch still does not have locking functionality and is hence not able to perform package management.</p>
+<img src="/posts/python/figures/hatch_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h4 id="feature-evaluation-4">Feature evaluation</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id="creating-a-new-project-1">Creating a new project</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create directory structure and pyproject.toml</span>
+</span></span><span style="display:flex;"><span>hatch new &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Interactive mode</span>
+</span></span><span style="display:flex;"><span>hatch new -i &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Initialize existing project / create pyproject.toml</span>
+</span></span><span style="display:flex;"><span>hatch new --init
+</span></span></code></pre></div><h4 id="dependency-management-2">Dependency management</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Packages are added manually to pyproject.toml</span>
+</span></span><span style="display:flex;"><span>hatch add <span style="color:#f92672">&lt;</span>package_name<span style="color:#f92672">&gt;</span> <span style="color:#75715e"># This command doesn&#39;t exist!</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Display dependencies</span>
+</span></span><span style="display:flex;"><span>hatch dep show table
+</span></span></code></pre></div><h4 id="running-code-2">Running code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Activate virtual env</span>
+</span></span><span style="display:flex;"><span>hatch shell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run script within virtual env</span>
+</span></span><span style="display:flex;"><span>hatch run python &lt;script_name.py&gt;
+</span></span></code></pre></div><h4 id="buildpublish-flow-2">Build/publish flow</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Package code (creates `.tar.gz` and `.whl` files)</span>
+</span></span><span style="display:flex;"><span>hatch build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Publish to PyPI</span>
+</span></span><span style="display:flex;"><span>hatch publish 
+</span></span></code></pre></div><h4 id="declarative-environment-management">Declarative environment management</h4>
+<p>Special about Hatch is that it allows you to configure your virtual environments within the <code>pyproject.toml</code> file. In addition it lets you define scripts specifically for an environment. And example use case for this is <a href="https://hatch.pypa.io/1.1/config/environment/#scripts" target="_blank" rel="noopener">code formatting</a>.</p>
+<h3 id="rye">Rye</h3>
+<p><a href="https://rye-up.com/" target="_blank" rel="noopener">Rye</a> was recently developed by Armin Ronacher (first release May 2023), the creator of the Flask framework. It is strongly inspired by <code>rustup</code> and <code>cargo</code>, the packaging tools of the programming language Rust. Rye is written in Rust and is able to perform all tasks in our Venn diagram:</p>
+<ul>
+<li>Python version management: ✅</li>
+<li>Package management: ✅</li>
+<li>Environment management: ✅</li>
+<li>Building a package: ✅</li>
+<li>Publishing a package: ✅</li>
+</ul>
+<p>Currently, Rye does not have a plugin interface. However, since new releases are published on a regular basis, this might be added in the future.</p>
+<img src="/posts/python/figures/rye_updated_08_2024.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<h4 id="feature-evaluation-5">Feature evaluation</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id="creating-a-new-project-2">Creating a new project</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create directory structure and pyproject.toml</span>
+</span></span><span style="display:flex;"><span>rye init &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Pin a Python version</span>
+</span></span><span style="display:flex;"><span>rye pin 3.10
+</span></span></code></pre></div><h4 id="dependency-management-3">Dependency management</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Add dependency - this does not install the package!</span>
+</span></span><span style="display:flex;"><span>rye add <span style="color:#f92672">&lt;</span>package_name<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Synchronize virtual envs, lock file, etc.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># This install packages and Python versions</span>
+</span></span><span style="display:flex;"><span>rye sync
+</span></span></code></pre></div><h4 id="running-code-3">Running code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Activate virtual env</span>
+</span></span><span style="display:flex;"><span>rye shell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run script within virtual env</span>
+</span></span><span style="display:flex;"><span>rye run python &lt;script_name.py&gt;
+</span></span></code></pre></div><h4 id="buildpublish-flow-3">Build/publish flow</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Package code (creates `.tar.gz` and `.whl` files)</span>
+</span></span><span style="display:flex;"><span>rye build
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Publish to PyPI</span>
+</span></span><span style="display:flex;"><span>rye publish 
+</span></span></code></pre></div><h3 id="uv">uv</h3>
+<p>The newes addition to the Python packaging landscape is <a href="https://astral.sh/blog/uv" target="_blank" rel="noopener"><code>uv</code></a>. Similar to <code>rye</code>, <code>uv</code> is written in Rust. Actually, the company behind <code>uv</code> (Astral) has taken stewardship of <code>rye</code> and will &ldquo;maintain Rye as we expand uv into a unified successor project&rdquo;. At the moment, <code>uv</code> can do everything besides building and publishing a package. However, this might change in the future. Therefore, I haven&rsquo;t added <code>uv</code> to all Venn diagrams yet. To dive deeper into <code>uv</code>, check out <a href="https://docs.astral.sh/uv/getting-started/" target="_blank" rel="noopener">the official documentation</a>.</p>
+<img src="/posts/python/figures/uv.png"
+    
+    
+        width="60%"
+    
+    
+    
+    
+        class="center"
+    
+>
+
+<ul>
+<li>Python version management: ✅</li>
+<li>Package management: ✅</li>
+<li>Environment management: ✅</li>
+<li>Building a package: ❌</li>
+<li>Publishing a package: ❌</li>
+</ul>
+<h4 id="creating-a-new-project-3">Creating a new project</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create directory structure and pyproject.toml</span>
+</span></span><span style="display:flex;"><span>uv init &lt;project_name&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install a specific Python version</span>
+</span></span><span style="display:flex;"><span>uv python install 3.12.3
+</span></span></code></pre></div><h4 id="dependency-management-4">Dependency management</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Add dependency</span>
+</span></span><span style="display:flex;"><span>uv add <span style="color:#f92672">&lt;</span>package_name<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove a dependene</span>
+</span></span><span style="display:flex;"><span>uv remove <span style="color:#f92672">&lt;</span>package_name<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h4 id="running-code-4">Running code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run script within virtual env</span>
+</span></span><span style="display:flex;"><span>uv run &lt;script_name.py&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Alternatively, you can manually update the environment</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and then activate it before executing a command</span>
+</span></span><span style="display:flex;"><span>uv sync
+</span></span><span style="display:flex;"><span>source .venv/bin/activate
+</span></span><span style="display:flex;"><span>python &lt;script_name.py&gt;
+</span></span></code></pre></div><h3 id="overview">Overview</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Flit</th>
+<th>Poetry</th>
+<th>PDM</th>
+<th>Hatch</th>
+<th>Rye</th>
+<th>uv</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Does the tool manage dependencies?</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it resolve/lock dependencies?</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Is there a clean build/publish flow?</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it allow to use plugins?</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>Does it support PEP 660 (editable installs)?</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Does it support PEP 621 (project metadata)?</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tools-that-do-not-fit-the-categories">Tools that do not fit the categories</h2>
+<p>Some tools exist which don&rsquo;t fit into any of my categories. These are:</p>
+<ul>
+<li><a href="https://pip-tools.readthedocs.io/en/latest/" target="_blank" rel="noopener">pip-tools</a> which helps to keep the versions of your <code>pip</code>-based packages up-to-date.</li>
+<li><a href="https://tox.wiki/" target="_blank" rel="noopener">tox</a> and <a href="https://nox.thea.codes/" target="_blank" rel="noopener">nox</a> which are mainly used for testing but also handles virtual environments.</li>
+</ul>
+
+        </div>
+
+        
+        <div class="row ps-3 pe-3">
+        
+          <div class="col-md-6 share-buttons">
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/python/packaging_tools.md" title="Improve this page" target="_blank" rel="noopener">
+            
+                <i class="fas fa-code-branch"></i>
+                Improve this page
+              </a>
+          </div>
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+    
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/python/mocking/" title="Mocking in Python" class="btn filled-button">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Mocking in Python</div>
+      </a>
+    </div>
+  
+  
+      
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/python/magical_universe/day_1_start/" title="100 Days of code - Creating my personal Magical Universe" class="btn filled-button">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">100 Days of code - Creating my personal Magical Universe</div>
+        </a>
+      </div>
+    
+</div>
+
+      <hr />
+
+      
+      
+
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center ps-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#last-update">Last update</a></li>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#categorization">Categorization</a></li>
+    <li><a href="#python-version-management">Python version management</a>
+      <ul>
+        <li><a href="#definition">Definition</a></li>
+        <li><a href="#motivation-1">Motivation</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#pyenv">pyenv</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-environment-management">(Virtual) environment management</a>
+      <ul>
+        <li><a href="#definition-1">Definition</a></li>
+        <li><a href="#motivation-2">Motivation</a></li>
+        <li><a href="#tools-1">Tools</a></li>
+        <li><a href="#venv">venv</a></li>
+        <li><a href="#virtualenv">virtualenv</a></li>
+      </ul>
+    </li>
+    <li><a href="#recap-i---pyprojecttoml">Recap I - <code>pyproject.toml</code></a></li>
+    <li><a href="#package-management">Package management</a>
+      <ul>
+        <li><a href="#definition-2">Definition</a></li>
+        <li><a href="#motivation-3">Motivation</a></li>
+        <li><a href="#tools-2">Tools</a>
+          <ul>
+            <li><a href="#pip">pip</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#recap-ii---lock-file">Recap II - Lock file</a></li>
+    <li><a href="#multi-purpose-tools">Multi-purpose tools</a>
+      <ul>
+        <li><a href="#pipenv">Pipenv</a></li>
+        <li><a href="#conda">Conda</a></li>
+        <li><a href="#feature-evaluation">Feature evaluation</a></li>
+        <li><a href="#flit">Flit</a>
+          <ul>
+            <li><a href="#feature-evaluation-1">Feature evaluation</a></li>
+            <li><a href="#main-commands">Main commands</a></li>
+          </ul>
+        </li>
+        <li><a href="#poetry">Poetry</a>
+          <ul>
+            <li><a href="#feature-evaluation-2">Feature evaluation</a></li>
+            <li><a href="#main-commands-1">Main commands</a></li>
+            <li><a href="#dependency-management">Dependency management</a></li>
+            <li><a href="#running-code">Running code</a></li>
+            <li><a href="#lock-file">Lock file</a></li>
+            <li><a href="#buildpublish-flow">Build/publish flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#pdm">PDM</a>
+          <ul>
+            <li><a href="#feature-evaluation-3">Feature evaluation</a></li>
+            <li><a href="#creating-a-new-project">Creating a new project</a></li>
+            <li><a href="#dependency-management-1">Dependency management</a></li>
+            <li><a href="#running-code-1">Running code</a></li>
+            <li><a href="#lock-file-1">Lock file</a></li>
+            <li><a href="#buildpublish-flow-1">Build/publish flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#hatch">Hatch</a>
+          <ul>
+            <li><a href="#feature-evaluation-4">Feature evaluation</a></li>
+            <li><a href="#creating-a-new-project-1">Creating a new project</a></li>
+            <li><a href="#dependency-management-2">Dependency management</a></li>
+            <li><a href="#running-code-2">Running code</a></li>
+            <li><a href="#buildpublish-flow-2">Build/publish flow</a></li>
+            <li><a href="#declarative-environment-management">Declarative environment management</a></li>
+          </ul>
+        </li>
+        <li><a href="#rye">Rye</a>
+          <ul>
+            <li><a href="#feature-evaluation-5">Feature evaluation</a></li>
+            <li><a href="#creating-a-new-project-2">Creating a new project</a></li>
+            <li><a href="#dependency-management-3">Dependency management</a></li>
+            <li><a href="#running-code-3">Running code</a></li>
+            <li><a href="#buildpublish-flow-3">Build/publish flow</a></li>
+          </ul>
+        </li>
+        <li><a href="#uv">uv</a>
+          <ul>
+            <li><a href="#creating-a-new-project-3">Creating a new project</a></li>
+            <li><a href="#dependency-management-4">Dependency management</a></li>
+            <li><a href="#running-code-4">Running code</a></li>
+          </ul>
+        </li>
+        <li><a href="#overview">Overview</a></li>
+      </ul>
+    </li>
+    <li><a href="#tools-that-do-not-fit-the-categories">Tools that do not fit the categories</a></li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+    
+    
+      
+    
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-start">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#about">About</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#skills">Skills</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#experiences">Experiences</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#education">Education</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#projects">Projects</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#appearances">Talks &amp; Podcasts</a>
+                </li>
+              
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#recent-posts">Recent Posts</a>
+                </li>
+              
+            
+              
+            
+          </ul>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:popkes@gmx.net target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>popkes@gmx.net</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/zotroneneis target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>zotroneneis</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+        <div class="col-md-4 text-end">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script src="/application.cc91051931b43fe247c674f2359ddb534b993b1148bb7cc4f32b9869fb9c9b6c.js" integrity="sha256-zJEFGTG0P&#43;JHxnTyNZ3bU0uZOxFIu3zE8yuYafucm2w=" defer></script>
+
+
+    
+     
+
+    
+</body>
+</html>

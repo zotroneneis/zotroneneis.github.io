@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>Bayesian linear regression</title>
-    
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/style.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/application.b896cc6be95aba26430ee0585857aeda204b1b895c4fb4822daeab0075b9cab7.css" integrity="sha256-uJbMa&#43;lauiZDDuBYWFeu2iBLG4lcT7SCLa6rAHW5yrc=" />
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
-<link rel="icon" type="image/png" href="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
 
+  
 
-<link rel="stylesheet" href="/css/style.css"/>
+  
+  
+  
+    
+  
+  
 
+  <link rel="icon" type="image/png" href="/images/author/image_al_hu15845133475761513827.jpg" />
+
+<meta property="og:url" content="http://localhost:1313/posts/machine_learning/bayesian_linear_regression/">
+  <meta property="og:site_name" content="Anna-Lena Popkes">
+  <meta property="og:title" content="Bayesian linear regression">
+  <meta property="og:description" content="I finally found time to continue working on my machine learning basics repository which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What is Bayesian linear regression (BLR)? Bayesian linear regression is the Bayesian interpretation of linear regression.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-02-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-02-20T00:00:00+00:00">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Bayesian linear regression">
+  <meta name="twitter:description" content="I finally found time to continue working on my machine learning basics repository which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What is Bayesian linear regression (BLR)? Bayesian linear regression is the Bayesian interpretation of linear regression.">
+
+    
     
 <meta name="description" content="Bayesian linear regression" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
-/>
-<link rel="stylesheet" href="/css/layouts/single.css"/>
-<link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
-    
+
+
+
+
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -61,17 +73,9 @@
 
 
 
-  
 
 
 
-  
-
-
-
-
-
-  
 
 
 
@@ -80,27 +84,201 @@
   
 
 
+  
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
-      <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+      
+        <img src="/images/author/image_al_hu15845133475761513827.jpg" id="logo" alt="Logo">
+      Anna-Lena Popkes</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#education">Education</a>
+                </li>
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#projects">Projects</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#recent-posts">Recent Posts</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#appearances">Talks &amp; Podcasts</a>
+                    
+                  
+              </div>
+            </li>
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
+          <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+</a>
+<div id="themeMenu" class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" data-scheme="light">
+    <img class="theme-icon" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="dark">
+    <img class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="system">
+    <img class="theme-icon" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
+  </a>
+</div>
+</li>
+
+        
       </ul>
     </div>
   </div>
   
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
 </nav>
 
 
@@ -110,10 +288,12 @@
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -122,7 +302,7 @@
   
   
     
-    <li><a class="" href="/posts/news/">Personal news</a></li>
+    <li><a class=" list-link" href="/posts/news/" title="Personal news">Personal news</a></li>
   
 
   
@@ -131,7 +311,7 @@
   
   
     
-    <li><a class="" href="/posts/my_path_to_ml/">My path to machine learning</a></li>
+    <li><a class=" list-link" href="/posts/my_path_to_ml/" title="My path to machine learning">My path to machine learning</a></li>
   
 
   
@@ -141,7 +321,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/books/">Books</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/books/"> Books</a>
       
       <ul class="">
         
@@ -151,7 +331,7 @@
   
   
     
-    <li><a class="" href="/posts/books/reading_list/">Personal reading List</a></li>
+    <li><a class=" list-link" href="/posts/books/reading_list/" title="Personal reading List">Personal reading List</a></li>
   
 
   
@@ -160,7 +340,7 @@
   
   
     
-    <li><a class="" href="/posts/books/deep_work/">Deep work</a></li>
+    <li><a class=" list-link" href="/posts/books/deep_work/" title="Deep work">Deep work</a></li>
   
 
 
@@ -178,7 +358,7 @@
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/machine_learning/">Machine Learning</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/machine_learning/"> Machine Learning</a>
       
       <ul class="active">
         
@@ -191,7 +371,7 @@
   
   
     
-    <li><a class="active" href="/posts/machine_learning/bayesian_linear_regression/">Bayesian linear regression</a></li>
+    <li><a class="active list-link" href="/posts/machine_learning/bayesian_linear_regression/" title="Bayesian linear regression">Bayesian linear regression</a></li>
   
 
   
@@ -200,7 +380,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/kl_divergence/" title="KL Divergence">KL Divergence</a></li>
   
 
   
@@ -209,7 +389,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/principal_component_analysis/">Principal component analysis (PCA)</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/principal_component_analysis/" title="Principal component analysis (PCA)">Principal component analysis (PCA)</a></li>
   
 
   
@@ -218,7 +398,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/support_vector_machines/">Support vector machines</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/support_vector_machines/" title="Support vector machines">Support vector machines</a></li>
   
 
   
@@ -227,7 +407,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/variational_inference/" title="Variational Inference">Variational Inference</a></li>
   
 
 
@@ -242,7 +422,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/"> Python</a>
       
       <ul class="">
         
@@ -252,7 +432,25 @@
   
   
     
-    <li><a class="" href="/posts/python/mocking/">Mocking</a></li>
+    <li><a class=" list-link" href="/posts/python/coding_with_kids/" title="Coding with kids">Coding with kids</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/mocking/" title="Mocking">Mocking</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/packaging_tools/" title="Packaging tools">Packaging tools</a></li>
   
 
   
@@ -262,7 +460,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/magical_universe/">Magical Universe</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/magical_universe/"> Magical Universe</a>
       
       <ul class="">
         
@@ -272,7 +470,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_start/">Start</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_start/" title="Start">Start</a></li>
   
 
   
@@ -281,7 +479,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_magical_universe/" title="The Tales of Castle Kilmere">The Tales of Castle Kilmere</a></li>
   
 
   
@@ -290,7 +488,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_first_post_oop/" title="Object-oriented programming">Object-oriented programming</a></li>
   
 
   
@@ -299,7 +497,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_2_types_of_methods/" title="Types of methods">Types of methods</a></li>
   
 
   
@@ -308,7 +506,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_3_type_annotations/" title="Type annotations">Type annotations</a></li>
   
 
   
@@ -317,7 +515,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_4_to_string_conversion/" title="To-string conversion">To-string conversion</a></li>
   
 
   
@@ -326,7 +524,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_5_decorators/" title="Decorators">Decorators</a></li>
   
 
   
@@ -335,7 +533,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_6_properties/" title="Properties">Properties</a></li>
   
 
   
@@ -344,7 +542,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_7_underscore_patterns/" title="Underscore patterns">Underscore patterns</a></li>
   
 
   
@@ -353,7 +551,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_8_extending_universe/" title="Extending the universe">Extending the universe</a></li>
   
 
   
@@ -362,7 +560,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_9_duck_typing/" title="Duck Typing">Duck Typing</a></li>
   
 
   
@@ -371,7 +569,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_10_11_namedtuples/" title="Namedtuples">Namedtuples</a></li>
   
 
   
@@ -380,7 +578,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_12_to_15_abcs/" title="Abstract Base Classes">Abstract Base Classes</a></li>
   
 
   
@@ -389,7 +587,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_16_to_18_data_classes/" title="Data classes">Data classes</a></li>
   
 
   
@@ -398,7 +596,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_19_immutable_data_classes/" title="Immutable data classes">Immutable data classes</a></li>
   
 
   
@@ -407,7 +605,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_20_decorators_in_classes/" title="Decorators in classes">Decorators in classes</a></li>
   
 
   
@@ -416,7 +614,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_21_if_main/" title="if __name__ == &#34;__main__&#34;">if __name__ == &#34;__main__&#34;</a></li>
   
 
   
@@ -425,7 +623,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_22_to_24_context_managers/" title="Context managers">Context managers</a></li>
   
 
   
@@ -434,7 +632,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_25_to_28_pytest/" title="Testing with pytest">Testing with pytest</a></li>
   
 
   
@@ -443,7 +641,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_29_to_31_iterators/" title="Iterators">Iterators</a></li>
   
 
   
@@ -452,7 +650,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_34_multisets/" title="Multisets">Multisets</a></li>
   
 
   
@@ -461,7 +659,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_37_extending_universe/" title="Extending the universe II">Extending the universe II</a></li>
   
 
   
@@ -470,7 +668,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_43_to_45_exception_classes/" title="Exception classes">Exception classes</a></li>
   
 
   
@@ -479,7 +677,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_46_functools_wraps/" title="functools.wraps">functools.wraps</a></li>
   
 
   
@@ -488,7 +686,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_47_to_48_defaultdict/" title="Defaultdict">Defaultdict</a></li>
   
 
   
@@ -497,7 +695,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_49_to_50_config_files/" title="Config files">Config files</a></li>
   
 
   
@@ -506,7 +704,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/" title="Wrap up">Wrap up</a></li>
   
 
 
@@ -526,7 +724,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/software_engineering/">Software Engineering</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/software_engineering/"> Software Engineering</a>
       
       <ul class="">
         
@@ -536,7 +734,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/containers/">Intro to containers</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/containers/" title="Intro to containers">Intro to containers</a></li>
   
 
   
@@ -545,7 +743,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/docker/">Intro to Docker</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/docker/" title="Intro to Docker">Intro to Docker</a></li>
   
 
   
@@ -554,7 +752,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/virtual_machines/" title="Intro to virtual machines">Intro to virtual machines</a></li>
   
 
 
@@ -577,27 +775,32 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://alpopkes.com/images/default-hero.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
       </div>
 
       
       <div class="page-content">
-        <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/image_al.jpg'/>
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/image_al_hu6187147171234605626.jpg' alt="Author Image">
           <h5 class="author-name">Anna-Lena Popkes</h5>
-          <p>February 20, 2021</p>
+          <p class="text-muted">Saturday, February 20, 2021</p>
         </div>
-
+        
+        
         <div class="title">
           <h1>Bayesian linear regression</h1>
         </div>
 
+        
+
+        
         <div class="post-content" id="post-content">
-          <p>I finally found time to continue working on my <a href="https://github.com/zotroneneis/machine_learning_basics">machine learning basics repository</a> which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb">original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the notebook directly in your Browser using Binder</a>.</p>
+          <p>I finally found time to continue working on my <a href="https://github.com/zotroneneis/machine_learning_basics" target="_blank" rel="noopener">machine learning basics repository</a> which implements fundamental machine learning algorithms in plain Python. Especially, I took a detailed look at Bayesian linear regression. The blog post below contains the same content as the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/bayesian_linear_regression.ipynb" target="_blank" rel="noopener">original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb" target="_blank" rel="noopener">run the notebook directly in your Browser using Binder</a>.</p>
 <h2 id="1-what-is-bayesian-linear-regression-blr">1. What is Bayesian linear regression (BLR)?</h2>
 <p>Bayesian linear regression is the <em>Bayesian</em> interpretation of linear regression. What does that mean? To answer this question we first have to understand the Bayesian approach. In most of the algorithms we have looked at so far we computed <em>point estimates</em> of our parameters. For example, in linear regression we chose values for the weights and bias that minimized our mean squared error cost function. In the Bayesian approach we don&rsquo;t work with exact values but with <em>probabilities</em>. This allows us to model the <em>uncertainty</em> in our parameter estimates. Why is this important?</p>
 <p>In nearly all real-world situations, our data and knowledge about the world is incomplete, indirect and noisy. Hence, uncertainty must be a fundamental part of our decision-making process. This is exactly what the Bayesian approach is about. It provides a formal and consistent way to reason in the presence of uncertainty. Bayesian methods have been around for a long time and are widely-used in many areas of science (e.g. astronomy). Although Bayesian methods have been applied to machine learning problems too, they are usually less well known to beginners. The major reason is that they require a good understanding of probability theory.</p>
-<p>In the following post we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples. Remember: you can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb">run the original notebook directly in your Browser using Binder</a>.</p>
+<p>In the following post we will work our way from linear regression to Bayesian linear regression, including the most important theoretical knowledge and code examples. Remember: you can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=bayesian_linear_regression.ipynb" target="_blank" rel="noopener">run the original notebook directly in your Browser using Binder</a>.</p>
 <h2 id="2-recap-linear-regression">2. Recap linear regression</h2>
 <ul>
 <li>In linear regression, we want to find a function $f$ that maps inputs $x \in \mathbb{R}^D$ to corresponding function values $f(x) \in \mathbb{R}$.</li>
@@ -612,11 +815,11 @@ y &amp;= \theta_0 + \theta_1 x_1 + \theta_2 x_2 + &hellip; + \theta_d x_d \\\
 \end{split}
 $$</p>
 <ul>
-<li>For more details take a look at the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb">notebook on linear regression</a></li>
+<li>For more details take a look at the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb" target="_blank" rel="noopener">notebook on linear regression</a></li>
 </ul>
 <h2 id="3-fundamental-concepts">3. Fundamental concepts</h2>
 <ul>
-<li>One fundamental tool in Bayesian learning is <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes&rsquo; theorem</a></li>
+<li>One fundamental tool in Bayesian learning is <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem" target="_blank" rel="noopener">Bayes&rsquo; theorem</a></li>
 <li>Bayes&rsquo; theorem looks as follows:
 $$
 \begin{equation}
@@ -628,7 +831,7 @@ $$</li>
 <li>$p(\pmb{x}, y)$ is the <em>evidence</em>. It describes the joint probability of the data and targets.</li>
 <li>$p(\pmb{\theta} | \pmb{x}, y)$ is the <em>posterior</em>. It describes the probability of the parameters given the observed data and targets.
 <!-- raw HTML omitted --></li>
-<li>Another important tool you need to know about is the <a href="https://en.wikipedia.org/wiki/Normal_distribution">Gaussian distribution</a>. If you are not familiar with it I suggest you pause for a minute and understand its main properties before reading on.</li>
+<li>Another important tool you need to know about is the <a href="https://en.wikipedia.org/wiki/Normal_distribution" target="_blank" rel="noopener">Gaussian distribution</a>. If you are not familiar with it I suggest you pause for a minute and understand its main properties before reading on.</li>
 </ul>
 <p>The general Bayesian inference approach is as follows:</p>
 <ol>
@@ -651,7 +854,7 @@ $$</p>
 <p>This corresponds to the following likelihood function:
 $$p(y | \pmb{x}, \pmb{\theta}) = \mathcal{N}(\pmb{x}^T \pmb{\theta}, \sigma^2)$$</p>
 <p>Our goal is to find the parameters $\pmb{\theta} = \Big \{ \theta_1, &hellip;, \theta_D \Big \}$ that model the given data best.
-In standard linear regression we can find the best parameters using a least-squares, maximum likelihood (ML) or maximum a posteriori (MAP) approach. If you want to know more about these solutions take a look at the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb">notebook on linear regression</a> or at chapter 9.2 of the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>.</p>
+In standard linear regression we can find the best parameters using a least-squares, maximum likelihood (ML) or maximum a posteriori (MAP) approach. If you want to know more about these solutions take a look at the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb" target="_blank" rel="noopener">notebook on linear regression</a> or at chapter 9.2 of the book <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning</a>.</p>
 <h2 id="5-linear-regression-with-basis-functions">5. Linear regression with basis functions</h2>
 <p>The simple linear regression model above is linear not only with respect to the parameters $\pmb{\theta}$ but also with respect to the inputs $\pmb{x}$. When $\pmb{x}$ is not a vector but a single value (that is, the dataset is one-dimensional) the model $y_i = x_i \cdot \theta$ describes straight lines with $\theta$ being the slope of the line.</p>
 <p>The plot below shows example lines produced with the model $y = x \cdot \theta$, using different values for the slope $\theta$ and intercept 0.</p>
@@ -766,7 +969,7 @@ $$</p>
 <p>We start by setting up a probabilistic model that describes our assumptions how the data and parameters are generated. For this, we place a prior $p(\pmb{\theta})$ over our parameters which encodes what parameter values are plausible (before we have seen any data). Example: With a single parameter $\theta$, a Gaussian  prior $p(\theta) = \mathcal{N}(0, 1)$ says that parameter values are normally distributed with mean 0 and standard deviation 1. In other words: the parameter values are most likely to fall into the interval $[−2,2]$ which is two standard deviations around the mean value.</p>
 <p>To keep things simple we will assume a Gaussian prior over the parameters: $p(\pmb{\theta}) = \mathcal{N}(\pmb{m}_0, \pmb{S}_0)$. Let&rsquo;s further assume that the likelihood function is Gaussian, too: $p(y \mid \pmb{x}, \pmb{\theta})=\mathcal{N}\left(y \mid \pmb{\phi}^{\top}(\pmb{x}) \pmb{\theta}, \sigma^{2}\right)$.</p>
 <p>Note: When considering the set of all targets $\mathcal{Y} := \Big \{ y_1, &hellip;, y_n \Big \}$, the likelihood function becomes a multivariate Gaussian distribution: $p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta})=\mathcal{N}\left(\pmb{y} \mid \pmb{\Phi} \pmb{\theta}, \sigma^{2} \pmb{I}\right)$</p>
-<p>The nice thing about choosing a Gaussian distribution for our prior is that the posterior distributions will be Gaussian, too (keyword <a href="https://en.wikipedia.org/wiki/Conjugate_prior">conjugate prior</a>)!</p>
+<p>The nice thing about choosing a Gaussian distribution for our prior is that the posterior distributions will be Gaussian, too (keyword <a href="https://en.wikipedia.org/wiki/Conjugate_prior" target="_blank" rel="noopener">conjugate prior</a>)!</p>
 <p>We will start our <code>BayesianLinearRegression</code> class with the knowledge we have so far - our probabilistic model. As mentioned in the beginning we assume that the variance $\sigma^2$ of the noise $\epsilon$ is known. Furthermore, to allow plotting the data later on we will assume that it&rsquo;s two dimensional (d=2).</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> scipy.stats <span style="color:#f92672">import</span> multivariate_normal
 </span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
@@ -877,7 +1080,7 @@ $$</p>
 <li>$p(\pmb{\theta})$ is the prior distribution, $p(\pmb{\theta})=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{0}, \pmb{S}_{0}\right)$</li>
 <li>$p(\mathcal{Y} \mid \mathcal{X})=\int p(\mathcal{Y} \mid \mathcal{X}, \pmb{\theta}) p(\pmb{\theta}) \mathrm{d} \pmb{\theta}$ is the evidence which ensures that the posterior is normalized (that is, that it integrates to 1).</li>
 </ul>
-<p>The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>):
+<p>The parameter posterior can be estimated in closed form (for proof see theorem 9.1 in the book <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning</a>):
 $$
 \begin{aligned}
 p(\pmb{\theta} \mid \mathcal{X}, \mathcal{Y}) &amp;=\mathcal{N}\left(\pmb{\theta} \mid \pmb{m}_{N}, \pmb{S}_{N}\right) \\\
@@ -981,7 +1184,7 @@ $$</p>
 </span></span><span style="display:flex;"><span>        pred_posterior <span style="color:#f92672">=</span> univariate_normal(loc<span style="color:#f92672">=</span>pred_mean<span style="color:#f92672">.</span>flatten(), scale<span style="color:#f92672">=</span>pred_cov<span style="color:#f92672">**</span><span style="color:#ae81ff">0.5</span>)
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> pred_posterior
 </span></span></code></pre></div><h3 id="64-visualizing-the-parameter-posterior">6.4 Visualizing the parameter posterior</h3>
-<p>To ensure that our implementation is correct we can visualize how the posterior over the parameters changes as the model sees more data. We will visualize the distribution using a <a href="https://en.wikipedia.org/wiki/Contour_line">contour plot</a> - a method for visualizing three-dimensional functions. In our case we want to visualize the density of our bi-variate Gaussian for each point (that is, each slope/intercept combination). The plot below shows an example which illustrates how the lines  and colours of a contour plot correspond to a Gaussian distribution:</p>
+<p>To ensure that our implementation is correct we can visualize how the posterior over the parameters changes as the model sees more data. We will visualize the distribution using a <a href="https://en.wikipedia.org/wiki/Contour_line" target="_blank" rel="noopener">contour plot</a> - a method for visualizing three-dimensional functions. In our case we want to visualize the density of our bi-variate Gaussian for each point (that is, each slope/intercept combination). The plot below shows an example which illustrates how the lines  and colours of a contour plot correspond to a Gaussian distribution:</p>
 <img src="/posts/machine_learning/images/density_plot.png"
     
     
@@ -1203,144 +1406,220 @@ $$</p>
 >
 
 <h2 id="7-sources-and-further-reading">7. Sources and further reading</h2>
-<p>The basis for this notebook is chapter 9.2 of the book <a href="https://mml-book.com">Mathematics for Machine Learning</a>. I can highly recommend to read through chapter 9 to get a deeper understanding of (Bayesian) linear regression.</p>
-<p>You will find explanations and an implementation of simple linear regression in the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb">notebook on linear regression</a></p>
+<p>The basis for this notebook is chapter 9.2 of the book <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning</a>. I can highly recommend to read through chapter 9 to get a deeper understanding of (Bayesian) linear regression.</p>
+<p>You will find explanations and an implementation of simple linear regression in the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/linear_regression.ipynb" target="_blank" rel="noopener">notebook on linear regression</a></p>
 
         </div>
 
         
+        <div class="row ps-3 pe-3">
         
-          <div class="btn-improve-page">
-              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/bayesian_linear_regression.md">
+          <div class="col-md-6 share-buttons">
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/bayesian_linear_regression.md" title="Improve this page" target="_blank" rel="noopener">
+            
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
+        </div>
 
-        
+
+
+      
       <hr />
-        <div class="row next-prev-navigator">
+        
 
 
-  
 
-  
 
-  
 
-  
+
 
   
 
+
+
+
+
+  
   
 
   
-
   
 
   
-
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
     
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/books/deep_work/" title="Deep Work" class="btn filled-button">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Deep Work</div>
+      </a>
+    </div>
+  
+  
       
-      <div class="col-md-6 previous-article">
-        <a href="/posts/books/reading_list/" class="btn btn-outline-info">
-          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
-          <br />
-          <span>Personal reading list of non-fiction books</span>
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/machine_learning/kl_divergence/" title="Kullback-Leibler Divergence" class="btn filled-button">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Kullback-Leibler Divergence</div>
         </a>
       </div>
-      
     
-    
-      
-        
-        
-          
-              
-          
-        
-        <div class="col-md-6 next-article">
-          <a href="/posts/books/deep_work/" class="btn btn-outline-info">
-            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
-            <br />
-            <span>Deep Work</span>
-          </a>
-        </div>
-      
-    
-  
-
-  
-
-  
-
-  
-
 </div>
 
       <hr />
+
       
       
+
+      
+      
+
       </div>
     </div>
   </div>
   
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
 </section>
 
 
@@ -1349,7 +1628,7 @@ $$</p>
   <section class="toc-section" id="toc-section">
     
     <div class="toc-holder">
-      <h5 class="text-center pl-3">Table of Contents</h5>
+      <h5 class="text-center ps-3">Table of Contents</h5>
       <hr>
       <div class="toc">
         <nav id="TableOfContents">
@@ -1390,13 +1669,15 @@ $$</p>
     </div>
 
     
-
-  
-
+    
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1406,162 +1687,177 @@ $$</p>
     
   
 
+  
+  
+    
+  
 
+  
+  
 
-
-
-
-
-
-
+  
+  
+    
+    
+      
+    
   
 
 
+  
+  
+  
 
+  
+  
+  
 
+  
+  
+  
+    
+  
+  
 
+  
+  
+  
 
-
-<footer class="container-fluid text-center align-content-center footer pb-2">
-  <div class="container pt-5">
-    <div class="row text-left">
-      <div class="col-md-4 col-sm-12">
-        <h5>Navigation</h5>
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-start">
         
-        <ul>
-            
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#about">About</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#about">About</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#skills">Skills</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#experiences">Experiences</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#experiences">Experiences</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#education">Education</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#projects">Projects</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#appearances">Talks &amp; Podcasts</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
-              </li>
-            
-            
-              
-              
                 
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#recent-posts">Recent Posts</a>
+                </li>
               
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#appearances">Talks &amp; Podcasts</a>
-              </li>
             
-        </ul>
+              
+            
+          </ul>
+          
+        </div>
         
-
-      </div>
-      
-      <div class="col-md-4 col-sm-12">
-        <h5>Contact me:</h5>
-        <ul>
-          
-          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
-          
-        </ul>
-      </div>
-      
-      
-    </div>
-  </div>
-  <hr />
-  <div class="container">
-    <div class="row text-left">
-      <div class="col-md-4">
-        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png">
-          Toha
-        </a>
-      </div>
-      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
-      <div class="col-md-4 text-right">
-        <a id="hugo" href="https://gohugo.io/">Powered by
-        <img
-          src="/images/hugo-logo.svg"
-          alt="Hugo Logo"
-          height="18"
-        />
-        </a>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:popkes@gmx.net target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>popkes@gmx.net</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/zotroneneis target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>zotroneneis</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
       </div>
     </div>
-  </div>
-</footer>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+        <div class="col-md-4 text-end">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
 
-    <script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 
-<script src="/js/navbar.js"></script>
-<script src="/js/main.js"></script>
+    <script src="/application.cc91051931b43fe247c674f2359ddb534b993b1148bb7cc4f32b9869fb9c9b6c.js" integrity="sha256-zJEFGTG0P&#43;JHxnTyNZ3bU0uZOxFIu3zE8yuYafucm2w=" defer></script>
 
 
     
+     
+
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/js/single.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-<script>
-window.MathJax = {
-	tex: {
-		inlineMath: [['$', '$'], ['\\(', '\\)']],
-		processEnvironments: true
-	}
-};
-</script>
-
-
-
-
-  </body>
+</body>
 </html>

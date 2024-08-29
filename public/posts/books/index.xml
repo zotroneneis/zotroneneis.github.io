@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Books on Anna-Lena Popkes</title>
-    <link>https://alpopkes.com/posts/books/</link>
+    <link>http://localhost:1313/posts/books/</link>
     <description>Recent content in Books on Anna-Lena Popkes</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alpopkes.com/posts/books/index.xml" rel="self" type="application/rss+xml" />
-    <item>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/books/index.xml" rel="self" type="application/rss+xml" /><item>
       <title>Personal reading list of non-fiction books</title>
-      <link>https://alpopkes.com/posts/books/reading_list/</link>
+      <link>http://localhost:1313/posts/books/reading_list/</link>
       <pubDate>Tue, 06 Apr 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://alpopkes.com/posts/books/reading_list/</guid>
-      <description>Books I am currently reading Atomic Habits by James Clear Link to book Books I have read A Promised Land by Barack Obama (Link to book)
+      <guid>http://localhost:1313/posts/books/reading_list/</guid>
+      <description>Books I am currently reading Mindset by Carol Dweck (Link to book) Books I have read Atomic Habits by James Clear (Link to book)
+A Promised Land by Barack Obama (Link to book)
 The Alchemy of Air by Thomas Hager (Link to book)
 Superintelligence: Paths, Dangers, Strategies by Nick Bostrom (Link to book)
 Beethoven, A Life by Jan Caeyers (Link to book)
@@ -22,12 +22,23 @@ Deep Work: Rules for Focused Success in a Distracted World by Cal Newport (Link 
     
     <item>
       <title>Deep Work</title>
-      <link>https://alpopkes.com/posts/books/deep_work/</link>
+      <link>http://localhost:1313/posts/books/deep_work/</link>
       <pubDate>Fri, 18 Dec 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://alpopkes.com/posts/books/deep_work/</guid>
+      <guid>http://localhost:1313/posts/books/deep_work/</guid>
       <description>I recently finished reading the book Deep Work by Cal Newport. For years, I have been interested in the question of how we can improve our learning and work habits. There is a ton of research on this topic and many great resources (like, for example, the podcast The Learning Scientists). I don&amp;rsquo;t want to use this blog post to talk about all the different things I have learned and tried in the past years.</description>
     </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/books/fixed_growth_mindset/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/books/fixed_growth_mindset/</guid>
+      <description>Mindset - changing the way you think to fulfil your potential 1. The mindsets Some people love challenges and thrive on them Experiments with kids that had to solve hard puzzles. Some quickly gave up, other got excited: &amp;ldquo;I love a challenge!&amp;rdquo; What do these kids have what some of us lack? Fixed mindset:
+Belief that qualities like intelligence, creativity, etc. are carved in stone Abilities are innate and unchangeable These people are often urgent to prove themselves to show over and over again, that they are intelligent/creative/&amp;hellip; enough Growth mindset:</description>
+    </item>
+    
     
   </channel>
 </rss>

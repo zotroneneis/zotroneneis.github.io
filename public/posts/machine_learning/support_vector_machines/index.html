@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>Support vector machines</title>
-    
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-<meta charset="UTF-8" />
+    <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-
-<link rel="stylesheet" href="/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="/css/layouts/main.css"/>
-<link rel="stylesheet" href="/css/style.css"/>
-<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/application.b896cc6be95aba26430ee0585857aeda204b1b895c4fb4822daeab0075b9cab7.css" integrity="sha256-uJbMa&#43;lauiZDDuBYWFeu2iBLG4lcT7SCLa6rAHW5yrc=" />
 
 
-<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
 
 
-<link rel="icon" type="image/png" href="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" />
 
+  
 
-<link rel="stylesheet" href="/css/style.css"/>
+  
+  
+  
+    
+  
+  
 
+  <link rel="icon" type="image/png" href="/images/author/image_al_hu15845133475761513827.jpg" />
+
+<meta property="og:url" content="http://localhost:1313/posts/machine_learning/support_vector_machines/">
+  <meta property="og:site_name" content="Anna-Lena Popkes">
+  <meta property="og:title" content="Support vector machines">
+  <meta property="og:description" content="I posted another notebook in my machine learning basics repository. This time, I took a detailed look at support vector machines. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What are support vector machines? Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of kernel methods.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-04-13T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-04-13T00:00:00+00:00">
+
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Support vector machines">
+  <meta name="twitter:description" content="I posted another notebook in my machine learning basics repository. This time, I took a detailed look at support vector machines. The blog post below contains the same content as the original notebook. You can run the notebook directly in your Browser using Binder.
+1. What are support vector machines? Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of kernel methods.">
+
+    
     
 <meta name="description" content="Support vector machines" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
-/>
-<link rel="stylesheet" href="/css/layouts/single.css"/>
-<link rel="stylesheet" href="/css/navigators/sidebar.css">
 
 
     
-    
+
+
+
+
+<script>
+      theme = localStorage.getItem('darkmode:color-scheme') || 'system';
+      if (theme == 'system') {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          theme = 'dark';
+        } else {
+          theme = 'light';
+        }
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    </script>
   </head>
 
-  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
-    <div class="container-fluid bg-dimmed wrapper">
+  <body class="type-posts kind-page" data-bs-spy="scroll" data-bs-target="#TableOfContents" data-bs-offset="80">
+    <div class="container-fluid bg-secondary wrapper">
       
       
     
@@ -61,17 +73,9 @@
 
 
 
-  
 
 
 
-  
-
-
-
-
-
-  
 
 
 
@@ -80,27 +84,201 @@
   
 
 
+  
 
-<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+
+
+
+  
+  
+    
+  
+  
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+<nav class="navbar navbar-expand-xl top-navbar shadow " id="top-navbar">
   <div class="container">
-      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
-      <span class="navbar-toggler-icon"></span>
+    
+    <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button">
+      <i data-feather="sidebar"></i>
     </button>
+    
     <a class="navbar-brand" href="/">
-      <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg">Anna-Lena Popkes</a>
-    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
-      <span class="navbar-toggler-icon"></span>
+      
+        <img src="/images/author/image_al_hu15845133475761513827.jpg" id="logo" alt="Logo">
+      Anna-Lena Popkes</a>
+    <button
+      class="navbar-toggler navbar-light"
+      id="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#top-nav-items"
+      aria-label="menu"
+    >
+      <i data-feather="menu"></i>
     </button>
 
-    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
-      <ul class="navbar-nav ml-auto">
-      
+    <div class="collapse navbar-collapse dynamic-navbar" id="top-nav-items">
+      <ul class="nav navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/#home">Home</a>
+        </li>
+        
+          
+          
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#about">About</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#skills">Skills</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#experiences">Experiences</a>
+                </li>
+              
+            
+            
+              
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="/#projects">Projects</a>
+                </li>
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+            
+              
+              
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#projects">Projects</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#recent-posts">Recent Posts</a>
+                    
+                  
+                  
+                    
+                    
+                      <a class="dropdown-item" href="/#appearances">Talks &amp; Podcasts</a>
+                    
+                  
+              </div>
+            </li>
+          
+        
+        
+          <div id="top-navbar-divider"></div>
+        
+        
+          <li class="nav-item">
+            <a class="nav-link" id="blog-link" href="/posts">Posts</a>
+          </li>
+        
+        
+        
+        
+        
+          <li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle"  href="#" id="themeSelector" role="button"
+  data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <img id="navbar-theme-icon-svg" class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+</a>
+<div id="themeMenu" class="dropdown-menu dropdown-menu-icons-only" aria-labelledby="themeSelector">
+  <a class="dropdown-item nav-link" href="#" data-scheme="light">
+    <img class="theme-icon" src="/icons/sun-svgrepo-com.svg" width=20 alt="Light Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="dark">
+    <img class="theme-icon" src="/icons/moon-svgrepo-com.svg" width=20 alt="Dark Theme">
+  </a>
+  <a class="dropdown-item nav-link" href="#" data-scheme="system">
+    <img class="theme-icon" src="/icons/computer-svgrepo-com.svg" width=20 alt="System Theme">
+  </a>
+</div>
+</li>
+
+        
       </ul>
     </div>
   </div>
   
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="main-logo">
-  <img src="/images/author/image_al_hu6aa485cfd64a98f54b411e3a0324b396_178285_42x0_resize_q75_box.jpg" class="d-none" id="inverted-logo">
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="main-logo" alt="Logo">
+  
+  
+    <img src="/images/author/image_al_hu15845133475761513827.jpg" class="d-none" id="inverted-logo" alt="Inverted Logo">
+  
 </nav>
 
 
@@ -110,10 +288,12 @@
   <section class="sidebar-section" id="sidebar-section">
     <div class="sidebar-holder">
       <div class="sidebar" id="sidebar">
-        <input type="text" value="" placeholder="Search" data-search="" id="search-box" />
+        <form class="mx-auto" method="get" action="/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
         <div class="sidebar-tree">
           <ul class="tree" id="tree">
-            <li id="list-heading"><a href="/posts" data-filter="all">Posts</a></li>
+            <li id="list-heading"><a href="/posts/" data-filter="all">Posts</a></li>
             <div class="subtree">
                 
   
@@ -122,7 +302,7 @@
   
   
     
-    <li><a class="" href="/posts/news/">Personal news</a></li>
+    <li><a class=" list-link" href="/posts/news/" title="Personal news">Personal news</a></li>
   
 
   
@@ -131,7 +311,7 @@
   
   
     
-    <li><a class="" href="/posts/my_path_to_ml/">My path to machine learning</a></li>
+    <li><a class=" list-link" href="/posts/my_path_to_ml/" title="My path to machine learning">My path to machine learning</a></li>
   
 
   
@@ -141,7 +321,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/books/">Books</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/books/"> Books</a>
       
       <ul class="">
         
@@ -151,7 +331,7 @@
   
   
     
-    <li><a class="" href="/posts/books/reading_list/">Personal reading List</a></li>
+    <li><a class=" list-link" href="/posts/books/reading_list/" title="Personal reading List">Personal reading List</a></li>
   
 
   
@@ -160,7 +340,7 @@
   
   
     
-    <li><a class="" href="/posts/books/deep_work/">Deep work</a></li>
+    <li><a class=" list-link" href="/posts/books/deep_work/" title="Deep work">Deep work</a></li>
   
 
 
@@ -178,7 +358,7 @@
   
     
     <li>
-      <i class="fas fa-minus-circle"></i><a class="active" href="/posts/machine_learning/">Machine Learning</a>
+      <i data-feather="minus-circle"></i><a class="active list-link" href="/posts/machine_learning/"> Machine Learning</a>
       
       <ul class="active">
         
@@ -188,7 +368,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/bayesian_linear_regression/">Bayesian linear regression</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/bayesian_linear_regression/" title="Bayesian linear regression">Bayesian linear regression</a></li>
   
 
   
@@ -197,7 +377,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/kl_divergence/">KL Divergence</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/kl_divergence/" title="KL Divergence">KL Divergence</a></li>
   
 
   
@@ -206,7 +386,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/principal_component_analysis/">Principal component analysis (PCA)</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/principal_component_analysis/" title="Principal component analysis (PCA)">Principal component analysis (PCA)</a></li>
   
 
   
@@ -218,7 +398,7 @@
   
   
     
-    <li><a class="active" href="/posts/machine_learning/support_vector_machines/">Support vector machines</a></li>
+    <li><a class="active list-link" href="/posts/machine_learning/support_vector_machines/" title="Support vector machines">Support vector machines</a></li>
   
 
   
@@ -227,7 +407,7 @@
   
   
     
-    <li><a class="" href="/posts/machine_learning/variational_inference/">Variational Inference</a></li>
+    <li><a class=" list-link" href="/posts/machine_learning/variational_inference/" title="Variational Inference">Variational Inference</a></li>
   
 
 
@@ -242,7 +422,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/">Python</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/"> Python</a>
       
       <ul class="">
         
@@ -252,7 +432,25 @@
   
   
     
-    <li><a class="" href="/posts/python/mocking/">Mocking</a></li>
+    <li><a class=" list-link" href="/posts/python/coding_with_kids/" title="Coding with kids">Coding with kids</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/mocking/" title="Mocking">Mocking</a></li>
+  
+
+  
+  
+  
+  
+  
+    
+    <li><a class=" list-link" href="/posts/python/packaging_tools/" title="Packaging tools">Packaging tools</a></li>
   
 
   
@@ -262,7 +460,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/python/magical_universe/">Magical Universe</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/python/magical_universe/"> Magical Universe</a>
       
       <ul class="">
         
@@ -272,7 +470,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_start/">Start</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_start/" title="Start">Start</a></li>
   
 
   
@@ -281,7 +479,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_magical_universe/">The Tales of Castle Kilmere</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_magical_universe/" title="The Tales of Castle Kilmere">The Tales of Castle Kilmere</a></li>
   
 
   
@@ -290,7 +488,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_1_first_post_oop/">Object-oriented programming</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_1_first_post_oop/" title="Object-oriented programming">Object-oriented programming</a></li>
   
 
   
@@ -299,7 +497,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_2_types_of_methods/">Types of methods</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_2_types_of_methods/" title="Types of methods">Types of methods</a></li>
   
 
   
@@ -308,7 +506,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_3_type_annotations/">Type annotations</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_3_type_annotations/" title="Type annotations">Type annotations</a></li>
   
 
   
@@ -317,7 +515,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_4_to_string_conversion/">To-string conversion</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_4_to_string_conversion/" title="To-string conversion">To-string conversion</a></li>
   
 
   
@@ -326,7 +524,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_5_decorators/">Decorators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_5_decorators/" title="Decorators">Decorators</a></li>
   
 
   
@@ -335,7 +533,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_6_properties/">Properties</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_6_properties/" title="Properties">Properties</a></li>
   
 
   
@@ -344,7 +542,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_7_underscore_patterns/">Underscore patterns</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_7_underscore_patterns/" title="Underscore patterns">Underscore patterns</a></li>
   
 
   
@@ -353,7 +551,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_8_extending_universe/">Extending the universe</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_8_extending_universe/" title="Extending the universe">Extending the universe</a></li>
   
 
   
@@ -362,7 +560,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_9_duck_typing/">Duck Typing</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_9_duck_typing/" title="Duck Typing">Duck Typing</a></li>
   
 
   
@@ -371,7 +569,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_10_11_namedtuples/">Namedtuples</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_10_11_namedtuples/" title="Namedtuples">Namedtuples</a></li>
   
 
   
@@ -380,7 +578,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_12_to_15_abcs/">Abstract Base Classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_12_to_15_abcs/" title="Abstract Base Classes">Abstract Base Classes</a></li>
   
 
   
@@ -389,7 +587,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_16_to_18_data_classes/">Data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_16_to_18_data_classes/" title="Data classes">Data classes</a></li>
   
 
   
@@ -398,7 +596,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_19_immutable_data_classes/">Immutable data classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_19_immutable_data_classes/" title="Immutable data classes">Immutable data classes</a></li>
   
 
   
@@ -407,7 +605,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_20_decorators_in_classes/">Decorators in classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_20_decorators_in_classes/" title="Decorators in classes">Decorators in classes</a></li>
   
 
   
@@ -416,7 +614,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_21_if_main/">if __name__ == &#34;__main__&#34;</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_21_if_main/" title="if __name__ == &#34;__main__&#34;">if __name__ == &#34;__main__&#34;</a></li>
   
 
   
@@ -425,7 +623,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_22_to_24_context_managers/">Context managers</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_22_to_24_context_managers/" title="Context managers">Context managers</a></li>
   
 
   
@@ -434,7 +632,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_25_to_28_pytest/">Testing with pytest</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_25_to_28_pytest/" title="Testing with pytest">Testing with pytest</a></li>
   
 
   
@@ -443,7 +641,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_29_to_31_iterators/">Iterators</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_29_to_31_iterators/" title="Iterators">Iterators</a></li>
   
 
   
@@ -452,7 +650,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_34_multisets/">Multisets</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_34_multisets/" title="Multisets">Multisets</a></li>
   
 
   
@@ -461,7 +659,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_37_extending_universe/">Extending the universe II</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_37_extending_universe/" title="Extending the universe II">Extending the universe II</a></li>
   
 
   
@@ -470,7 +668,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_43_to_45_exception_classes/">Exception classes</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_43_to_45_exception_classes/" title="Exception classes">Exception classes</a></li>
   
 
   
@@ -479,7 +677,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_46_functools_wraps/">functools.wraps</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_46_functools_wraps/" title="functools.wraps">functools.wraps</a></li>
   
 
   
@@ -488,7 +686,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_47_to_48_defaultdict/">Defaultdict</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_47_to_48_defaultdict/" title="Defaultdict">Defaultdict</a></li>
   
 
   
@@ -497,7 +695,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/day_49_to_50_config_files/">Config files</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/day_49_to_50_config_files/" title="Config files">Config files</a></li>
   
 
   
@@ -506,7 +704,7 @@
   
   
     
-    <li><a class="" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/">Wrap up</a></li>
+    <li><a class=" list-link" href="/posts/python/magical_universe/2018-09-16-blog-post-day-51/" title="Wrap up">Wrap up</a></li>
   
 
 
@@ -526,7 +724,7 @@
   
     
     <li>
-      <i class="fas fa-plus-circle"></i><a class="" href="/posts/software_engineering/">Software Engineering</a>
+      <i data-feather="plus-circle"></i><a class=" list-link" href="/posts/software_engineering/"> Software Engineering</a>
       
       <ul class="">
         
@@ -536,7 +734,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/containers/">Intro to containers</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/containers/" title="Intro to containers">Intro to containers</a></li>
   
 
   
@@ -545,7 +743,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/docker/">Intro to Docker</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/docker/" title="Intro to Docker">Intro to Docker</a></li>
   
 
   
@@ -554,7 +752,7 @@
   
   
     
-    <li><a class="" href="/posts/software_engineering/virtual_machines/">Intro to virtual machines</a></li>
+    <li><a class=" list-link" href="/posts/software_engineering/virtual_machines/" title="Intro to virtual machines">Intro to virtual machines</a></li>
   
 
 
@@ -577,25 +775,30 @@
   <div class="content">
     <div class="container p-0 read-area">
       
-      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://alpopkes.com/images/default-hero.jpg);'>
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(/images/default-hero.jpg);'>
       </div>
 
       
       <div class="page-content">
-        <div class="author-profile ml-auto align-self-lg-center">
-          <img class="rounded-circle" src='/images/author/image_al.jpg'/>
+        
+        <div class="author-profile ms-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/image_al_hu6187147171234605626.jpg' alt="Author Image">
           <h5 class="author-name">Anna-Lena Popkes</h5>
-          <p>April 13, 2021</p>
+          <p class="text-muted">Tuesday, April 13, 2021</p>
         </div>
-
+        
+        
         <div class="title">
           <h1>Support vector machines</h1>
         </div>
 
+        
+
+        
         <div class="post-content" id="post-content">
-          <p>I posted another notebook in my <a href="https://github.com/zotroneneis/machine_learning_basics">machine learning basics repository</a>. This time, I took a detailed look at support vector machines. The blog post below contains the same content as the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/support_vector_machines.ipynb">original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=support_vector_machines.ipynb">run the notebook directly in your Browser using Binder</a>.</p>
+          <p>I posted another notebook in my <a href="https://github.com/zotroneneis/machine_learning_basics" target="_blank" rel="noopener">machine learning basics repository</a>. This time, I took a detailed look at support vector machines. The blog post below contains the same content as the <a href="https://github.com/zotroneneis/machine_learning_basics/blob/master/support_vector_machines.ipynb" target="_blank" rel="noopener">original notebook</a>. You can <a href="https://mybinder.org/v2/gh/zotroneneis/machine_learning_basics/HEAD?filepath=support_vector_machines.ipynb" target="_blank" rel="noopener">run the notebook directly in your Browser using Binder</a>.</p>
 <h2 id="1-what-are-support-vector-machines">1. What are support vector machines?</h2>
-<p>Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of <a href="https://en.wikipedia.org/wiki/Kernel_method"><em>kernel methods</em></a>. SVMs can be used both for classification and regression. The original SVM proposed in 1963 is a simple binary linear classifier. What does this mean?</p>
+<p>Support vector machines (short: SVMs) are supervised machine learning models. They are the most prominent member of the class of <a href="https://en.wikipedia.org/wiki/Kernel_method" target="_blank" rel="noopener"><em>kernel methods</em></a>. SVMs can be used both for classification and regression. The original SVM proposed in 1963 is a simple binary linear classifier. What does this mean?</p>
 <p>Assume we are given a dataset $D = \big \{ \mathbf{x}_n, y_n \big \}_{n=1}^N$, where $\mathbf{x} \in \mathbb{R}^D$ and labels $y_n \in {-1, +1 }$. A linear (hard-margin) SVM separates the two classes using a ($D-1$ dimensional) hyperplane.</p>
 <p>Special to SVMs is that they use not any hyperplane but the one that maximizes the distance between itself and the two sets of datapoints. Such a hyperplane is called <em>maximum-margin</em> hyperplane:</p>
 <img src="/posts/machine_learning/images/separating_hyperplanes.png"
@@ -649,7 +852,7 @@ $$
 $$</p>
 <p>In words: we want to find the values for $\mathbf{w}$ and $b$ that maximize the margin while classifying all training examples correctly. This approach is called the <em>hard-margin support vector machine</em>. &ldquo;Hard&rdquo; because it does not allow for violations of the margin requirement (= no points are allowed to be within the margin).</p>
 <h3 id="24-optional-deriving-the-margin-equation">2.4 (Optional) Deriving the margin equation</h3>
-<p>We can derive the width of the margin in several ways (see sections 12.2.1-12.2.2 of the <a href="https://mml-book.com">Mathematics for Machine Learning book</a>). Personally, I found the explanation of <a href="https://www.youtube.com/watch?v=_PwhiWxHK8o">this MIT lecture on SVMs</a> easiest to understand.</p>
+<p>We can derive the width of the margin in several ways (see sections 12.2.1-12.2.2 of the <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning book</a>). Personally, I found the explanation of <a href="https://www.youtube.com/watch?v=_PwhiWxHK8o" target="_blank" rel="noopener">this MIT lecture on SVMs</a> easiest to understand.</p>
 <p>The derivation of the margin is based on the assumptions that we have already noted above:
 $$\langle \mathbf{w}, \mathbf{x}_{+} \rangle + b = +1$$
 $$\langle \mathbf{w}, \mathbf{x}_{-} \rangle + b = -1$$</p>
@@ -702,7 +905,7 @@ y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1 - \xi_n
 <p>$$ \xi_i \gt 0 \text{ for all } n = 1, &hellip;, N $$</p>
 <p>The parameter $C$ is a regularization term that controls the trade-off between maximizing the margin and minimizing the training error (which in turn means classifying all training examples correctly). If the value of $C$ is small, we care more about maximizing the margin than classifying all points correctly. If the value of $C$ is large, we care more about classifying all points correctly than maximizing the margin.</p>
 <h2 id="4-solving-the-primal-optimization-problem">4. Solving the primal optimization problem</h2>
-<p>Theoretically, the primal SVM can be solved in multiple ways. The most well known way is to use the <a href="https://en.wikipedia.org/wiki/Hinge_loss">hinge loss function</a> together with <a href="https://en.wikipedia.org/wiki/Subgradient_method">subgradient descent</a>.</p>
+<p>Theoretically, the primal SVM can be solved in multiple ways. The most well known way is to use the <a href="https://en.wikipedia.org/wiki/Hinge_loss" target="_blank" rel="noopener">hinge loss function</a> together with <a href="https://en.wikipedia.org/wiki/Subgradient_method" target="_blank" rel="noopener">subgradient descent</a>.</p>
 <h3 id="41-hinge-loss-function">4.1 Hinge loss function</h3>
 <p>The hinge loss function given the true target $y \in {-1, +1}$ and the prediction $f(\mathbf{x}) = \langle\mathbf{w}, \mathbf{x}\rangle+b$ is computed as follows:</p>
 <p>$$\ell(t)=\max {0,1-t} \quad \text{where} \quad t=y \cdot f(\mathbf{x})= y \cdot \big(\langle\mathbf{w}, \mathbf{x}\rangle+b\big)$$</p>
@@ -730,7 +933,7 @@ y_n(\langle \mathbf{w}, \mathbf{x}_n \rangle + b) \ge 1 - \xi_n
 <p>$$
 \min_{\mathbf{w}, b} \frac{1}{2}|\mathbf{w}|^{2} + C \sum_{n=1}^{N} \max \left\{0,1-y_{n}\left(\left\langle\mathbf{w}, \mathbf{x}_{n}\right\rangle+b\right)\right\}
 $$</p>
-<p>If you would like to understand why this is equivalent to our previous formulation of the soft-margin SVM please take a look at chapter 12.2.5 of the <a href="https://mml-book.com">Mathematics for Machine Learning book</a>.</p>
+<p>If you would like to understand why this is equivalent to our previous formulation of the soft-margin SVM please take a look at chapter 12.2.5 of the <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning book</a>.</p>
 <h3 id="43-optional-three-parts-of-the-objective-function">4.3 [Optional] Three parts of the objective function</h3>
 <p>Our objective function can be divided into three distinct parts:</p>
 <p>Part 1: $\frac{1}{2}|\mathbf{w}|^{2}$</p>
@@ -739,7 +942,7 @@ $$</p>
 <p>This part is also called the <em>empirical loss</em>. In our case it&rsquo;s the hinge loss which penalizes solutions that make mistakes when classifying the training examples. In theory, this term could be replaced with another loss function that expresses a different preference.</p>
 <p>Part 3: The hyperparameter $C$ that controls the tradeoff between a large margin and a small hinge loss.</p>
 <h3 id="44-sub-gradient-descent">4.4 Sub-gradient descent</h3>
-<p>The hinge loss function is not differentiable (namely at the point $t=1$). Therefore, we cannot compute the gradient right away. However, we can use a method called <a href="https://en.wikipedia.org/wiki/Subgradient_method">subgradient descent</a> to solve our optimization problem. To simplify the derivation we will adapt two things:</p>
+<p>The hinge loss function is not differentiable (namely at the point $t=1$). Therefore, we cannot compute the gradient right away. However, we can use a method called <a href="https://en.wikipedia.org/wiki/Subgradient_method" target="_blank" rel="noopener">subgradient descent</a> to solve our optimization problem. To simplify the derivation we will adapt two things:</p>
 <ol>
 <li>We assume that the bias $b$ is contained in our weight vector as the first entry $w_0$, that is $\mathbf{w} = [b, w_1, &hellip;, w_D]$</li>
 <li>We divide the hinge loss by the number of samples</li>
@@ -782,7 +985,7 @@ $$</p>
 <p>To minimize the objective function $f$ the subgradient method uses the following update formula for iteration $k+1$:</p>
 <p>$$ w^{(k+1)} = w^{(k)} - \alpha_k g^{(k)}$$</p>
 <p>Where $g^{(k)}$ is <em>any</em> subgradient of $f$ at $w^{(k)}$ and $\alpha_k$ is the $k$-th step size. Thus, at each iteration, we make a step into the direction of the negative subgradient. When $f$ is differentiable, $g^{(k)}$ equals the gradient $\nabla f(x^{(k)})$ and the method reduces to the standard gradient descent method.</p>
-<p>More details on the subgradient method can be found <a href="https://web.stanford.edu/class/ee392o/subgrad_method.pdf">here</a>.</p>
+<p>More details on the subgradient method can be found <a href="https://web.stanford.edu/class/ee392o/subgrad_method.pdf" target="_blank" rel="noopener">here</a>.</p>
 <h2 id="5-implementation-primal-approach">5. Implementation primal approach</h2>
 <h3 id="51-toy-dataset">5.1 Toy dataset</h3>
 <p>To implement what we have learned about primal SVMs we first have to generate a dataset. In the cell below we create a simple dataset with two features and labels +1 and -1. We further split the dataset into a test and train set.</p>
@@ -834,7 +1037,7 @@ $$
 \end{array} \right \}.
 $$</li>
 <li>Given the gradient we use stochastic gradient descent to train our model</li>
-<li>After training our model we can make predictions using the <a href="https://en.wikipedia.org/wiki/Sign_function">sign function</a></li>
+<li>After training our model we can make predictions using the <a href="https://en.wikipedia.org/wiki/Sign_function" target="_blank" rel="noopener">sign function</a></li>
 </ol>
 <p>As mentioned previously, we will assume that the bias $b$ is contained in our weight vector as the first entry $w_0$, that is $\mathbf{w} = [b, w_1, &hellip;, w_D] = \mathbf{w} = [w_0, w_1, &hellip;, w_D]$.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
@@ -1022,7 +1225,7 @@ Precision on test dataset: 1.0
 <p>In the previous sections we took a detailed look at the primal SVM. To solve a primal SVM, we need to find the best values for the weights and bias. Recall that our input examples $\mathbf{x} \in \mathbb{R}^D$ have $D$ features. Consequently, our weights $\mathbf{w}$ have $D$ features, too. This can become problematic if the number of features $D$ is large.</p>
 <p>That&rsquo;s where the second way of formalizing SVMs (called <em>dual approach</em>) comes in handy. The optimization problem of the dual approach is independent of the number of features. Instead, the number of parameters increases with the number of examples in the training set.</p>
 <p>The dual approach uses the method of Lagrange multipliers. Lagrange multipliers allow us to find the minimum or maximum of a function if there are one or more constraints on the input values we are allowed to used.</p>
-<p>If you never heard of Lagrange multipliers I can recommend the <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint">blog posts</a> and <a href="https://www.youtube.com/watch?v=yuqB-d5MjZA&amp;list=PLCg2-CTYVrQvNGLbd-FN70UxWZSeKP4wV&amp;index=1">video tutorials</a> on the topic from Khan Academy.</p>
+<p>If you never heard of Lagrange multipliers I can recommend the <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint" target="_blank" rel="noopener">blog posts</a> and <a href="https://www.youtube.com/watch?v=yuqB-d5MjZA&amp;list=PLCg2-CTYVrQvNGLbd-FN70UxWZSeKP4wV&amp;index=1" target="_blank" rel="noopener">video tutorials</a> on the topic from Khan Academy.</p>
 <h3 id="61-recap-lagrange-multipliers">6.1 Recap Lagrange multipliers</h3>
 <p>Lagrange multipliers allow us to solve constrained optimization problems. Let&rsquo;s say we want to maximize the function $f(x, y) = 2x + y$ under the constraint that our values of $x$ and $y$ satisfy the following equation: $g(x, y) = x^2 + y^2 = 1$. This constraint equation describes a circle of radius 1.</p>
 <p>The key insight behind the solution to this problem is that we need to find those values for $x$ and $y$ where the gradients of $f$ and $g$ are aligned. This can be expressed using a Lagrange multiplier (typically $\lambda$):</p>
@@ -1057,11 +1260,11 @@ $$ \begin{aligned}
 \left(x_{0}, y_{0}\right) &amp;=\left(\frac{1}{\lambda_{0}}, \frac{1}{2 \lambda_{0}}\right) \\\
 &amp;=\left(\frac{2}{\sqrt{5}}, \frac{1}{\sqrt{5}}\right) \quad \text { or } \quad\left(\frac{-2}{\sqrt{5}}, \frac{-1}{\sqrt{5}}\right)
 \end{aligned} $$</p>
-<p>where the first point denotes a maximum (what we wanted to find) and the second a minimum. This solves our constrained optimization problem. For more details and a full solution look at <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint">this Khan academy post</a>.</p>
+<p>where the first point denotes a maximum (what we wanted to find) and the second a minimum. This solves our constrained optimization problem. For more details and a full solution look at <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint" target="_blank" rel="noopener">this Khan academy post</a>.</p>
 <h3 id="62-recap-lagrangian">6.2 Recap Lagrangian</h3>
 <p>The Lagrangian is a way to repackage the individual conditions of our constrained optimization problem into a single equation. In the example above we wanted to optimize some function $f(x, y)$ under the constraint that the inputs $x$ and $y$ satisfy the equation $g(x, y) = x^2 + y^2 = c$. In our case the constant $c$ was given by 1. We know that the solution is given by those points where the gradients of $f$ and $g$ align. The Lagrangian function puts all of this into a single equation:</p>
 <p>$$ \mathcal{L}(x, y, \lambda)=f(x, y)-\lambda(g(x, y)-c) $$</p>
-<p>When computing the partial derivatives of $\mathcal{L}$ with respect to $x, y$ and $\lambda$ and setting them to zero, we will find that they correspond exactly to the three constraints we looked at earlier. This can be summarized by simply setting the gradient of $\mathcal{L}$ equal to the zero vector: $\nabla \mathcal{L} = \mathbf{0}$. The compact Lagrangian form is often used when solving constrained optimization problem with computers because it summarizes the elaborate problem with multiple constraints into a single equation. For more details and a full solution look at <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint">this Khan academy post</a>.</p>
+<p>When computing the partial derivatives of $\mathcal{L}$ with respect to $x, y$ and $\lambda$ and setting them to zero, we will find that they correspond exactly to the three constraints we looked at earlier. This can be summarized by simply setting the gradient of $\mathcal{L}$ equal to the zero vector: $\nabla \mathcal{L} = \mathbf{0}$. The compact Lagrangian form is often used when solving constrained optimization problem with computers because it summarizes the elaborate problem with multiple constraints into a single equation. For more details and a full solution look at <a href="https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint" target="_blank" rel="noopener">this Khan academy post</a>.</p>
 <h3 id="63-dual-optimization-problem">6.3 Dual optimization problem</h3>
 <p>For the primal soft-margin SVM we considered the following optimization problem:
 $$ \min_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \sum_{n=1}^N \xi_n $$</p>
@@ -1077,14 +1280,14 @@ $$ \min_{\mathbf{w}, b, \mathbf{\xi}} \frac{1}{2} \Vert \mathbf{w} \Vert^2 + C \
 $$</p>
 <p>Next, we have to compute the partial derivatives of the Lagrangian with respect to the variables $\mathbf{w}, b$ and $\xi$: $\frac{\partial \mathfrak{L}}{\partial \mathbf{w}}, \frac{\partial \mathfrak{L}}{\partial b}, \frac{\partial \mathfrak{L}}{\partial \xi}$. When setting the first partial derivative to zero we obtain an important interim result:
 $$ \mathbf{w} = \sum_{n=1}^N \alpha_n y_n \mathbf{x}_n $$</p>
-<p>This equation states the the optimal solution for the weight vector is given by a linear combination of our training examples. After setting the other partial derivatives to zero, using the result and simplifying the equations we end up with the following optimization problem (for details see section 12.3.1 of the <a href="https://mml-book.com">Mathematics for Machine Learning book</a>):</p>
+<p>This equation states the the optimal solution for the weight vector is given by a linear combination of our training examples. After setting the other partial derivatives to zero, using the result and simplifying the equations we end up with the following optimization problem (for details see section 12.3.1 of the <a href="https://mml-book.com" target="_blank" rel="noopener">Mathematics for Machine Learning book</a>):</p>
 <p>$$\min_{\boldsymbol{\alpha}} \frac{1}{2} \sum_{i=1}^{N} \sum_{j=1}^{N} y_{i} y_{j} \alpha_{i} \alpha_{j}\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle-\sum_{i=1}^{N} \alpha_{i}$$
 $$ \text{subject to:} $$
 $$\sum_{i=1}^{N} y_{i} \alpha_{i}=0$$
 $$0 \le \alpha_{i} \le C \text{ for all } i=1, \ldots, N$$</p>
-<p>This constrained quadratic optimization problem can be solved very efficiently, for example with quadratic programming techniques. One popular library for solving dual SVMs is <a href="https://github.com/cjlin1/libsvm">libsvm</a> which makes use of a decomposition method to solve the problem (see <a href="https://www.csie.ntu.edu.tw/~cjlin/papers/libsvm.pdf">this paper</a> for more details). However, several other approaches exist.</p>
+<p>This constrained quadratic optimization problem can be solved very efficiently, for example with quadratic programming techniques. One popular library for solving dual SVMs is <a href="https://github.com/cjlin1/libsvm" target="_blank" rel="noopener">libsvm</a> which makes use of a decomposition method to solve the problem (see <a href="https://www.csie.ntu.edu.tw/~cjlin/papers/libsvm.pdf" target="_blank" rel="noopener">this paper</a> for more details). However, several other approaches exist.</p>
 <h2 id="7-primal-vs-dual-approach">7. Primal vs. dual approach</h2>
-<p>Most SVM research in the last decade has been about the dual formulation. Why this is the case is not clear. Both approaches have advantages and disadvantages. In the paper <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.3368&amp;rep=rep1&amp;type=pdf">&ldquo;Training a Support Vector Machine in the Primal&rdquo;</a> Chapelle et al. mention the following hypothesis:</p>
+<p>Most SVM research in the last decade has been about the dual formulation. Why this is the case is not clear. Both approaches have advantages and disadvantages. In the paper <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.3368&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">&ldquo;Training a Support Vector Machine in the Primal&rdquo;</a> Chapelle et al. mention the following hypothesis:</p>
 <blockquote>
 <p>We believe that it is because SVMs were first introduced in their hard margin formulation (Boser et al., 1992), for which a dual optimization (because of the constraints) seems more natural. In general, however, soft margin SVMs should be preferred, even if the training data are separable: the decision boundary is more robust because more training points are taken into account (Chapelle et al., 2000). We do not pretend that primal optimization is better in general; our main motivation wasto point out that primal and dual are two sides of the same coin and that there is no reason to look always at the same side.</p>
 </blockquote>
@@ -1093,7 +1296,7 @@ $$0 \le \alpha_{i} \le C \text{ for all } i=1, \ldots, N$$</p>
 <p>If you take another look at the optimization equation of dual SVMs you will notice that it computes the inner product $\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle$ between all datapoints $\mathbf{x}_{i}, \mathbf{x}_{j}$. A kernel is a way to compute this inner product implicitely in some (potentially very high dimensional) feature space. To be more precise: assume we have some mapping function $\varphi$ which maps an $n$ dimensional input vector to an $m$ dimensional output vector: $\varphi , : , \mathbb R^n \to \mathbb R^m$. Given this mapping function we can compute the dot product of two vectors $\mathbf x$ and $\mathbf y$ in this space as follows: $\varphi(\mathbf x)^T \varphi(\mathbf y)$.</p>
 <p>A kernel is a function $k$ that gives the same result as this dot product: $k(\mathbf x, \mathbf y) = \varphi(\mathbf x)^T \varphi(\mathbf y)$. In other words: the kernel function is equivalent to the dot product of the mapping function.</p>
 <h3 id="82-what-are-kernels-good-for">8.2 What are kernels good for?</h3>
-<p>Until now (apart from the soft-margin SVM) our SVMs, both primal and dual, are only able to classify data that is <a href="https://en.wikipedia.org/wiki/Linear_separability">linearly separable</a>. However, most datasets in practice won&rsquo;t be of this form. We need a way to classify data that is <strong>not</strong> linearly separable. This is where the so called <strong>kernel trick</strong> comes into play.</p>
+<p>Until now (apart from the soft-margin SVM) our SVMs, both primal and dual, are only able to classify data that is <a href="https://en.wikipedia.org/wiki/Linear_separability" target="_blank" rel="noopener">linearly separable</a>. However, most datasets in practice won&rsquo;t be of this form. We need a way to classify data that is <strong>not</strong> linearly separable. This is where the so called <strong>kernel trick</strong> comes into play.</p>
 <p>Because the objective function of the dual SVM contains inner products only between datapoints $\mathbf{x}_i, \mathbf{x}_j$, we can easily replace this inner product (that is, $\left\langle\mathbf{x}_{i}, \mathbf{x}_{j}\right\rangle$ ) with some mapping function $\varphi(\mathbf{x}_i)^T \varphi(\mathbf{x}_j)$. This mapping function can be non-linear, allowing us to compute an SVM that is non-linear with respect to the input examples. The mapping function takes our input data (which is not linearly separable) and transforms it into some higher-dimensional space where it becomes linearly separable. This is illustrated in the figure below.</p>
 <img src="/posts/machine_learning/images/feature_mapping_illustration.png"
     
@@ -1110,7 +1313,7 @@ $$0 \le \alpha_{i} \le C \text{ for all } i=1, \ldots, N$$</p>
 <p>In theory, we could use any mapping function we like. In practice, however, computing inner products is expensive. Therefore, we use mapping functions that have a corresponding kernel function. This will allow us to map the datapoints into a higher dimensional space without ever explicitely computing the (expensive) inner products.</p>
 <p>Let&rsquo;s take a look at an example.</p>
 <h3 id="83-example">8.3 Example</h3>
-<p>Note: this example was taken from <a href="https://stats.stackexchange.com/posts/153134">this StackExchange post</a>.</p>
+<p>Note: this example was taken from <a href="https://stats.stackexchange.com/posts/153134" target="_blank" rel="noopener">this StackExchange post</a>.</p>
 <p>We can create a simple polynomial kernel as follows: $k(\mathbf{x}, \mathbf{y}) = (1 + \mathbf x^T \mathbf y)^2$ with $\mathbf x, \mathbf y \in \mathbb R^2$. The kernel does not seem to correspond to any mapping function $\varphi$, it&rsquo;s just a function that returns a real number. Our input vectors $\mathbf{x}, \mathbf{y}$ are 2-dimensional: $\mathbf x = (x_1, x_2)$ and $\mathbf y = (y_1, y_2)$. With this knowledge we can expand the kernel computation:</p>
 <p>$\begin{align}
 k(\mathbf x, \mathbf y) &amp; = (1 + \mathbf x^T \mathbf y)^2 \\\
@@ -1120,11 +1323,11 @@ k(\mathbf x, \mathbf y) &amp; = (1 + \mathbf x^T \mathbf y)^2 \\\
 <p>Note that this is nothing else but a dot product between two vectors $(1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt{2} x_2, \sqrt{2} x_1 x_2)$ and $(1, y_1^2, y_2^2, \sqrt{2} y_1, \sqrt{2} y_2, \sqrt{2} y_1 y_2)$. This can be expressed with the following mapping function:
 $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt{2} x_2, \sqrt{2} x_1 x_2)$$</p>
 <p>So the kernel $k(\mathbf x, \mathbf y) = (1 + \mathbf x^T \mathbf y)^2 = \varphi(\mathbf x)^T \varphi(\mathbf y)$ computes a dot product in 6-dimensional space without explicitly visiting this space. The generalization from an inner product to a kernel function is known as the <strong>kernel trick</strong>.</p>
-<p>Several popular kernel functions exist. Popular ones are, for example, the <a href="https://en.wikipedia.org/wiki/Polynomial_kernel">polyomial kernel</a> or <a href="https://en.wikipedia.org/wiki/Radial_basis_function_kernel">RBF kernel</a>.</p>
+<p>Several popular kernel functions exist. Popular ones are, for example, the <a href="https://en.wikipedia.org/wiki/Polynomial_kernel" target="_blank" rel="noopener">polyomial kernel</a> or <a href="https://en.wikipedia.org/wiki/Radial_basis_function_kernel" target="_blank" rel="noopener">RBF kernel</a>.</p>
 <h3 id="84-can-we-also-use-kernels-in-the-primal-svm">8.4 Can we also use kernels in the primal SVM?</h3>
-<p>Yes, the kernel trick can be applied to primal SVM&rsquo;s, too. It&rsquo;s not as straightforward as with dual SVMs but still possible. Consider <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.3368&amp;rep=rep1&amp;type=pdf">this paper by Chapelle et al.</a> as an example.</p>
+<p>Yes, the kernel trick can be applied to primal SVM&rsquo;s, too. It&rsquo;s not as straightforward as with dual SVMs but still possible. Consider <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.129.3368&amp;rep=rep1&amp;type=pdf" target="_blank" rel="noopener">this paper by Chapelle et al.</a> as an example.</p>
 <h3 id="85-how-do-i-choose-the-right-kernel-for-my-problem">8.5 How do I choose the right kernel for my problem?</h3>
-<p>The problem of choosing the right kernel has been answered in <a href="https://stats.stackexchange.com/questions/18030/how-to-select-kernel-for-svm">this StackExchange post</a>.</p>
+<p>The problem of choosing the right kernel has been answered in <a href="https://stats.stackexchange.com/questions/18030/how-to-select-kernel-for-svm" target="_blank" rel="noopener">this StackExchange post</a>.</p>
 <p>Summary:</p>
 <ul>
 <li>Without expert knowledge, the Radial Basis Function kernel makes a good default kernel (in case you need a non-linear model)</li>
@@ -1132,144 +1335,220 @@ $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt
 <li>Choosing the kernel and parameters automatically is tricky, as it is very easy to overfit the model selection criterion</li>
 </ul>
 <h2 id="9-sources-and-further-reading">9. Sources and further reading</h2>
-<p>The basis for this notebook is chapter 12 of the book <a href="https://mml-book.github.io/">Mathematics for Machine Learning</a>. I can highly recommend to read through the entire chapter to get a deeper understanding of support vector machines.</p>
-<p>Another source I liked very much is <a href="https://www.youtube.com/watch?v=_PwhiWxHK8o">this MIT lecture on SVMs</a>.</p>
+<p>The basis for this notebook is chapter 12 of the book <a href="https://mml-book.github.io/" target="_blank" rel="noopener">Mathematics for Machine Learning</a>. I can highly recommend to read through the entire chapter to get a deeper understanding of support vector machines.</p>
+<p>Another source I liked very much is <a href="https://www.youtube.com/watch?v=_PwhiWxHK8o" target="_blank" rel="noopener">this MIT lecture on SVMs</a>.</p>
 
         </div>
 
         
+        <div class="row ps-3 pe-3">
         
-          <div class="btn-improve-page">
-              <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/support_vector_machines.md">
+          <div class="col-md-6 share-buttons">
+          
+          </div>
+
+        
+        
+          
+            
+          
+          <div class="col-md-6 btn-improve-page">
+             
+               <a href="https://github.com/zotroneneis/zotroneneis.github.io/edit/main/content/posts/machine_learning/support_vector_machines.md" title="Improve this page" target="_blank" rel="noopener">
+            
                 <i class="fas fa-code-branch"></i>
                 Improve this page
               </a>
           </div>
         
+        </div>
 
-        
+
+
+      
       <hr />
-        <div class="row next-prev-navigator">
+        
 
 
-  
 
-  
 
-  
 
-  
+
 
   
 
+
+
+
+
+  
   
 
   
-
   
 
   
-
   
 
   
-
   
 
   
-
   
 
   
-
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
   
 
   
     
+    
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+
+<div class="row next-prev-navigator">
+  
+    <div class="col-md-6 previous-article">
+      <a href="/posts/machine_learning/principal_component_analysis/" title="Principal component analysis (PCA)" class="btn filled-button">
+        <div><i class="fas fa-chevron-circle-left"></i> Prev</div>
+        <div class="next-prev-text">Principal component analysis (PCA)</div>
+      </a>
+    </div>
+  
+  
       
-      <div class="col-md-6 previous-article">
-        <a href="/posts/machine_learning/principal_component_analysis/" class="btn btn-outline-info">
-          <span><i class="fas fa-chevron-circle-left"></i> Prev</span>
-          <br />
-          <span>Principal component analysis (PCA)</span>
+      
+        
+      
+      <div class="col-md-6 next-article">
+        <a href="/posts/machine_learning/variational_inference/" title="Variational Inference" class="btn filled-button">
+          <div>Next <i class="fas fa-chevron-circle-right"></i></div>
+          <div class="next-prev-text">Variational Inference</div>
         </a>
       </div>
-      
     
-    
-      
-        
-        
-          
-              
-          
-        
-        <div class="col-md-6 next-article">
-          <a href="/posts/books/reading_list/" class="btn btn-outline-info">
-            <span>Next <i class="fas fa-chevron-circle-right"></i></span>
-            <br />
-            <span>Personal reading list of non-fiction books</span>
-          </a>
-        </div>
-      
-    
-  
-
-  
-
 </div>
 
       <hr />
+
       
       
+
+      
+      
+
       </div>
     </div>
   </div>
   
+  <a id="scroll-to-top" class="btn" type="button" data-bs-toggle="tooltip" data-bs-placement="left" title="Scroll to top">
+    <i class="fas fa-chevron-circle-up"></i>
+  </a>
 </section>
 
 
@@ -1278,7 +1557,7 @@ $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt
   <section class="toc-section" id="toc-section">
     
     <div class="toc-holder">
-      <h5 class="text-center pl-3">Table of Contents</h5>
+      <h5 class="text-center ps-3">Table of Contents</h5>
       <hr>
       <div class="toc">
         <nav id="TableOfContents">
@@ -1343,13 +1622,15 @@ $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt
     </div>
 
     
-
-  
-
+    
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -1359,162 +1640,177 @@ $$\varphi(\mathbf x) = \varphi(x_1, x_2) = (1, x_1^2, x_2^2, \sqrt{2} x_1, \sqrt
     
   
 
+  
+  
+    
+  
 
+  
+  
 
-
-
-
-
-
-
+  
+  
+    
+    
+      
+    
   
 
 
+  
+  
+  
 
+  
+  
+  
 
+  
+  
+  
+    
+  
+  
 
+  
+  
+  
 
-
-<footer class="container-fluid text-center align-content-center footer pb-2">
-  <div class="container pt-5">
-    <div class="row text-left">
-      <div class="col-md-4 col-sm-12">
-        <h5>Navigation</h5>
+  <footer id="footer" class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-start">
         
-        <ul>
-            
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+          <ul>
+              
+                
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#about">About</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#about">About</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#skills">Skills</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#skills">Skills</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#experiences">Experiences</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#experiences">Experiences</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#education">Education</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#projects">Projects</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#projects">Projects</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#education">Education</a>
-              </li>
-            
-            
+                
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#appearances">Talks &amp; Podcasts</a>
+                </li>
               
               
                 
-              
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#recent-posts">Recent Posts</a>
-              </li>
-            
-            
-              
-              
                 
+                  
+                
+                <li class="nav-item">
+                  <a class="smooth-scroll" href="http://localhost:1313/#recent-posts">Recent Posts</a>
+                </li>
               
-              <li class="nav-item">
-                <a class="smooth-scroll" href="#appearances">Talks &amp; Podcasts</a>
-              </li>
             
-        </ul>
+              
+            
+          </ul>
+          
+        </div>
         
-
-      </div>
-      
-      <div class="col-md-4 col-sm-12">
-        <h5>Contact me:</h5>
-        <ul>
-          
-          <li><span>Email: </span> <span>popkes@gmx.net</span></li>
-          
-        </ul>
-      </div>
-      
-      
-    </div>
-  </div>
-  <hr />
-  <div class="container">
-    <div class="row text-left">
-      <div class="col-md-4">
-        <a id="theme" href="https://github.com/hossainemruz/toha" target="#">
-          <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png">
-          Toha
-        </a>
-      </div>
-      <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
-      <div class="col-md-4 text-right">
-        <a id="hugo" href="https://gohugo.io/">Powered by
-        <img
-          src="/images/hugo-logo.svg"
-          alt="Hugo Logo"
-          height="18"
-        />
-        </a>
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+              
+                <li><a href=mailto:popkes@gmx.net target="_blank" rel="noopener">
+                  <span><i class="fas fa-envelope"></i></span> <span>popkes@gmx.net</span>
+                </a></li>
+              
+            
+              
+                <li><a href=https://github.com/zotroneneis target="_blank" rel="noopener">
+                  <span><i class="fab fa-github"></i></span> <span>zotroneneis</span>
+                </a></li>
+              
+            
+          </ul>
+        </div>
+        
+        
+        
       </div>
     </div>
-  </div>
-</footer>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hugo-toha/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu16779671404603505019.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2020-2021 Copyright.</div>
+        <div class="col-md-4 text-end">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
 
-    <script src="/js/jquery-3.4.1.min.js"></script>
-<script src="/js/popper.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 
-<script src="/js/navbar.js"></script>
-<script src="/js/main.js"></script>
+    <script src="/application.cc91051931b43fe247c674f2359ddb534b993b1148bb7cc4f32b9869fb9c9b6c.js" integrity="sha256-zJEFGTG0P&#43;JHxnTyNZ3bU0uZOxFIu3zE8yuYafucm2w=" defer></script>
 
 
     
+     
+
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
-<script src="/js/single.js"></script>
-<script>
-  hljs.initHighlightingOnLoad();
-</script>
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-<script>
-window.MathJax = {
-	tex: {
-		inlineMath: [['$', '$'], ['\\(', '\\)']],
-		processEnvironments: true
-	}
-};
-</script>
-
-
-
-
-  </body>
+</body>
 </html>
