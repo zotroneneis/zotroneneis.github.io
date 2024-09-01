@@ -1,6 +1,6 @@
 ---
 title: When and how to start coding with kids
-date: 2024-08-05
+date: 2024-09-01
 menu:
   sidebar:
     name: Coding with kids
@@ -139,17 +139,20 @@ The [bee-bot](https://b-bot.de/bee-bot) is a programmable floor robot designed f
 
 The [video below](https://youtube.com/shorts/kri_1cnRNd4?feature=shared) gives a short demonstration:
 
-{{<video src="/posts/python/figures/coding_with_kids/beebot.mp4" align="center">}}
+<!-- {{<video src="/posts/python/figures/coding_with_kids/beebot.mp4" align="center">}} -->
+
+{{< youtube kri_1cnRNd4 >}}
 
 #### Cubelets
 [Cubelets](https://modrobotics.com/) are small blocks that can be used to introduce physical computing to children. Children can snap together different types of blocks to create their own unique robots. These robots will perform actions such as moving or lighting up, depending on their surroundings, such as the distance your hand is from the robot. A nice thing on top: cubelets can be programmed using [MakeCode](https://makecode.microbit.org/), a visual programming language, when a child grows older. A disadvantage of cubelets is their cost: a single block costs around 50€.
 
 {{< img src="/posts/python/figures/coding_with_kids/cubelets.png" width="30%" align="center" >}}
 
-Short [demo video](https://youtube.com/shorts/g69iscnh_rs?feature=shared):
+Short [demo video](https://www.youtube.com/shorts/fz9pZ_7xq0g):
 
+<!-- {{<video src="/posts/python/figures/coding_with_kids/cubelet.mp4" width="10px">}} -->
 
-{{<video src="/posts/python/figures/coding_with_kids/cubelet.mp4" width="10px">}}
+{{< youtube fz9pZ_7xq0g>}}
 
 #### Micro:bit
 The [micro:bit](https://microbit.org/get-started/what-is-the-microbit/) is a small programmable device with an LED display, buttons, and sensors. It can be used to create games, animations, interactive projects, and lots more. It's recommended for children age 8+ years because it involves visual programming using [MakeCode](https://makecode.microbit.org/). Compared to other devices it is cheap, with the starter bundle costing only 20€.
