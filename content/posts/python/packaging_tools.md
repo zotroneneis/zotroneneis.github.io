@@ -482,7 +482,7 @@ rye publish
 
 ### uv
 
-The newes addition to the Python packaging landscape is [`uv`](https://astral.sh/blog/uv). Similar to `rye`, `uv` is written in Rust. Actually, the company behind `uv` (Astral) has taken stewardship of `rye` and will "maintain Rye as we expand uv into a unified successor project". At the moment, `uv` can do everything besides building and publishing a package. However, this might change in the future. Therefore, I haven't added `uv` to all Venn diagrams yet. To dive deeper into `uv`, check out [the official documentation](https://docs.astral.sh/uv/getting-started/).
+The newest addition to the Python packaging landscape is [`uv`](https://astral.sh/blog/uv). Similar to `rye`, `uv` is written in Rust. Actually, the company behind `uv` (Astral) has taken stewardship of `rye` and will "maintain Rye as we expand uv into a unified successor project". At the moment, `uv` can do everything besides building and publishing a package. However, this might change in the future. Therefore, I haven't added `uv` to all Venn diagrams yet. To dive deeper into `uv`, check out [the official documentation](https://docs.astral.sh/uv/getting-started/).
 
 {{< img src="/posts/python/figures/uv.png" width="60%" align="center" >}}
 
